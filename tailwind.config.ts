@@ -19,6 +19,10 @@ const config: Config = {
         principalHover: "#FBBF01",
         fondoBlanco: "#F2F2F2",
       },
+      fontFamily: {
+        nunitoSans: ["Nunito Sans", "sans-serif"],
+        merriwather: ["Merriweather", "serif"],
+      },
     },
   },
   plugins: [],
