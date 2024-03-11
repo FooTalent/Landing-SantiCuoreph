@@ -1,8 +1,0 @@
-{
-    "exportall.config.folderListener": [
-        "/src/app/Componentes"
-    ],
-    "exportall.config.relExclusion": [
-        "/src/app/Componentes/AboutMe.tsx"
-    ]
-}
