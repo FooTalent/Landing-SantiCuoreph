@@ -1,8 +1,6 @@
-'use client'
 import Mail from '../Icon/Mail'
 import Instagram from '../Icon/Instagram'
 import Whatsapp from '../Icon/Whatsapp'
-import { useEffect, useState} from "react"
 const Footer = () => {
  
     return(
