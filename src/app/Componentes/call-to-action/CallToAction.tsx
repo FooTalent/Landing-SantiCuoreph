@@ -14,12 +14,13 @@ const CallToAction = (props: CallToActionProps) => {
     return (
         <section className="flex flex-col justify-center items-center gap-8">
             <p className="text-3xl font-bold">{header}</p>
+            <div className="relative container mw-xl" >
             <Image
             src={imageUrl}
-            width={imageSize}
-            height={imageSize}
+            fill={true}
             alt="Picture of Santi Cuore"
             />
+            </div>
             <button>{buttonText}</button>
         </section>
     )
