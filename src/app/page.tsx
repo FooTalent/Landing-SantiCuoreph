@@ -1,4 +1,4 @@
-import AboutMe from "./Componentes/AboutMe";
+import AboutMe from "./Componentes/aboutme/AboutMe";
 import Banner from "./Componentes/Banner";
 import CallToAction from "./Componentes/call-to-action/CallToAction";
 import Hero from "./Componentes/Hero";
