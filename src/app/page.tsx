@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main className="">
       <Hero/>
-      <Banner></Banner>
+      {/* <Banner></Banner> */}
       <Banner></Banner>
       <AboutMe></AboutMe>
       <Testimonials></Testimonials>
