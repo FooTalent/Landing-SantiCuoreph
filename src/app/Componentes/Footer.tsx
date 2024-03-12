@@ -1,18 +1,7 @@
-'use client'
 import Mail from '../Icon/Mail'
 import Instagram from '../Icon/Instagram'
 import Whatsapp from '../Icon/Whatsapp'
-import { useEffect, useState} from "react"
 const Footer = () => {
-
-    //Para evitar problemas de Hydration se espera a que cargue el componente antes de ser mostrado
-    const [isLoaded, setIsloaded] = useState(false)
-
-    useEffect(() => {
-        setIsloaded(true)
-    },[])
-
-    if(!isLoaded) return null
  
     return(
     <>
