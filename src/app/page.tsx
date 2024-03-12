@@ -6,6 +6,13 @@ import Testimonials from "./Componentes/Testimonials";
 
 
 export default function Home() {
+
+  const callToActionProps = {
+    header: "¿Necesitás contenido que sea inolvidable?",
+    imageUrl: "/images/call-to-action/profile-picture.png",
+    buttonText: "Contactame"
+  }
+
   return (
     <main className="">
       <Hero/>
@@ -13,7 +20,10 @@ export default function Home() {
       <Banner></Banner>
       <AboutMe></AboutMe>
       <Testimonials></Testimonials>
-      <CallToAction></CallToAction>
+      <CallToAction
+      header={callToActionProps.header}
+      imageUrl={callToActionProps.imageUrl}
+      buttonText={callToActionProps.buttonText} />
     </main>
   );
 }
