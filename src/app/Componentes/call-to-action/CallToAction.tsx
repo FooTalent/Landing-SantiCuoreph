@@ -4,19 +4,20 @@ type CallToActionProps = {
     header: string,
     imageUrl: string,
     buttonText: string,
+    imageSize: number
 }
 
 const CallToAction = (props: CallToActionProps) => {
 
-    const {header, imageUrl, buttonText} = props;
+    const {header, imageUrl, buttonText, imageSize} = props;
 
     return (
         <section className="flex flex-col justify-center items-center gap-8">
             <p className="text-3xl font-bold">{header}</p>
             <Image
             src={imageUrl}
-            width={250}
-            height={250}
+            width={imageSize}
+            height={imageSize}
             alt="Picture of Santi Cuore"
             />
             <button>{buttonText}</button>
