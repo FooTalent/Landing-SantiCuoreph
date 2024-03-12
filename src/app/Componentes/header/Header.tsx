@@ -21,8 +21,8 @@ const Header = () => {
                     {
                         navLinks.map((link) => {
                             return (
-                                <li className="hover:text-principalHover">
-                                    <Link href={link.href} key={link.name}>
+                                <li className="hover:text-principalHover" key={link.name}>
+                                    <Link href={link.href}>
                                         {link.name}
                                     </Link>
                                 </li>
