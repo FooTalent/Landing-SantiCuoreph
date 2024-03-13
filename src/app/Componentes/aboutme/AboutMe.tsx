@@ -24,7 +24,7 @@ const AboutMe = () => {
                 <CustomFlecha description="Realmaker" />
                 <p className="text-xl font-semibold my-5">¿Querés saber más sobre mí</p>
                 <div className="button flex justify-center items-center">
-                <CustomButton title="Saber más" styles="py-2 px-12 bg-principal rounded-3xl merriwather font-bold text-fondoNegro text-xl" />
+                <CustomButton title="Saber más" styles="py-2 px-12 bg-principal rounded-full merriwather font-bold text-fondoNegro text-xl" />
                 </div>
             </div>
         </section>
