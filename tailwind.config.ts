@@ -22,7 +22,7 @@ const config: Config = {
       },
       fontFamily: {
         nunitoSans: ["Nunito Sans", "sans-serif"],
-        merriwather: ["Merriweather", "serif"],
+        merriwather: ["Merriweather Sans", "serif"],
       },
     },
   },
