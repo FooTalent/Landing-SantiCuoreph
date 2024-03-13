@@ -5,7 +5,7 @@ import CustomFlecha from "./CustomFlecha";
 const AboutMe = () => {
     return (
         <>
-        <section className="Sobremi flex justify-center items-start gap-20 m-20">
+        <section className="Sobremi flex flex-col items-center justify-center lg:flex-row lg:items-start gap-20 m-20">
             <picture className="Sobremi__retrato">
                 <Image
                 src={santi}
