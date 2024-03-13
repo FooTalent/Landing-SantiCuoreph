@@ -5,7 +5,7 @@ import CustomFlecha from "./CustomFlecha";
 const AboutMe = () => {
     return (
         <>
-        <section className="Sobremi flex flex-col items-center justify-center lg:flex-row lg:items-start gap-20 m-20">
+        <section className="Sobremi flex flex-col items-center justify-center lg:flex-row lg:items-start gap-20 m-16">
             <picture className="Sobremi__retrato">
                 <Image
                 src={santi}
@@ -24,7 +24,7 @@ const AboutMe = () => {
                 <CustomFlecha description="Realmaker" />
                 <p className="text-xl font-semibold my-5">¿Querés saber más sobre mí</p>
                 <div className="button flex justify-center items-center">
-                <CustomButton title="Saber más" styles="py-2 px-12 bg-principal rounded-full merriwather font-bold text-fondoNegro text-xl" />
+                <CustomButton title="Saber más" styles="py-2 px-12 bg-principal rounded-full merriwather font-bold text-fondoNegro text-xl 2lg:text-4xl hover:bg-principalHover hover:scale-110" />
                 </div>
             </div>
         </section>
