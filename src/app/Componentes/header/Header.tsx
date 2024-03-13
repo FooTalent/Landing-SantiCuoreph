@@ -4,6 +4,7 @@ import CameraLogo from "./CameraLogo";
 import InstagramLogo from "./InstagramLogo";
 import TextLogo from "./TextLogo";
 import { useState } from "react";
+import Logo from "./Logo";
 
 const navLinks = [
   { name: "Servicios", href: "/servicios" },
@@ -27,8 +28,7 @@ const Header = () => {
           <div className="flex items-center grow">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 grow">
-                <CameraLogo />
-                <TextLogo />
+                  <Logo></Logo>
               </Link>
             </div>
           </div>
