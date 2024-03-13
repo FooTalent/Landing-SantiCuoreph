@@ -17,7 +17,7 @@ const {description}= props
         width={17}
         height={17}
         alt="flecha"
-        className="object-cover w-8">
+        className="object-cover w-8 h-fit">
 
         </Image>
         {description}
