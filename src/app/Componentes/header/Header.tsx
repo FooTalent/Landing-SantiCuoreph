@@ -43,7 +43,7 @@ const Header = () => {
             })}
           </ul>
 
-          <div className="hidden sm:flex grow justify-end grow">
+          <div className="hidden sm:flex grow justify-end grow items-center">
             <InstagramLogo size={32} />
           </div>
 

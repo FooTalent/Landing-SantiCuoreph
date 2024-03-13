@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CustomButton from "../CustomButton";
+import Link from "next/link";
 
 type CallToActionProps = {
     header: string,
@@ -23,9 +24,14 @@ const CallToAction = (props: CallToActionProps) => {
             alt="Picture of Santi Cuore"
             />
             </div>
-            <CustomButton
+            {/*<CustomButton
                 title="Contactame"
-                styles="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-[0.5em] px-[2em] bg-principal rounded-full merriwather font-bold text-fondoNegro" />
+                styles="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-[0.5em] px-[2em] bg-principal rounded-full merriwather font-bold text-fondoNegro hover:bg-[#FBBF01] hover:scale-110" />
+                */}
+                <Link href="/contacto" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-[0.5em] px-[2em] bg-principal rounded-full merriwather font-bold text-fondoNegro hover:bg-[#FBBF01] hover:scale-110">
+                    Contactame
+                </Link>
+                
         </section>
     )
 }

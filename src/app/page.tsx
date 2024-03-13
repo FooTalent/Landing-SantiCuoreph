@@ -19,12 +19,14 @@ export default function Home() {
       <Banner></Banner>
       <AboutMe></AboutMe>
       <Testimonials></Testimonials>
-      <CallToAction
-        header={callToActionProps.header}
-        imageUrl={callToActionProps.imageUrl}
-        buttonText={callToActionProps.buttonText}
-        imageSize={callToActionProps.imageSize}
-      />
+      <div className="mb-[8rem]">
+        <CallToAction
+          header={callToActionProps.header}
+          imageUrl={callToActionProps.imageUrl}
+          buttonText={callToActionProps.buttonText}
+          imageSize={callToActionProps.imageSize}
+        />
+      </div>
     </main>
   );
 }
