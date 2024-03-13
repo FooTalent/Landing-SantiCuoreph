@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header className="bg-fondoNegro">
-      <nav>
+      <nav className="container mx-auto py-4">
         <div className="flex justify-between">
           <div className="flex items-center grow">
             <div className="flex-shrink-0">
@@ -33,7 +33,7 @@ const Header = () => {
             </div>
           </div>
 
-          <ul className="hidden md:flex justify-between items-center text-white grow">
+          <ul className="hidden sm:flex justify-between items-center text-white grow text-xl">
             {navLinks.map((link) => {
               return (
                 <li className="hover:text-principalHover" key={link.name}>
@@ -43,11 +43,11 @@ const Header = () => {
             })}
           </ul>
 
-          <div className="hidden md:flex grow justify-end grow">
+          <div className="hidden sm:flex grow justify-end grow items-center">
             <InstagramLogo size={32} />
           </div>
 
-          <div className="md:hidden flex items-center">
+          <div className="sm:hidden flex items-center">
             <button
               className="inline-flex items-center justify-center"
               onClick={toggleNavbar}
@@ -58,9 +58,9 @@ const Header = () => {
         </div>
 
         {isClick && (
-          <div className="md:hidden">
+          <div className="sm:hidden">
             <div className="px-2 pt-2 space-y-1">
-              <ul className="flex flex-col items-center justify-between text-white grow">
+              <ul className="flex flex-col items-center justify-between text-white grow text-2xl">
                 {navLinks.map((link) => {
                   return (
                     <li className="hover:text-principalHover" key={link.name}>
