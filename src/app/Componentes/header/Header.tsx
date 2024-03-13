@@ -44,7 +44,10 @@ const Header = () => {
           </ul>
 
           <div className="hidden sm:flex grow justify-end grow items-center">
+          <a href="https://www.instagram.com/santicuoreph" target="_blank">
+
             <InstagramLogo size={32} />
+            </a>
           </div>
 
           <div className="sm:hidden flex items-center">
@@ -69,7 +72,9 @@ const Header = () => {
                   );
                 })}
                 <div className="grow justify-end grow">
+                <a href="https://www.instagram.com/santicuoreph" target="_blank">
             <InstagramLogo size={32} />
+            </a>
           </div>
               </ul>
             </div>
