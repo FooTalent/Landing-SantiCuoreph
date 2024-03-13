@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <main className="">
-       <Slideshow />
+      <Slideshow />
       <Hero />
       <Banner></Banner>
       <AboutMe></AboutMe>
