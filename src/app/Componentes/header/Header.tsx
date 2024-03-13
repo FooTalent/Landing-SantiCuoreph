@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header className="bg-fondoNegro">
-      <nav className="container mx-auto py-4">
+      <nav className="container mx-auto py-4 px-4">
         <div className="flex justify-between">
           <div className="flex items-center grow">
             <div className="flex-shrink-0">
