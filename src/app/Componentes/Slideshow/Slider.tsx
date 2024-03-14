@@ -53,19 +53,14 @@ const buttonStyle = {
 };
 const properties = {
   prevArrow: (
-    <button
-    className="container mx-4"
-      style={{ ...buttonStyle }}
-    >
-      
+
+    <button className="lg:ml-40 ml-4" style={{ ...buttonStyle }}>
       <Image src="/assets/img/ArrowLeft.png" alt="" width={60} height={60} />
     </button>
   ),
   nextArrow: (
-    <button
-      className="container mx-4"
-      style={{ ...buttonStyle }}
-    >
+
+    <button className="lg:mr-40 mr-4" style={{ ...buttonStyle }}>
       <Image src="/assets/img/ArrowRight.png" alt="" width={60} height={60} />
     </button>
   ),
@@ -77,15 +72,15 @@ const Slideshow = () => {
     <div className="slide-container">
       <Slide autoplay={false} {...properties} cssClass="bg-red-500 pb-5">
         {slideImages.map((slideImage, index) => (
-          <div key={index} className="h-screen">
+          <div key={index} className="h-full">
             <div className="h-full relative flex items-center">
               <Image
                 src={slideImage.url}
                 alt="Slide"
                 width="0"
                 height="0"
-                sizes="cover"
-                className="w-screen h-screen filter brightness-50"
+                sizes="100%"
+                className="w-screen h-screen object-cover filter brightness-50"
               />
               {/* CONTENEDOR DE LOS INDICADORES */}
               <div
@@ -102,10 +97,10 @@ const Slideshow = () => {
                 ))}
               </div>
               {/* TEXTO PRINCIPAL Y SECUNDARIO */}
-              <p className="text-fondoBlanco absolute font-merriwather font-bold italic lg:text-[4rem] text-[2rem] 2xl:left-48 xl:left-28 lg:left-20 md:left-28 left-14 lg:bottom-32 bottom-48">
+              <p className="text-fondoBlanco absolute font-merriwather font-bold italic lg:text-[4rem] text-[2rem] lg:left-40 left-4 lg:bottom-32 bottom-48">
                 {slideImage.caption}
               </p>
-              <p className="2xl:left-48 xl:left-28 lg:left-24 font-nunitoSans absolute font-light text-fondoBlanco text-[2rem] md:left-28 left-14 lg:bottom-24 bottom-36">
+              <p className="lg:left-40 font-nunitoSans absolute font-light text-fondoBlanco md:text-[2rem] text-[1.5rem] left-4 lg:bottom-24 bottom-36">
                 {slideImage.caption2}
               </p>
             </div>
