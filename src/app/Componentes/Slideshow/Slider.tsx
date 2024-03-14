@@ -54,15 +54,16 @@ const buttonStyle = {
 const properties = {
   prevArrow: (
     <button
-      className="container 2xl:ml-48 xl:ml-28 lg:ml-24 md:ml-28 ml-14"
+    className="container mx-4"
       style={{ ...buttonStyle }}
     >
+      
       <Image src="/assets/img/ArrowLeft.png" alt="" width={60} height={60} />
     </button>
   ),
   nextArrow: (
     <button
-      className="container 2xl:mr-48 xl:mr-28 lg:ml-24 md:mr-28 mr-14"
+      className="container mx-4"
       style={{ ...buttonStyle }}
     >
       <Image src="/assets/img/ArrowRight.png" alt="" width={60} height={60} />
@@ -72,8 +73,9 @@ const properties = {
 
 const Slideshow = () => {
   return (
+    
     <div className="slide-container">
-      <Slide autoplay={false} {...properties}>
+      <Slide autoplay={false} {...properties} cssClass="bg-red-500 pb-5">
         {slideImages.map((slideImage, index) => (
           <div key={index} className="h-screen">
             <div className="h-full relative flex items-center">

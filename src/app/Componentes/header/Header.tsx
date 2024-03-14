@@ -15,15 +15,15 @@ const navLinks = [
 const getSections = () => {};
 
 const Header = () => {
-  const [isClick, setIsClick] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = (): void => {
-    setIsClick(!isClick);
+  const toggleMenu = (): void => {
+    setIsOpen(!isOpen);
   };
 
   return (
     <header className="bg-fondoNegro">
-      <nav className="container mx-auto py-4 px-4">
+      <nav className="py-4 px-4 lg:px-40">
         <div className="flex justify-between">
           <div className="flex items-center grow">
             <div className="flex-shrink-0">
@@ -53,14 +53,14 @@ const Header = () => {
           <div className="sm:hidden flex items-center">
             <button
               className="inline-flex items-center justify-center"
-              onClick={toggleNavbar}
+              onClick={toggleMenu}
             >
-              {isClick ? "CERRAR" : "ABRIR"}
+              {isOpen ? "CERRAR" : "ABRIR"}
             </button>
           </div>
         </div>
 
-        {isClick && (
+        {isOpen && (
           <div className="sm:hidden">
             <div className="px-2 pt-2 space-y-1">
               <ul className="flex flex-col items-center justify-between text-white grow text-2xl">

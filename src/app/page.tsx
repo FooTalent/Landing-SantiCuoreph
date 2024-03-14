@@ -2,7 +2,6 @@ import AboutMe from "./Componentes/aboutme/AboutMe";
 import Banner from "./Componentes/Banner";
 import CallToAction from "./Componentes/call-to-action/CallToAction";
 import Testimonials from "./Componentes/Testimonials";
-import Slideshow from "./Componentes/Slideshow/Slider";
 
 export default function Home() {
   const callToActionProps = {
@@ -12,10 +11,11 @@ export default function Home() {
     imageSize: 410,
   };
 
+
+
   return (
+
     <main className="">
-      <Slideshow />
-      <Banner></Banner>
       <AboutMe></AboutMe>
       <Testimonials></Testimonials>
       <div className="mb-[8rem]">
