@@ -23,12 +23,12 @@ const Header = () => {
 
   return (
     <header className="bg-fondoNegro">
-      <nav className="container mx-auto py-4">
+      <nav className="py-4 pr-4 lg:px-40">
         <div className="flex justify-between">
           <div className="flex items-center grow">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 grow">
-                  <Logo></Logo>
+                <Logo></Logo>
               </Link>
             </div>
           </div>
@@ -44,9 +44,8 @@ const Header = () => {
           </ul>
 
           <div className="hidden sm:flex grow justify-end grow items-center">
-          <a href="https://www.instagram.com/santicuoreph" target="_blank">
-
-            <InstagramLogo size={32} />
+            <a href="https://www.instagram.com/santicuoreph" target="_blank">
+              <InstagramLogo size={32} />
             </a>
           </div>
 
@@ -72,10 +71,13 @@ const Header = () => {
                   );
                 })}
                 <div className="grow justify-end grow">
-                <a href="https://www.instagram.com/santicuoreph" target="_blank">
-            <InstagramLogo size={32} />
-            </a>
-          </div>
+                  <a
+                    href="https://www.instagram.com/santicuoreph"
+                    target="_blank"
+                  >
+                    <InstagramLogo size={32} />
+                  </a>
+                </div>
               </ul>
             </div>
           </div>
