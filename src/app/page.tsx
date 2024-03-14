@@ -1,6 +1,7 @@
 import AboutMe from "./Componentes/aboutme/AboutMe";
 import Banner from "./Componentes/Banner";
 import CallToAction from "./Componentes/call-to-action/CallToAction";
+import Slideshow from "./Componentes/Slideshow/Slider";
 import Testimonials from "./Componentes/Testimonials";
 
 export default function Home() {
@@ -16,6 +17,8 @@ export default function Home() {
   return (
 
     <main className="">
+      <Slideshow />
+      <Banner></Banner>
       <AboutMe></AboutMe>
       <Testimonials></Testimonials>
       <div className="mb-[8rem]">
