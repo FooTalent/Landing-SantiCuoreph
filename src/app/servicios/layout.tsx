@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ServiceBanner from "./Components/ServiceBanner";
+import ServiceBanner from "./components/ServiceBanner";
 
 
 const services = [
@@ -15,18 +15,24 @@ const ServicesLayout =({
     children: React.ReactNode;
   }>) => {
     const pathname = usePathname();
+    const activeStyle = 'font-extrabold';
+    const inactiveStyle = 'font-light'
     
 
     return (
-        <div>
-            <section>
-                <h1>Servicios layout</h1>
-                <h2>params: {pathname}</h2>
-                <div>
+        <div className="px-4 lg:px-40 font-merriwather font-bold">
+            <section className="pb-8 border-b-4 border-black text-fondoNegro">
+                <h1 className="py-16 text-8xl">Servicios</h1>
+                <div className="flex gap-8 text-4xl">
                     {
                         services.map((service, idx) => {
                             const isActive: boolean = pathname.endsWith(service.href);
-                            return <Link href={service.href} key={idx} className={isActive ? 'bg-green-500' : 'bg-red-500'}>{service.name}</Link>
+                            return <div>
+                                        <Link href={service.href} key={idx} className={isActive ? activeStyle : inactiveStyle}>{service.name}</Link>
+                                        {
+                                            isActive && <div className="pt-[0.5em] mx-auto w-4/5 border-b-8 border-yellow-500"></div>
+                                        }
+                                    </div>
                         })
                     }
                 </div>

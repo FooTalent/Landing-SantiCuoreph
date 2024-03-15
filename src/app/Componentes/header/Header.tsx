@@ -23,8 +23,8 @@ const Header = () => {
 
   return (
     <header className="bg-fondoNegro">
-      <nav className="py-4 pr-4 lg:px-40">
-        <div className="flex justify-between">
+      <nav className="py-4 px-4 lg:px-40">
+        <div className="flex justify-between items-center">
           <div className="flex items-center grow">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 grow">
@@ -51,10 +51,10 @@ const Header = () => {
 
           <div className="sm:hidden flex items-center">
             <button
-              className="inline-flex items-center justify-center"
+              className="inline-flex items-center justify-center text-xl"
               onClick={toggleMenu}
             >
-              {isOpen ? "CERRAR" : "ABRIR"}
+              {isOpen ? "CERRAR" : "MENU"}
             </button>
           </div>
         </div>
