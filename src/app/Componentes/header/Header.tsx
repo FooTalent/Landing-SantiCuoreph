@@ -33,7 +33,7 @@ const Header = () => {
             </div>
           </div>
 
-          <ul className="hidden sm:flex justify-between items-center text-white grow text-xl">
+          <ul className="hidden sm:flex justify-between items-center text-white grow text-2xl font-medium">
             {navLinks.map((link) => {
               return (
                 <li className="hover:text-principalHover" key={link.name}>

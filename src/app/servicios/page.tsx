@@ -1,7 +1,7 @@
-const Services = () => {
+const ServicesPage = () => {
     return (
-        <h1>SERVICES PAGE</h1>
+        <h2>FOTOGRAFIA PAGE</h2>
     );
-};
+}
 
-export default Services;
+export default ServicesPage;

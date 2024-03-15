@@ -15,8 +15,7 @@ export default function Home() {
 
 
   return (
-
-    <main className="">
+      <>
       <Slideshow />
       <Banner></Banner>
       <AboutMe></AboutMe>
@@ -29,6 +28,6 @@ export default function Home() {
           imageSize={callToActionProps.imageSize}
         />
       </div>
-    </main>
+      </>
   );
 }
