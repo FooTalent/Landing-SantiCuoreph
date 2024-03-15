@@ -1,7 +1,7 @@
 import AboutMe from "./Componentes/aboutme/AboutMe";
 import Banner from "./Componentes/Banner";
 import CallToAction from "./Componentes/call-to-action/CallToAction";
-import Testimonials from "./Componentes/Testimonials";
+import Testimonials from "./Componentes/Slideshow/Testimonials";
 import Slideshow from "./Componentes/Slideshow/Slider";
 
 export default function Home() {

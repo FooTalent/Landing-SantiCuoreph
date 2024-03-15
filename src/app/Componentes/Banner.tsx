@@ -53,7 +53,7 @@ const Banner = () => {
             autoPlay
             ref={video0Ref}
             muted
-            src="https://vod-progressive.akamaized.net/exp=1710479431~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F3651%2F14%2F368256550%2F1523668912.mp4~hmac=82b6437dc2f72299dd25092d4522a7cf16bc8c49fa4c93eb13e1570a02d3aeb9/vimeo-prod-skyfire-std-us/01/3651/14/368256550/1523668912.mp4?filename=file.mp4"
+            src="https://player.vimeo.com/progressive_redirect/playback/394784792/rendition/1080p/file.mp4?loc=external&oauth2_token_id=1747418641&signature=c9080766c8f3cfcb6f9b63ed5cce3dd219a2bd1f378d1c7bb1d374521ef22d31"
           />
         )}
 
@@ -81,7 +81,8 @@ const Banner = () => {
             autoPlay
             ref={video1Ref}
             muted
-            src="https://vod-progressive.akamaized.net/exp=1710479932~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F711%2F14%2F353558999%2F1436805237.mp4~hmac=93852619386b969a935f35e0e99b6fbdd84614171e08de698693761be654967e/vimeo-prod-skyfire-std-us/01/711/14/353558999/1436805237.mp4?filename=file.mp4"
+            src="https://player.vimeo.com/progressive_redirect/playback/348728035/rendition/1080p/file.mp4?loc=external&oauth2_token_id=1747418641&signature=9fd0f1b42276d7d0cdee48f924811ccb3f8288807f1504c5866b4b800fd8e02d"
+            
           />
         )}
         <div className="absolute p-5 top-0 z-30 flex h-full w-full transition-all duration-200 hover:bg-black/50 ">
