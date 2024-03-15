@@ -30,7 +30,7 @@ const Banner = () => {
   };
 
   return (
-    <section className="h-max px-2 space-y-2 bg-black">
+    <section className="h-max px-2 space-y-2 bg-black overflow-hidden">
       <div
         onMouseEnter={handleVideo}
         onMouseLeave={handleVideo}
