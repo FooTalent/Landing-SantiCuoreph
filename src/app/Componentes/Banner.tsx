@@ -34,7 +34,7 @@ const Banner = () => {
   };
 
   return (
-    <section className="h-screen font-merriwather text-white  bg-black">
+    <section className="h-max px-2 space-y-2 font-merriwather text-white  bg-black overflow-hidden">
       <div
         onMouseEnter={handleVideo}
         onMouseLeave={handleVideo}
