@@ -9,8 +9,8 @@ const AboutMe = () => {
             <picture className="Sobremi__retrato">
                 <Image
                 src={santi}
-                width={380}
-                height={480}
+                width={420}
+                height={520}
                 alt="SantiCuroePH">
 
                 </Image>
@@ -21,10 +21,10 @@ const AboutMe = () => {
                 <CustomFlecha description="Fotógrafo profesional" />
                 <CustomFlecha description="Editor de video" />
                 <CustomFlecha description="Creador de contenido audiovisual" />
-                <CustomFlecha description="Realmaker" />
-                <p className="text-xl font-semibold my-5">¿Querés saber más sobre mí</p>
+                <CustomFlecha description="Reelmaker" />
+                <p className="text-xl font-semibold my-10">¿Querés saber más sobre mí?</p>
                 <div className="button flex justify-center items-center">
-                <CustomButton title="Saber más" styles="py-2 px-12 bg-principal rounded-full merriwather font-bold text-fondoNegro text-xl 2lg:text-4xl hover:bg-principalHover hover:scale-110" />
+                <CustomButton title="Saber más" styles="py-2 mt-4 px-12 bg-principal rounded-full merriwather font-bold text-fondoNegro text-xl 2lg:text-4xl hover:bg-principalHover hover:scale-110 " />
                 </div>
             </div>
         </section>

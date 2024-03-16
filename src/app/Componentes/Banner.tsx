@@ -55,7 +55,7 @@ const Banner = () => {
 
         <div className="absolute top-0 z-30 flex h-full w-full transition-all duration-200 hover:bg-black/50 ">
           <div className="flex flex-col  p-5 ">
-            <h1 className="pb-2  text-5xl font-bold text-white smm:text-xl ">
+            <h1 className="pb-2  text-2xl md:text-5xl font-bold text-white smm:text-xl ">
               Fotografías
             </h1>
           </div>
@@ -84,7 +84,7 @@ const Banner = () => {
         )}
         <div className="absolute top-0 z-30 flex h-full w-full transition-all duration-200 hover:bg-black/50 ">
           <div className="flex flex-col  p-5 ">
-            <h1 className="pb-2  text-5xl font-bold text-white smm:text-xl ">
+            <h1 className="pb-2  text-2xl md:text-5xl font-bold text-white smm:text-xl ">
               Edición Audiovisual
             </h1>
           </div>
