@@ -16,13 +16,14 @@ const navLinks = [
 const getSections = () => {};
 
 const Header = () => {
-  const [isClick, setIsClick] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleNavbar = (): void => {
-    setIsClick(!isClick);
+  const toggleMenu = (): void => {
+    setIsOpen(!isOpen);
   };
 
   return (
+
     <header className="bg-fondoNegro fixed z-40 w-full">
       <nav className="py-4 pr-4 lg:px-40">
         <div className="flex justify-between">
@@ -34,7 +35,7 @@ const Header = () => {
             </div>
           </div>
 
-          <ul className="hidden sm:flex justify-between items-center text-white grow text-xl">
+          <ul className="hidden sm:flex justify-between items-center text-white grow text-2xl font-medium">
             {navLinks.map((link) => {
               return (
                 <li className="hover:text-principalHover font-semibold hover:font-bold font-nunitoSans" key={link.name}>
@@ -55,15 +56,16 @@ const Header = () => {
           </div>
           <div className="sm:hidden flex items-center">
             <button
-              className="inline-flex items-center justify-center"
-              onClick={toggleNavbar}
+              className="inline-flex items-center justify-center text-xl"
+              onClick={toggleMenu}
             >
-             {isClick ? "ABRIR" : "CERRAR"}
+              {isOpen ? "CERRAR" : "MENU"}
+
             </button>
           </div>
         </div>
 
-        {isClick && (
+        {isOpen && (
           <div className="sm:hidden">
             <div className="px-2 pt-2 space-y-1">
               <ul className="flex flex-col items-center justify-between text-white grow text-2xl">
