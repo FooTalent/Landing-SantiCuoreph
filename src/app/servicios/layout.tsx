@@ -27,8 +27,8 @@ const ServicesLayout =({
                     {
                         services.map((service, idx) => {
                             const isActive: boolean = pathname.endsWith(service.href);
-                            return <div>
-                                        <Link href={service.href} key={idx} className={isActive ? activeStyle : inactiveStyle}>{service.name}</Link>
+                            return <div key={idx}>
+                                        <Link href={service.href}  className={isActive ? activeStyle : inactiveStyle}>{service.name}</Link>
                                         {
                                             isActive && <div className="pt-[0.5em] mx-auto w-4/5 border-b-8 border-yellow-500"></div>
                                         }
