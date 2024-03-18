@@ -12,7 +12,7 @@ const SlideIndicator: React.FC<{ active: boolean }> = ({ active }) => (
       width: "8px",
       height: "8px",
       borderRadius: "50%",
-      backgroundColor: active ? "#fff" : "rgba(255, 255, 255, 0.5)",
+      backgroundColor: active ? "#FBBF01" : "rgba(255, 255, 255, 0.5)",
       marginRight: "8px",
       cursor: "pointer",
     }}

@@ -38,7 +38,7 @@ const Banner = () => {
       <div
         onMouseEnter={handleVideo}
         onMouseLeave={handleVideo}
-        className={`relative hover:scale-[0.97]  flex   w-full h-1/2   transition-all ease-in-out    `}
+        className={`relative hover:scale-[0.97]  flex   w-full h-[400px]   transition-all ease-in-out    `}
       >
         {!videoImage ? (
           <img
@@ -65,8 +65,8 @@ const Banner = () => {
       </div>
       <div
         onMouseEnter={handleVideo1}
-        onMouseLeave={handleVideo1}
-        className={`relative hover:scale-[0.97]  flex   w-full h-1/2   transition-all ease-in-out `}
+        onMouseLeave={handleVideo1}                     /*en esta zona cambian la altura de la carta*/
+        className={`relative hover:scale-[0.97]  flex   w-full h-[400px]   transition-all ease-in-out `}
       >
         {!videoImage ? (
           <img
