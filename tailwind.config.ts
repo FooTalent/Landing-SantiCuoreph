@@ -18,10 +18,11 @@ const config: Config = {
         principal: "#FCCD35",
         principalHover: "#FBBF01",
         fondoBlanco: "#F2F2F2",
+        fondoGris: "#424242",
       },
       fontFamily: {
         nunitoSans: ["Nunito Sans", "sans-serif"],
-        merriwather: ["Merriweather", "serif"],
+        merriwather: ["Merriweather Sans", "serif"],
       },
     },
   },
