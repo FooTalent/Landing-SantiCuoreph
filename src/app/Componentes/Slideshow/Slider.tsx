@@ -53,22 +53,23 @@ const buttonStyle = {
 };
 const properties = {
   prevArrow: (
-
-    <button className="lg:ml-40 ml-4" style={{ ...buttonStyle }}>
-      <Image src="/assets/img/ArrowLeft.png" alt="" width={60} height={60} />
+    <button className="lg:ml-40 ml-4 " style={{ ...buttonStyle }}>
+      <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
+        <Image src="/assets/img/ArrowLeft.png" alt="" width={20} height={20} />
+      </div>
     </button>
   ),
   nextArrow: (
-
     <button className="lg:mr-40 mr-4" style={{ ...buttonStyle }}>
-      <Image src="/assets/img/ArrowRight.png" alt="" width={60} height={60} />
+      <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
+        <Image src="/assets/img/ArrowRight.png" alt="" width={20} height={20} />
+      </div>
     </button>
   ),
 };
 
 const Slideshow = () => {
   return (
-    
     <div className="slide-container">
       <Slide autoplay={false} {...properties} cssClass="bg-red-500 pb-5">
         {slideImages.map((slideImage, index) => (
