@@ -3,3 +3,33 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Slider.css */
+.indicators {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.indicators li {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.indicators li button {
+  opacity: 1 !important;
+}
+
+.indicators li button:hover::before {
+  background-color: #eec54a !important;
+}
+
+.indicators li button:before {
+  background: #d9d9d9 !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.indicators li .active::before {
+  background-color: #eec54a !important;
+}
