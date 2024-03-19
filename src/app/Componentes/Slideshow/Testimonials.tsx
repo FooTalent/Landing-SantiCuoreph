@@ -4,34 +4,20 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-/* Componente de Indicadores */
-const SlideIndicator: React.FC<{ active: boolean }> = ({ active }) => (
-  <span
-    style={{
-      display: "inline-block",
-      width: "8px",
-      height: "8px",
-      borderRadius: "50%",
-      backgroundColor: active ? "#FBBF01" : "rgba(255, 255, 255, 0.5)",
-      marginRight: "8px",
-      cursor: "pointer",
-    }}
-  />
-);
 /* Array con las imagenes que se mostraran, texto principal y texto secundario */
 /**
- TODO -  OBTENER ESTE LISTADO POR PARAMETRO
+TODO -  OBTENER ESTE LISTADO POR PARAMETRO
  */
 const slideImages = [
   {
-    url: "/assets/img/Test1.JPG",
-    caption: `"La experiencia con Santi fue excelente. Hicimos unas fotos en exteriores para la banda. La jornada fue muy buena y productiva. Santi es un tipo muy criterioso y nos sentimos muy cómodos. La experiencia fue muy buena, cubrió las expectativas de todos los que somos parte de la banda."`,
-    caption2: "Lucas, bajista de Pasado Pisado",
+    url: "/assets/img/Test3.JPG",
+    caption:
+      '"Santi fue súper profesional, llegó puntual al evento, en nuestro caso hasta un rato antes inclusive, para ir viendo el lugar y saber dónde podía tomar mejores fotos aprovechando la luz del sol, muy cálido con toda la familia y logró unas fotos hermosas con todos. Lo recomiendo a full además de que tiene varias propuesta que puedan ser acordes a lo que uno esté buscando. Gracias Santi, la rompiste toda y nos quedaron hermosos recuerdos del primer cumpleañito de Ciro."',
+    caption2: "Usuario Desconocido",
   },
   {
-    url: "/assets/img/Test2.JPG",
-    caption:
-      '"La experiencia con Santi fue excelente. Hicimos unas fotos en exteriores para la banda. La jornada fue muy buena y productiva. Santi es un tipo muy criterioso y nos sentimos muy cómodos. La experiencia fue muy buena, cubrió las expectativas de todos los que somos parte de la banda."',
+    url: "/assets/img/Test1.JPG",
+    caption: `"La experiencia con Santi fue excelente. Hicimos unas fotos en exteriores para la banda. La jornada fue muy buena y productiva. Santi es un tipo muy criterioso y nos sentimos muy cómodos. La experiencia fue muy buena, cubrió las expectativas de todos los que somos parte de la banda."`,
     caption2: "Lucas, bajista de Pasado Pisado",
   },
 ];
@@ -45,20 +31,24 @@ const buttonStyle = {
 const properties = {
   prevArrow: (
     <button className="lg:ml-40 ml-4" style={{ ...buttonStyle }}>
-      <Image src="/assets/img/ArrowLeft.png" alt="" width={60} height={60} />
+      <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
+        <Image src="/assets/img/ArrowLeft.png" alt="" width={20} height={20} />
+      </div>
     </button>
   ),
   nextArrow: (
     <button className="lg:mr-40 mr-4" style={{ ...buttonStyle }}>
-      <Image src="/assets/img/ArrowRight.png" alt="" width={60} height={60} />
+      <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
+        <Image src="/assets/img/ArrowRight.png" alt="" width={20} height={20} />
+      </div>
     </button>
   ),
 };
 
 const Slideshow = () => {
   return (
-    <div className="slide-container my-10">
-      <Slide autoplay={false} {...properties}>
+    <div className="slide-container my-10" id="testimonios">
+      <Slide autoplay={false} {...properties} indicators={true}>
         {slideImages.map((slideImage, index) => (
           <div key={index} className="h-full">
             <div className="h-full relative flex items-center">
@@ -70,20 +60,7 @@ const Slideshow = () => {
                 sizes="100%"
                 className="w-screen h-[400px] md:h-[744px] object-cover filter brightness-50"
               />
-              {/* CONTENEDOR DE LOS INDICADORES */}
-              <div
-                style={{
-                  position: "absolute",
-                  bottom: "20px", // Ajusta la posición vertical de los indicadores
-                  left: "50%", // Centra los indicadores horizontalmente
-                  transform: "translateX(-50%)", // Centra los indicadores horizontalmente
-                  zIndex: 10, // Asegura que los indicadores estén encima de la imagen
-                }}
-              >
-                {slideImages.map((_, i) => (
-                  <SlideIndicator key={i} active={i === index} />
-                ))}
-              </div>
+
               {/* TEXTO PRINCIPAL Y SECUNDARIO */}
               <h3 className="text-fondoBlanco font-merriwather font-normal text-2xl md:text-4xl absolute left-4 lg:left-40 top-14 md:top-24">
                 Testimonios

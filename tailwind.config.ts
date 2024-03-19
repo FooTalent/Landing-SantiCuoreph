@@ -19,6 +19,9 @@ const config: Config = {
         principalHover: "#FBBF01",
         fondoBlanco: "#F2F2F2",
         fondoGris: "#424242",
+        sliderHover: "#969696B2",
+        slider: "#555555B2",
+        sliderIndicator: "#EEC54A",
       },
       fontFamily: {
         nunitoSans: ["Nunito Sans", "sans-serif"],
