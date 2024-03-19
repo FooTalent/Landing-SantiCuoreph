@@ -21,8 +21,8 @@ const ServicesLayout =({
 
     return (
         <div className="px-4 lg:px-40 font-merriwather font-bold">
-            <section className="pb-8 border-b-4 border-black text-fondoNegro">
-                <h1 className="py-16 text-8xl">Servicios</h1>
+            <section className=" pb-8 border-b-4 border-black text-fondoNegro md:text-7xl 2xl:text-8xl pl-[1.5em] mb-[1em]">
+                <h1 className="pt-[1.6em] pb-[.4em]">Servicios</h1>
                 <div className="flex gap-8 text-4xl">
                     {
                         services.map((service, idx) => {
