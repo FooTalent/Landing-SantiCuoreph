@@ -3,7 +3,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background-color: #F2F2F2;
+}
+
 /* Slider.css */
+#testimonios {
+  position: relative;
+}
+
+#testimonios .indicators {
+  position: absolute;
+
+}
+
 .indicators {
   position: absolute;
   bottom: 5%;
@@ -21,7 +34,7 @@
 }
 
 .indicators li button:hover::before {
-  background-color: #eec54a !important;
+  background-color: #FCCD35 !important;
 }
 
 .indicators li button:before {
@@ -31,5 +44,5 @@
 }
 
 .indicators li .active::before {
-  background-color: #eec54a !important;
+  background-color: #FCCD35 !important;
 }

@@ -8,9 +8,9 @@ import "react-slideshow-image/dist/styles.css";
 
 const slideImages = [
   {
-    url: "/assets/img/PasadoPisado.JPG",
-    caption: "Pasado Pisado",
-    caption2: "Fotografía artística",
+    url: "/assets/img/Masq1.JPG",
+    caption: "Más que uno: 10 años",
+    caption2: "Cobertura de evento artístico",
   },
   {
     url: "/assets/img/AuraGin.JPG",
@@ -18,10 +18,11 @@ const slideImages = [
     caption2: "Fotografía comercial",
   },
   {
-    url: "/assets/img/Masq1.JPG",
-    caption: "Más que uno: 10 años",
-    caption2: "Cobertura de evento artístico",
+    url: "/assets/img/PasadoPisado.JPG",
+    caption: "Pasado Pisado",
+    caption2: "Fotografía artística",
   },
+
   {
     url: "/assets/img/Toch.JPG",
     caption: "TOCH",
