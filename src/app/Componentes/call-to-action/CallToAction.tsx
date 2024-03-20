@@ -23,14 +23,13 @@ const CallToAction = (props: CallToActionProps) => {
             alt="Picture of Santi Cuore"
             />
             </div>
-            <div className="relative">
-                <Link href="/contacto"> 
-                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl py-[0.5em] px-[2em] 
-                bg-principal rounded-full merriwather font-bold text-fondoNegro hover:bg-[#FCDC71] hover:font-extrabold">
+                <Link href="/contacto" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl py-[0.5em] px-[2em] 
+                bg-principal rounded-full merriwather font-semibold text-fondoNegro hover:bg-[#FCDC71] hover:font-bold">
                     Contactame
-                    </p>
                     
-                </Link>                </div>
+                    
+                </Link>                
+
                 
         </section>
     )
