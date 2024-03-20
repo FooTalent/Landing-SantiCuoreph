@@ -8,7 +8,6 @@ type CallToActionProps = {
     buttonText: string,
     imageSize: number
 }
-//w-1/5 max-w-[410px] min-w-[200px]
 
 const CallToAction = (props: CallToActionProps) => {
 
@@ -30,7 +29,10 @@ const CallToAction = (props: CallToActionProps) => {
                 */}
                 <Link href="/contacto" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl py-[0.5em] px-[2em] bg-principal rounded-full merriwather font-semibold text-fondoNegro hover:bg-principalHover hover:font-extrabold">
                     Contactame
-                </Link>
+                    
+                    
+                </Link>                
+
                 
         </section>
     )
