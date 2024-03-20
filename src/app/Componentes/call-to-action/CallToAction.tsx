@@ -8,7 +8,6 @@ type CallToActionProps = {
     buttonText: string,
     imageSize: number
 }
-//w-1/5 max-w-[410px] min-w-[200px]
 
 const CallToAction = (props: CallToActionProps) => {
 
@@ -24,13 +23,14 @@ const CallToAction = (props: CallToActionProps) => {
             alt="Picture of Santi Cuore"
             />
             </div>
-            {/*<CustomButton
-                title="Contactame"
-                styles="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-[0.5em] px-[2em] bg-principal rounded-full merriwather font-bold text-fondoNegro hover:bg-[#FBBF01] hover:scale-110" />
-                */}
-                <Link href="/contacto" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl py-[0.5em] px-[2em] bg-principal rounded-full merriwather font-bold text-fondoNegro hover:bg-principalHover hover:scale-110">
+            <div className="relative">
+                <Link href="/contacto"> 
+                <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl py-[0.5em] px-[2em] 
+                bg-principal rounded-full merriwather font-bold text-fondoNegro hover:bg-[#FCDC71] hover:font-extrabold">
                     Contactame
-                </Link>
+                    </p>
+                    
+                </Link>                </div>
                 
         </section>
     )
