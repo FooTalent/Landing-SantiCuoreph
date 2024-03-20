@@ -29,10 +29,10 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-fondoNegro fixed z-40 w-full opacity-85">
-      <nav className="py-3 pr-4 lg:px-40 opacity-100">
+    <header className="bg-fondo fixed z-40 w-full">
+      <nav className="py-3 px-4 md:px-8 lg:px-20 xl:px-40">
         <div className="flex justify-between">
-          <div className="flex items-center grow-[2]">
+          <div className="flex items-center xl:grow-[2]">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 grow">
                 <Image src={LogoSanti} alt="Logo Santi Cuore PH" />
@@ -40,7 +40,7 @@ const Header = () => {
             </div>
           </div>
 
-          <ul className="hidden sm:flex justify-around items-center text-white text-xl grow-[2] pr-40">
+          <ul className="hidden sm:flex justify-around items-center text-white text-xl grow-[2] xl:pr-40">
             {navLinks.map((link) => {
               return (
                 <li
@@ -52,7 +52,7 @@ const Header = () => {
               );
             })}
           </ul>
-          <div className="flex gap-10">
+          <div className="flex sm:gap-3 lg:gap-6 xl:gap-10">
             <div className="hidden sm:flex grow justify-end items-center gap-10">
               <a href="https://www.instagram.com/santicuoreph" target="_blank">
                 <InstagramLogo size={32} />
@@ -82,9 +82,9 @@ const Header = () => {
         </div>
 
         {isClick && (
-          <div className="sm:hidden">
-            <div className="px-2 pt-2 space-y-1">
-              <ul className="flex flex-col items-center justify-between text-white grow text-2xl">
+          <div className="sm:hidden pb-1">
+            <div className="px-2 pt-2">
+              <ul className="flex flex-col items-center justify-between text-white grow text-2xl font-semibold gap-5">
                 {navLinks.map((link) => {
                   return (
                     <li className="hover:text-principalHover" key={link.name}>
@@ -92,18 +92,22 @@ const Header = () => {
                     </li>
                   );
                 })}
-                <div className="grow justify-end grow">
+                <div className="flex items-center gap-5">
                   <a
                     href="https://www.instagram.com/santicuoreph"
                     target="_blank"
                   >
                     <InstagramLogo size={32} />
                   </a>
-                </div>
-                <div className="grow justify-end grow">
                   <a href="" target="_blank">
                     <Whatsapp />
                   </a>
+                  <a href="" target="_blank">
+                    <FacebookLogo />
+                  </a>
+                </div>
+                <div className="grow justify-end grow">
+   
                 </div>
               </ul>
             </div>

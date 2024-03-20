@@ -1,4 +1,6 @@
-
+.bg-fondo {
+  background-color: rgba(41, 35, 25, 0.85);
+}
 
 .btn {
   width: 40px;
