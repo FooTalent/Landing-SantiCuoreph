@@ -8,7 +8,7 @@ const Banner = () => {
   return (
     <>
     <Link href="/servicios">
-    <section className="h-max px-2 space-y-2 font-merriwather text-white  bg-black overflow-hidden relative hover:text-secundario ">
+    <section className="h-max px-2 space-y-2 font-merriwather text-white  bg-fondoBlanco overflow-hidden relative ">
       <div className="absolute p-5 pt-16 right-0 left-0 top-0 z-30 flex h-fit w-fit">
           <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] lg:ml-20 ml-4  merriwather">
             Fotografía
@@ -22,6 +22,7 @@ const Banner = () => {
        width={4036}
        height={500}
        alt="terraza"
+       className="object-cover"
        >
 
        </Image>
@@ -30,7 +31,7 @@ const Banner = () => {
     </section>
     </Link>
     <Link href="/servicios/audiovisual">
-    <section className="h-max px-2 space-y-2 font-merriwather text-white  bg-black overflow-hidden relative hover:text-secundario">
+    <section className="h-max px-2 space-y-2 font-merriwather text-white bg-fondoBlanco overflow-hidden relative ">
       <div className="absolute p-5 pt-16 top-0 z-30 flex h-fit w-fit">
           <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] lg:ml-20 ml-4 merriwather hover:secundario">
             Edición Audiovisual

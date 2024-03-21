@@ -6,7 +6,6 @@ import TextLogo from "./TextLogo";
 import { useState } from "react";
 import Logo from "./Logo";
 import Whatsapp from "@/app/Icon/Whatsappequipo6";
-import FacebookLogo from "./FacebookLogo";
 import LogoSanti from "../../../../public/images/navbar/logo-santi.png";
 import Image from "next/image";
 import MenuOpen from "./MenuOpen";
