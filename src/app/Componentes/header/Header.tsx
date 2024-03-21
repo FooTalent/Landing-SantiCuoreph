@@ -4,9 +4,7 @@ import CameraLogo from "./CameraLogo";
 import InstagramLogo from "./InstagramLogo";
 import TextLogo from "./TextLogo";
 import { useState } from "react";
-import Logo from "./Logo";
 import Whatsapp from "@/app/Icon/Whatsappequipo6";
-import FacebookLogo from "./FacebookLogo";
 import LogoSanti from "../../../../public/images/navbar/logo-santi.png";
 import Image from "next/image";
 import MenuOpen from "./MenuOpen";
@@ -63,11 +61,6 @@ const Header = () => {
                 <Whatsapp />
               </a>
             </div>
-            <div className="hidden sm:flex grow justify-end items-center gap-10">
-              <a href="" target="_blank">
-                <FacebookLogo />
-              </a>
-            </div>
           </div>
           <div className="sm:hidden flex items-center relative" onClick={toggleNavbar}>
               <div className="box">
@@ -101,9 +94,6 @@ const Header = () => {
                   </a>
                   <a href="" target="_blank">
                     <Whatsapp />
-                  </a>
-                  <a href="" target="_blank">
-                    <FacebookLogo />
                   </a>
                 </div>
                 <div className="grow justify-end grow">
