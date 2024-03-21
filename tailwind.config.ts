@@ -16,9 +16,11 @@ const config: Config = {
       colors: {
         fondoNegro: "#292319",
         principal: "#FCCD35",
-        principalHover: "#FBBF01",
+        secundario: "#FBBF01",
+        principalHover: "#FCDC71",
         fondoBlanco: "#F2F2F2",
         fondoGris: "#424242",
+        fondoGrisClaro:"#696863",
         sliderHover: "#969696B2",
         slider: "#555555B2",
         sliderIndicator: "#EEC54A",
