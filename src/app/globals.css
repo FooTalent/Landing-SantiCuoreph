@@ -2,7 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.slick-next::before{
+content: " ";
+display: none;
+}
+.slick-prev::before{
+  display: none;
+  content: " ";
+}
 html {
   background-color: #F2F2F2;
 }
