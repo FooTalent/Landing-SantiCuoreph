@@ -9,47 +9,45 @@ import img07 from "../../../public/images/services/photography/img07.jpg";
 
 const ServicesPage = () => {
   return (
-    <section className="">
-      <div className="grid grid-cols-5 gap-3 mb-3 items-stretch" style={{ maxHeight: "1160px" }}>
+    <section className="px-4 lg:px-40">
+      <div className="grid grid-cols-5 gap-3 mb-3 items-stretch overflow-hidden lg:max-h-[550px] 2xl:max-h-[1160px]">
         <div className="col-span-2">
           <Image
             src={img01}
             alt="asd"
-            className="object-cover h-full rounded-2xl"
-            style={{ maxHeight: "1160px" }}
+            className="object-cover rounded-xl lg:max-h-[550px]"
           />
         </div>
         <div
-          className="col-span-3 grid grid-rows-2 gap-3 "
-          style={{ maxHeight: "1160px" }}
+          className="col-span-3 grid grid-rows-2 gap-3 lg:max-h-[550px]"
         >
           <div>
             <Image
               src={img02}
               alt="asd"
-              className="object-cover h-full rounded-2xl"
+              className="object-cover h-full rounded-2xl lg:max-h-[550px]"
             />
           </div>
           <div>
             <Image
               src={img03}
               alt="asd"
-              className="object-cover h-full rounded-2xl"
+              className="object-cover h-full rounded-2xl lg:max-h-[550px]"
             />
           </div>
         </div>
       </div>
 
-      <div className="mb-3" style={{ maxHeight: "571px" }}>
-        <Image src={img04} alt="asd" className="object-cover object-top h-full rounded-2xl w-full" style={{ maxHeight: "571px" }}/>
+      <div className="mb-3 lg:max-h-[456px]">
+        <Image src={img04} alt="asd" className="object-cover rounded-2xl lg:max-h-[456px]"/>
       </div>
 
-      <div className="grid grid-cols-5 gap-3 mb-3" style={{ maxHeight: "571px" }}>
-        <div className="col-span-2">
-          <Image src={img05} alt="asds" className="object-cover rounded-2xl" style={{ maxHeight: "571px" }} />
+      <div className="grid grid-cols-5 gap-3 mb-3 lg:max-h-[550px]">
+        <div className="col-span-2 lg:max-h-[200px]">
+          <Image src={img05} alt="asds" className="object-cover rounded-2xl lg:max-h-[200px]" />
         </div>
-        <div className="col-span-3">
-          <Image src={img06} alt="asds" className="object-fill rounded-2xl" style={{ maxHeight: "571px" }} />
+        <div className="col-span-3 lg:max-h-[550px]">
+          <Image src={img06} alt="asds" className="object-contain rounded-2xllg:max-h-[550px]" />
         </div>
       </div>
       <div className="mb-3" style={{ maxHeight: "571px" }}>
