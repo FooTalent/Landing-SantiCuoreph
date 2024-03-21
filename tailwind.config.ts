@@ -22,10 +22,15 @@ const config: Config = {
         sliderHover: "#969696B2",
         slider: "#555555B2",
         sliderIndicator: "#EEC54A",
+        formBackground: "#7D7D7Dcc",
+        inputBackground: "#424242cc",
       },
       fontFamily: {
         nunitoSans: ["Nunito Sans", "sans-serif"],
         merriwather: ["Merriweather Sans", "serif"],
+      },
+      backgound: {
+        contactoBackground: "url('/img/fondocontact.jpg')",
       },
     },
   },
