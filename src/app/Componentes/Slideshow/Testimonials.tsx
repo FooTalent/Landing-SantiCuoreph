@@ -65,10 +65,10 @@ const Slideshow = () => {
               <h3 className="text-fondoBlanco font-merriwather font-normal text-2xl md:text-4xl absolute left-4 lg:left-40 top-14 md:top-24">
                 Testimonios
               </h3>
-              <p className="text-fondoBlanco font-nunitoSans italic font-semibold text-sm md:text-2xl lg:text-2xl absolute md:mx-36 lg:mx-64 mx-20">
+              <p className="text-fondoBlanco font-nunitoSans italic font-semibold  text-xs sm:text-sm md:text-2xl lg:text-2xl absolute md:mx-36 lg:mx-64 mx-20">
                 {slideImage.caption}
               </p>
-              <p className="text-fondoBlanco font-nunitoSans font-semibold text-sm md:text-2xl lg:text-2xl absolute md:mx-36 lg:mx-64 mx-20 bottom-16 md:bottom-36">
+              <p className="text-fondoBlanco font-nunitoSans font-semibold text-xs sm:text-sm md:text-2xl lg:text-2xl absolute md:mx-36 lg:mx-64 mx-20 bottom-16 md:bottom-36">
                 {slideImage.caption2}
               </p>
             </div>
