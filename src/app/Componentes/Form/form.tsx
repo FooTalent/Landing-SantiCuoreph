@@ -134,18 +134,43 @@ export default function Form() {
           </fieldset>
         ) : (
           <fieldset className="flex gap-4 w-full justify-between">
-            <CustomButton
-              title="Fotografía"
-              styles="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans w-[310px]"
+            <input
+              name="tipoServicio"
+              type="radio"
+              id="fotografia"
+              className="peer/draft hidden"
             />
-            <CustomButton
-              title="Edición/Creación de video"
-              styles="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans w-[310px]"
+
+            <label
+              htmlFor="fotografia"
+              className="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft:border-principalHover grow"
+            >
+              Fotografía
+            </label>
+            <input
+              name="tipoServicio"
+              type="radio"
+              id="edicion"
+              className="hidden peer/draft1"
             />
-            <CustomButton
-              title="Ambos"
-              styles="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans w-[310px]"
+            <label
+              htmlFor="edicion"
+              className="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft1:border-principalHover grow"
+            >
+              Edición/Creación de video
+            </label>
+            <input
+              name="tipoServicio"
+              type="radio"
+              id="ambos"
+              className="hidden peer/draft2"
             />
+            <label
+              htmlFor="ambos"
+              className="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft2:border-principalHover grow"
+            >
+              Ambos
+            </label>
           </fieldset>
         )}
       </form>
@@ -156,15 +181,14 @@ export default function Form() {
           styles="bg-principal rounded-[40px] px-14 py-3 font-merriwather font-bold text-3xl mt-16 hover:bg-principalHover"
           onClick={() => setPaso(paso - 1)}
         />
-        {paso == 1 && (
-          <CustomButton
-            title="Continuar"
-            styles="bg-principal rounded-[40px] px-14 py-3 font-merriwather font-bold text-3xl mt-16"
-            onClick={() => {
-              setPaso(paso + 1);
-            }}
-          />
-        )}
+
+        <CustomButton
+          title="Continuar"
+          styles="bg-principal rounded-[40px] px-14 py-3 font-merriwather font-bold text-3xl mt-16"
+          onClick={() => {
+            setPaso(paso + 1);
+          }}
+        />
       </div>
     </div>
   );
