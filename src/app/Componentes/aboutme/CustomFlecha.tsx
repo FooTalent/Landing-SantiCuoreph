@@ -11,7 +11,7 @@ const CustomFlecha = (props: flechaProps) => {
 const {description}= props
 
     return(
-        <div className="flex flex-row nunitoSans font-bold text-xl gap-2 my-7">
+        <div className="flex flex-row nunitoSans font-bold text-xl gap-2 my-5">
         <Image
         src={flecha}
         width={17}

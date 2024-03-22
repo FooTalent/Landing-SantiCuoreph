@@ -5,6 +5,7 @@ import InstagramLogo from "./InstagramLogo";
 import TextLogo from "./TextLogo";
 import { useState } from "react";
 import Whatsapp from "@/app/Icon/Whatsappequipo6";
+import FacebookLogo from "./FacebookLogo";
 import LogoSanti from "../../../../public/images/navbar/logo-santi.png";
 import Image from "next/image";
 import MenuOpen from "./MenuOpen";
@@ -43,7 +44,7 @@ const Header = () => {
             {navLinks.map((link) => {
               return (
                 <li
-                  className="hover:text-secundario font-semibold hover:font-bold font-nunitoSans"
+                  className="hover:text-principalHover font-semibold hover:font-bold font-nunitoSans"
                   key={link.name}
                 >
                   <Link href={link.href}>{link.name}</Link>
