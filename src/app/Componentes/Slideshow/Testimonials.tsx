@@ -13,7 +13,7 @@ const slideImages = [
     url: "/assets/img/Test3.JPG",
     caption:
       '"Santi fue súper profesional, llegó puntual al evento, en nuestro caso hasta un rato antes inclusive, para ir viendo el lugar y saber dónde podía tomar mejores fotos aprovechando la luz del sol, muy cálido con toda la familia y logró unas fotos hermosas con todos. Lo recomiendo a full además de que tiene varias propuesta que puedan ser acordes a lo que uno esté buscando. Gracias Santi, la rompiste toda y nos quedaron hermosos recuerdos del primer cumpleañito de Ciro."',
-    caption2: "Usuario Desconocido",
+    caption2: "Guido Vitale",
   },
   {
     url: "/assets/img/Test1.JPG",
