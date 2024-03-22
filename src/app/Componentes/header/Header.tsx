@@ -4,9 +4,7 @@ import CameraLogo from "./CameraLogo";
 import InstagramLogo from "./InstagramLogo";
 import TextLogo from "./TextLogo";
 import { useState } from "react";
-import Logo from "./Logo";
 import Whatsapp from "@/app/Icon/Whatsappequipo6";
-import FacebookLogo from "./FacebookLogo";
 import LogoSanti from "../../../../public/images/navbar/logo-santi.png";
 import Image from "next/image";
 import MenuOpen from "./MenuOpen";
@@ -28,9 +26,10 @@ const Header = () => {
     setIsClick(!isClick);
   };
 
+
   return (
     <header className="bg-fondo fixed z-40 w-full">
-      <nav className="py-3 px-4 md:px-8 lg:px-20 xl:px-40">
+      <nav className="py-3 px-4 md:px-8 xl:max-w-screen-xl xl:mx-auto xl:px-0">
         <div className="flex justify-between">
           <div className="flex items-center xl:grow-[2]">
             <div className="flex-shrink-0">
