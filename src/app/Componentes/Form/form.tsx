@@ -45,14 +45,6 @@ export default function Form() {
         className="pt-8 pb-20 px-9 bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl h-[400px]"
       >
         {paso == 1 ? (
-          <div className="flex justify-between pb-6">
-            <h2 className="text-2xl font-bold">
-              Ingresá tus datos de contacto
-            </h2>
-            {/* Aqui incoporar el paso */}
-            <h2 className="text-xl">Paso {paso} de x</h2>
-          </div>
-        ) : (
           <div className="flex justify-between pb-10 font-nunitoSans">
             <h2 className="text-2xl font-bold">
               ¿Qué tipo de servicio necesitas?
@@ -60,10 +52,58 @@ export default function Form() {
 
             <h2 className="text-xl">Paso {paso} de x</h2>
           </div>
+        ) : (
+          <div className="flex justify-between pb-6">
+            <h2 className="text-2xl font-bold">
+              Ingresá tus datos de contacto
+            </h2>
+            {/* Aqui incoporar el paso */}
+            <h2 className="text-xl">Paso {paso} de x</h2>
+          </div>
         )}
         {/* register your input into the hook by invoking the "register" function */}
         {/**Paso 1*/}
         {paso == 1 ? (
+          <fieldset className="flex gap-4 w-full justify-between">
+            <input
+              name="tipoServicio"
+              type="radio"
+              id="fotografia"
+              className="peer/draft hidden"
+            />
+
+            <label
+              htmlFor="fotografia"
+              className="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft:border-principalHover grow"
+            >
+              Fotografía
+            </label>
+            <input
+              name="tipoServicio"
+              type="radio"
+              id="edicion"
+              className="hidden peer/draft1"
+            />
+            <label
+              htmlFor="edicion"
+              className="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft1:border-principalHover grow"
+            >
+              Edición/Creación de video
+            </label>
+            <input
+              name="tipoServicio"
+              type="radio"
+              id="ambos"
+              className="hidden peer/draft2"
+            />
+            <label
+              htmlFor="ambos"
+              className="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft2:border-principalHover grow"
+            >
+              Ambos
+            </label>
+          </fieldset>
+        ) : (
           <fieldset
             id="paso1"
             className="grid grid-cols-2 grid-rows-2 gap-x-24 gap-y-4 text-xl"
@@ -130,46 +170,6 @@ export default function Form() {
                 className="appearance-none w-7 h-7 border-2 border-principalHover rounded-md"
               />{" "}
               Quiero recibir mi presupuesto por mail
-            </label>
-          </fieldset>
-        ) : (
-          <fieldset className="flex gap-4 w-full justify-between">
-            <input
-              name="tipoServicio"
-              type="radio"
-              id="fotografia"
-              className="peer/draft hidden"
-            />
-
-            <label
-              htmlFor="fotografia"
-              className="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft:border-principalHover grow"
-            >
-              Fotografía
-            </label>
-            <input
-              name="tipoServicio"
-              type="radio"
-              id="edicion"
-              className="hidden peer/draft1"
-            />
-            <label
-              htmlFor="edicion"
-              className="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft1:border-principalHover grow"
-            >
-              Edición/Creación de video
-            </label>
-            <input
-              name="tipoServicio"
-              type="radio"
-              id="ambos"
-              className="hidden peer/draft2"
-            />
-            <label
-              htmlFor="ambos"
-              className="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft2:border-principalHover grow"
-            >
-              Ambos
             </label>
           </fieldset>
         )}
