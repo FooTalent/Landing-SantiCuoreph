@@ -2,14 +2,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.slick-next::before{
-content: " ";
-display: none;
+
+.slick-next::before {
+  content: " ";
+  display: none;
 }
-.slick-prev::before{
+
+.slick-prev::before {
   display: none;
   content: " ";
 }
+
 html {
   background-color: #F2F2F2;
 }
@@ -55,7 +58,7 @@ html {
 }
 
 #formulario {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(/assets/img/fondoContact.jpeg) no-repeat;
   background-size: cover;
 }

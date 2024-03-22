@@ -20,11 +20,11 @@ const config: Config = {
         principalHover: "#FCDC71",
         fondoBlanco: "#F2F2F2",
         fondoGris: "#424242",
-        fondoGrisClaro:"#696863",
+        fondoGrisClaro: "#696863",
         sliderHover: "#969696B2",
         slider: "#555555B2",
         sliderIndicator: "#EEC54A",
-        formBackground: "#7D7D7Dcc",
+        formBackground: "#424242cc",
         inputBackground: "#424242cc",
       },
       fontFamily: {

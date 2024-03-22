@@ -19,7 +19,7 @@ export default function Form() {
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
-  const [paso, setPaso] = useState(1);
+  const [paso, setPaso] = useState(0);
 
   console.log(watch("nombre")); // watch input value by passing the name of it
 
@@ -42,15 +42,13 @@ export default function Form() {
       )}
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="pt-8 pb-20 px-9 bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl h-[400px]"
+        className="pt-8 pb-20 px-9 bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl h-[400px] backdrop-blur-xl drop-shadow-2xl"
       >
-        {paso == 1 ? (
+        {paso == 0 ? (
           <div className="flex justify-between pb-10 font-nunitoSans">
             <h2 className="text-2xl font-bold">
               ¿Qué tipo de servicio necesitas?
             </h2>
-
-            <h2 className="text-xl">Paso {paso} de x</h2>
           </div>
         ) : (
           <div className="flex justify-between pb-6">
@@ -63,7 +61,7 @@ export default function Form() {
         )}
         {/* register your input into the hook by invoking the "register" function */}
         {/**Paso 1*/}
-        {paso == 1 ? (
+        {paso == 0 ? (
           <fieldset className="flex gap-4 w-full justify-between">
             <input
               name="tipoServicio"
@@ -88,7 +86,7 @@ export default function Form() {
               htmlFor="edicion"
               className="rounded-[20px] border-2 border-secundario bg-[#424242cc] py-[11px] text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft1:border-principalHover grow"
             >
-              Edición/Creación de video
+              Edición / Creación de video
             </label>
             <input
               name="tipoServicio"
@@ -113,7 +111,7 @@ export default function Form() {
               <input
                 {...register("nombre", { required: true })}
                 id="nombre"
-                className="mt-2 border-[1.5px] border-principalHover rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-inputBackground focus:outline outline-3 outline-principalHover"
+                className="mt-2 border-[1.5px] border-principalHover rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-inputBackground focus:outline outline-[2px] outline-principalHover"
               />
               {errors.nombre && <span>Este campo es requerido</span>}
             </label>
@@ -184,7 +182,7 @@ export default function Form() {
 
         <CustomButton
           title="Continuar"
-          styles="bg-principal rounded-[40px] px-14 py-3 font-merriwather font-bold text-3xl mt-16"
+          styles="bg-principal rounded-[40px] px-14 py-3 font-merriwather font-bold text-3xl mt-16 hover:bg-principalHover"
           onClick={() => {
             setPaso(paso + 1);
           }}
