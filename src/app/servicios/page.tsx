@@ -9,7 +9,7 @@ import img07 from "../../../public/images/services/photography/img07.jpg";
 
 const ServicesPage = () => {
   return (
-    <section className="xl:max-w-screen-xl mx-auto">
+    <section className="xl:max-w-screen-xl mx-auto mb-36">
       <div className="grid grid-cols-5 gap-3 mb-3 items-stretch overflow-hidden xl:max-h-[928px]">
         <div className="col-span-2">
           <Image
