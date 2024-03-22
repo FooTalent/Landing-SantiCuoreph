@@ -1,14 +1,12 @@
 "use client";
 import Image from "next/image";
 import bannerFotografia from '../../../public/images/banner.jpg'
-import Link from "next/link";
 
 const Banner = () => {
 
   return (
     <>
-    <Link href="/servicios">
-    <section className="h-max px-2 space-y-2 font-merriwather text-white  bg-fondoBlanco overflow-hidden relative ">
+    <section className="h-max px-2 space-y-2 font-merriwather text-white  bg-black overflow-hidden relative">
       <div className="absolute p-5 pt-16 right-0 left-0 top-0 z-30 flex h-fit w-fit">
           <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] lg:ml-20 ml-4  merriwather">
             Fotografía
@@ -22,18 +20,15 @@ const Banner = () => {
        width={4036}
        height={500}
        alt="terraza"
-       className="object-cover"
        >
 
        </Image>
 
       </div>
     </section>
-    </Link>
-    <Link href="/servicios/audiovisual">
-    <section className="h-max px-2 space-y-2 font-merriwather text-white bg-fondoBlanco overflow-hidden relative ">
+    <section className="h-max px-2 space-y-2 font-merriwather text-white  bg-black overflow-hidden relative">
       <div className="absolute p-5 pt-16 top-0 z-30 flex h-fit w-fit">
-          <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] lg:ml-20 ml-4 merriwather hover:secundario">
+          <h2 className="text-[2rem] md:text-[3rem] lg:text-[4rem] lg:ml-20 ml-4 merriwather ">
             Edición Audiovisual
           </h2>
         </div>
@@ -50,7 +45,6 @@ const Banner = () => {
           />
       </div>
     </section>
-    </Link>
     </>
   );
 };
