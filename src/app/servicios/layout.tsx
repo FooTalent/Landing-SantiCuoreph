@@ -20,8 +20,8 @@ const ServicesLayout =({
     
 
     return (
-        <div className="px-4 lg:px-40 font-merriwather font-bold">
-            <section className=" pb-8 border-b-4 border-black text-fondoNegro md:text-7xl 2xl:text-8xl pl-[1.5em] mb-[1em]">
+        <div className="font-merriwather font-bold">
+            <section className="xl:max-w-screen-xl mx-auto pb-8 border-b-4 border-black text-fondoNegro md:text-7xl 2xl:text-8xl pl-[1.5em] mb-[1em]">
                 <h1 className="pt-[1.6em] pb-[.4em]">Servicios</h1>
                 <div className="flex gap-8 text-4xl">
                     {
@@ -38,8 +38,8 @@ const ServicesLayout =({
                 </div>
             </section>
             {children}
-            <section>
-                <ServiceBanner></ServiceBanner>
+            <section className="w-full">
+                <ServiceBanner textBanner="Producciones fotográficas de calidad y la mejor cobertura para tus eventos"></ServiceBanner>
             </section>
         </div>
     );
