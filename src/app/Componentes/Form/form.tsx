@@ -26,17 +26,23 @@ export default function Form() {
   return (
     /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <div>
-      <div className="text-fondoBlanco text-3xl mb-10 font-nunitoSans">
-        <h2 className="text-3xl font-bold">
-          Solicitá hoy tu presupuesto completando el siguiente formulario.
-        </h2>
-        <h2 className="text-3xl font-bold">
-          Tendrás una respuesta en un plazo de 48 horas.
-        </h2>
-      </div>
+      {paso == 1 ? (
+        <div className="text-fondoBlanco text-3xl mb-10 font-nunitoSans">
+          <h2 className="text-3xl font-bold">Información de contacto</h2>
+        </div>
+      ) : (
+        <div className="text-fondoBlanco text-3xl mb-10 font-nunitoSans">
+          <h2 className="text-3xl font-bold">
+            Solicitá hoy tu presupuesto completando el siguiente formulario.
+          </h2>
+          <h2 className="text-3xl font-bold">
+            Tendrás una respuesta en un plazo de 48 horas.
+          </h2>
+        </div>
+      )}
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="pt-8 pb-20 px-10 bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl h-[400px]"
+        className="pt-8 pb-20 px-9 bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl h-[400px]"
       >
         {paso == 1 ? (
           <div className="flex justify-between pb-6">
@@ -60,14 +66,14 @@ export default function Form() {
         {paso == 1 ? (
           <fieldset
             id="paso1"
-            className="grid grid-cols-2 grid-rows-2 gap-x-28 gap-y-5 text-xl"
+            className="grid grid-cols-2 grid-rows-2 gap-x-24 gap-y-4 text-xl"
           >
             <label htmlFor="nombre" className="flex flex-col">
               Nombre
               <input
                 {...register("nombre", { required: true })}
                 id="nombre"
-                className="mt-2 border-[1.5px] border-principalHover rounded-2xl h-16 text-xl px-4 py-3 text-fondoBlanco bg-inputBackground focus:outline outline-3 outline-principalHover"
+                className="mt-2 border-[1.5px] border-principalHover rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-inputBackground focus:outline outline-3 outline-principalHover"
               />
               {errors.nombre && <span>Este campo es requerido</span>}
             </label>
@@ -78,22 +84,22 @@ export default function Form() {
               <input
                 {...register("apellido", { required: true })}
                 id="apellido"
-                className="mt-2 border-[1.5px] border-principalHover rounded-2xl h-16 text-xl px-4 py-3 text-fondoBlanco bg-inputBackground focus:outline outline-3 outline-principalHover"
+                className="mt-2 border-[1.5px] border-principalHover rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-inputBackground focus:outline outline-3 outline-principalHover"
               />
             </label>
             {/* errors will return when field validation fails  */}
             {errors.nombre && <span>This field is required</span>}
             <label htmlFor="telefono" className="flex flex-col">
               Telefono
-              <div className="flex gap-3">
+              <div className="flex gap-3 w-full">
                 <input
                   {...register("telefono1", { required: true })}
-                  className="mt-2 border-[1.5px] border-principalHover rounded-2xl h-16 text-xl px-4 py-3 text-fondoBlanco bg-inputBackground w-20 focus:outline outline-3 outline-principalHover"
+                  className="mt-2 border-[1.5px] border-principalHover rounded-2xl w-20 h-11 text-xl px-4 py-3 text-fondoBlanco bg-inputBackground focus:outline outline-3 outline-principalHover"
                   id="telefono"
                 />
                 <input
                   {...register("telefono2", { required: true })}
-                  className="mt-2 border-[1.5px] border-principalHover rounded-2xl h-16 text-xl px-4 py-3 text-fondoBlanco bg-inputBackground grow focus:outline outline-3 outline-principalHover"
+                  className="mt-2 border-[1.5px] border-principalHover w-full rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-inputBackground 2xl:grow focus:outline outline-3 outline-principalHover"
                 />
               </div>
             </label>
@@ -102,20 +108,26 @@ export default function Form() {
               <input
                 {...register("email")}
                 type="email"
-                className="mt-2 border-[1.5px] border-principalHover rounded-2xl h-16 text-xl px-4 py-3 text-fondoBlanco bg-inputBackground focus:outline outline-3 outline-principalHover"
+                className="mt-2 border-[1.5px] border-principalHover rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-inputBackground focus:outline outline-3 outline-principalHover"
               />
             </label>
-            <label htmlFor="whatsapp" className="flex grow gap-2 items-center">
+            <label
+              htmlFor="whatsapp"
+              className="flex w-full gap-1 items-center text-base"
+            >
               <input
                 type="checkbox"
-                className="appearance-none w-8 h-8 border-[3px] border-principalHover rounded-md "
+                className="appearance-none w-7 h-7 border-2 border-principalHover rounded-md "
               />{" "}
               Quiero recibir mi presupuesto por Whatsapp
             </label>
-            <label htmlFor="whatsapp" className="flex grow gap-2 items-center">
+            <label
+              htmlFor="mail"
+              className="flex w-full gap-1 items-center text-base"
+            >
               <input
                 type="checkbox"
-                className="appearance-none w-8 h-8 border-[3px] border-principalHover rounded-md"
+                className="appearance-none w-7 h-7 border-2 border-principalHover rounded-md"
               />{" "}
               Quiero recibir mi presupuesto por mail
             </label>
