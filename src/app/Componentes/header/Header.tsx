@@ -26,6 +26,7 @@ const Header = () => {
     setIsClick(!isClick);
   };
 
+
   return (
     <header className="bg-fondo fixed z-40 w-full">
       <nav className="py-3 px-4 md:px-8 lg:px-20 xl:px-40">
