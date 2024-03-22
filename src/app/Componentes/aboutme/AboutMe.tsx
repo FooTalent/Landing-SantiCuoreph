@@ -5,7 +5,7 @@ import CustomFlecha from "./CustomFlecha";
 const AboutMe = () => {
     return (
         <>
-        <section className="Sobremi flex flex-col items-center justify-center lg:flex-row lg:items-start gap-20 my-40">
+        <section className="Sobremi flex flex-col items-center justify-center lg:flex-row lg:items-start gap-20 m-6 my-40">
             <picture className="Sobremi__retrato  h-[350px]  sm-[420px] lg:h-[480px] m-2">
                 <Image
                 src={santi}
@@ -16,7 +16,7 @@ const AboutMe = () => {
 
                 </Image>
             </picture>
-            <div className="sobremi__texto Merriweather w-fit max-w-sm">
+            <div className="sobremi__texto Merriweather w-fit max-w-[369px]">
                 <h2 className="nunitoSans font-bold text-4xl mb-5">Sobre mí</h2>
                 <p className="text-balance text-xl">¡Hola! Soy Santiago García, creador de <b>SantiCuorePH</b>, y soy...</p>
                 <CustomFlecha description="Fotógrafo profesional" />
