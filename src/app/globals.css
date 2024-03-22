@@ -2,7 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.slick-next::before{
+content: " ";
+display: none;
+}
+.slick-prev::before{
+  display: none;
+  content: " ";
+}
 html {
   background-color: #F2F2F2;
 }
@@ -45,4 +52,10 @@ html {
 
 .indicators li .active::before {
   background-color: #FCCD35 !important;
+}
+
+#formulario {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(/assets/img/fondoContact.jpeg) no-repeat;
+  background-size: cover;
 }

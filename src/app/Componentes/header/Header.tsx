@@ -43,7 +43,7 @@ const Header = () => {
             {navLinks.map((link) => {
               return (
                 <li
-                  className="hover:text-principalHover font-semibold hover:font-bold font-nunitoSans"
+                  className="hover:text-secundario font-semibold hover:font-bold font-nunitoSans"
                   key={link.name}
                 >
                   <Link href={link.href}>{link.name}</Link>
