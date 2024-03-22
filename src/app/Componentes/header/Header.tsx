@@ -63,11 +63,6 @@ const Header = () => {
                 <Whatsapp />
               </a>
             </div>
-            <div className="hidden sm:flex grow justify-end items-center gap-10">
-              <a href="" target="_blank">
-                <FacebookLogo />
-              </a>
-            </div>
           </div>
           <div className="sm:hidden flex items-center relative" onClick={toggleNavbar}>
               <div className="box">
@@ -101,9 +96,6 @@ const Header = () => {
                   </a>
                   <a href="" target="_blank">
                     <Whatsapp />
-                  </a>
-                  <a href="" target="_blank">
-                    <FacebookLogo />
                   </a>
                 </div>
                 <div className="grow justify-end grow">
