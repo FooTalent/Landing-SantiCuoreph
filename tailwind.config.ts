@@ -31,9 +31,6 @@ const config: Config = {
         nunitoSans: ["Nunito Sans", "sans-serif"],
         merriwather: ["Merriweather Sans", "serif"],
       },
-      backgound: {
-        contactoBackground: "url('/img/fondocontact.jpg')",
-      },
     },
   },
   plugins: [],

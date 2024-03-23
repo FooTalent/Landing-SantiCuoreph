@@ -13,7 +13,7 @@ const slideImages = [
     url: "/assets/img/Test3.JPG",
     caption:
       '"Santi fue súper profesional, llegó puntual al evento, en nuestro caso hasta un rato antes inclusive, para ir viendo el lugar y saber dónde podía tomar mejores fotos aprovechando la luz del sol, muy cálido con toda la familia y logró unas fotos hermosas con todos. Lo recomiendo a full además de que tiene varias propuesta que puedan ser acordes a lo que uno esté buscando. Gracias Santi, la rompiste toda y nos quedaron hermosos recuerdos del primer cumpleañito de Ciro."',
-    caption2: "Usuario Desconocido",
+    caption2: "Guido Vitale",
   },
   {
     url: "/assets/img/Test1.JPG",
@@ -65,10 +65,10 @@ const Slideshow = () => {
               <h3 className="text-fondoBlanco font-merriwather font-normal text-2xl md:text-4xl absolute left-4 lg:left-40 top-14 md:top-24">
                 Testimonios
               </h3>
-              <p className="text-fondoBlanco font-nunitoSans italic font-semibold  text-xs sm:text-sm md:text-2xl lg:text-2xl absolute md:mx-36 lg:mx-64 mx-20">
+              <p className="text-fondoBlanco font-nunitoSans italic font-semibold text-sm md:text-2xl lg:text-2xl absolute md:mx-36 lg:mx-64 mx-20">
                 {slideImage.caption}
               </p>
-              <p className="text-fondoBlanco font-nunitoSans font-semibold text-xs sm:text-sm md:text-2xl lg:text-2xl absolute md:mx-36 lg:mx-64 mx-20 bottom-16 md:bottom-36">
+              <p className="text-fondoBlanco font-nunitoSans font-semibold text-sm md:text-2xl lg:text-2xl absolute md:mx-36 lg:mx-64 mx-20 bottom-16 md:bottom-36">
                 {slideImage.caption2}
               </p>
             </div>

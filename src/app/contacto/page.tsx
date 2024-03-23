@@ -1,5 +1,4 @@
 import Form from "../Componentes/Form/form";
-
 const Contact = () => {
   return (
     <div className="">

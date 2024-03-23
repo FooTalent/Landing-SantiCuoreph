@@ -4,13 +4,11 @@ import CameraLogo from "./CameraLogo";
 import InstagramLogo from "./InstagramLogo";
 import TextLogo from "./TextLogo";
 import { useState } from "react";
-import Logo from "./Logo";
 import Whatsapp from "@/app/Icon/Whatsappequipo6";
 import LogoSanti from "../../../../public/images/navbar/logo-santi.png";
 import Image from "next/image";
-import MenuOpen from "./MenuOpen";
-import MenuClose from "./MenuClose";
 import "./styles.css";
+import Logo from "./Logo";
 
 const navLinks = [
   { name: "Servicios", href: "/servicios" },
@@ -27,14 +25,15 @@ const Header = () => {
     setIsClick(!isClick);
   };
 
+
   return (
     <header className="bg-fondo fixed z-40 w-full">
-      <nav className="py-3 px-4 md:px-8 lg:px-20 xl:px-40">
+      <nav className="py-3 px-4 md:px-8 xl:max-w-screen-xl xl:mx-auto xl:px-0">
         <div className="flex justify-between">
           <div className="flex items-center xl:grow-[2]">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-2 grow">
-                <Image src={LogoSanti} alt="Logo Santi Cuore PH" />
+              <Link href="/" className="flex items-center gap-2 grow w-40 md:w-56">
+                <Logo />
               </Link>
             </div>
           </div>
@@ -43,7 +42,7 @@ const Header = () => {
             {navLinks.map((link) => {
               return (
                 <li
-                  className="hover:text-secundario font-semibold hover:font-bold font-nunitoSans"
+                  className="hover:text-principalHover font-semibold hover:font-bold font-nunitoSans"
                   key={link.name}
                 >
                   <Link href={link.href}>{link.name}</Link>

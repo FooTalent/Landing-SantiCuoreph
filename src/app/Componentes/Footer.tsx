@@ -4,7 +4,7 @@ import Whatsapp from "../Icon/Whatsapp";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-fondoGris flex flex-col justify-center items-center text-center text-fondoBlanco gap-3 p-10 overflow-hidden nunitoSans font-normal text-xl 2xl:text-base">
+      <footer className="bg-fondoGris flex flex-col justify-center items-center text-center text-fondoBlanco gap-3 p-10 overflow-hidden nunitoSans font-normal text-base">
         <h4 className="text-2xl font-bold">¡Hablemos de tu proyecto!</h4>
         <picture className="flex flex-row justify-center items-center gap-8">
           <hr className="min-w-[500px]"></hr>
