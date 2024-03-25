@@ -33,12 +33,12 @@ const Header = () => {
           <div className="flex items-center xl:grow-[2]">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 grow w-40 md:w-56">
-                <Logo />
+                <Logo width={220} height={52} />
               </Link>
             </div>
           </div>
 
-          <ul className="hidden sm:flex justify-around items-center text-white text-xl grow-[2] xl:pr-40">
+          <ul className="hidden sm:flex justify-around items-center text-white text-[19px] grow-[2] xl:pr-40">
             {navLinks.map((link) => {
               return (
                 <li
@@ -53,12 +53,12 @@ const Header = () => {
           <div className="flex sm:gap-3 lg:gap-6 xl:gap-10">
             <div className="hidden sm:flex grow justify-end items-center gap-10">
               <a href="https://www.instagram.com/santicuoreph" target="_blank">
-                <InstagramLogo size={32} />
+                <InstagramLogo size={26} />
               </a>
             </div>
             <div className="hidden sm:flex grow justify-end items-center gap-10">
               <a href="" target="_blank">
-                <Whatsapp />
+                <Whatsapp size={28} />
               </a>
             </div>
           </div>
