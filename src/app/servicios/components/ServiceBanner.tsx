@@ -10,7 +10,7 @@ const ServiceBanner = (props : ServiceBannerProps) => {
     return (
         <section className="relative">
             <Image src={bannerPhotos} alt="banner" className="object-cover max-h-[500px] w-full" />
-            <div className="absolute inset-0 xl:max-w-screen-xl mx-auto items-center justify-between flex">
+            <div className="absolute inset-0 xl:max-w-screen-xl mx-auto items-center justify-between flex flex-wrap lg:flex-nowrap">
                 <div>
                 <h3 className="text-[43px] text-fondoBlanco font-nunitoSans">{props.textBanner}</h3>
                 </div>

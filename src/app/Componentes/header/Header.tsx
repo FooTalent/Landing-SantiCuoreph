@@ -7,9 +7,8 @@ import { useState } from "react";
 import Whatsapp from "@/app/Icon/Whatsappequipo6";
 import LogoSanti from "../../../../public/images/navbar/logo-santi.png";
 import Image from "next/image";
-import MenuOpen from "./MenuOpen";
-import MenuClose from "./MenuClose";
 import "./styles.css";
+import Logo from "./Logo";
 
 const navLinks = [
   { name: "Servicios", href: "/servicios" },
@@ -33,8 +32,8 @@ const Header = () => {
         <div className="flex justify-between">
           <div className="flex items-center xl:grow-[2]">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-2 grow">
-                <Image src={LogoSanti} alt="Logo Santi Cuore PH" />
+              <Link href="/" className="flex items-center gap-2 grow w-40 md:w-56">
+                <Logo />
               </Link>
             </div>
           </div>

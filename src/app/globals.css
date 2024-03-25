@@ -53,3 +53,15 @@ html {
 .indicators li .active::before {
   background-color: #FCCD35 !important;
 }
+
+.Sobremi{
+  display: grid;
+  grid-template-rows: 3;
+  grid-template-columns: 1;
+  place-content: center;
+}
+
+.quiensoy{
+  grid-row: 1 / 3;
+}
+

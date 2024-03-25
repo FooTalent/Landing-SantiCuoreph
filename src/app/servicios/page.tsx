@@ -18,18 +18,18 @@ const ServicesPage = (props: PhotographyServiceInfo[]) => {
 
   return (
     <section className="xl:max-w-screen-xl mx-auto mb-36">
-      <div className="grid grid-cols-5 gap-3 mb-3 items-stretch overflow-hidden xl:max-h-[928px] relative">
-        <div className="col-span-2">
+      <div className="grid grid-cols-5 gap-3 mb-3 items-stretch overflow-hidden xl:max-h-[928px] text-fondoBlanco">
+        <picture className="col-span-2 relative h-full w-full">
+          <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
+            <h2 className="text-5xl mb-4 italic">Lorena</h2>
+            <h3 className="text-3xl font-thin">Retrato Artístico</h3>
+          </div>
           <Image
             src={img01}
             alt="asd"
             className="object-cover rounded-xl h-full xl:max-h-[928px]"
           />
-        </div>
-        <div className="mx-auto my-auto text-center absolute">
-          <h2>Lorena</h2>
-          <h3>Retrato artisicto</h3>
-        </div>
+        </picture>
         <div
           className="col-span-3 grid grid-rows-2 gap-3 xl:max-h-[928px]"
         >
