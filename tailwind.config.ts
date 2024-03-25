@@ -25,7 +25,8 @@ const config: Config = {
         slider: "#555555B2",
         sliderIndicator: "#EEC54A",
         formBackground: "#424242cc",
-        inputBackground: "#424242cc",
+        inputBorderSelected: "#FBBF01",
+        textoInput: "#292319",
       },
       fontFamily: {
         nunitoSans: ["Nunito Sans", "sans-serif"],
