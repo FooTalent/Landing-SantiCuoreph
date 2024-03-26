@@ -255,7 +255,7 @@ const Audiovisual = () => {
               className="h-[1344px] rounded-2xl object-cover  w-full"
               loop
               muted
-              src="https://s3-figma-videos-production-sig.figma.com/video/1159262127674411291/TEAM/ce1a/1b48/-85d7-44fb-9b96-104d788a4786?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JvL4ujCfx3eOx4TKgOhlJpk1IGroqvJyr5YUAI59kPbl-rvCqpVe~WsK0HM3na09KL657VJvmN1JFZvmBdzjK9s4J7tOCL3NW8JV~tV~X3LXxUYiEz5Q0dapUCREQW1mHXIKBDx8gvEcXSPYV8wG92L4fpNNXNoVxJOTdYgJYBZ~te1bEmF1m6VDtcNT-5ywRokSu~u-6BohW4cel-fqxzVs8ykWl8fjMhDkO40o5girBXHCFh59rRRb8s1eTWfpKfDVuvVKgqPEpfpHQzp-MlF5tNtCl2kN9ThiQNPP-4zASsJRVfbOs~EJ~clRlVrT~Txo0CfdH2cIMIY9RQr5JQ__"
+              src="/videos/Backstage Microcentro ALTA.mp4"
             />
             <div
               onClick={() => {
@@ -284,7 +284,7 @@ const Audiovisual = () => {
                 className=" object-cover rounded-2xl h-full w-full "
                 loop
                 muted
-                src="https://s3-figma-videos-production-sig.figma.com/video/1159262127674411291/TEAM/cef7/36ca/-a141-40b3-8f53-79cd6c4aa1d9?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RF65o0qclXmGSrETDL2rWGDJuR8Hiazy67IdHnJCyRjHoSJzlypw~nB3w9JdRNCKBFDyuClhlfoB6HtkuobTzPrC6vUrIUz3Eh97wQBm4I78j9nJnKDvU~Ap6LFbunn32Sfi~S9UeecOXtxMSeLuAlv4suUM012xJzqBzV5-HABVY9tGM8lxEsoM2IQA5hOgB3vqfhoKsLmZF-NLe7zFvfaGNTDYbusjNVb4jiywZM8hpNUfm85y4pLBv11-hkqi2TCpMmEIrdq-GKXwfY2yiFYQo3R2PVlmO-giv4uFyCCMAGrn9KoK3YQXA09RKSq1zuxSH5pe9d~oZevGRO~fVA__"
+                src="/videos/Sala de Exposiciones.mp4"
               />
               <div
                 onClick={() => {
@@ -311,7 +311,7 @@ const Audiovisual = () => {
                 className=" object-cover rounded-2xl h-full w-full"
                 loop
                 muted
-                src="https://s3-figma-videos-production-sig.figma.com/video/1159262127674411291/TEAM/1319/0194/-ffd4-4bb6-8432-79cb045c2c58?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gMVgihU5xxgDK1N2Du7osgVvPN7BW8Ar-7kltMtxCVcjjED8h~s-5n-2sK~gxCOZsGGC7SNmwUn5Iogcn1G5ll~Pw5jUNWKsgOK2oQVQ98g7OJsKRjw0fcBY5BuCAGuv~XZ2qmYZnxDOF9m2oxmqaL~wWHS1-E1ZRxud9cnoeHU4niBMBnE221LxDDW-rCC6jQXcqXJ5IoICYm-I2y1yggM213juGuhVwkz5PNwNAyoOgNjBtfihGK0F8cYOrFwpPhuSZghQ02m5FjUK9KL7TU8GMC8NX0-bDIgeQ-EpHEjU4z4un~hqwXo6gAuWYSBjWnz9iUjPfcqV019cYVcgHA__"
+                src="/videos/Biró.mp4"
               />
               <div
                 onClick={() => {
