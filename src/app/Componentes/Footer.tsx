@@ -15,7 +15,7 @@ const Footer = () => {
         <hr className="min-w-[500px]"></hr>
         </picture>
         <p>Prohibida la reproducción total o parcial de este sitio y su contenido.</p>
-        <p className="font-bold">SantiCuorePH Copyright &copy; 2024. Buenos Aires, Argentina.</p>
+        <p><b>Santiago García. 2024.</b> Buenos Aires, Argentina.</p>
        </footer>
 
        </> 

@@ -25,7 +25,7 @@ const AboutMe = () => {
                     </Image>
                 </picture>
                 <div className='sobremi__text text-start mt-28 text-xl lg:text-2xl max-w-[560px] p-14 lg:p-0' >
-                        <h2 className='text-2xl lg:text-4xl font-semibold mb-14'>!Hola! <br/> Soy Santiago García.</h2>
+                        <h2 className='text-2xl lg:text-4xl font-semibold mb-14'>¡Hola! <br/> Soy Santiago García.</h2>
                         <p className='mb-14'>Soy una persona divertida, creativa, apasionada. Y soy el corazón detrás de <b>SantiCuore PH.</b> Actualmente vivo en la vibrante ciudad de Buenos Aires, Argentina.</p>
                         <p>El año 2013 fue el punto de partida en que empezó mi recorrido en el fascinante mundo de la fotografía. Estudié y luego me recibí como Técnico Superior en Fotografía Profesional en el ISEC.</p>
                     </div>
@@ -60,7 +60,7 @@ const AboutMe = () => {
         </section>
         <div className='bg-fixed  h-screen' style={{backgroundImage: 'url("https://s3-alpha-sig.figma.com/img/e6c6/ce3f/773d9dc268a1dd97887da3dcec35d2c3?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jd7UWTGyr66htvt7r-nJ~mVekLu3nx7blC-9aA7XydY6uIz3g5droj2rOAb7ATvv-4YHadS4fxUwXyTvCs8-1QHtQr4N6L57HUE0WwmgterP~YnqSWCdObnCRoXsSPKIxb4FsOYEZbsQ5QGwVDzA31AkBfVNog54Y4OE88ZMO3GzzJxYjR~uaFZjJpKqK4Jrjc9yijH8cUuYrzubhL0yLPlo0K8JQDSaTWkVuQihHEBZ7IT~SVDDQwZm1CGzLojXa05xCwO7R~j1tztzp9WBD7SJNLVMnH~~z3JQG~r5SozjyLWrYRXCiZb7RLDwlIG8wltWzz-pCzNMc0r98huV9g__")'}} >
         </div>
-        <section className='w-full grid grid-cols-1 lg:grid-cols-2 h-full items-center'>
+        <section className='w-full grid grid-cols-1 lg:grid-cols-2 h-[465px] items-start'>
         <picture className="flex justify-start">
                     <Image
                     src={santiago}
@@ -72,10 +72,10 @@ const AboutMe = () => {
                     </Image>
                 </picture>
         <div className='sobremi__text'>
-            <div className='text-2xl text-balance m-20'>
-                        <p className='mb-16'>Mi enfoque va más allá de simplemente capturar imágenes y editar videos:</p>  
-                        <p className='mb-24'>Me encargo de crear recuerdos y construir historias que perduren en el tiempo</p>
-                        <p className='mb-24'>Ahora que ya sabés un poco mas sobre mí...</p>
+            <div className='text-2xl text-balance m-20 mt-10'>
+                        <p className='mb-12'>Mi enfoque va más allá de simplemente capturar imágenes y editar videos:</p>  
+                        <p className='mb-14'>Me encargo de crear recuerdos y construir historias que perduren en el tiempo</p>
+                        <p className='mb-14'>Ahora que ya sabés un poco mas sobre mí...</p>
                         <p className='font-bold'>¡Es hora de conocernos!</p>
                     </div>
             </div>
