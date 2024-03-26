@@ -1,27 +1,56 @@
-import Image from "next/image";
-import bannerPhotos from "../../../../public/images/services/photography/banner/bannerphoto.jpg";
-import Link from "next/link";
+"use client"
 
-type ServiceBannerProps = {
-    textBanner: string
-}
+import Image, { StaticImageData } from 'next/image';
+import { Fade } from "react-slideshow-image"
 
-const ServiceBanner = (props : ServiceBannerProps) => {
-    return (
-        <section className="relative">
-            <Image src={bannerPhotos} alt="banner" className="object-cover max-h-[500px] w-full" />
-            <div className="absolute inset-0 xl:max-w-screen-xl mx-auto items-center justify-between flex flex-wrap lg:flex-nowrap">
+//"/../../../../public/images/services/photography/banner/banner01.jpg",
+
+const ServiceBanner = () => {
+
+    const images = [
+        {
+            url: "/images/services/photography/banner/banner01.jpg",
+            caption: "Texto una imagen"
+        },
+        {
+            url: "/images/services/photography/banner/banner02.jpg",
+            caption: "Texto segunda imagen"
+        }
+
+    ]
+ 
+  return (
+    <section>
+        <Fade
+            indicators={false}
+            arrows={false}
+            autoplay={true}
+            infinite={true}
+            canSwipe={false}
+            transitionDuration={5000}
+        >
+            <div className='each-slide'>
                 <div>
-                <h3 className="text-[43px] text-fondoBlanco font-nunitoSans">{props.textBanner}</h3>
+                    <Image src={images[0].url}
+                                    width="0"
+                                    height="0"
+                                    sizes="100%"
+                                    className="w-screen h-screen object-cover"
+                    alt='Imagen 01' />
                 </div>
+            </div>
+            <div className='each-slide'>
                 <div>
-                <Link href="/contacto" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl py-[0.5em] px-[2em] bg-principal rounded-full merriwather font-semibold text-fondoNegro hover:bg-principalHover hover:font-bold">
-                    Contactame          
-                </Link>  
+                    <Image src={images[1].url} alt='Imagen 02'
+                                    width="0"
+                                    height="0"
+                                    sizes="100%"
+                                    className="w-screen h-screen object-cover" />
                 </div>
-                </div>
-        </section>
-    );
+            </div>
+        </Fade>
+    </section>
+  );
 }
 
 export default ServiceBanner;
