@@ -90,10 +90,10 @@ const Header = () => {
                     href="https://www.instagram.com/santicuoreph"
                     target="_blank"
                   >
-                    <InstagramLogo size={32} />
+                    <InstagramLogo size={26} />
                   </a>
                   <a href="" target="_blank">
-                    <Whatsapp />
+                    <Whatsapp size={28}/>
                   </a>
                 </div>
                 <div className="grow justify-end grow">
