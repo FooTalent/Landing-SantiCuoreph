@@ -12,7 +12,7 @@ const ServicesPage = () => {
     <section className="xl:max-w-screen-xl mx-auto mb-36 text-fondoBlanco">
       <div className="grid grid-cols-5 gap-3 mb-3 items-stretch overflow-hidden xl:max-h-[928px]">
         <div className="col-span-2 relative h-full w-full">
-          <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
+          <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center rounded-xl cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Lorena</h2>
             <h3 className="text-3xl font-thin">Retrato Artístico</h3>
           </div>
@@ -24,7 +24,7 @@ const ServicesPage = () => {
         </div>
         <div className="col-span-3 grid grid-rows-2 gap-3 xl:max-h-[928px]">
           <div className="relative">
-          <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
+          <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center rounded-xl cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Aura Gin</h2>
             <h3 className="text-3xl font-thin">Fotografía comercial</h3>
           </div>
@@ -35,7 +35,7 @@ const ServicesPage = () => {
             />
           </div>
           <div className="relative">
-          <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
+          <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center rounded-xl cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Pasado Pisado</h2>
             <h3 className="text-3xl font-thin">Fotografía artística</h3>
           </div>
@@ -49,7 +49,7 @@ const ServicesPage = () => {
       </div>
 
       <div className="mb-3 xl:max-h-[456px] relative">
-      <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
+      <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center rounded-xl cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Jettatore - Obra teatral</h2>
             <h3 className="text-3xl font-thin">Covertura de evento artístico</h3>
           </div>
@@ -62,7 +62,7 @@ const ServicesPage = () => {
 
       <div className="grid grid-cols-2 gap-3 mb-3 xl:max-h-[456px]">
         <div className="col-span-1 xl:max-h-[456px] relative">
-        <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
+        <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center rounded-xl cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">One-bar</h2>
             <h3 className="text-3xl font-thin">Cobertura de evento artístico</h3>
           </div>
@@ -73,7 +73,7 @@ const ServicesPage = () => {
           />
         </div>
         <div className="col-span-1 h-full relative">
-        <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
+        <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center rounded-xl cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Más que uno</h2>
             <h3 className="text-3xl font-thin">Cobertura de evento artístico</h3>
           </div>
@@ -85,7 +85,7 @@ const ServicesPage = () => {
         </div>
       </div>
       <div className="mb-3 xl:max-h-[456px] relative">
-      <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
+      <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center rounded-xl cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Más que uno</h2>
             <h3 className="text-3xl font-thin">Cobertura de evento artístico</h3>
           </div>
