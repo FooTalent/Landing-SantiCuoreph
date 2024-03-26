@@ -226,7 +226,7 @@ const Audiovisual = () => {
               className="h-[1344px] rounded-2xl object-cover  w-full"
               loop
               muted
-              src="https://s3-figma-videos-production-sig.figma.com/video/1159262127674411291/TEAM/5c14/6b55/-aa9d-4724-bd79-6eef7dc35203?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XXtR5x7WEG0N6HRUBWDd6DYZOPHdQtAMuhoF2lO-dmw9JTRhn2N1LfmNFKv02jfO7vx1xiPwZf8sJZ7WqJUTOCmBarnEjMMx1J4tl7w7VwwVoWp1EGUCCLVRBxlKanKuOH93bZtbLJuQ-Q5y7qcxUk0771IwYBSDa9KVYVekleQ9nDdZYwBeara1Xf9TnrWf4pMZG6v55WceIG2DWIJI3-R0C7mhIore66GfNEgbiv07zkFZKGR1gU15Gqe6Jdkkux2zzyRLGw48d3EPVWBPSUla2VI6VJpoGssOTKkNJFhUPczmTQ8-N8w4ng~Bo~vPOufj2ewRc4cgqRBwVIw36A__"
+              src="/videos/-aa9d-4724-bd79-6eef7dc35203.mp4"
             />
             <div
               onClick={() => {
