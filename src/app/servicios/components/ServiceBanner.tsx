@@ -42,7 +42,7 @@ const ServiceBanner = () => {
   ];
 
   return (
-    <section>
+    <section className="relative">
       <Fade
         indicators={false}
         arrows={false}
@@ -64,7 +64,7 @@ const ServiceBanner = () => {
                     className="w-screen h-[400px] object-cover"
                     alt="Imagen 01"
                   />
-                  <div className="absolute inset-0 xl:max-w-screen-xl mx-auto items-center justify-between flex flex-wrap lg:flex-nowrap">
+                  <div className="absolute inset-0 xl:max-w-screen-xl mx-auto items-center justify-between flex flex-wrap lg:flex-nowrap gap-20">
                     <div>
                       <h3 className="text-[43px] text-fondoBlanco font-nunitoSans">
                         {image.caption}
@@ -73,7 +73,7 @@ const ServiceBanner = () => {
                     <div>
                       <Link
                         href="/contacto"
-                        className="text-xl sm:text-2xl md:text-3xl lg:text-4xl py-[0.5em] px-[2em] bg-principal rounded-full merriwather font-semibold text-fondoNegro hover:bg-principalHover hover:font-bold"
+                        className="text-xl sm:text-2xl md:text-[40px] py-[0.5em] px-[2em] md:px-[81px] md:py-[17px] bg-principal rounded-full merriwather font-semibold text-fondoNegro hover:bg-principalHover hover:font-bold"
                       >
                         Contactame
                       </Link>
