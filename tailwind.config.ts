@@ -8,9 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'background1': 'url("/images/aboutme/image 28.jpg")',
+        'background2': 'url("/images/aboutme/background2.jpg")',
+        'background3': 'url("/images/aboutme/MAS QUE UNO BAJA-51 1.jpg")',
+        
       },
       colors: {
         fondoNegro: "#292319",
