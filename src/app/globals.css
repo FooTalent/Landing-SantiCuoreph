@@ -57,11 +57,13 @@ html {
   background-color: #FCCD35 !important;
 }
 
+
 #formulario {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(/assets/img/fondoContact.png) no-repeat;
   background-size: cover;
 }
+
 
 #fecha {
   text-align: right;
@@ -89,4 +91,16 @@ html {
 
 #fecha::-webkit-datetime-edit {
   display: block;
+}
+
+
+.Sobremi {
+  display: grid;
+  grid-template-rows: 3;
+  grid-template-columns: 1;
+  place-content: center;
+}
+
+.quiensoy {
+  grid-row: 1 / 3;
 }
