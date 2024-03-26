@@ -5,7 +5,7 @@ import Image from 'next/image';
 import background1 from '../../../public/images/aboutme/image 28.jpg'
 import background2 from '../../../public/images/aboutme/background2.jpg'
 import background3 from '../../../public/images/aboutme/MAS QUE UNO BAJA-51 1.jpg'
-import ServiceBanner from '../servicios/components/ServiceBanner';
+import ServiceBanner from '../servicios/components/ServiceBanner'
 import { url } from 'inspector';
 const AboutMe = () => {
     return (

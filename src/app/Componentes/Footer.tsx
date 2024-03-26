@@ -11,7 +11,7 @@ const Footer = () => {
         <hr  className="min-w-[500px]"></hr>
         <a href='' className='p-2.5'><Instagram /></a>
         <a href='mailto:santi@gmail.com' className='p-2.5'><Mail /></a>
-        <a href='' className='p-2.5'><Whatsapp size={24} /></a>
+        <a href='' className='p-2.5'><Whatsapp size={33} /></a>
         <hr className="min-w-[500px]"></hr>
         </picture>
         <p>Prohibida la reproducción total o parcial de este sitio y su contenido.</p>
