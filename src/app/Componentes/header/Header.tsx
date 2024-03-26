@@ -33,7 +33,7 @@ const Header = () => {
           <div className="flex items-center xl:grow-[2]">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center gap-2 grow w-40 md:w-56">
-                <Logo width={220} height={52} />
+                <Logo/>
               </Link>
             </div>
           </div>
