@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import img01 from "../../../public/images/services/photography/img01.jpg";
 import img02 from "../../../public/images/services/photography/img02.jpg";
 import img03 from "../../../public/images/services/photography/img03.jpg";
@@ -7,14 +7,8 @@ import img05 from "../../../public/images/services/photography/img05.jpg";
 import img06 from "../../../public/images/services/photography/img06.jpg";
 import img07 from "../../../public/images/services/photography/img07.jpg";
 
-type PhotographyServiceInfo = {
-  image: StaticImageData,
-  title: string,
-  subtitle: string,
-}
 
-
-const ServicesPage = (props: PhotographyServiceInfo[]) => {
+const ServicesPage = () => {
 
   return (
     <section className="xl:max-w-screen-xl mx-auto mb-36">

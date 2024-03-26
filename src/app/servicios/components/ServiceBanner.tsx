@@ -1,9 +1,6 @@
-"use client"
-
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { Fade } from "react-slideshow-image"
 
-//"/../../../../public/images/services/photography/banner/banner01.jpg",
 
 const ServiceBanner = () => {
 
@@ -27,7 +24,7 @@ const ServiceBanner = () => {
             autoplay={true}
             infinite={true}
             canSwipe={false}
-            transitionDuration={5000}
+            transitionDuration={2000}
         >
             <div className='each-slide'>
                 <div>
