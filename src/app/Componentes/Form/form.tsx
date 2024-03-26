@@ -2,6 +2,13 @@
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import CustomButton from "../CustomButton";
 import { useState } from "react";
+import Select from "react-select";
+import Image from "next/image";
+
+interface Option {
+  label: string;
+  value: string;
+}
 
 type Inputs = {
   servicio: string;
@@ -10,10 +17,14 @@ type Inputs = {
   telefono1: number;
   telefono2: number;
   email: string;
+  tipoServFoto: Option[];
+  ciudad: string;
+  fecha: Date;
 };
 
 export default function Form() {
   const {
+    control,
     register,
     handleSubmit,
     watch,
@@ -21,6 +32,20 @@ export default function Form() {
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
   const [paso, setPaso] = useState(0);
+  const servFotograficoOptions = [
+    {
+      value: "cumpleano-casamiento",
+      label: "Cobertura de cumpleaños / casamiento",
+    },
+    {
+      value: "evento",
+      label: "Cobertura de evento social / artístico / corporativo",
+    },
+    { value: "artistica", label: "Fotografía artística" },
+    { value: "comercial", label: "Fotografía comercial / publicitaria" },
+    { value: "retrato", label: "Retrato" },
+    { value: "otro", label: "Otro tipo de fotografía" },
+  ];
 
   console.log(watch("servicio")); // watch input value by passing the name of it
 
@@ -79,7 +104,7 @@ export default function Form() {
       {/**Formulario */}
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="pt-8 pb-20 px-9 bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl h-[400px] backdrop-blur-xl drop-shadow-2xl"
+        className="pt-8 pb-20 px-9 bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl h-[400px] backdrop-blur-sm drop-shadow-2xl"
       >
         {/**Encabezados de Formulario */}
         {paso == 0 && (
@@ -222,16 +247,96 @@ export default function Form() {
         )}
         {/** paso 2 */}
         {paso == 2 && watch("servicio") === "fotografia" && (
-          <fieldset id="paso2" className="flex flex-col gap-4 pb-10">
+          <fieldset id="paso2" className="flex flex-col gap-4 pb-10 px-32">
             <label htmlFor="send" className="flex flex-col">
               ¿Qué tipo de servicio fotográfico necesitas?
-              <Controller as={Select} name="send" control={control}>
-                <option value="fotografia">Fotografía</option>
-                <option value="edicion">Edición / Creación de video</option>
-                <option value="ambos">
-                  Fotografía y edición / creación de video
-                </option>
-              </Controller>
+              <Controller
+                name="tipoServFoto"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    placeholder={"Seleccioná un tipo de servicio fotográfico"}
+                    {...field}
+                    options={servFotograficoOptions}
+                    isClearable
+                    styles={{
+                      control: (styles) => ({
+                        ...styles,
+                        boxSizing: "content-box",
+                        backgroundColor: "#424242",
+                        borderRadius: "10px",
+                        padding: "0 21px",
+                        border: "1px solid #FCCD35",
+                        color: "#f2f2f2",
+                        fontSize: "18px",
+                        margin: "20px 0",
+                        overlay: "none",
+                        ":hover": {
+                          ...styles[":hover"],
+                          borderColor: "#FBBF01",
+                        },
+                      }),
+                      singleValue: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                        overlay: "none",
+                      }),
+                      placeholder: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                      }),
+                      option: (styles, { isFocused }) => ({
+                        ...styles,
+                        backgroundColor: isFocused ? "#FCCD35" : "#424242",
+                        ":first-child": {
+                          ...styles[":first-child"],
+                          borderRadius: "10px 10px 0 0",
+                        },
+                        ":last-child": {
+                          ...styles[":first-child"],
+                          borderRadius: "0 0 10px 10px",
+                        },
+                        color: isFocused ? "#292319" : "#f2f2f2",
+                      }),
+                      menu: (styles) => ({
+                        ...styles,
+                        borderRadius: "10px",
+                        fontSize: "18px",
+                      }),
+                      menuList: (styles) => ({
+                        ...styles,
+                        maxHeight: "auto",
+                        padding: "0",
+                        overflow: "hidden",
+                      }),
+                    }}
+                    // Otros props de React Select según tus necesidades
+                  />
+                )}
+              ></Controller>
+            </label>
+            <label htmlFor="ciudad" className="flex flex-col">
+              ¿En qué ciudad se va a realizar la sesión fotográfica?
+              <input
+                {...register("ciudad", { required: true })}
+                id="ciudad"
+                className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
+              />
+              <label htmlFor="fecha" className="flex flex-col">
+                ¿En qué fecha estimada se va a realizar la sesión de fotos?
+                <div className="flex relative max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
+                  <Image
+                    src="/assets/img/calendar_month_FILL0_wght400_GRAD0_opsz40 1.svg"
+                    alt="icon"
+                  />
+                  <input
+                    type="date"
+                    {...register("fecha", { required: true })}
+                    id="fecha"
+                    className="appearance-none border-l-[1.5px] border-inputBorderSelected  text-xl  text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
+                  />
+                </div>
+              </label>
             </label>
           </fieldset>
         )}

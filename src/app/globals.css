@@ -59,6 +59,34 @@ html {
 
 #formulario {
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(/assets/img/fondoContact.jpeg) no-repeat;
+    url(/assets/img/fondoContact.png) no-repeat;
   background-size: cover;
+}
+
+#fecha {
+  text-align: right;
+}
+
+#fecha::-webkit-inner-spin-button,
+::-webkit-calendar-picker-indicator,
+::-webkit-datetime-edit {
+  display: none;
+}
+
+#fecha::-webkit-calendar-picker-indicator {
+  display: block;
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+#fecha::-webkit-datetime-edit {
+  display: block;
 }
