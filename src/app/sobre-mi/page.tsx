@@ -80,7 +80,7 @@ const AboutMe = () => {
                     </div>
             </div>
         </section>
-        <ServiceBanner  textBanner='Producciones fotográficas de calidad y la mejor cobertura para tus eventos' />
+        <ServiceBanner />
         </>
      
     );

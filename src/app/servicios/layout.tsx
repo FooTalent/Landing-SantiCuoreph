@@ -2,6 +2,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ServiceBanner from "./components/ServiceBanner";
+import banner01 from "../../../public/images/services/photography/banner/bannerphoto.jpg"
+import banner02 from "../../../public/images/services/photography/img01.jpg"
+
 
 
 const services = [
@@ -39,7 +42,7 @@ const ServicesLayout =({
             </section>
             {children}
             <section className="w-full">
-                <ServiceBanner textBanner="Producciones fotográficas de calidad y la mejor cobertura para tus eventos"></ServiceBanner>
+                <ServiceBanner />
             </section>
         </div>
     );
