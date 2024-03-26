@@ -7,9 +7,8 @@ import { useState } from "react";
 import Whatsapp from "@/app/Icon/Whatsappequipo6";
 import LogoSanti from "../../../../public/images/navbar/logo-santi.png";
 import Image from "next/image";
-import MenuOpen from "./MenuOpen";
-import MenuClose from "./MenuClose";
 import "./styles.css";
+import Logo from "./Logo";
 
 const navLinks = [
   { name: "Servicios", href: "/servicios" },
@@ -29,17 +28,17 @@ const Header = () => {
 
   return (
     <header className="bg-fondo fixed z-40 w-full">
-      <nav className="py-3 px-4 md:px-8 xl:max-w-screen-xl xl:mx-auto xl:px-0">
+      <nav className="py-3 px-4 md:px-8 xl:max-w-screen-xl xl:mx-[105px] xl:px-0">
         <div className="flex justify-between">
           <div className="flex items-center xl:grow-[2]">
             <div className="flex-shrink-0">
-              <Link href="/" className="flex items-center gap-2 grow">
-                <Image src={LogoSanti} alt="Logo Santi Cuore PH" />
+              <Link href="/" className="flex items-center gap-2 grow w-40 md:w-56">
+                <Logo/>
               </Link>
             </div>
           </div>
 
-          <ul className="hidden sm:flex justify-around items-center text-white text-xl grow-[2] xl:pr-40">
+          <ul className="hidden sm:flex justify-around items-center text-white text-[19px] grow-[2] xl:pr-40">
             {navLinks.map((link) => {
               return (
                 <li
@@ -54,12 +53,12 @@ const Header = () => {
           <div className="flex sm:gap-3 lg:gap-6 xl:gap-10">
             <div className="hidden sm:flex grow justify-end items-center gap-10">
               <a href="https://www.instagram.com/santicuoreph" target="_blank">
-                <InstagramLogo size={32} />
+                <InstagramLogo size={26} />
               </a>
             </div>
             <div className="hidden sm:flex grow justify-end items-center gap-10">
               <a href="" target="_blank">
-                <Whatsapp />
+                <Whatsapp size={28} />
               </a>
             </div>
           </div>
@@ -91,10 +90,10 @@ const Header = () => {
                     href="https://www.instagram.com/santicuoreph"
                     target="_blank"
                   >
-                    <InstagramLogo size={32} />
+                    <InstagramLogo size={26} />
                   </a>
                   <a href="" target="_blank">
-                    <Whatsapp />
+                    <Whatsapp size={28}/>
                   </a>
                 </div>
                 <div className="grow justify-end grow">

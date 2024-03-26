@@ -38,14 +38,14 @@ const buttonStyle = {
 };
 const properties = {
   prevArrow: (
-    <button className="lg:ml-40 ml-4 " style={{ ...buttonStyle }}>
+    <button className="lg:ml-[115px] ml-4 " style={{ ...buttonStyle }}>
       <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
         <Image src="/assets/img/ArrowLeft.png" alt="" width={20} height={20} />
       </div>
     </button>
   ),
   nextArrow: (
-    <button className="lg:mr-40 mr-4" style={{ ...buttonStyle }}>
+    <button className="lg:mr-[115px] mr-4" style={{ ...buttonStyle }}>
       <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
         <Image src="/assets/img/ArrowRight.png" alt="" width={20} height={20} />
       </div>
@@ -70,10 +70,10 @@ const Slideshow = () => {
               />
 
               {/* TEXTO PRINCIPAL Y SECUNDARIO */}
-              <p className="text-fondoBlanco absolute font-merriwather font-bold italic lg:text-[4rem] text-[2rem] lg:left-40 left-4 lg:bottom-32 bottom-48">
+              <p className="text-fondoBlanco absolute font-merriwather font-bold italic lg:text-[4rem] text-[2rem] lg:left-[105px] left-4 lg:bottom-32 bottom-48">
                 {slideImage.caption}
               </p>
-              <p className="lg:left-40 font-nunitoSans absolute font-light text-fondoBlanco md:text-[2rem] text-[1.5rem] left-4 lg:bottom-24 bottom-36">
+              <p className="lg:left-[105px] font-nunitoSans absolute font-light text-fondoBlanco md:text-[2rem] text-[1.5rem] left-4 lg:bottom-24 bottom-36">
                 {slideImage.caption2}
               </p>
             </div>

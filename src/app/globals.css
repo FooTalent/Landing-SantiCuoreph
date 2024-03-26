@@ -2,14 +2,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.slick-next::before{
-content: " ";
-display: none;
+
+.slick-next::before {
+  content: " ";
+  display: none;
 }
-.slick-prev::before{
+
+.slick-prev::before {
   display: none;
   content: " ";
 }
+
 html {
   background-color: #F2F2F2;
 }
@@ -52,4 +55,52 @@ html {
 
 .indicators li .active::before {
   background-color: #FCCD35 !important;
+}
+
+
+#formulario {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(/assets/img/fondoContact.png) no-repeat;
+  background-size: cover;
+}
+
+
+#fecha {
+  text-align: right;
+}
+
+#fecha::-webkit-inner-spin-button,
+::-webkit-calendar-picker-indicator,
+::-webkit-datetime-edit {
+  display: none;
+}
+
+#fecha::-webkit-calendar-picker-indicator {
+  display: block;
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+#fecha::-webkit-datetime-edit {
+  display: block;
+}
+
+
+.Sobremi {
+  display: grid;
+  grid-template-rows: 3;
+  grid-template-columns: 1;
+  place-content: center;
+}
+
+.quiensoy {
+  grid-row: 1 / 3;
 }
