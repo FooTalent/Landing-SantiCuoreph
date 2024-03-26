@@ -1,6 +1,7 @@
+"use client"
+
 import Image from 'next/image';
 import { Fade } from "react-slideshow-image"
-
 
 const ServiceBanner = () => {
 
