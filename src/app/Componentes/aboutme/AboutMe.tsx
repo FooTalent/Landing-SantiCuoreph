@@ -1,6 +1,7 @@
 import CustomButton from "../CustomButton";
-import santi from '../../../../public/images/aboutme/05_FotografiaSantiagoGarcia.jpeg'
+import santi from '../../../../public/images/aboutme/05_FotografiaSantiagoGarcia.webp'
 import Image from "next/image";
+import Link from "next/link";
 import CustomFlecha from "./CustomFlecha";
 const AboutMe = () => {
     return (
@@ -27,7 +28,9 @@ const AboutMe = () => {
                 <CustomFlecha description="Reelmaker" />
                 <p className="text-xl font-semibold my-10">¿Querés saber más sobre mí?</p>
                 <div className="button flex justify-center items-center">
+                <Link href={"/sobre-mi"}>
                 <CustomButton title="Saber más" styles="py-2 mt-4 px-12 bg-principal rounded-full merriwather font-semibold hover:font-extrabold text-fondoNegro text-xl 2lg:text-4xl hover:bg-principalHover " />
+                </Link>
                 </div>
             </div>
         </section>
