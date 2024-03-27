@@ -1,5 +1,5 @@
 import CustomButton from "../CustomButton";
-import santi from '../../../../public/images/aboutme/05_FotografiaSantiagoGarcia.jpeg'
+import santi from '../../../../public/images/aboutme/05_FotografiaSantiagoGarcia.webp'
 import Image from "next/image";
 import Link from "next/link";
 import CustomFlecha from "./CustomFlecha";

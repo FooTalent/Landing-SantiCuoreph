@@ -8,9 +8,9 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'background1': 'url("/images/aboutme/image 28.jpg")',
-        'background2': 'url("/images/aboutme/background2.jpg")',
-        'background3': 'url("/images/aboutme/MAS QUE UNO BAJA-51 1.jpg")',
+        'background1': 'url("/images/aboutme/image 28.webp")',
+        'background2': 'url("/images/aboutme/background2.webp")',
+        'background3': 'url("/images/aboutme/MAS QUE UNO BAJA-51 1.webp")',
         
       },
       colors: {
