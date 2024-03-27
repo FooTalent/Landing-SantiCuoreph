@@ -106,7 +106,7 @@ const Audiovisual = () => {
               loop
               muted
               controls
-              src="https://s3-figma-videos-production-sig.figma.com/video/1159262127674411291/TEAM/587c/fc4f/-df52-4356-853b-f2fcf5ce094e?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oIxtYZfwYkaxfxF3~WzW58LU594fcs1RyrXgBsuv6XCOJNzXnnf09mVgZX0R31rfksTh3oCNrK1UWGctkR8EUoqTWiR9Sz1VjlHui3nLxmYeXAnD1Lu9YhyhbxwhxDc9S87JyfzMZcOi4i9mJ9Su6cvZREXPrfh7vGbkTMKzWy8NNS9RmNsIfw3ZPy0NPPAPqfbjSEbG2kauBqSghU6aiy6s9-boRDwY6wWrgU4q4-NP2AIEtjQnYCvrIHULSVBjR~mQiHuFmNPAAFksisBQRANpzA7e9cUpHp5cCE4nSb24MmVk7AH8UtsIhUN89Ii8EUPBr1JiSKanAB66NU1TSQ__"
+              src="/videos/-df52-4356-853b-f2fcf5ce094e.mp4"
             />
             <div className="m-auto text-center text-fondoBlanco">
               <h1 className=" text-[48px]  italic">Spasio Kinesio</h1>
@@ -121,7 +121,7 @@ const Audiovisual = () => {
               loop
               muted
               controls
-              src="https://s3-figma-videos-production-sig.figma.com/video/1159262127674411291/TEAM/5c14/6b55/-aa9d-4724-bd79-6eef7dc35203?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XXtR5x7WEG0N6HRUBWDd6DYZOPHdQtAMuhoF2lO-dmw9JTRhn2N1LfmNFKv02jfO7vx1xiPwZf8sJZ7WqJUTOCmBarnEjMMx1J4tl7w7VwwVoWp1EGUCCLVRBxlKanKuOH93bZtbLJuQ-Q5y7qcxUk0771IwYBSDa9KVYVekleQ9nDdZYwBeara1Xf9TnrWf4pMZG6v55WceIG2DWIJI3-R0C7mhIore66GfNEgbiv07zkFZKGR1gU15Gqe6Jdkkux2zzyRLGw48d3EPVWBPSUla2VI6VJpoGssOTKkNJFhUPczmTQ8-N8w4ng~Bo~vPOufj2ewRc4cgqRBwVIw36A__"
+              src="/videos/-aa9d-4724-bd79-6eef7dc35203.mp4"
             />
             <div className="m-auto text-center text-fondoBlanco">
               <h1 className=" text-[48px]  italic">
@@ -138,7 +138,7 @@ const Audiovisual = () => {
               loop
               muted
               controls
-              src="https://s3-figma-videos-production-sig.figma.com/video/1159262127674411291/TEAM/ce1a/1b48/-85d7-44fb-9b96-104d788a4786?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=JvL4ujCfx3eOx4TKgOhlJpk1IGroqvJyr5YUAI59kPbl-rvCqpVe~WsK0HM3na09KL657VJvmN1JFZvmBdzjK9s4J7tOCL3NW8JV~tV~X3LXxUYiEz5Q0dapUCREQW1mHXIKBDx8gvEcXSPYV8wG92L4fpNNXNoVxJOTdYgJYBZ~te1bEmF1m6VDtcNT-5ywRokSu~u-6BohW4cel-fqxzVs8ykWl8fjMhDkO40o5girBXHCFh59rRRb8s1eTWfpKfDVuvVKgqPEpfpHQzp-MlF5tNtCl2kN9ThiQNPP-4zASsJRVfbOs~EJ~clRlVrT~Txo0CfdH2cIMIY9RQr5JQ__"
+              src="/videos/Backstage Microcentro ALTA.mp4"
             />
 
             <div className="m-auto text-center text-fondoBlanco">
@@ -156,7 +156,7 @@ const Audiovisual = () => {
               loop
               muted
               controls
-              src="https://s3-figma-videos-production-sig.figma.com/video/1159262127674411291/TEAM/cef7/36ca/-a141-40b3-8f53-79cd6c4aa1d9?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RF65o0qclXmGSrETDL2rWGDJuR8Hiazy67IdHnJCyRjHoSJzlypw~nB3w9JdRNCKBFDyuClhlfoB6HtkuobTzPrC6vUrIUz3Eh97wQBm4I78j9nJnKDvU~Ap6LFbunn32Sfi~S9UeecOXtxMSeLuAlv4suUM012xJzqBzV5-HABVY9tGM8lxEsoM2IQA5hOgB3vqfhoKsLmZF-NLe7zFvfaGNTDYbusjNVb4jiywZM8hpNUfm85y4pLBv11-hkqi2TCpMmEIrdq-GKXwfY2yiFYQo3R2PVlmO-giv4uFyCCMAGrn9KoK3YQXA09RKSq1zuxSH5pe9d~oZevGRO~fVA__"
+              src="/videos/Sala de Exposiciones.mp4"
             />
             <div className="m-auto text-center text-fondoBlanco">
               <h1 className=" text-[48px]  italic">
@@ -174,7 +174,7 @@ const Audiovisual = () => {
               onMouseEnter={(e) => e}
               muted
               controls
-              src="https://s3-figma-videos-production-sig.figma.com/video/1159262127674411291/TEAM/1319/0194/-ffd4-4bb6-8432-79cb045c2c58?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gMVgihU5xxgDK1N2Du7osgVvPN7BW8Ar-7kltMtxCVcjjED8h~s-5n-2sK~gxCOZsGGC7SNmwUn5Iogcn1G5ll~Pw5jUNWKsgOK2oQVQ98g7OJsKRjw0fcBY5BuCAGuv~XZ2qmYZnxDOF9m2oxmqaL~wWHS1-E1ZRxud9cnoeHU4niBMBnE221LxDDW-rCC6jQXcqXJ5IoICYm-I2y1yggM213juGuhVwkz5PNwNAyoOgNjBtfihGK0F8cYOrFwpPhuSZghQ02m5FjUK9KL7TU8GMC8NX0-bDIgeQ-EpHEjU4z4un~hqwXo6gAuWYSBjWnz9iUjPfcqV019cYVcgHA__"
+              src="/videos/Biró.mp4"
             />
             <div className="m-auto text-center text-fondoBlanco">
               <h1 className=" text-[48px]  italic">José Ladislao Biró </h1>
@@ -200,7 +200,7 @@ const Audiovisual = () => {
               className="h-[1344px] rounded-2xl object-cover  w-full"
               loop
               muted
-              src="https://s3-figma-videos-production-sig.figma.com/video/1159262127674411291/TEAM/587c/fc4f/-df52-4356-853b-f2fcf5ce094e?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oIxtYZfwYkaxfxF3~WzW58LU594fcs1RyrXgBsuv6XCOJNzXnnf09mVgZX0R31rfksTh3oCNrK1UWGctkR8EUoqTWiR9Sz1VjlHui3nLxmYeXAnD1Lu9YhyhbxwhxDc9S87JyfzMZcOi4i9mJ9Su6cvZREXPrfh7vGbkTMKzWy8NNS9RmNsIfw3ZPy0NPPAPqfbjSEbG2kauBqSghU6aiy6s9-boRDwY6wWrgU4q4-NP2AIEtjQnYCvrIHULSVBjR~mQiHuFmNPAAFksisBQRANpzA7e9cUpHp5cCE4nSb24MmVk7AH8UtsIhUN89Ii8EUPBr1JiSKanAB66NU1TSQ__"
+              src="/videos/-df52-4356-853b-f2fcf5ce094e.mp4"
             />
             <div
               onClick={() => {
