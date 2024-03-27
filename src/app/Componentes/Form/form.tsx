@@ -19,14 +19,14 @@ type Inputs = {
   email: string;
   contactoW: boolean;
   contactoM: boolean;
-  tipoServFoto?: Option[];
-  tipoServAudVis?: Option[];
+  tipoServFoto?: Option;
+  tipoServAudVis?: Option;
   ciudad: string;
   fecha: Date;
-  duracion: Option[];
+  duracion: Option;
   cantidadFotos: string;
   cantidadVideos: string;
-  formato: Option[];
+  formato: Option;
   comentarios?: string;
 };
 
@@ -73,8 +73,6 @@ export default function Form() {
     { value: "redes-sociales", label: "Creación de video para redes sociales" },
     { value: "otro", label: "Otro tipo de producción audiovisual" },
   ];
-
-  const dependencias = [paso, watch];
 
   //control paso 0
   useEffect(() => {
@@ -1149,7 +1147,7 @@ export default function Form() {
                 ¿Qué tipo de servicio fotográfico necesitás?
               </p>
               <p className="font-nunito text-lg font-bold">
-                {watch("tipoServFoto")?.label}
+                {watch("tipoServFoto.label")}
               </p>
             </div>
             <div>
@@ -1175,7 +1173,7 @@ export default function Form() {
                 Tiempo estimado de la cobertura del evento / sesión fotográfica
               </p>
               <p className="font-nunito text-lg font-bold">
-                {watch("duracion")?.label}
+                {watch("duracion.label")}
               </p>
             </div>
             <div>
@@ -1191,7 +1189,7 @@ export default function Form() {
                 ¿En qué formato necesitás las fotos?
               </p>
               <p className="font-nunito text-lg font-bold">
-                {watch("formato")?.label}
+                {watch("formato.label")}
               </p>
             </div>
             <div>
