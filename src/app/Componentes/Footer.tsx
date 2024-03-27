@@ -8,7 +8,7 @@ const Footer = () => {
         <h4 className="text-2xl font-bold">¡Hablemos de tu proyecto!</h4>
         <picture className="flex flex flex-row justify-center items-center gap-8">
         <hr  className="min-w-[500px]"></hr>
-        <a href='' className='p-2.5'><Instagram /></a>
+        <a href='https://www.instagram.com/santicuore.ph/' className='p-2.5'><Instagram /></a>
         <a href='mailto:santi@gmail.com' className='p-2.5'><Mail /></a>
         <a href='' className='p-2.5'><Whatsapp size={33} /></a>
         <hr className="min-w-[500px]"></hr>
