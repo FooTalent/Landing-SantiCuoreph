@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
+
 import InstagramLogo from "./InstagramLogo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Whatsapp from "@/app/Icon/Whatsappequipo6";
 import "./styles.css";
 import Logo from "./Logo";
@@ -21,12 +22,15 @@ const Header = () => {
     setIsClick(!isClick);
   };
 
-  if(isClick == false){
-    document.body.style.overflow = 'auto';
-  }else{
-    document.body.style.overflow = 'hidden ';
-  }
-
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if(isClick == false){
+        document.body.style.overflow = 'auto';
+      }else{
+        document.body.style.overflow = 'hidden ';
+      }
+    }
+  }, [isClick]);
 
   return (
     <header className="bg-fondo fixed z-40 w-full h-14 md:h-min ">
