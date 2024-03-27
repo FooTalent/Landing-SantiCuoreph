@@ -44,6 +44,7 @@ const Header = () => {
             {navLinks.slice(1).map((link) => {
               return (
                 <li
+                  
                   className="hover:text-principalHover font-semibold hover:font-bold font-nunitoSans"
                   key={link.name}
                 >
@@ -86,7 +87,7 @@ const Header = () => {
                 {navLinks.map((link) => {
                   return (
                     <li className="hover:text-principalHover" key={link.name}>
-                      <Link href={link.href}>{link.name}</Link>
+                      <Link href={link.href}  onClick={toggleNavbar}>{link.name}</Link>
                     </li>
                   );
                 })}
