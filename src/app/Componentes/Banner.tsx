@@ -38,7 +38,7 @@ const Banner = () => {
           </h2>
         </div>
       <div                
-        className={`relative  hover:scale-[1.3]  flex  items-start  w-full h-[500px]   transition-all ease-in-out cursor-pointer `}
+        className={`relative  hover:scale-[1.3]  flex  lg:items-start  w-full h-[500px]   transition-all ease-in-out cursor-pointer `}
       >
           <video
             className="w-full object-cover object-bottom"
