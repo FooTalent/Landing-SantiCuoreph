@@ -4,6 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import ServicesLayout from "../layout";
+import Link from "next/link";
 const buttonStyle = {
   width: "50px",
   background: "none",
@@ -86,13 +88,17 @@ const Audiovisual = () => {
     <section
       className={
         carrousel
-          ? `backdrop-blur-xl bg-black/15 flex absolute top-0 right-0 left-0 bottom-0 z-50 `
-          : ""
+          ? `backdrop-blur-xl mb-36 bg-black/15 h-screen flex fixed top-0 right-0 left-0 bottom-0 z-[9999]`
+          : "mb-36"
       }
     >
       <div
         ref={carrouselRef}
-        className={carrousel ? `w-[50%]  mx-auto mt-10 ` : "hidden"}
+        className={
+          carrousel
+            ? ` w-[70%] md:w-[60%]  lg:w-[50%] mx-auto mt-10 `
+            : "hidden"
+        }
       >
         <Slider
           ref={(slider) => {
@@ -183,156 +189,176 @@ const Audiovisual = () => {
               </p>
             </div>
           </div>
+          <div className=" h-[450px]">
+            <div className=" h-full  flex">
+              <div className="space-y-20 m-auto flex flex-col">
+                <p className="merriwather text-2xl text-center italic text-white">Reservemos una cita!</p>
+                <div>
+                  <Link
+                    href="/contacto"
+                    className="text-xl transition-all ease-in-out sm:text-2xl md:text-[40px] py-[0.5em] px-[2em] md:px-[81px] md:py-[17px] bg-principal rounded-full merriwather font-semibold text-fondoNegro hover:bg-principalHover hover:font-bold"
+                  >
+                    Contactame
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </Slider>
       </div>
-      {
-        !carrousel &&
-        (
-      <div className={"gap-y-2 flex flex-col"}>
-        <div className="flex gap-x-2 font-merriwather italic text-fondoBlanco">
-          <div
-            onMouseEnter={() => videoRef1.current.play()}
-            onMouseLeave={() => videoRef1.current.pause()}
-            className="relative"
-          >
-            <video
-              ref={videoRef1}
-              className="h-[1344px] rounded-2xl object-cover  w-full"
-              loop
-              muted
-              src="/videos/-df52-4356-853b-f2fcf5ce094e.mp4"
-            />
+      {!carrousel && (
+        <div
+          className={
+            "gap-y-2 xl:max-w-screen-xl px-5 lg:px-0 mx-auto flex flex-col"
+          }
+        >
+          <div className="flex-col lg:flex  lg:flex-row gap-x-2 font-merriwather italic text-fondoBlanco">
             <div
-              onClick={() => {
-                sliderRef.slickGoTo(0), setCarrousel(true);
-              }}
-              className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
+              onMouseEnter={() => videoRef1.current.play()}
+              onMouseLeave={() => videoRef1.current.pause()}
+              className="relative"
             >
-              <div className="m-auto">
-                <h1 className=" text-[48px]  italic">Spasio Kinesio</h1>
-                <p className="text-fondoBlanco font-nunitoSans font-thin text-[30px]">
-                  Creación de video para redes
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            onMouseEnter={() => videoRef2.current.play()}
-            onMouseLeave={() => videoRef2.current.pause()}
-            className="relative"
-          >
-            <video
-            ref={videoRef2}
-              className="h-[1344px] rounded-2xl object-cover  w-full"
-              loop
-              muted
-              src="/videos/-aa9d-4724-bd79-6eef7dc35203.mp4"
-            />
-            <div
-              onClick={() => {
-                sliderRef.slickGoTo(1), setCarrousel(true);
-              }}
-              className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
-            >
-              <div className="m-auto">
-                <h1 className=" text-[48px]  italic">
-                  TOCH en Camping de Palermo
-                </h1>
-                <p className="text-fondoBlanco font-nunitoSans font-thin text-[30px]">
-                  Creación de video para redes
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="flex gap-x-2">
-          <div
-           onMouseEnter={() => videoRef3.current.play()}
-           onMouseLeave={() => videoRef3.current.pause()}
-          className="relative w-1/2 text-fondoBlanco ">
-            <video
-            ref={videoRef3}
-              className="h-[1344px] rounded-2xl object-cover  w-full"
-              loop
-              muted
-              src="/videos/Backstage Microcentro ALTA.mp4"
-            />
-            <div
-              onClick={() => {
-                sliderRef.slickGoTo(2), setCarrousel(true);
-              }}
-              className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
-            >
-              <div className="m-auto">
-                <h1 className=" text-[48px]  italic">
-                  Backstage de fotos Pasado Pisado{" "}
-                </h1>
-                <p className="font-nunitoSans font-thin text-[30px]">
-                  Creación de video para redes{" "}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-1/2 gap-y-2 flex flex-col">
-            <div 
-             onMouseEnter={() => videoRef4.current.play()}
-             onMouseLeave={() => videoRef4.current.pause()}
-            className="relative h-1/2 text-fondoBlanco ">
               <video
-              ref={videoRef4}
-                className=" object-cover rounded-2xl h-full w-full "
+                ref={videoRef1}
+                className="h-[1344px] rounded-2xl object-cover  w-full"
                 loop
                 muted
-                src="/videos/Sala de Exposiciones.mp4"
+                src="/videos/-df52-4356-853b-f2fcf5ce094e.mp4"
               />
               <div
                 onClick={() => {
-                  sliderRef.slickGoTo(3), setCarrousel(true);
+                  sliderRef.slickGoTo(0), setCarrousel(true);
+                }}
+                className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
+              >
+                <div className="m-auto">
+                  <h1 className=" text-[48px]  italic">Spasio Kinesio</h1>
+                  <p className="text-fondoBlanco font-nunitoSans font-thin text-[30px]">
+                    Creación de video para redes
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              onMouseEnter={() => videoRef2.current.play()}
+              onMouseLeave={() => videoRef2.current.pause()}
+              className="relative"
+            >
+              <video
+                ref={videoRef2}
+                className="h-[1344px] rounded-2xl object-cover  w-full"
+                loop
+                muted
+                src="/videos/-aa9d-4724-bd79-6eef7dc35203.mp4"
+              />
+              <div
+                onClick={() => {
+                  sliderRef.slickGoTo(1), setCarrousel(true);
                 }}
                 className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
               >
                 <div className="m-auto">
                   <h1 className=" text-[48px]  italic">
-                    Exposición en Centro Cultural Kirchner{" "}
+                    TOCH en Camping de Palermo
                   </h1>
-                  <p className="font-nunitoSans font-thin text-[30px]">
-                    Edición de video{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div 
-             onMouseEnter={() => videoRef5.current.play()}
-             onMouseLeave={() => videoRef5.current.pause()}
-            className="relative h-1/2 text-fondoBlanco ">
-              <video
-              ref={videoRef5}
-                className=" object-cover rounded-2xl h-full w-full"
-                loop
-                muted
-                src="/videos/Biró.mp4"
-              />
-              <div
-                onClick={() => {
-                  sliderRef.slickGoTo(4), setCarrousel(true);
-                }}
-                className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
-              >
-                <div className="m-auto">
-                  <h1 className=" text-[48px]  italic">José Ladislao Biró </h1>
-                  <p className="font-nunitoSans font-thin text-[30px]">
-                    Edición de video{" "}
+                  <p className="text-fondoBlanco font-nunitoSans font-thin text-[30px]">
+                    Creación de video para redes
                   </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+          <div className="flex-col lg:flex lg:flex-row gap-x-2">
+            <div
+              onMouseEnter={() => videoRef3.current.play()}
+              onMouseLeave={() => videoRef3.current.pause()}
+              className="relative w-full lg:flex lg:w-1/2 text-fondoBlanco "
+            >
+              <video
+                ref={videoRef3}
+                className="h-[1344px] rounded-2xl object-cover  w-full"
+                loop
+                muted
+                src="/videos/Backstage Microcentro ALTA.mp4"
+              />
+              <div
+                onClick={() => {
+                  sliderRef.slickGoTo(2), setCarrousel(true);
+                }}
+                className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
+              >
+                <div className="m-auto">
+                  <h1 className=" text-[48px]  italic">
+                    Backstage de fotos Pasado Pisado{" "}
+                  </h1>
+                  <p className="font-nunitoSans font-thin text-[30px]">
+                    Creación de video para redes{" "}
+                  </p>
+                </div>
+              </div>
+            </div>
 
-        )
-      }
+            <div className="w-full lg:w-1/2 gap-y-2 flex flex-col">
+              <div
+                onMouseEnter={() => videoRef4.current.play()}
+                onMouseLeave={() => videoRef4.current.pause()}
+                className="relative h-1/2 text-fondoBlanco "
+              >
+                <video
+                  ref={videoRef4}
+                  className=" object-cover rounded-2xl h-full w-full "
+                  loop
+                  muted
+                  src="/videos/Sala de Exposiciones.mp4"
+                />
+                <div
+                  onClick={() => {
+                    sliderRef.slickGoTo(3), setCarrousel(true);
+                  }}
+                  className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
+                >
+                  <div className="m-auto">
+                    <h1 className=" text-[48px]  italic">
+                      Exposición en Centro Cultural Kirchner{" "}
+                    </h1>
+                    <p className="font-nunitoSans font-thin text-[30px]">
+                      Edición de video{" "}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                onMouseEnter={() => videoRef5.current.play()}
+                onMouseLeave={() => videoRef5.current.pause()}
+                className="relative h-1/2 text-fondoBlanco "
+              >
+                <video
+                  ref={videoRef5}
+                  className=" object-cover rounded-2xl h-full w-full"
+                  loop
+                  muted
+                  src="/videos/Biró.mp4"
+                />
+                <div
+                  onClick={() => {
+                    sliderRef.slickGoTo(4), setCarrousel(true);
+                  }}
+                  className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
+                >
+                  <div className="m-auto">
+                    <h1 className=" text-[48px]  italic">
+                      José Ladislao Biró{" "}
+                    </h1>
+                    <p className="font-nunitoSans font-thin text-[30px]">
+                      Edición de video{" "}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
