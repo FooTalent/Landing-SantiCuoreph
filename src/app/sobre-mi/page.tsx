@@ -1,6 +1,6 @@
-import santi from '../../../public/images/aboutme/Foto Sanit 2.jpg'
-import santiCuorePH from '../../../public/images/aboutme/08_FotografiaSantiagoGarcia.jpeg'
-import santiago from '../../../public/images/aboutme/Foto Santi.jpg'
+import santi from '../../../public/images/aboutme/Foto Sanit 2.webp'
+import santiCuorePH from '../../../public/images/aboutme/08_FotografiaSantiagoGarcia.webp'
+import santiago from '../../../public/images/aboutme/Foto Santi.webp'
 import Image from 'next/image';
 import background1 from '../../../public/images/aboutme/image 28.jpg'
 import background2 from '../../../public/images/aboutme/background2.jpg'
