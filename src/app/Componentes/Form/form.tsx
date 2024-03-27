@@ -1,7 +1,7 @@
 "use client";
-import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import { useForm, SubmitHandler, Controller, set } from "react-hook-form";
 import CustomButton from "../CustomButton";
-import { useState } from "react";
+import { use, useEffect, useState } from "react";
 import Select from "react-select";
 import Image from "next/image";
 
@@ -17,9 +17,17 @@ type Inputs = {
   telefono1: number;
   telefono2: number;
   email: string;
-  tipoServFoto: Option[];
+  contactoW: boolean;
+  contactoM: boolean;
+  tipoServFoto?: Option[];
+  tipoServAudVis?: Option[];
   ciudad: string;
   fecha: Date;
+  duracion: Option[];
+  cantidadFotos: string;
+  cantidadVideos: string;
+  formato: Option[];
+  comentarios?: string;
 };
 
 export default function Form() {
@@ -31,6 +39,7 @@ export default function Form() {
     formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const [habilitar, setHabilitar] = useState(false);
   const [paso, setPaso] = useState(0);
   const servFotograficoOptions = [
     {
@@ -46,8 +55,93 @@ export default function Form() {
     { value: "retrato", label: "Retrato" },
     { value: "otro", label: "Otro tipo de fotografía" },
   ];
+  const duraciones = [
+    { value: "2", label: "Hasta 2 horas" },
+    { value: "4", label: "Hasta 4 horas" },
+    { value: "6", label: "Hasta 6 horas" },
+    { value: "8", label: "Hasta 8 horas" },
+    { value: "10", label: "Hasta 10 horas" },
+    { value: "0", label: "No lo sé" },
+  ];
+  const formatos = [
+    { value: "digital", label: "Digital" },
+    { value: "impreso", label: "Impreso" },
+    { value: "digital-impreso", label: "Digital e Impreso" },
+  ];
+  const servAudiovisualOptions = [
+    { value: "graba-edita", label: "Grabación y edición de video" },
+    { value: "redes-sociales", label: "Creación de video para redes sociales" },
+    { value: "otro", label: "Otro tipo de producción audiovisual" },
+  ];
 
-  console.log(watch("servicio")); // watch input value by passing the name of it
+  const dependencias = [paso, watch];
+
+  //control paso 0
+  useEffect(() => {
+    if (paso === 0 && watch("servicio")) {
+      setHabilitar(true);
+    }
+  }, [paso, watch("servicio")]);
+
+  //control paso 1
+  useEffect(() => {
+    if (
+      paso === 1 &&
+      watch("apellido") &&
+      watch("nombre") &&
+      watch("telefono1") &&
+      watch("telefono2") &&
+      (watch("contactoW") || watch("contactoM"))
+    ) {
+      setHabilitar(true);
+    } else {
+      setHabilitar(false);
+    }
+  }, [
+    paso,
+    watch("apellido"),
+    watch("nombre"),
+    watch("telefono1"),
+    watch("telefono2"),
+    watch("contactoW"),
+    watch("contactoM"),
+  ]);
+
+  //control paso 2a
+  useEffect(() => {
+    if (
+      paso === 2 &&
+      watch("servicio") === "fotografia" &&
+      watch("cantidadFotos") &&
+      watch("ciudad") &&
+      watch("duracion") &&
+      watch("fecha") &&
+      watch("formato") &&
+      watch("tipoServFoto")
+    ) {
+      setHabilitar(true);
+    }
+  }, [
+    paso,
+    watch("servicio"),
+    watch("cantidadFotos"),
+    watch("ciudad"),
+    watch("duracion"),
+    watch("fecha"),
+    watch("formato"),
+    watch("tipoServFoto"),
+  ]);
+
+  //control paso 3 y 4
+  useEffect(() => {
+    if (paso === 3 || paso === 4) {
+      setHabilitar(true);
+    }
+  }, [paso]);
+
+  const handleContinuar = () => {
+    setPaso(paso + 1);
+  };
 
   return (
     /**Encabezados */
@@ -73,7 +167,11 @@ export default function Form() {
         </div>
       )}
       {paso == 2 && watch("servicio") === "fotografia" && (
-        <div className="text-fondoBlanco text-3xl mb-10 flex justify-between pb-6 items-center">
+        <div
+          className={`text-fondoBlanco text-3xl mb-10 ${
+            paso === 2 || (paso === 4 && watch("servicio")) ? "mx-52" : ""
+          } flex justify-between pb-6 items-center`}
+        >
           <h2 className="text-3xl font-bold">Servicio de fotografía</h2>
           <h2 className="text-2xl font-bold font-nunitoSans">
             Paso {paso} de 4
@@ -81,7 +179,11 @@ export default function Form() {
         </div>
       )}
       {paso == 2 && watch("servicio") === "edicion" && (
-        <div className="text-fondoBlanco text-3xl mb-10 flex justify-between pb-6 items-center">
+        <div
+          className={`text-fondoBlanco text-3xl mb-10 ${
+            paso === 2 || (paso === 4 && watch("servicio")) ? "mx-52" : ""
+          } flex justify-between pb-6 items-center`}
+        >
           <h2 className="text-3xl font-bold">
             Servicio de edición / creación de video
           </h2>
@@ -91,7 +193,11 @@ export default function Form() {
         </div>
       )}
       {paso == 2 && watch("servicio") === "ambos" && (
-        <div className="text-fondoBlanco text-3xl mb-10 flex justify-between pb-6 items-center">
+        <div
+          className={`text-fondoBlanco text-3xl mb-10 ${
+            paso === 2 || (paso === 4 && watch("servicio")) ? "mx-52" : ""
+          } flex justify-between pb-6 items-center`}
+        >
           <h2 className="text-3xl font-bold">
             Servicio de fotografía y edición de video
           </h2>
@@ -104,13 +210,17 @@ export default function Form() {
       {/**Formulario */}
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="pt-8 pb-20 px-9 bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl h-[400px] backdrop-blur-sm drop-shadow-2xl"
+        className={`pt-8 pb-20 ${
+          paso === 2 || (paso === 4 && watch("servicio"))
+            ? "lg:mx-52 mx-32"
+            : "px-9"
+        } bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl min-h-[400px] backdrop-blur-sm drop-shadow-2xl`}
       >
         {/**Encabezados de Formulario */}
         {paso == 0 && (
           <div className="flex justify-between pb-10 font-nunitoSans">
             <h2 className="text-2xl font-bold">
-              ¿Qué tipo de servicio necesitas?
+              ¿Qué tipo de servicio necesitás?
             </h2>
           </div>
         )}
@@ -226,12 +336,14 @@ export default function Form() {
                   className="flex  gap-1 items-center text-base "
                 >
                   <input
+                    {...register("contactoW")}
                     type="checkbox"
                     className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-md checked:bg-inputBorderSelected"
                   />{" "}
                   Teléfono
                 </label>
                 <label
+                  {...register("contactoM")}
                   htmlFor="mail"
                   className="flex gap-1 items-center text-base"
                 >
@@ -245,20 +357,20 @@ export default function Form() {
             </div>
           </fieldset>
         )}
-        {/** paso 2 */}
+        {/** paso 2a */}
         {paso == 2 && watch("servicio") === "fotografia" && (
-          <fieldset id="paso2" className="flex flex-col gap-4 pb-10 px-32">
-            <label htmlFor="send" className="flex flex-col">
-              ¿Qué tipo de servicio fotográfico necesitas?
+          <fieldset id="paso2" className="flex flex-col gap-6 pb-10 px-32">
+            <label htmlFor="servicio" className="flex flex-col">
+              ¿Qué tipo de servicio fotográfico necesitás?
               <Controller
                 name="tipoServFoto"
                 control={control}
                 render={({ field }) => (
                   <Select
+                    id="servicio"
                     placeholder={"Seleccioná un tipo de servicio fotográfico"}
                     {...field}
                     options={servFotograficoOptions}
-                    isClearable
                     styles={{
                       control: (styles) => ({
                         ...styles,
@@ -288,12 +400,12 @@ export default function Form() {
                       option: (styles, { isFocused }) => ({
                         ...styles,
                         backgroundColor: isFocused ? "#FCCD35" : "#424242",
-                        ":first-child": {
-                          ...styles[":first-child"],
+                        ":first-of-type": {
+                          ...styles[":first-of-type"],
                           borderRadius: "10px 10px 0 0",
                         },
                         ":last-child": {
-                          ...styles[":first-child"],
+                          ...styles[":first-of-type"],
                           borderRadius: "0 0 10px 10px",
                         },
                         color: isFocused ? "#292319" : "#f2f2f2",
@@ -322,27 +434,790 @@ export default function Form() {
                 id="ciudad"
                 className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
               />
-              <label htmlFor="fecha" className="flex flex-col">
-                ¿En qué fecha estimada se va a realizar la sesión de fotos?
-                <div className="flex relative max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
-                  <Image
-                    src="/assets/img/calendar_month_FILL0_wght400_GRAD0_opsz40 1.svg"
-                    alt="icon"
-                  />
-                  <input
-                    type="date"
-                    {...register("fecha", { required: true })}
-                    id="fecha"
-                    className="appearance-none border-l-[1.5px] border-inputBorderSelected  text-xl  text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
-                  />
-                </div>
-              </label>
             </label>
+            <label htmlFor="fecha" className="flex flex-col">
+              ¿En qué fecha estimada se va a realizar la sesión de fotos?
+              <div className="flex relative max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
+                <Image
+                  src="/assets/img/calendar_month_FILL0_wght400_GRAD0_opsz40 1.svg"
+                  alt="icon"
+                  width={50}
+                  height={50}
+                  className="absolute top-[50%] translate-y-[-50%] left-6"
+                />
+                <input
+                  type="date"
+                  {...register("fecha", { required: true })}
+                  id="fecha"
+                  className="appearance-none border-l-[1.5px] border-inputBorderSelected text-center mx-auto text-xl  text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover py-3"
+                />
+              </div>
+            </label>
+            <label htmlFor="duracion" className="flex flex-col">
+              Tiempo estimado de la cobertura del evento / sesión fotográfica
+              <Controller
+                name="duracion"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    id="duracion"
+                    placeholder={"Indicá un tiempo estimado de horas"}
+                    {...field}
+                    options={duraciones}
+                    styles={{
+                      control: (styles) => ({
+                        ...styles,
+                        boxSizing: "content-box",
+                        backgroundColor: "#424242",
+                        borderRadius: "10px",
+                        padding: "0 21px",
+                        border: "1px solid #FCCD35",
+                        color: "#f2f2f2",
+                        fontSize: "18px",
+                        margin: "20px 0",
+                        overlay: "none",
+                        ":hover": {
+                          ...styles[":hover"],
+                          borderColor: "#FBBF01",
+                        },
+                      }),
+                      singleValue: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                        overlay: "none",
+                      }),
+                      placeholder: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                      }),
+                      option: (styles, { isFocused }) => ({
+                        ...styles,
+                        backgroundColor: isFocused ? "#FCCD35" : "#424242",
+                        ":first-of-type": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "10px 10px 0 0",
+                        },
+                        ":last-child": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "0 0 10px 10px",
+                        },
+                        color: isFocused ? "#292319" : "#f2f2f2",
+                      }),
+                      menu: (styles) => ({
+                        ...styles,
+                        borderRadius: "10px",
+                        fontSize: "18px",
+                      }),
+                      menuList: (styles) => ({
+                        ...styles,
+                        maxHeight: "auto",
+                        padding: "0",
+                        overflow: "hidden",
+                      }),
+                    }}
+                    // Otros props de React Select según tus necesidades
+                  />
+                )}
+              ></Controller>
+            </label>
+            <label htmlFor="cantidad" className="flex flex-col">
+              ¿Cuántas fotos editadas y retocadas necesitás?
+              <input
+                {...register("cantidadFotos", { required: true })}
+                id="cantidad"
+                className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
+              />
+            </label>
+            <label htmlFor="formato" className="flex flex-col">
+              ¿En qué formato necesitás las fotos?
+              <Controller
+                name="formato"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    id="formato"
+                    placeholder={"Seleccioná un tipo de formato"}
+                    {...field}
+                    options={formatos}
+                    styles={{
+                      control: (styles) => ({
+                        ...styles,
+                        boxSizing: "content-box",
+                        backgroundColor: "#424242",
+                        borderRadius: "10px",
+                        padding: "0 21px",
+                        border: "1px solid #FCCD35",
+                        color: "#f2f2f2",
+                        fontSize: "18px",
+                        margin: "20px 0",
+                        overlay: "none",
+                        ":hover": {
+                          ...styles[":hover"],
+                          borderColor: "#FBBF01",
+                        },
+                      }),
+                      singleValue: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                        overlay: "none",
+                      }),
+                      placeholder: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                      }),
+                      option: (styles, { isFocused }) => ({
+                        ...styles,
+                        backgroundColor: isFocused ? "#FCCD35" : "#424242",
+                        ":first-of-type": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "10px 10px 0 0",
+                        },
+                        ":last-child": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "0 0 10px 10px",
+                        },
+                        color: isFocused ? "#292319" : "#f2f2f2",
+                      }),
+                      menu: (styles) => ({
+                        ...styles,
+                        borderRadius: "10px",
+                        fontSize: "18px",
+                      }),
+                      menuList: (styles) => ({
+                        ...styles,
+                        maxHeight: "auto",
+                        padding: "0",
+                        overflow: "hidden",
+                      }),
+                    }}
+                    // Otros props de React Select según tus necesidades
+                  />
+                )}
+              ></Controller>
+            </label>
+          </fieldset>
+        )}
+        {/** paso 2b */}
+        {paso == 2 && watch("servicio") === "edicion" && (
+          <fieldset id="paso2" className="flex flex-col gap-6 pb-10 px-32">
+            <label htmlFor="servicio" className="flex flex-col">
+              ¿Qué tipo de servicio audiovisual necesitás?
+              <Controller
+                name="tipoServAudVis"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    id="servicio"
+                    placeholder={"Seleccioná un tipo de servicio audiovisual"}
+                    {...field}
+                    options={servAudiovisualOptions}
+                    styles={{
+                      control: (styles) => ({
+                        ...styles,
+                        boxSizing: "content-box",
+                        backgroundColor: "#424242",
+                        borderRadius: "10px",
+                        padding: "0 21px",
+                        border: "1px solid #FCCD35",
+                        color: "#f2f2f2",
+                        fontSize: "18px",
+                        margin: "20px 0",
+                        overlay: "none",
+                        ":hover": {
+                          ...styles[":hover"],
+                          borderColor: "#FBBF01",
+                        },
+                      }),
+                      singleValue: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                        overlay: "none",
+                      }),
+                      placeholder: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                      }),
+                      option: (styles, { isFocused }) => ({
+                        ...styles,
+                        backgroundColor: isFocused ? "#FCCD35" : "#424242",
+                        ":first-of-type": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "10px 10px 0 0",
+                        },
+                        ":last-child": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "0 0 10px 10px",
+                        },
+                        color: isFocused ? "#292319" : "#f2f2f2",
+                      }),
+                      menu: (styles) => ({
+                        ...styles,
+                        borderRadius: "10px",
+                        fontSize: "18px",
+                      }),
+                      menuList: (styles) => ({
+                        ...styles,
+                        maxHeight: "auto",
+                        padding: "0",
+                        overflow: "hidden",
+                      }),
+                    }}
+                    // Otros props de React Select según tus necesidades
+                  />
+                )}
+              ></Controller>
+            </label>
+            <label htmlFor="ciudad" className="flex flex-col">
+              ¿En qué ciudad se va a realizar la sesión de video?
+              <input
+                {...register("ciudad", { required: true })}
+                id="ciudad"
+                className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
+              />
+            </label>
+            <label htmlFor="fecha" className="flex flex-col">
+              ¿En qué fecha estimada se va a realizar la sesión de video?
+              <div className="flex relative max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
+                <Image
+                  src="/assets/img/calendar_month_FILL0_wght400_GRAD0_opsz40 1.svg"
+                  alt="icon"
+                  width={50}
+                  height={50}
+                  className="absolute top-[50%] translate-y-[-50%] left-6"
+                />
+                <input
+                  type="date"
+                  {...register("fecha", { required: true })}
+                  id="fecha"
+                  className="appearance-none border-l-[1.5px] border-inputBorderSelected text-center mx-auto text-xl  text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover py-3"
+                />
+              </div>
+            </label>
+            <label htmlFor="duracion" className="flex flex-col">
+              Tiempo estimado de la cobertura del evento / sesión de video
+              <Controller
+                name="duracion"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    id="duracion"
+                    placeholder={"Indicá un tiempo estimado de horas"}
+                    {...field}
+                    options={duraciones}
+                    styles={{
+                      control: (styles) => ({
+                        ...styles,
+                        boxSizing: "content-box",
+                        backgroundColor: "#424242",
+                        borderRadius: "10px",
+                        padding: "0 21px",
+                        border: "1px solid #FCCD35",
+                        color: "#f2f2f2",
+                        fontSize: "18px",
+                        margin: "20px 0",
+                        overlay: "none",
+                        ":hover": {
+                          ...styles[":hover"],
+                          borderColor: "#FBBF01",
+                        },
+                      }),
+                      singleValue: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                        overlay: "none",
+                      }),
+                      placeholder: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                      }),
+                      option: (styles, { isFocused }) => ({
+                        ...styles,
+                        backgroundColor: isFocused ? "#FCCD35" : "#424242",
+                        ":first-of-type": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "10px 10px 0 0",
+                        },
+                        ":last-child": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "0 0 10px 10px",
+                        },
+                        color: isFocused ? "#292319" : "#f2f2f2",
+                      }),
+                      menu: (styles) => ({
+                        ...styles,
+                        borderRadius: "10px",
+                        fontSize: "18px",
+                      }),
+                      menuList: (styles) => ({
+                        ...styles,
+                        maxHeight: "auto",
+                        padding: "0",
+                        overflow: "hidden",
+                      }),
+                    }}
+                    // Otros props de React Select según tus necesidades
+                  />
+                )}
+              ></Controller>
+            </label>
+            <label htmlFor="cantidad" className="flex flex-col">
+              ¿Cuántos videos editados necesitás?
+              <input
+                {...register("cantidadVideos", { required: true })}
+                id="cantidad"
+                className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
+              />
+            </label>
+          </fieldset>
+        )}
+        {/** paso 2c */}
+        {paso == 2 && watch("servicio") === "ambos" && (
+          <fieldset id="paso2" className="flex flex-col gap-6 pb-10 px-32">
+            <label htmlFor="servicio" className="flex flex-col">
+              ¿Qué tipo de servicio fotográfico necesitás?
+              <Controller
+                name="tipoServFoto"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    id="servicio"
+                    placeholder={"Seleccioná un tipo de servicio fotográfico"}
+                    {...field}
+                    options={servFotograficoOptions}
+                    styles={{
+                      control: (styles) => ({
+                        ...styles,
+                        boxSizing: "content-box",
+                        backgroundColor: "#424242",
+                        borderRadius: "10px",
+                        padding: "0 21px",
+                        border: "1px solid #FCCD35",
+                        color: "#f2f2f2",
+                        fontSize: "18px",
+                        margin: "20px 0",
+                        overlay: "none",
+                        ":hover": {
+                          ...styles[":hover"],
+                          borderColor: "#FBBF01",
+                        },
+                      }),
+                      singleValue: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                        overlay: "none",
+                      }),
+                      placeholder: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                      }),
+                      option: (styles, { isFocused }) => ({
+                        ...styles,
+                        backgroundColor: isFocused ? "#FCCD35" : "#424242",
+                        ":first-of-type": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "10px 10px 0 0",
+                        },
+                        ":last-child": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "0 0 10px 10px",
+                        },
+                        color: isFocused ? "#292319" : "#f2f2f2",
+                      }),
+                      menu: (styles) => ({
+                        ...styles,
+                        borderRadius: "10px",
+                        fontSize: "18px",
+                      }),
+                      menuList: (styles) => ({
+                        ...styles,
+                        maxHeight: "auto",
+                        padding: "0",
+                        overflow: "hidden",
+                      }),
+                    }}
+                    // Otros props de React Select según tus necesidades
+                  />
+                )}
+              ></Controller>
+            </label>
+            <label htmlFor="servicio1" className="flex flex-col">
+              ¿Qué tipo de servicio audiovisual necesitás?
+              <Controller
+                name="tipoServAudVis"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    id="servicio1"
+                    placeholder={"Seleccioná un tipo de servicio audiovisual"}
+                    {...field}
+                    options={servAudiovisualOptions}
+                    styles={{
+                      control: (styles) => ({
+                        ...styles,
+                        boxSizing: "content-box",
+                        backgroundColor: "#424242",
+                        borderRadius: "10px",
+                        padding: "0 21px",
+                        border: "1px solid #FCCD35",
+                        color: "#f2f2f2",
+                        fontSize: "18px",
+                        margin: "20px 0",
+                        overlay: "none",
+                        ":hover": {
+                          ...styles[":hover"],
+                          borderColor: "#FBBF01",
+                        },
+                      }),
+                      singleValue: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                        overlay: "none",
+                      }),
+                      placeholder: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                      }),
+                      option: (styles, { isFocused }) => ({
+                        ...styles,
+                        backgroundColor: isFocused ? "#FCCD35" : "#424242",
+                        ":first-of-type": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "10px 10px 0 0",
+                        },
+                        ":last-child": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "0 0 10px 10px",
+                        },
+                        color: isFocused ? "#292319" : "#f2f2f2",
+                      }),
+                      menu: (styles) => ({
+                        ...styles,
+                        borderRadius: "10px",
+                        fontSize: "18px",
+                      }),
+                      menuList: (styles) => ({
+                        ...styles,
+                        maxHeight: "auto",
+                        padding: "0",
+                        overflow: "hidden",
+                      }),
+                    }}
+                    // Otros props de React Select según tus necesidades
+                  />
+                )}
+              ></Controller>
+            </label>
+            <label htmlFor="ciudad" className="flex flex-col">
+              ¿En qué ciudad se va a realizar la sesión de fotos / video?
+              <input
+                {...register("ciudad", { required: true })}
+                id="ciudad"
+                className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
+              />
+            </label>
+            <label htmlFor="fecha" className="flex flex-col">
+              ¿En qué fecha estimada se va a realizar la sesión de fotos /
+              video?
+              <div className="flex relative max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
+                <Image
+                  src="/assets/img/calendar_month_FILL0_wght400_GRAD0_opsz40 1.svg"
+                  alt="icon"
+                  width={50}
+                  height={50}
+                  className="absolute top-[50%] translate-y-[-50%] left-6"
+                />
+                <input
+                  type="date"
+                  {...register("fecha", { required: true })}
+                  id="fecha"
+                  className="appearance-none border-l-[1.5px] border-inputBorderSelected text-center mx-auto text-xl  text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover py-3"
+                />
+              </div>
+            </label>
+            <label htmlFor="duracion" className="flex flex-col">
+              Tiempo estimado de la cobertura del evento o sesión de fotos /
+              video
+              <Controller
+                name="duracion"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    id="duracion"
+                    placeholder={"Indicá un tiempo estimado de horas"}
+                    {...field}
+                    options={duraciones}
+                    styles={{
+                      control: (styles) => ({
+                        ...styles,
+                        boxSizing: "content-box",
+                        backgroundColor: "#424242",
+                        borderRadius: "10px",
+                        padding: "0 21px",
+                        border: "1px solid #FCCD35",
+                        color: "#f2f2f2",
+                        fontSize: "18px",
+                        margin: "20px 0",
+                        overlay: "none",
+                        ":hover": {
+                          ...styles[":hover"],
+                          borderColor: "#FBBF01",
+                        },
+                      }),
+                      singleValue: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                        overlay: "none",
+                      }),
+                      placeholder: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                      }),
+                      option: (styles, { isFocused }) => ({
+                        ...styles,
+                        backgroundColor: isFocused ? "#FCCD35" : "#424242",
+                        ":first-of-type": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "10px 10px 0 0",
+                        },
+                        ":last-child": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "0 0 10px 10px",
+                        },
+                        color: isFocused ? "#292319" : "#f2f2f2",
+                      }),
+                      menu: (styles) => ({
+                        ...styles,
+                        borderRadius: "10px",
+                        fontSize: "18px",
+                      }),
+                      menuList: (styles) => ({
+                        ...styles,
+                        maxHeight: "auto",
+                        padding: "0",
+                        overflow: "hidden",
+                      }),
+                    }}
+                    // Otros props de React Select según tus necesidades
+                  />
+                )}
+              ></Controller>
+            </label>
+            <label htmlFor="cantidad" className="flex flex-col">
+              ¿Cuántas fotos editadas y retocadas necesitás?
+              <input
+                {...register("cantidadFotos", { required: true })}
+                id="cantidad"
+                className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
+              />
+            </label>
+            <label htmlFor="formato" className="flex flex-col">
+              ¿En qué formato necesitás las fotos?
+              <Controller
+                name="formato"
+                control={control}
+                render={({ field }) => (
+                  <Select
+                    id="formato"
+                    placeholder={"Seleccioná un tipo de formato"}
+                    {...field}
+                    options={formatos}
+                    styles={{
+                      control: (styles) => ({
+                        ...styles,
+                        boxSizing: "content-box",
+                        backgroundColor: "#424242",
+                        borderRadius: "10px",
+                        padding: "0 21px",
+                        border: "1px solid #FCCD35",
+                        color: "#f2f2f2",
+                        fontSize: "18px",
+                        margin: "20px 0",
+                        overlay: "none",
+                        ":hover": {
+                          ...styles[":hover"],
+                          borderColor: "#FBBF01",
+                        },
+                      }),
+                      singleValue: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                        overlay: "none",
+                      }),
+                      placeholder: (styles) => ({
+                        ...styles,
+                        color: "#f2f2f2",
+                      }),
+                      option: (styles, { isFocused }) => ({
+                        ...styles,
+                        backgroundColor: isFocused ? "#FCCD35" : "#424242",
+                        ":first-of-type": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "10px 10px 0 0",
+                        },
+                        ":last-child": {
+                          ...styles[":first-of-type"],
+                          borderRadius: "0 0 10px 10px",
+                        },
+                        color: isFocused ? "#292319" : "#f2f2f2",
+                      }),
+                      menu: (styles) => ({
+                        ...styles,
+                        borderRadius: "10px",
+                        fontSize: "18px",
+                      }),
+                      menuList: (styles) => ({
+                        ...styles,
+                        maxHeight: "auto",
+                        padding: "0",
+                        overflow: "hidden",
+                      }),
+                    }}
+                    // Otros props de React Select según tus necesidades
+                  />
+                )}
+              ></Controller>
+            </label>
+            <label htmlFor="cantidad2" className="flex flex-col">
+              ¿Cuántos videos editados necesitás?
+              <input
+                {...register("cantidadVideos", { required: true })}
+                id="cantidad2"
+                className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
+              />
+            </label>
+          </fieldset>
+        )}
+        {/** paso 3 */}
+        {paso === 3 && (
+          <fieldset className="flex flex-col gap-4 px-36">
+            <h2 className="text-fondoBlanco font-nunitoSans text-2xl font-bold">
+              Información adicional (opcional)
+            </h2>
+            <label className="flex flex-col text-fondoBlanco font-nunitoSans text-lg font-bold">
+              Detallá cualquier información relevante relacionada con tu pedido
+              <textarea
+                className="my-4 bg-fondoGris rounded-2xl h-96 border p-6 border-inputBorderSelected"
+                {...register("comentarios")}
+              />
+            </label>
+          </fieldset>
+        )}
+        {/** paso 4 */}
+        {paso === 4 && (
+          <fieldset className="flex flex-col gap-8 pb-10 px-32">
+            <h2 className="text-fondoBlanco font-nunitoSans text-2xl font-bold">
+              Revisá que la información sea correcta
+            </h2>
+            <div className="grid grid-cols-2">
+              <div className="flex flex-col gap-2">
+                <p className="text-fondoBlanco font-nunitoSans text-lg">
+                  Nombre
+                </p>
+                <p className="font-nunito text-lg font-bold">
+                  {watch("nombre")}
+                </p>
+              </div>
+              <div className="flex flex-col gap-4">
+                <p className="text-fondoBlanco font-nunitoSans text-lg">
+                  Apellido
+                </p>
+                <p className="font-nunito text-lg font-bold">
+                  {watch("apellido")}
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2">
+              <div className="flex flex-col gap-4">
+                <p className="text-fondoBlanco font-nunitoSans text-lg">
+                  Teléfono
+                </p>
+                <p className="font-nunito text-lg font-bold">
+                  {watch("telefono1")}-{watch("telefono2")}
+                </p>
+              </div>
+              <div className="flex flex-col gap-4">
+                <p className="text-fondoBlanco font-nunitoSans text-lg text-left">
+                  Email
+                </p>
+                <p className="font-nunito text-lg font-bold">
+                  {watch("email")}
+                </p>
+              </div>
+            </div>
+            <div>
+              <p className="text-fondoBlanco font-nunitoSans text-lg text-left pb-2">
+                ¿Qué tipo de servicio fotográfico necesitás?
+              </p>
+              <p className="font-nunito text-lg font-bold">
+                {watch("tipoServFoto")?.label}
+              </p>
+            </div>
+            <div>
+              <p className="text-fondoBlanco font-nunitoSans text-lg text-left pb-2">
+                ¿En qué ciudad se va a realizar la sesión fotográfica?
+              </p>
+              <p className="font-nunito text-lg font-bold">{watch("ciudad")}</p>
+            </div>
+            <div>
+              <p className="text-fondoBlanco font-nunitoSans text-lg text-left pb-2">
+                ¿En qué fecha estimada se va a realizar la sesión de fotos?
+              </p>
+              <p className="font-nunito text-lg font-bold">
+                {watch("fecha").toString().slice(-2)}
+                {"/"}
+                {watch("fecha").toString().slice(-5, -3)}
+                {"/"}
+                {watch("fecha").toString().slice(0, 4)}
+              </p>
+            </div>
+            <div>
+              <p className="text-fondoBlanco font-nunitoSans text-lg text-left pb-2">
+                Tiempo estimado de la cobertura del evento / sesión fotográfica
+              </p>
+              <p className="font-nunito text-lg font-bold">
+                {watch("duracion")?.label}
+              </p>
+            </div>
+            <div>
+              <p className="text-fondoBlanco font-nunitoSans text-lg text-left pb-2">
+                ¿Cuántas fotos editadas y retocadas necesitás?
+              </p>
+              <p className="font-nunito text-lg font-bold">
+                {watch("cantidadFotos")}
+              </p>
+            </div>
+            <div>
+              <p className="text-fondoBlanco font-nunitoSans text-lg text-left pb-2">
+                ¿En qué formato necesitás las fotos?
+              </p>
+              <p className="font-nunito text-lg font-bold">
+                {watch("formato")?.label}
+              </p>
+            </div>
+            <div>
+              <p className="text-fondoBlanco font-nunitoSans text-lg text-left pb-2">
+                Detallá cualquier información relevante relacionada con tu
+                pedido
+              </p>
+              <p className="font-nunito text-lg font-bold">
+                {watch("comentarios")}
+              </p>
+            </div>
+            <div>
+              <p className="text-fondoBlanco font-nunitoSans text-lg text-left pb-2">
+                ¿Por qué medio querés recibir tu presupuesto?
+              </p>
+              <p className="font-nunito text-lg font-bold">
+                {watch("contactoW") ? "Whatsapp" : ""}
+                {watch("contactoM") && watch("contactoW") ? "-" : ""}{" "}
+                {watch("contactoM") ? "Mail" : ""}
+              </p>
+            </div>
           </fieldset>
         )}
       </form>
       {/*Botones para volver o pasar al siguiente formulario */}
-      <div className="flex justify-around">
+      <div className="flex justify-around ">
         <CustomButton
           title="Volver"
           styles="bg-principal rounded-[40px] px-14 py-3 font-merriwather font-bold text-3xl mt-16 hover:bg-principalHover"
@@ -351,9 +1226,18 @@ export default function Form() {
 
         <CustomButton
           title="Continuar"
-          styles="bg-principal rounded-[40px] px-14 py-3 font-merriwather font-bold text-3xl mt-16 hover:bg-principalHover"
+          disabled={!habilitar}
+          styles={`${
+            habilitar
+              ? "bg-principal hover:bg-principalHover"
+              : "bg-backgroundDisabled cursor-not-allowed"
+          } rounded-[40px] px-14 py-3 font-merriwather font-bold text-3xl mt-16`}
           onClick={() => {
-            setPaso(paso + 1);
+            if (paso === 4) {
+              handleSubmit(onSubmit)();
+            } else {
+              handleContinuar();
+            }
           }}
         />
       </div>

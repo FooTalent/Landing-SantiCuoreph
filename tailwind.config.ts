@@ -26,10 +26,12 @@ const config: Config = {
         formBackground: "#424242cc",
         inputBorderSelected: "#FBBF01",
         textoInput: "#292319",
+        backgroundDisabled: "#d9d9d938",
       },
       fontFamily: {
         nunitoSans: ["Nunito Sans", "sans-serif"],
         merriwather: ["Merriweather Sans", "serif"],
+        nunito: ["Nunito", "serif"],
       },
     },
   },
