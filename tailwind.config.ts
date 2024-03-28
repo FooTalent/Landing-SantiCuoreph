@@ -23,10 +23,11 @@ const config: Config = {
         sliderHover: "#969696B2",
         slider: "#555555B2",
         sliderIndicator: "#EEC54A",
-        formBackground: "#424242cc",
+        formBackground: "#42424250",
         inputBorderSelected: "#FBBF01",
         textoInput: "#292319",
-        backgroundDisabled: "#d9d9d938",
+        backgroundDisabled: "#FCCD3538",
+        textoDisabled: "#D9D9D938",
       },
       fontFamily: {
         nunitoSans: ["Nunito Sans", "sans-serif"],
