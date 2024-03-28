@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .slick-next::before {
   content: " ";
   display: none;
@@ -109,7 +110,7 @@ html {
   grid-row: 2 / 3;
 }
 
-@media (min-width: 1020px) {
+@media (min-width: 1220px) {
   .sobremi__Santi{
     grid-template-rows: 1;
     grid-template-columns: 2;
@@ -120,6 +121,10 @@ html {
 
   .pocodespues{
     grid-column: 2 / 2;
+  }
+
+  body{
+    overflow: auto;
   }
 }
 

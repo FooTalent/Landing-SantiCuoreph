@@ -65,7 +65,7 @@ const AboutMe = () => {
         </section>
         <div className='bg-fixed  h-screen bg-background3'  >
         </div>
-        <section className='w-full grid grid-cols-1 lg:grid-cols-2  nunitoSans max-w-[590px] lg:max-w-fit m-auto  mb-96 lg:mb-0 text-lg text-start'>
+        <section className='w-full grid grid-cols-1 lg:grid-cols-2  nunitoSans max-w-[590px] lg:max-w-fit m-auto mb-20 lg:mb-0 text-lg text-start'>
         <div className=' flex flex-col lg:hidden gap-10 mx-8  mt-10'>
         <p >Mi enfoque va más allá de simplemente capturar imágenes y editar videos:</p>  
         <p className='font-bold'>Me encargo de crear recuerdos y construir historias que perduren en el tiempo</p>
