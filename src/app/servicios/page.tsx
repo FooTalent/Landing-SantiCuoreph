@@ -100,8 +100,8 @@ const ServicesPage = () => {
     </section>
     </div>
 
-    <section className="xl:max-w-screen-xl mx-auto mb-16 md:mb-36 text-fondoBlanco px-4 md:px-0">
-      <div className="md:grid md:grid-cols-5 md:gap-3 mb-3 items-stretch overflow-hidden xl:max-h-[928px]">
+    <section className="xl:max-w-screen-xl mx-auto mb-16 md:mb-36 text-fondoBlanco mx-4 md:px-0">
+      <div className="md:grid md:grid-cols-5 md:gap-3 mb-3 items-stretch overflow-hidden md:max-h-[600px] lg:max-h-[800px] xl:max-h-[928px]">
         <Link href="/fotografia/lorena" className="col-span-2 relative h-full w-full" id="0">
           <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Lorena</h2>
@@ -110,10 +110,10 @@ const ServicesPage = () => {
           <Image
             src={img01}
             alt="asd"
-            className="object-cover rounded-xl h-full xl:max-h-[928px]"
+            className="object-cover rounded-xl h-full md:max-h-[600px] lg:max-h-[800px] xl:max-h-[928px]"
           />
         </Link>
-        <div className="col-span-3 grid grid-rows-2 gap-3 xl:max-h-[928px]">
+        <div className="col-span-3 grid grid-rows-2 gap-3 md:max-h-[600px] lg:max-h-[800px] xl:max-h-[928px]">
           <Link href="/fotografia/aura-gin" className="relative pt-3 md:pt-0" id="1">
           <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Aura Gin</h2>
@@ -122,7 +122,7 @@ const ServicesPage = () => {
             <Image
               src={img02}
               alt="asd"
-              className="object-cover h-full rounded-2xl xl:max-h-[464px]"
+              className="object-cover h-full rounded-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[464px]"
             />
           </Link>
           <div className="relative" id="2">
@@ -133,13 +133,13 @@ const ServicesPage = () => {
             <Image
               src={img03}
               alt="asd"
-              className="object-cover h-full rounded-2xl xl:max-h-[464px]"
+              className="object-cover h-full rounded-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[464px]"
             />
           </div>
         </div>
       </div>
 
-      <div className="mb-3 xl:max-h-[456px] relative" id="3">
+      <div className="mb-3 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] relative" id="3">
       <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Jettatore - Obra teatral</h2>
             <h3 className="text-3xl font-thin">Covertura de evento artístico</h3>
@@ -147,12 +147,12 @@ const ServicesPage = () => {
         <Image
           src={img04}
           alt="asd"
-          className="object-cover rounded-2xl xl:max-h-[456px] object-top"
+          className="object-cover rounded-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] object-top"
         />
       </div>
 
-      <div className="md:grid md:grid-cols-2 md:gap-3 mb-3 xl:max-h-[456px]">
-        <div className="col-span-1 xl:max-h-[456px] relative pb-3 md:pb-0">
+      <div className="md:grid md:grid-cols-2 md:gap-3 mb-3 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px]">
+        <div className="col-span-1 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] relative pb-3 md:pb-0">
         <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">One-bar</h2>
             <h3 className="text-3xl font-thin">Cobertura de evento artístico</h3>
@@ -160,7 +160,7 @@ const ServicesPage = () => {
           <Image
             src={img05}
             alt="asds"
-            className="object-cover rounded-2xl xl:max-h-[456px] object-top"
+            className="object-cover rounded-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] object-top"
           />
         </div>
         <div className="col-span-1 h-full relative">
@@ -171,11 +171,11 @@ const ServicesPage = () => {
           <Image
             src={img06}
             alt="asds"
-            className="object-cover h-full rounded-2xl xl:max-h-[456px]"
+            className="object-cover h-full rounded-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px]"
           />
         </div>
       </div>
-      <div className="mb-3 xl:max-h-[456px] relative">
+      <div className="mb-3 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] relative">
       <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Más que uno</h2>
             <h3 className="text-3xl font-thin">Cobertura de evento artístico</h3>
@@ -183,7 +183,7 @@ const ServicesPage = () => {
         <Image
           src={img07}
           alt="asds"
-          className="object-cover rounded-2xl xl:max-h-[456px] object-top"
+          className="object-cover rounded-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] object-top"
         />
       </div>
     </section>
