@@ -8,9 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'background1': 'url("/images/aboutme/image 28.webp")',
+        'background2': 'url("/images/aboutme/background2.webp")',
+        'background3': 'url("/images/aboutme/MAS QUE UNO BAJA-51 1.webp")',
+        
       },
       colors: {
         fondoNegro: "#292319",
@@ -19,14 +20,20 @@ const config: Config = {
         principalHover: "#FCDC71",
         fondoBlanco: "#F2F2F2",
         fondoGris: "#424242",
-        fondoGrisClaro:"#696863",
+        fondoGrisClaro: "#696863",
         sliderHover: "#969696B2",
         slider: "#555555B2",
         sliderIndicator: "#EEC54A",
+        formBackground: "#42424250",
+        inputBorderSelected: "#FBBF01",
+        textoInput: "#292319",
+        backgroundDisabled: "#FCCD3538",
+        textoDisabled: "#D9D9D938",
       },
       fontFamily: {
         nunitoSans: ["Nunito Sans", "sans-serif"],
         merriwather: ["Merriweather Sans", "serif"],
+        nunito: ["Nunito", "serif"],
       },
     },
   },

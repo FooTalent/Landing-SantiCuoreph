@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.slick-next::before{
-content: " ";
-display: none;
+
+.slick-next::before {
+  content: " ";
+  display: none;
 }
-.slick-prev::before{
+
+.slick-prev::before {
   display: none;
   content: " ";
 }
+
 html {
   background-color: #F2F2F2;
 }
@@ -54,14 +57,72 @@ html {
   background-color: #FCCD35 !important;
 }
 
-.Sobremi{
+
+#formulario {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(/assets/img/fondoContact.png) no-repeat;
+  background-size: cover;
+}
+
+
+#fecha {
+  text-align: right;
+}
+
+#fecha::-webkit-inner-spin-button,
+::-webkit-calendar-picker-indicator,
+::-webkit-datetime-edit {
+  display: none;
+}
+
+#fecha::-webkit-calendar-picker-indicator {
+  display: block;
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+#fecha::-webkit-datetime-edit {
+  display: block;
+}
+
+
+.Sobremi,.SantiagoGarcia {
   display: grid;
   grid-template-rows: 3;
   grid-template-columns: 1;
   place-content: center;
 }
 
-.quiensoy{
+.quiensoy,.santiagoSaluda {
   grid-row: 1 / 3;
 }
+
+.santiCamera{
+  grid-row: 2 / 3;
+}
+
+@media (min-width: 1020px) {
+  .sobremi__Santi{
+    grid-template-rows: 1;
+    grid-template-columns: 2;
+  }
+  .santiCamera{
+    grid-row: 1 / 1;
+  }
+
+  .pocodespues{
+    grid-column: 2 / 2;
+  }
+}
+
+
+
 

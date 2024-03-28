@@ -1,26 +1,23 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ServiceBanner from "./components/ServiceBanner";
-import banner01 from "../../../public/images/services/photography/banner/bannerphoto.jpg"
-import banner02 from "../../../public/images/services/photography/img01.jpg"
-
-
+import banner01 from "../../../public/images/services/photography/banner/bannerphoto.jpg";
+import banner02 from "../../../public/images/services/photography/img01.jpg";
 
 const services = [
-    {name: "Fotografía", href: "/servicios"},
-    {name: "Edición audiovisual", href: "/servicios/audiovisual"}
-]
+  { name: "Fotografía", href: "/servicios" },
+  { name: "Edición audiovisual", href: "/servicios/audiovisual" },
+];
 
-const ServicesLayout =({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) => {
-    const pathname = usePathname();
-    const activeStyle = 'font-extrabold';
-    const inactiveStyle = 'font-light'
-    
+const ServicesLayout = ({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) => {
+  const pathname = usePathname();
+  const activeStyle = "font-extrabold";
+  const inactiveStyle = "font-light";
 
     return (
         <div className="font-merriwather font-bold mx-auto">
@@ -45,8 +42,7 @@ const ServicesLayout =({
                 <ServiceBanner />
             </section>
         </div>
-    );
-
-}
+  );
+};
 
 export default ServicesLayout;

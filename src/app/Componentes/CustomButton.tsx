@@ -1,23 +1,24 @@
-'use client'
+"use client";
 
 type buttonProps = {
-    title: string,
-    styles: string,
-}
+  title: string;
+  styles: string;
+  onClick?: () => void;
+  disabled?: boolean;
+};
 
 const CustomButton = (props: buttonProps) => {
+  const { title, styles, onClick, disabled = false } = props;
 
-
-const {title, styles}= props
-
-    return(
-        <button
-        type="button"
-        className={styles}
-        onClick={() => {}}
-        >
-            {title}
-        </button>
-    )
-}
-export default CustomButton
+  return (
+    <button
+      type="button"
+      className={styles}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {title}
+    </button>
+  );
+};
+export default CustomButton;

@@ -47,6 +47,7 @@ const ServicesPage = () => {
           </Link>
           <Link href="/fotografia/pasado-pisado" className="relative" id="2">
           <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
+
             <h2 className="text-5xl mb-4 italic">Pasado Pisado</h2>
             <h3 className="text-3xl font-thin">Fotografía artística</h3>
           </div>
