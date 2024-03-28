@@ -51,7 +51,7 @@ const ServicesPage = () => {
       <div className="mb-3 xl:max-h-[456px] relative">
       <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center rounded-xl cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Jettatore - Obra teatral</h2>
-            <h3 className="text-3xl font-thin">Covertura de evento artístico</h3>
+            <h3 className="text-3xl font-thin">Cobertura de evento artístico</h3>
           </div>
         <Image
           src={img04}
@@ -64,7 +64,7 @@ const ServicesPage = () => {
         <div className="col-span-1 xl:max-h-[456px] relative">
         <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center rounded-xl cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">One-bar</h2>
-            <h3 className="text-3xl font-thin">Cobertura de evento artístico</h3>
+            <h3 className="text-3xl font-thin">Cobertura de evento social</h3>
           </div>
           <Image
             src={img05}

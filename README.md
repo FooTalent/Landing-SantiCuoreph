@@ -81,7 +81,7 @@ El videografo autodidacta de Buenos Aires SantiCuoreph con gran creatividad nece
     <td align='center'>
       <div >
         <a href="https://www.linkedin.com/in/rafael-strongoli/" target="_blank" rel="author">
-          <img width="110" src="https://media.licdn.com/dms/image/D4E35AQGcmu2CS8HD3A/profile-framedphoto-shrink_800_800/0/1689114650333?e=1710774000&v=beta&t=tADfVBcLdLeSZzw_dGRMcnrrmGTJs-z5ruX2PHfEKGo"/>
+          <img width="110" src="https://avatars.githubusercontent.com/u/44025206?v=4"/>
         </a>
         <a href="https://www.linkedin.com/in/rafael-strongoli/" target="_blank" rel="author">
           <h4 style="margin-top: 1rem;">Rafael Strongoli</br><small>Frontend Developer</small></h4>
