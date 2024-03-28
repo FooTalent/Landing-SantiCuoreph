@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import ServicesLayout from "../layout";
 import Link from "next/link";
 const buttonStyle = {
   width: "50px",
@@ -20,8 +19,9 @@ function SampleNextArrow(props: any) {
         className="lg:mr-40 mr-4"
         style={{ ...buttonStyle }}
       >
-        <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
+        <div className="bg-slider xl:w-14 w-10 h-10 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
           <Image
+          className="w-[15px] h-[17px] xl:w-20 xl:h-2"
             src="/assets/img/ArrowRight.png"
             alt=""
             width={20}
@@ -43,8 +43,9 @@ function SamplePrevArrow(props: any) {
         className="lg:mr-40 -ml-8 "
         style={{ ...buttonStyle }}
       >
-        <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
+        <div className="bg-slider xl:w-14 w-10 h-10 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
           <Image
+          className="w-[15px] h-[17px] xl:w-20 xl:h-20"
             src="/assets/img/ArrowLeft.png"
             alt=""
             width={20}
@@ -84,11 +85,11 @@ const Audiovisual = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  const handleOpenModal = (to:number) =>{
+  const handleOpenModal = (to: number) => {
     sliderRef.slickGoTo(to),
-    setCarrousel(true),
-    (document.body.style.overflow = "hidden");
-  }
+      setCarrousel(true),
+      (document.body.style.overflow = "hidden");
+  };
   const carrouselRef: any = useRef<HTMLDivElement>();
   return (
     <section
@@ -121,8 +122,8 @@ const Audiovisual = () => {
               src="/videos/-df52-4356-853b-f2fcf5ce094e.mp4"
             />
             <div className="m-auto text-center text-fondoBlanco">
-              <h1 className=" text-[48px]  italic">Spasio Kinesio</h1>
-              <p className="text-fondoBlanco font-nunitoSans font-thin text-[10px] md:text-[30px]">
+              <h1 className=" text-2xl xl:text-[48px]  italic">Spasio Kinesio</h1>
+              <p className="text-fondoBlanco font-nunitoSans font-thin text-xl md:text-[30px]">
                 Creación de video para redes
               </p>
             </div>
@@ -136,10 +137,10 @@ const Audiovisual = () => {
               src="/videos/-aa9d-4724-bd79-6eef7dc35203.mp4"
             />
             <div className="m-auto text-center text-fondoBlanco">
-              <h1 className=" text-[48px]  italic">
+              <h1 className="  text-2xl xl:text-[48px]  italic">
                 TOCH en Camping de Palermo
               </h1>
-              <p className="text-fondoBlanco font-nunitoSans font-thin text-[30px]">
+              <p className="text-fondoBlanco font-nunitoSans font-thin  text-xl md:text-[30px]">
                 Creación de video para redes
               </p>
             </div>
@@ -154,10 +155,10 @@ const Audiovisual = () => {
             />
 
             <div className="m-auto text-center text-fondoBlanco">
-              <h1 className=" text-[48px]  italic">
+              <h1 className="  text-2xl xl:text-[48px]  italic">
                 Backstage de fotos Pasado Pisado{" "}
               </h1>
-              <p className="font-nunitoSans font-thin text-[30px]">
+              <p className="font-nunitoSans font-thin  text-xl md:text-[30px]">
                 Creación de video para redes{" "}
               </p>
             </div>
@@ -171,10 +172,10 @@ const Audiovisual = () => {
               src="/videos/Sala de Exposiciones.mp4"
             />
             <div className="m-auto text-center text-fondoBlanco">
-              <h1 className=" text-[48px]  italic">
+              <h1 className="  text-2xl xl:text-[48px]  italic">
                 Exposición en Centro Cultural Kirchner{" "}
               </h1>
-              <p className="font-nunitoSans font-thin text-[30px]">
+              <p className="font-nunitoSans font-thin  text-xl md:text-[30px]">
                 Edición de video{" "}
               </p>
             </div>
@@ -189,8 +190,8 @@ const Audiovisual = () => {
               src="/videos/Biró.mp4"
             />
             <div className="m-auto text-center text-fondoBlanco">
-              <h1 className=" text-[48px]  italic">José Ladislao Biró </h1>
-              <p className="font-nunitoSans font-thin text-[30px]">
+              <h1 className="  text-2xl xl:text-[48px]  italic">José Ladislao Biró </h1>
+              <p className="font-nunitoSans font-thin  text-xl md:text-[30px]">
                 Edición de video{" "}
               </p>
             </div>
@@ -217,10 +218,10 @@ const Audiovisual = () => {
       {!carrousel && (
         <div
           className={
-            "gap-y-2 xl:max-w-screen-xl px-5 lg:px-0 mx-auto flex flex-col"
+            "gap-y-2 xl:max-w-screen-xl  px-5 lg:px-0 mx-auto flex flex-col"
           }
         >
-          <div className="flex-col lg:flex  lg:flex-row gap-x-2 font-merriwather italic text-fondoBlanco">
+          <div className="flex-col lg:flex space-y-2  lg:space-y-0 lg:flex-row gap-x-2 font-merriwather italic text-fondoBlanco">
             <div
               onMouseEnter={() => videoRef1.current.play()}
               onMouseLeave={() => videoRef1.current.pause()}
@@ -228,14 +229,16 @@ const Audiovisual = () => {
             >
               <video
                 ref={videoRef1}
-                className="h-[1344px] rounded-2xl object-cover  w-full"
+                className="
+                h-[656.92px]                
+                xl:h-[1344px] rounded-2xl object-cover  w-full"
                 loop
                 muted
                 src="/videos/-df52-4356-853b-f2fcf5ce094e.mp4"
               />
               <div
                 onClick={() => {
-                  handleOpenModal(0)
+                  handleOpenModal(0);
                 }}
                 className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
               >
@@ -254,7 +257,8 @@ const Audiovisual = () => {
             >
               <video
                 ref={videoRef2}
-                className="h-[1344px] rounded-2xl object-cover  w-full"
+                className="h-[656.92px]                
+                xl:h-[1344px] rounded-2xl object-cover  w-full"
                 loop
                 muted
                 src="/videos/-aa9d-4724-bd79-6eef7dc35203.mp4"
@@ -274,7 +278,7 @@ const Audiovisual = () => {
               </div>
             </div>
           </div>
-          <div className="flex-col lg:flex lg:flex-row gap-x-2">
+          <div className="flex-col space-y-2  lg:space-y-0 lg:flex lg:flex-row gap-x-2">
             <div
               onMouseEnter={() => videoRef3.current.play()}
               onMouseLeave={() => videoRef3.current.pause()}
@@ -282,7 +286,8 @@ const Audiovisual = () => {
             >
               <video
                 ref={videoRef3}
-                className="h-[1344px] rounded-2xl object-cover  w-full"
+                className="h-[656.92px]                
+                xl:h-[1344px] rounded-2xl object-cover  w-full"
                 loop
                 muted
                 src="/videos/Backstage Microcentro ALTA.mp4"
@@ -320,10 +325,10 @@ const Audiovisual = () => {
                   className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
                 >
                   <div className="m-auto">
-                    <h1 className=" text-[48px]  italic">
+                    <h1 className="text-xl xl:text-[48px]  italic">
                       Exposición en Centro Cultural Kirchner{" "}
                     </h1>
-                    <p className="font-nunitoSans font-thin text-[30px]">
+                    <p className="font-nunitoSans font-thin text-[20px] xl:text-[30px]">
                       Edición de video{" "}
                     </p>
                   </div>
@@ -346,10 +351,10 @@ const Audiovisual = () => {
                   className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
                 >
                   <div className="m-auto">
-                    <h1 className=" text-[48px]  italic">
+                    <h1 className=" text-xl xl:text-[48px]  italic">
                       José Ladislao Biró{" "}
                     </h1>
-                    <p className="font-nunitoSans font-thin text-[30px]">
+                    <p className="text-[20px] font-nunitoSans font-thin xl:text-[30px]">
                       Edición de video{" "}
                     </p>
                   </div>

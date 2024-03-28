@@ -36,7 +36,7 @@ const Header = () => {
     }
   }, [isClick]);
   const handleLogoLink = () => {
-    if (pathName === "/contacto") {
+    if (pathName === "/contacto/formulario") {
       document.body.style.overflow = "hidden";
       setToNavigate("/");
       setShowModal(true);
@@ -45,7 +45,7 @@ const Header = () => {
     }
   };
   const handleNavigateLinksOpenModal = (href: string) => {
-    if (pathName === "/contacto") {
+    if (pathName === "/contacto/formulario") {
       document.body.style.overflow = "hidden";
       setToNavigate(href);
       setShowModal(true);
