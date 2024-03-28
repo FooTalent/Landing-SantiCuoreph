@@ -82,7 +82,7 @@ const Header = () => {
         </div>
           <div className="sm:hidden pb-1">
             <div className="px-2 pt-2">
-              <ul className={`btn ${isClick ? 'right-0' : 'right-[-999px] '} flex flex-col bg-fondoGris absolute min-w-[250px] top-0 h-screen items-center justify-between text-white text-2xl font-semibold gap-8 transition-all duration-500 font-nunitoSans font-semibold`}>
+              <ul className={`btn ${isClick ? 'right-0' : 'right-[-999px] '} flex flex-col bg-fondoGris absolute min-w-[290px] top-0 h-screen items-center justify-between text-white text-2xl font-semibold gap-8 transition-all duration-500 font-nunitoSans font-semibold`}>
               <div className="flex-shrink-0 md:hidden">
               <Link href="/" className="flex items-center gap-2 grow w-40 my-12">
                 <Logo/>
