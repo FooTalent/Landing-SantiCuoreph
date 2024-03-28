@@ -45,11 +45,6 @@ const ServicesPage = () => {
   const [open, setOpen] = useState<boolean>(false)
   const [index, setIndex] = useState<number>(0)
 
-  const closeModal = () => {
-    console.log("asds")
-    setOpen(false)
-  }
-
   const openModal = (e: React.MouseEvent<HTMLDivElement>) => {
     let index = Number(e.currentTarget.id)
     setIndex(index)
@@ -87,7 +82,6 @@ const ServicesPage = () => {
     <>
     <div className={`${open ? "" : "hidden"}`}>
     <section className="slide-container backdrop-blur-xl bg-black/15 absolute w-screen h-screen top-0 right-0 left-0 bottom-0 z-50">
-      <div className="absolute right-0 z-100 hover:cursor-pointer hover:bg-red-500" onClick={closeModal}><h2>CERRAR</h2></div>
       <Slide {...properties} defaultIndex={index}>
         {
           images.map((image, idx) => {
