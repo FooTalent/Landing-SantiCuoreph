@@ -39,8 +39,8 @@ const AboutMe = () => {
         </div>
         </picture>
         <section className='sobremi__Santi w-full grid grid-cols-1 lg:grid-rows-1 lg:grid-cols-2  h-full place-content-center  nunitoSans text-xl lg:text-2xl'>
-                        <p className='pocodespues my-16 mx-20   sm:m-auto sm:my-16 block lg:hidden'>Poco tiempo después, en 2016, creé <b>SantiCuore PH.</b></p>  
-                        <p className='pocodespues m-16  flex lg:hidden'>Este emprendimiento surgió como resultado de una búsqueda de expresión artística. Comenzó inicialmente como un anhelo de capturar la belleza y la emoción detrás de cada instante, y con el objetivo de llevar a un nivel profesional mi creatividad y mi pasión por la fotografía</p>
+                        <p className='pocodespues my-16 mx-8   sm:m-auto sm:my-16 block lg:hidden'>Poco tiempo después, en 2016, creé <b>SantiCuore PH.</b></p>  
+                        <p className='pocodespues m-8 mb-16  flex lg:hidden'>Este emprendimiento surgió como resultado de una búsqueda de expresión artística. Comenzó inicialmente como un anhelo de capturar la belleza y la emoción detrás de cada instante, y con el objetivo de llevar a un nivel profesional mi creatividad y mi pasión por la fotografía</p>
                         <div className='hidden lg:flex flex-col'>
                         <p className='pocodespues m-16'>Poco tiempo después, en 2016, creé <b>SantiCuore PH.</b></p>  
                         <p className='pocodespues m-16 '>Este emprendimiento surgió como resultado de una búsqueda de expresión artística. Comenzó inicialmente como un anhelo de capturar la belleza y la emoción detrás de cada instante, y con el objetivo de llevar a un nivel profesional mi creatividad y mi pasión por la fotografía</p>
@@ -57,7 +57,7 @@ const AboutMe = () => {
                 </picture>
         </section>
         <div className='bg-fixed  h-screen flex items-center justify-center bg-background2'  >
-            <h2 className='text-xl text-center md:text-2xl lg:text-5xl font-bold text-white m-2'>Creando recuerdos, construyendo historias...</h2>
+            <h2 className='text-xl text-center md:text-2xl lg:text-5xl font-bold text-white m-4'>Creando recuerdos, construyendo historias...</h2>
         </div>
         <section className='w-full flex flex-col items-start justify-center max-w-[1100px] my-36 p-10  m-auto text-xl lg:text-2xl gap-20 nunitoSans'>
             <p>Estoy convencido de que una buena presencia en redes es fundamental para cualquier marca. Por eso también me encargo de crear contenido impactante y de calidad para distintas empresas y organizaciones. </p>
@@ -65,12 +65,12 @@ const AboutMe = () => {
         </section>
         <div className='bg-fixed  h-screen bg-background3'  >
         </div>
-        <section className='w-full grid grid-cols-1 lg:grid-cols-2 h-[465px] items-start nunitoSans mb-96 lg:mb-2 text-lg'>
-        <div className=' flex flex-col lg:hidden gap-10 mx-20  mt-10 items-center'>
+        <section className='w-full grid grid-cols-1 lg:grid-cols-2  nunitoSans m-auto  mb-96 lg:mb-0 text-lg'>
+        <div className=' flex flex-col lg:hidden gap-10 mx-8  mt-10 sm:items-center'>
         <p >Mi enfoque va más allá de simplemente capturar imágenes y editar videos:</p>  
         <p >Me encargo de crear recuerdos y construir historias que perduren en el tiempo</p>
         </div>
-        <picture className="flex justify-center m-20 lg:m-0">
+        <picture className="flex justify-center m-8 lg:m-0">
                     <Image
                     src={santiago}
                     width={678}
@@ -80,8 +80,8 @@ const AboutMe = () => {
                     >
                     </Image>
                 </picture>
-        <div className='sobremi__text'>
-            <div className='text-balance flex flex-col gap-10 mx-20  mt-0'>
+        <div className='sobremi__text mx-8'>
+            <div className='text-balance flex flex-col gap-10 mt-0 sm:items-center'>
                         <p className='hidden lg:block mt-10'>Mi enfoque va más allá de simplemente capturar imágenes y editar videos:</p>  
                         <p className='hidden lg:block'>Me encargo de crear recuerdos y construir historias que perduren en el tiempo</p>
                         <p >Ahora que ya sabés un poco mas sobre mí...</p>
@@ -89,9 +89,7 @@ const AboutMe = () => {
                     </div>
             </div>
         </section>
-        <div className='pt-32 lg:pt-0'>
         <ServiceBanner />
-        </div>
         </>
      
     );
