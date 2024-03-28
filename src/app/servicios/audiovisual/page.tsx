@@ -75,6 +75,7 @@ const Audiovisual = () => {
   useEffect(() => {
     const handleClickOutside = (e: any) => {
       if (carrouselRef.current && !carrouselRef.current.contains(e.target)) {
+        document.body.style.overflow = "auto";
         setCarrousel(false);
       }
     };
@@ -83,6 +84,11 @@ const Audiovisual = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  const handleOpenModal = (to:number) =>{
+    sliderRef.slickGoTo(to),
+    setCarrousel(true),
+    (document.body.style.overflow = "hidden");
+  }
   const carrouselRef: any = useRef<HTMLDivElement>();
   return (
     <section
@@ -192,7 +198,9 @@ const Audiovisual = () => {
           <div className=" h-[450px]">
             <div className=" h-full  flex">
               <div className="space-y-20 m-auto flex flex-col">
-                <p className="merriwather text-2xl text-center italic text-white">Reservemos una cita!</p>
+                <p className="merriwather text-2xl text-center italic text-white">
+                  Reservemos una cita!
+                </p>
                 <div>
                   <Link
                     href="/contacto"
@@ -227,7 +235,7 @@ const Audiovisual = () => {
               />
               <div
                 onClick={() => {
-                  sliderRef.slickGoTo(0), setCarrousel(true);
+                  handleOpenModal(0)
                 }}
                 className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
               >
@@ -252,9 +260,7 @@ const Audiovisual = () => {
                 src="/videos/-aa9d-4724-bd79-6eef7dc35203.mp4"
               />
               <div
-                onClick={() => {
-                  sliderRef.slickGoTo(1), setCarrousel(true);
-                }}
+                onClick={() => handleOpenModal(1)}
                 className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
               >
                 <div className="m-auto">
@@ -282,9 +288,7 @@ const Audiovisual = () => {
                 src="/videos/Backstage Microcentro ALTA.mp4"
               />
               <div
-                onClick={() => {
-                  sliderRef.slickGoTo(2), setCarrousel(true);
-                }}
+                onClick={() => handleOpenModal(2)}
                 className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
               >
                 <div className="m-auto">
@@ -312,9 +316,7 @@ const Audiovisual = () => {
                   src="/videos/Sala de Exposiciones.mp4"
                 />
                 <div
-                  onClick={() => {
-                    sliderRef.slickGoTo(3), setCarrousel(true);
-                  }}
+                  onClick={() => handleOpenModal(3)}
                   className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
                 >
                   <div className="m-auto">
@@ -340,9 +342,7 @@ const Audiovisual = () => {
                   src="/videos/Biró.mp4"
                 />
                 <div
-                  onClick={() => {
-                    sliderRef.slickGoTo(4), setCarrousel(true);
-                  }}
+                  onClick={() => handleOpenModal(4)}
                   className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
                 >
                   <div className="m-auto">
