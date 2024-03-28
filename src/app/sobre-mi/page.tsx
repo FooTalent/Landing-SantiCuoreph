@@ -12,7 +12,7 @@ const AboutMe = () => {
         <>
         <section className="max-w-[1296px] m-auto merriwather text-fondoNegro nunitoSans">
         <h1 className="text-5xl lg:text-6xl font-semibold ml-10 lg:ml-20 mb-5 lg:mb-10 pt-32">Sobre mí</h1>
-        <hr className="max-w-[1296px] mx-8 h-0.5 bg-black" />
+        <hr className="max-w-[1296px] mx-8 h-1 bg-black" />
             <div className="SantiagoGarcia gap-x-20 items-start m-8 lg:grid-cols-2 lg:grid-rows-1">
                 <picture className="fotosanti row-span-1 lg:col-span-1">
                     <Image
@@ -38,20 +38,20 @@ const AboutMe = () => {
         <div className='bg-fixed  h-screen bg-background1' >
         </div>
         </picture>
-        <section className='sobremi__Santi w-full grid grid-cols-1 lg:grid-rows-1 lg:grid-cols-2  h-full place-content-center  nunitoSans text-xl lg:text-2xl'>
-                        <p className='pocodespues my-16 mx-8   sm:m-auto sm:my-16 block lg:hidden'>Poco tiempo después, en 2016, creé <b>SantiCuore PH.</b></p>  
-                        <p className='pocodespues m-8 mb-16  flex lg:hidden'>Este emprendimiento surgió como resultado de una búsqueda de expresión artística. Comenzó inicialmente como un anhelo de capturar la belleza y la emoción detrás de cada instante, y con el objetivo de llevar a un nivel profesional mi creatividad y mi pasión por la fotografía</p>
-                        <div className='hidden lg:flex flex-col'>
+        <section className='sobremi__Santi w-full grid grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 h-full place-content-center  nunitoSans text-xl lg:text-2xl max-w-[590px] max-w-fit m-auto'>
+                        <p className='pocodespues my-16 sm:my-16 m-8  block lg:hidden'>Poco tiempo después, en 2016, creé <b>SantiCuore PH.</b></p>  
+                        <p className='pocodespues mt-10 mb-16  m-8  flex lg:hidden'>Este emprendimiento surgió como resultado de una búsqueda de expresión artística. Comenzó inicialmente como un anhelo de capturar la belleza y la emoción detrás de cada instante, y con el objetivo de llevar a un nivel profesional mi creatividad y mi pasión por la fotografía</p>
+                        <div className='hidden lg:flex flex-col m-8'>
                         <p className='pocodespues m-16'>Poco tiempo después, en 2016, creé <b>SantiCuore PH.</b></p>  
                         <p className='pocodespues m-16 '>Este emprendimiento surgió como resultado de una búsqueda de expresión artística. Comenzó inicialmente como un anhelo de capturar la belleza y la emoción detrás de cada instante, y con el objetivo de llevar a un nivel profesional mi creatividad y mi pasión por la fotografía</p>
                         </div>
-        <picture className="flex justify-center santiCamera m-8 lg:m-0">
+        <picture className="flex justify-center santiCamera m-8 lg:m-0 ">
                     <Image
                     src={santiCuorePH}
                     width={678}
                     height={792}
                     alt='santiCuorepH'
-                    className='mx-8'
+                    className=''
                     >
                     </Image>
                 </picture>
@@ -65,10 +65,10 @@ const AboutMe = () => {
         </section>
         <div className='bg-fixed  h-screen bg-background3'  >
         </div>
-        <section className='w-full grid grid-cols-1 lg:grid-cols-2  nunitoSans m-auto  mb-96 lg:mb-0 text-lg'>
-        <div className=' flex flex-col lg:hidden gap-10 mx-8  mt-10 sm:items-center'>
+        <section className='w-full grid grid-cols-1 lg:grid-cols-2  nunitoSans max-w-[590px] lg:max-w-fit m-auto  mb-96 lg:mb-0 text-lg text-start'>
+        <div className=' flex flex-col lg:hidden gap-10 mx-8  mt-10'>
         <p >Mi enfoque va más allá de simplemente capturar imágenes y editar videos:</p>  
-        <p >Me encargo de crear recuerdos y construir historias que perduren en el tiempo</p>
+        <p className='font-bold'>Me encargo de crear recuerdos y construir historias que perduren en el tiempo</p>
         </div>
         <picture className="flex justify-center m-8 lg:m-0">
                     <Image
@@ -81,9 +81,9 @@ const AboutMe = () => {
                     </Image>
                 </picture>
         <div className='sobremi__text mx-8'>
-            <div className='text-balance flex flex-col gap-10 mt-0 sm:items-center'>
+            <div className='text-balance flex flex-col gap-10 mt-0'>
                         <p className='hidden lg:block mt-10'>Mi enfoque va más allá de simplemente capturar imágenes y editar videos:</p>  
-                        <p className='hidden lg:block'>Me encargo de crear recuerdos y construir historias que perduren en el tiempo</p>
+                        <p className='hidden lg:block font-bold'>Me encargo de crear recuerdos y construir historias que perduren en el tiempo</p>
                         <p >Ahora que ya sabés un poco mas sobre mí...</p>
                         <p className='font-bold'>¡Es hora de conocernos!</p>
                     </div>
