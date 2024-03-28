@@ -1,5 +1,5 @@
 "use client";
-import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import { useForm, SubmitHandler, Controller, set } from "react-hook-form";
 import CustomButton from "../CustomButton";
 import { useEffect, useState } from "react";
 import Select from "react-select";
@@ -124,130 +124,102 @@ export default function Form() {
     await trigger(fieldName); // Disparar la validación para el campo especificado
   };
   const today = new Date().toISOString().split("T")[0];
-  console.log(errors);
-
+  const servicio = watch("servicio");
+  const apellido = watch("apellido");
+  const nombre = watch("nombre");
+  const telefono1 = watch("telefono1");
+  const telefono2 = watch("telefono2");
+  const contactoM = watch("contactoM");
+  const contactoW = watch("contactoW");
+  const ciudad = watch("ciudad");
+  const fecha = watch("fecha");
+  const duracion = watch("duracion");
+  const cantidadFotos = watch("cantidadFotos");
+  const cantidadVideos = watch("cantidadVideos");
+  const formato = watch("formato");
+  const comentarios = watch("comentarios");
+  const tipoServFoto = watch("tipoServFoto");
+  const tipoServAudVis = watch("tipoServAudVis");
   //control paso 0
   useEffect(() => {
-    if (paso === 0 && watch("servicio")) {
+    if (paso === 0 && servicio) {
       setHabilitar(true);
-    }
-  }, [paso, watch("servicio")]);
-
-  //control paso 1
-  useEffect(() => {
-    if (
+    } else if (
       paso === 1 &&
-      watch("apellido") &&
-      watch("nombre") &&
+      apellido &&
+      nombre &&
       Object.keys(errors).length === 0 &&
-      watch("telefono1") &&
-      watch("telefono2") &&
-      (watch("contactoW") || watch("contactoM"))
+      telefono1 &&
+      telefono2 &&
+      (contactoW || contactoM)
     ) {
+      setHabilitar(true);
+    } else if (
+      paso === 2 &&
+      servicio === "fotografia" &&
+      cantidadFotos &&
+      ciudad &&
+      Object.keys(errors).length === 0 &&
+      duracion &&
+      fecha &&
+      formato &&
+      tipoServFoto
+    ) {
+      setHabilitar(true);
+    } else if (
+      paso === 2 &&
+      servicio === "edicion" &&
+      cantidadVideos &&
+      ciudad &&
+      Object.keys(errors).length === 0 &&
+      duracion &&
+      fecha
+    ) {
+      setHabilitar(true);
+    } else if (
+      paso === 2 &&
+      servicio === "ambos" &&
+      cantidadVideos &&
+      cantidadFotos &&
+      Object.keys(errors).length === 0 &&
+      ciudad &&
+      duracion &&
+      fecha &&
+      formato &&
+      tipoServFoto &&
+      tipoServAudVis
+    ) {
+      setHabilitar(true);
+    } else if (paso === 3 || paso === 4) {
       setHabilitar(true);
     } else {
       setHabilitar(false);
     }
   }, [
     paso,
-    watch("apellido"),
-    watch("nombre"),
-    watch("telefono1"),
-    watch("telefono2"),
-    watch("contactoW"),
-    watch("contactoM"),
+    apellido,
+    servicio,
+    nombre,
+    contactoM,
+    contactoW,
     errors,
+    telefono1,
+    telefono2,
+    cantidadFotos,
+    cantidadVideos,
+    ciudad,
+    duracion,
+    fecha,
+    formato,
+    tipoServFoto,
+    tipoServAudVis,
   ]);
-
-  //control paso 2a
-  useEffect(() => {
-    if (
-      paso === 2 &&
-      watch("servicio") === "fotografia" &&
-      watch("cantidadFotos") &&
-      watch("ciudad") &&
-      Object.keys(errors).length === 0 &&
-      watch("duracion") &&
-      watch("fecha") &&
-      watch("formato") &&
-      watch("tipoServFoto")
-    ) {
-      setHabilitar(true);
-    }
-  }, [
-    paso,
-    errors,
-    watch("servicio"),
-    watch("cantidadFotos"),
-    watch("ciudad"),
-    watch("duracion"),
-    watch("fecha"),
-    watch("formato"),
-    watch("tipoServFoto"),
-  ]);
-  //control paso 2b
-  useEffect(() => {
-    if (
-      paso === 2 &&
-      watch("servicio") === "edicion" &&
-      watch("cantidadVideos") &&
-      watch("ciudad") &&
-      Object.keys(errors).length === 0 &&
-      watch("duracion") &&
-      watch("fecha")
-    ) {
-      setHabilitar(true);
-    }
-  }, [
-    paso,
-    errors,
-    watch("servicio"),
-    watch("cantidadVideos"),
-    watch("ciudad"),
-    watch("duracion"),
-    watch("fecha"),
-
-    watch("tipoServAudVis"),
-  ]);
-  //control paso 2c
-  useEffect(() => {
-    if (
-      paso === 2 &&
-      watch("servicio") === "ambos" &&
-      watch("cantidadVideos") &&
-      watch("cantidadFotos") &&
-      Object.keys(errors).length === 0 &&
-      watch("ciudad") &&
-      watch("duracion") &&
-      watch("fecha") &&
-      watch("formato") &&
-      watch("tipoServFoto") &&
-      watch("tipoServAudVis")
-    ) {
-      setHabilitar(true);
-    }
-  }, [
-    paso,
-    errors,
-    watch("servicio"),
-    watch("cantidadVideos"),
-    watch("cantidadFotos"),
-    watch("ciudad"),
-    watch("duracion"),
-    watch("fecha"),
-    watch("formato"),
-    watch("tipoServFoto"),
-    watch("tipoServAudVis"),
-  ]);
-
   //control paso 3 y 4
-  useEffect(() => {
-    if (paso === 3 || paso === 4) {
-      setHabilitar(true);
-    }
-  }, [paso]);
 
   const handleContinuar = () => {
+    if (paso == 0) {
+      setHabilitar(false);
+    }
     setPaso(paso + 1);
   };
 
