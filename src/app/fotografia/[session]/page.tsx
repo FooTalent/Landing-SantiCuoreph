@@ -40,11 +40,17 @@ const properties = {
   indicators: false,
 };
 
+
+type imageInfo = {
+  url: string,
+  alt: string,
+}
+
 type SessionInfoType = {
   title: string;
   subtitle: string;
   path: string;
-  images: string[];
+  images: imageInfo[];
 };
 
 const sessionInfo: SessionInfoType[] = [
@@ -53,11 +59,27 @@ const sessionInfo: SessionInfoType[] = [
     subtitle: "Retrato artístico",
     path: "lorena",
     images: [
-      "/images/lorena/lor01.jpg",
-      "/images/lorena/lor02.jpg",
-      "/images/lorena/lor03.jpg",
-      "/images/lorena/lor04.jpg",
-      "/images/lorena/lor05.jpg",
+      {
+        url: "/images/lorena/lor01.jpg",
+        alt: "Lorena"
+      },
+      {
+        url: "/images/lorena/lor02.jpg",
+        alt: "Lorena 02"
+      },
+      {
+        url: "/images/lorena/lor03.jpg",
+        alt: "Lorena 03"
+      },
+      {
+        url: "/images/lorena/lor04.jpg",
+        alt: "Lorena 04"
+      },
+      {
+        url: "/images/lorena/lor05.jpg",
+        alt: "Lorena 05"
+      },
+
     ],
   },
   {
@@ -65,16 +87,192 @@ const sessionInfo: SessionInfoType[] = [
     subtitle: "Fotografía comercial",
     path: "aura-gin",
     images: [
-      "/images/aura/aura01.jpg",
-      "/images/aura/aura02.jpg",
-      "/images/aura/aura03.jpg",
-      "/images/aura/aura04.jpg",
-      "/images/aura/aura05.jpg",
-      "/images/aura/aura06.jpg",
-      "/images/aura/aura07.jpg",
-      "/images/aura/aura08.jpg",
+      {
+        url: "/images/aura/aura01.jpg",
+        alt: "Aura gin"
+      },
+      {
+        url: "/images/aura/aura02.jpg",
+        alt: "Aura gin 02"
+      },
+      {
+        url: "/images/aura/aura03.jpg",
+        alt: "Aura gin 03"
+      },
+      {
+        url: "/images/aura/aura04.jpg",
+        alt: "Aura gin 04"
+      },
+      {
+        url: "/images/aura/aura05.jpg",
+        alt: "Aura gin 05"
+      },
+      {
+        url: "/images/aura/aura06.jpg",
+        alt: "Aura gin 06"
+      },
+      {
+        url: "/images/aura/aura07.jpg",
+        alt: "Aura gin 07"
+      },
+      {
+        url: "/images/aura/aura08.jpg",
+        alt: "Aura gin 08"
+      },
     ],
   },
+  {
+    title: "Pasado Pisado",
+    subtitle: "Fotografía artística",
+    path: "pasado-pisado",
+    images: [
+      {
+        url: "/images/pasado-pisado/pp01.jpg",
+        alt: "Pasado pisado"
+      },
+      {
+        url: "/images/pasado-pisado/pp02.jpg",
+        alt: "Pasado pisado 02"
+      },
+      {
+        url: "/images/pasado-pisado/pp03.jpg",
+        alt: "Pasado pisado 03"
+      },
+      {
+        url: "/images/pasado-pisado/pp04.jpg",
+        alt: "Pasado pisado 04"
+      },
+      {
+        url: "/images/pasado-pisado/pp05.jpg",
+        alt: "Pasado pisado 05"
+      },
+      {
+        url: "/images/pasado-pisado/pp06.jpg",
+        alt: "Pasado pisado 06"
+      },
+      {
+        url: "/images/pasado-pisado/pp07.jpg",
+        alt: "Pasado pisado 07"
+      },
+      {
+        url: "/images/pasado-pisado/pp08.jpg",
+        alt: "Pasado pisado 08"
+      },
+    ]
+  },
+  {
+    title: "Jettatore - Obra teatral",
+    subtitle: "Cobertura de evento artístico",
+    path: "jettatore",
+    images: [
+      {
+        url: "/images/jettatore/jt02.jpg",
+        alt: "Jettatore 02"
+      },
+      {
+        url: "/images/jettatore/jt03.jpg",
+        alt: "Jettatore 03"
+      },
+      {
+        url: "/images/jettatore/jt04.jpg",
+        alt: "Jettatore 04"
+      },
+      {
+        url: "/images/jettatore/jt05.jpg",
+        alt: "Jettatore 05"
+      },
+      {
+        url: "/images/jettatore/jt06.jpg",
+        alt: "Jettatore 06"
+      },
+      {
+        url: "/images/jettatore/jt07.jpg",
+        alt: "Jettatore 07"
+      },
+      {
+        url: "/images/jettatore/jt08.jpg",
+        alt: "Jettatore 08"
+      },
+    ]
+  },
+  {
+    title: "One - Bar",
+    subtitle: "Cobertura de evento social",
+    path: "one-bar",
+    images: [
+      {
+        url: "/images/one-bar/ob01.jpg",
+        alt: "One Bar"
+      },
+      {
+        url: "/images/one-bar/ob02.jpg",
+        alt: "One Bar 02"
+      },
+      {
+        url: "/images/one-bar/ob03.jpg",
+        alt: "One Bar 03"
+      },
+      {
+        url: "/images/one-bar/ob04.jpg",
+        alt: "One Bar 04"
+      },
+      {
+        url: "/images/one-bar/ob05.jpg",
+        alt: "One Bar 05"
+      },
+      {
+        url: "/images/one-bar/ob06.jpg",
+        alt: "One Bar 06"
+      },
+      {
+        url: "/images/one-bar/ob07.jpg",
+        alt: "One Bar 07"
+      },
+      {
+        url: "/images/one-bar/ob08.jpg",
+        alt: "One Bar 08"
+      },
+    ]
+  },
+  {
+    title: "Más que uno",
+    subtitle: "Cobertura de evento artístico",
+    path: "mas-que-uno",
+    images: [
+      {
+        url: "/images/mas-que-uno/mu01.jpg",
+        alt: "Mas que uno"
+      },
+      {
+        url: "/images/mas-que-uno/mu02.jpg",
+        alt: "Mas que uno 02"
+      },
+      {
+        url: "/images/mas-que-uno/mu03.jpg",
+        alt: "Mas que uno 03"
+      },
+      {
+        url: "/images/mas-que-uno/mu04.jpg",
+        alt: "Mas que uno 04"
+      },
+      {
+        url: "/images/mas-que-uno/mu05.jpg",
+        alt: "Mas que uno 05"
+      },
+      {
+        url: "/images/mas-que-uno/mu06.jpg",
+        alt: "Mas que uno 06"
+      },
+      {
+        url: "/images/mas-que-uno/mu07.jpg",
+        alt: "Mas que uno 07"
+      },
+      {
+        url: "/images/mas-que-uno/mu08.jpg",
+        alt: "Mas que uno 08"
+      },
+    ]
+  }
 ];
 
 const SessionPage = ({ params }: { params: { session: string } }) => {
@@ -112,7 +310,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
                   className="image-container"
                   onClick={() => setShowModal(true)}
                 >
-                  <Image src={image} width={600} height={1000} alt="Image" />
+                  <Image src={image.url} width={600} height={1000} alt={image.alt} />
                 </div>
               );
             })}
@@ -146,10 +344,10 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
                               className="relative w-screen h-screen"
                             >
                               <Image
-                                src={image}
+                                src={image.url}
                                 fill={true}
                                 className="max-w-screen-xl mx-auto h-[300px] py-5 object-contain"
-                                alt="asd"
+                                alt={image.alt}
                               />
                             </div>
                           );

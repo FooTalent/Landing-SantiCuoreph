@@ -15,84 +15,10 @@ import { useState } from "react";
 import Link from "next/link";
 
 
-const buttonStyle = {
-  width: "50px",
-  background: "none",
-  border: "0px",
-};
-const properties = {
-  prevArrow: (
-    <button className="lg:ml-40 ml-4 " style={{ ...buttonStyle }}>
-      <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
-        <Image src="/assets/img/ArrowLeft.png" alt="" width={20} height={20} />
-      </div>
-    </button>
-  ),
-  nextArrow: (
-    <button className="lg:mr-40 mr-4" style={{ ...buttonStyle }}>
-      <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
-        <Image src="/assets/img/ArrowRight.png" alt="" width={20} height={20} />
-      </div>
-    </button>
-  ),
-  autoplay: false,
-  indicators: false,
-
-};
-
-const ServicesPage = () => {
-
-  const [open, setOpen] = useState<boolean>(false)
-  const [index, setIndex] = useState<number>(0)
-
-  const openModal = (e: React.MouseEvent<HTMLDivElement>) => {
-    let index = Number(e.currentTarget.id)
-    setIndex(index)
-    setOpen(true)
-  }
-
-  const handleDefaultIndex = (e: React.MouseEvent<HTMLDivElement>) => {
-    let index = Number(e.currentTarget.id)
-    setIndex(index)
-  }
-
-  const images = [
-    {
-      url: "/images/services/photography/img01.jpg"
-    },
-    {
-      url: "/images/services/photography/img02.jpg"
-    },
-    {
-      url: "/images/services/photography/img03.jpg"
-    },
-    {
-      url: "/images/services/photography/img04.jpg"
-    },
-    {
-      url: "/images/services/photography/img05.jpg"
-    },
-    {
-      url: "/images/services/photography/img06.jpg"
-    },
-  ]
-  
+const ServicesPage = () => {  
 
   return (
     <>
-    <div className={`${open ? "" : "hidden"}`}>
-    <section className="slide-container backdrop-blur-xl bg-black/15 absolute w-screen h-screen top-0 right-0 left-0 bottom-0 z-50">
-      <Slide {...properties} defaultIndex={index}>
-        {
-          images.map((image, idx) => {
-            return <div key={idx} className="relative w-screen h-screen">
-              <Image src={image.url} fill={true} className="max-w-screen-xl mx-auto h-[300px] py-5 object-contain" alt="asd"/>
-            </div>
-          })
-        }
-      </Slide>
-    </section>
-    </div>
 
     <section className="xl:max-w-screen-xl mx-auto mb-16 md:mb-36 text-fondoBlanco mx-4 md:px-0">
       <div className="md:grid md:grid-cols-5 md:gap-3 mb-3 items-stretch overflow-hidden md:max-h-[600px] lg:max-h-[800px] xl:max-h-[928px]">
@@ -119,7 +45,7 @@ const ServicesPage = () => {
               className="object-cover h-full rounded-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[464px]"
             />
           </Link>
-          <div className="relative" id="2">
+          <Link href="/fotografia/pasado-pisado" className="relative" id="2">
           <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Pasado Pisado</h2>
             <h3 className="text-3xl font-thin">Fotografía artística</h3>
@@ -129,11 +55,11 @@ const ServicesPage = () => {
               alt="asd"
               className="object-cover h-full rounded-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[464px]"
             />
-          </div>
+          </Link>
         </div>
       </div>
 
-      <div className="mb-3 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] relative" id="3">
+      <Link href="/fotografia/jettatore" className="mb-3 flex md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] relative" id="3">
       <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Jettatore - Obra teatral</h2>
             <h3 className="text-3xl font-thin">Covertura de evento artístico</h3>
@@ -143,10 +69,10 @@ const ServicesPage = () => {
           alt="asd"
           className="object-cover rounded-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] object-top"
         />
-      </div>
+      </Link>
 
-      <div className="md:grid md:grid-cols-2 md:gap-3 mb-3 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px]">
-        <div className="col-span-1 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] relative pb-3 md:pb-0">
+      <div className="md:grid md:grid-cols-2 md:gap-3 mb-3 mt-3 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px]">
+        <Link href="/fotografia/one-bar" className="col-span-1 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] relative pb-3 md:pb-0">
         <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">One-bar</h2>
             <h3 className="text-3xl font-thin">Cobertura de evento artístico</h3>
@@ -156,8 +82,8 @@ const ServicesPage = () => {
             alt="asds"
             className="object-cover rounded-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] object-top"
           />
-        </div>
-        <div className="col-span-1 h-full relative">
+        </Link>
+        <Link href="/fotografia/mas-que-uno" className="col-span-1 h-full relative">
         <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Más que uno</h2>
             <h3 className="text-3xl font-thin">Cobertura de evento artístico</h3>
@@ -167,10 +93,10 @@ const ServicesPage = () => {
             alt="asds"
             className="object-cover h-full rounded-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px]"
           />
-        </div>
+        </Link>
       </div>
-      <div className="mb-3 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] relative">
-      <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
+      <Link href="/fotografia/mas-que-uno" className="mb-3 flex relative">
+      <div className="texto_image absolute inset-0 z-30 w-full md:h-[300px] lg:h-[400px] xl:h-[456px] flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Más que uno</h2>
             <h3 className="text-3xl font-thin">Cobertura de evento artístico</h3>
           </div>
@@ -179,7 +105,7 @@ const ServicesPage = () => {
           alt="asds"
           className="object-cover rounded-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] object-top"
         />
-      </div>
+      </Link>
     </section>
     </>
   );
