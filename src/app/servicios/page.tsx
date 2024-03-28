@@ -100,8 +100,8 @@ const ServicesPage = () => {
     </section>
     </div>
 
-    <section className="xl:max-w-screen-xl mx-auto mb-36 text-fondoBlanco">
-      <div className="grid grid-cols-5 gap-3 mb-3 items-stretch overflow-hidden xl:max-h-[928px]">
+    <section className="xl:max-w-screen-xl mx-auto mb-16 md:mb-36 text-fondoBlanco px-4 md:px-0">
+      <div className="md:grid md:grid-cols-5 md:gap-3 mb-3 items-stretch overflow-hidden xl:max-h-[928px]">
         <Link href="/fotografia/lorena" className="col-span-2 relative h-full w-full" id="0">
           <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Lorena</h2>
@@ -114,7 +114,7 @@ const ServicesPage = () => {
           />
         </Link>
         <div className="col-span-3 grid grid-rows-2 gap-3 xl:max-h-[928px]">
-          <Link href="/fotografia/aura-gin" className="relative" id="1">
+          <Link href="/fotografia/aura-gin" className="relative pt-3 md:pt-0" id="1">
           <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">Aura Gin</h2>
             <h3 className="text-3xl font-thin">Fotografía comercial</h3>
@@ -151,8 +151,8 @@ const ServicesPage = () => {
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-3 mb-3 xl:max-h-[456px]">
-        <div className="col-span-1 xl:max-h-[456px] relative">
+      <div className="md:grid md:grid-cols-2 md:gap-3 mb-3 xl:max-h-[456px]">
+        <div className="col-span-1 xl:max-h-[456px] relative pb-3 md:pb-0">
         <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
             <h2 className="text-5xl mb-4 italic">One-bar</h2>
             <h3 className="text-3xl font-thin">Cobertura de evento artístico</h3>

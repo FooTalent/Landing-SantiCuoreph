@@ -24,9 +24,9 @@ const ServicesLayout =({
 
     return (
         <div className="font-merriwather font-bold">
-            <section className="xl:max-w-screen-xl mx-auto pb-8 border-b-4 border-black text-fondoNegro md:text-7xl 2xl:text-8xl pl-[1.5em] mb-[1em]">
-                <h1 className="pt-[1.6em] pb-[.4em]">Servicios</h1>
-                <div className="flex gap-8 text-4xl">
+            <section className="xl:max-w-screen-xl mx-auto pb-8 border-b-4 border-black text-fondoNegro text-3xl md:text-7xl 2xl:text-8xl pl-[1.5em] mb-[1em]">
+                <h1 className="pt-[5rem] pb-[2rem] xl:pt-[1.6em] xl:pb-[.4em]">Servicios</h1>
+                <div className="flex gap-8">
                     {
                         services.map((service, idx) => {
                             const isActive: boolean = pathname.endsWith(service.href);

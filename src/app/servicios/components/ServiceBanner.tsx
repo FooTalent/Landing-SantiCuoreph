@@ -63,18 +63,18 @@ const ServiceBanner = () => {
                   width="0"
                   height="0"
                   sizes="100%"
-                  className="w-screen h-[250px] xl:h-[400px] object-cover"
+                  className="w-screen h-[250px] sm:h-[350px] xl:h-[400px] object-cover"
                   alt="Imagen 01"
                 />
-                <div className="absolute flex flex-col inset-0 px-4 xl:max-w-screen-xl xl:px-0 mx-auto items-center gap-10 pt-16 flex flex-wrap lg:flex-nowrap xl:gap-20">
+                <div className="absolute flex flex-col md:flex-row inset-0 px-4 xl:max-w-screen-xl xl:px-0 mx-auto items-center gap-10 sm:gap-16 md:gap-0 pt-16 sm:pt-24 md:pt-0 lg:flex-nowrap xl:gap-20">
                   <div className="">
-                    <h3 className="text-xl text-center xl:text-[43px] text-fondoBlanco font-nunitoSans">
+                    <h3 className="text-xl text-center md:text-left sm:text-3xl xl:text-[43px] text-fondoBlanco font-nunitoSans">
                       {image.caption}
                     </h3>
                   </div>
-                  <div className="w-full">
+                  <div className="w-full md:w-1/3">
                     <Link href="/contacto">
-                      <h3 className="text-lg sm:text-2xl md:text-[40px] py-[0.3em] md:px-[81px] md:py-[17px] bg-principal hover:bg-principalHover hover:font-bold text-fondoNegro text-center rounded-full merriwather font-semibold py-[0.5em]">Contactame</h3>
+                      <h3 className="text-lg sm:text-2xl  bg-principal hover:bg-principalHover hover:font-bold text-fondoNegro text-center rounded-full merriwather font-semibold py-[0.5em] md:px-5 xl:px-[80px]">Contactame</h3>
                     </Link>
 
                   </div>
