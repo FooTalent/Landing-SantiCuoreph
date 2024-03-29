@@ -1,10 +1,10 @@
 "use client";
 import { useForm, SubmitHandler, Controller, set } from "react-hook-form";
 import CustomButton from "../CustomButton";
-import { use, useEffect, useState } from "react";
+import {useEffect, useState } from "react";
 import Select from "react-select";
 import Image from "next/image";
-import { string, z } from "zod";
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 interface Option {
