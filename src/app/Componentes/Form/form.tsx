@@ -1,10 +1,10 @@
 "use client";
 import { useForm, SubmitHandler, Controller, set } from "react-hook-form";
 import CustomButton from "../CustomButton";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import Select from "react-select";
 import Image from "next/image";
-import { z } from "zod";
+import { string, z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 interface Option {
@@ -1649,11 +1649,19 @@ export default function Form() {
       {/*Botones para volver o pasar al siguiente formulario */}
       <div className="flex justify-around ">
         <CustomButton
-          title="Volver"
+          title={`${
+            paso == 4
+              ? "Editar informacion"
+              : "Volver"}`}
           styles="bg-principal rounded-[40px] px-14 py-3 font-merriwather font-bold text-3xl mt-16 hover:bg-principalHover"
-          onClick={() => setPaso(paso - 1)}
+          onClick={() =>{
+           if(paso === 4){
+              setPaso(0)
+            }else{
+              setPaso(paso - 1)
+            }
+          }}
         />
-
         <CustomButton
           title="Continuar"
           disabled={!habilitar}
