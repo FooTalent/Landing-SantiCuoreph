@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
+import CustomButton from "../Componentes/CustomButton";
 const page = () => {
   return (
     <>
@@ -46,9 +47,9 @@ const page = () => {
           </h3>
           <div className="flex xl:text-3xl flex-col xl:flex-row text-xl font-bold xl:flex justify-evenly">
             <p className="text-center ">Escribime a </p>
-            <p className="xl:bg-slate-100  xl:border-none px-2 py-1 w-max mx-auto xl:mx-0 border xl:shadow-none shadow-md bg-white rounded-2xl">
-              santicuoreph@gmail.com
-            </p>
+            <a href="mailto:santicuroeph@gmail.com">
+            <CustomButton title="santicuoreph@gmail.com" styles="xl:bg-slate-100  xl:border-none px-4 py-4 w-max mx-auto xl:mx-0 border xl:shadow-none shadow-md bg-white rounded-2xl hover:bg-principalHover"  />
+            </a>
           </div>
         </div>
       </section>
