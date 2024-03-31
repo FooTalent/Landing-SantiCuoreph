@@ -65,7 +65,7 @@ const Slideshow = () => {
               <h3 className="text-fondoBlanco font-merriwather font-normal text-2xl md:text-4xl absolute left-4 lg:left-40 top-14 md:top-24">
                 Testimonios
               </h3>
-              <p className="text-fondoBlanco font-nunitoSans italic font-light text-sm md:text-2xl lg:text-2xl absolute md:mx-36 lg:mx-56 mx-20">
+              <p className="text-fondoBlanco font-nunitoSans italic font-light text-[10px] sm:text-sm md:text-2xl lg:text-2xl absolute md:mx-36 lg:mx-56 mx-20">
                 {slideImage.caption}
               </p>
               <p className="text-fondoBlanco font-nunitoSans font-light text-sm md:text-2xl lg:text-2xl absolute md:mx-36 lg:mx-64 mx-20 bottom-16 md:bottom-36">
