@@ -1,11 +1,13 @@
 "use client";
 import { useForm, SubmitHandler, Controller, set } from "react-hook-form";
 import CustomButton from "../CustomButton";
-import {useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Select from "react-select";
 import Image from "next/image";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import "react-phone-number-input/style.css";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 
 interface Option {
   label: string;
@@ -44,10 +46,8 @@ const schema = z.object({
     .regex(/^[a-zA-Z\s]*$/, "No se permiten caracteres especiales ni números"),
   email: z.string().email("Formato de email invalido"),
   telefono1: z
-    .string()
-    .regex(/^\d*$/, { message: "Ingrese solo números" })
-    .min(2, "Debes ingresar una característica válida")
-    .max(4),
+    .string({ required_error: "Campo requerido" })
+    .refine(isValidPhoneNumber, { message: "Teléfono invalido" }),
   telefono2: z
     .string()
     .regex(/^\d*$/, { message: "Ingrese solo números" })
@@ -392,13 +392,23 @@ export default function Form() {
               Telefono*
               <div className="flex gap-3 w-full">
                 <div className="flex flex-col">
-                  <input
-                    {...register("telefono1", { required: true })}
-                    className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl w-20 h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
-                    id="telefono"
-                    maxLength={4}
-                    onBlur={() => handleBlurValidation("telefono1")}
+                  <Controller
+                    name="telefono1"
+                    control={control}
+                    render={({ field: { onChange, value } }) => (
+                      <PhoneInput
+                        className="mt-2 border-[1.5px] border-inputBorderSelected w-full rounded-2xl h-10 text-xl px-4 py-1  bg-formBackground 2xl:grow focus:outline outline-3 outline-principalHover"
+                        placeholder="ingrese su telefono"
+                        onChange={onChange}
+                        countryCallingCodeEditable={false}
+                        defaultCountry="AR"
+                        international
+                        value={value?.toString()}
+                        onBlur={() => handleBlurValidation("telefono1")}
+                      />
+                    )}
                   />
+
                   {errors.telefono1 && (
                     <p className="text-red-600 text-xs">
                       {errors.telefono1.message}
@@ -1649,16 +1659,13 @@ export default function Form() {
       {/*Botones para volver o pasar al siguiente formulario */}
       <div className="flex justify-around ">
         <CustomButton
-          title={`${
-            paso == 4
-              ? "Editar informacion"
-              : "Volver"}`}
+          title={`${paso == 4 ? "Editar informacion" : "Volver"}`}
           styles="bg-principal rounded-[40px] px-14 py-3 font-merriwather font-bold text-3xl mt-16 hover:bg-principalHover"
-          onClick={() =>{
-           if(paso === 4){
-              setPaso(0)
-            }else{
-              setPaso(paso - 1)
+          onClick={() => {
+            if (paso === 4) {
+              setPaso(0);
+            } else {
+              setPaso(paso - 1);
             }
           }}
         />
