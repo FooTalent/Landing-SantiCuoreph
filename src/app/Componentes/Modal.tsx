@@ -43,18 +43,17 @@ const Modal: React.FC<ModalProps> = ({ showModal, setShowModal, redirect }) => {
           </svg>
         </button>
         <h3 className="text-3xl font-bold text-center">
-          El formulario ha sido enviado correctamente.
+          ¡Listo! Ya recibimos tu solicitud de presupuesto
         </h3>
         <p className="text-center">
-          Gracias por contactar con SantiCuorePH. Recibirás el presupuesto muy
-          pronto!
+          Te enviaremos una respuesta en un plazo estimado de 48 horas
         </p>
         <div className="flex justify-evenly">
           <button
             onClick={handleCancelModal}
-            className="border w-32 rounded-3xl font-bold py-3 px-2 hover:bg-principalHover transition-all ease-in-out"
+            className="border w-32 rounded-3xl font-bold py-3 px-9 hover:bg-principalHover transition-all ease-in-out"
           >
-            Ok
+            Volver a Inicio
           </button>
         </div>
       </div>

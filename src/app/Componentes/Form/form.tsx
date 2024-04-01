@@ -20,7 +20,6 @@ type Inputs = {
   nombre: string;
   apellido: string;
   telefono1: number;
-  telefono2: number;
   email: string;
   contactoW: boolean;
   contactoM: boolean;
@@ -49,11 +48,6 @@ const schema = z.object({
   telefono1: z
     .string({ required_error: "Campo requerido" })
     .refine(isValidPhoneNumber, { message: "Teléfono invalido" }),
-  telefono2: z
-    .string()
-    .regex(/^\d*$/, { message: "Ingrese solo números" })
-    .min(4, "No es un número telefonico correcto")
-    .max(7),
   ciudad: z.string().min(1, "Debes ingresar una ciudad"),
   comentarios: z.string().max(2000),
 });
@@ -187,7 +181,6 @@ export default function Form() {
   const apellido = watch("apellido");
   const nombre = watch("nombre");
   const telefono1 = watch("telefono1");
-  const telefono2 = watch("telefono2");
   const contactoM = watch("contactoM");
   const contactoW = watch("contactoW");
   const ciudad = watch("ciudad");
@@ -209,7 +202,6 @@ export default function Form() {
       nombre &&
       Object.keys(errors).length === 0 &&
       telefono1 &&
-      telefono2 &&
       (contactoW || contactoM)
     ) {
       setHabilitar(true);
@@ -263,7 +255,6 @@ export default function Form() {
     contactoW,
     errors,
     telefono1,
-    telefono2,
     cantidadFotos,
     cantidadVideos,
     ciudad,
@@ -450,45 +441,27 @@ export default function Form() {
             </label>
             <label htmlFor="telefono" className="flex flex-col">
               Telefono*
-              <div className="flex gap-3 w-full">
-                <div className="flex flex-col">
-                  <Controller
-                    name="telefono1"
-                    control={control}
-                    render={({ field: { onChange, value } }) => (
-                      <PhoneInput
-                        className="mt-2 border-[1.5px] border-inputBorderSelected w-full rounded-2xl h-10 text-xl px-4 py-1  bg-formBackground 2xl:grow focus:outline outline-3 outline-principalHover"
-                        placeholder="ingrese su telefono"
-                        onChange={onChange}
-                        countryCallingCodeEditable={false}
-                        defaultCountry="AR"
-                        international
-                        value={value?.toString()}
-                        onBlur={() => handleBlurValidation("telefono1")}
-                      />
-                    )}
+              <Controller
+                name="telefono1"
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <PhoneInput
+                    className="mt-2 border-[1.5px] border-inputBorderSelected w-full rounded-2xl h-10 text-xl px-4 py-1  bg-formBackground 2xl:grow focus:outline outline-3 outline-principalHover"
+                    placeholder="ingrese su telefono"
+                    onChange={onChange}
+                    countryCallingCodeEditable={false}
+                    defaultCountry="AR"
+                    international
+                    value={value?.toString()}
+                    onBlur={() => handleBlurValidation("telefono1")}
                   />
-
-                  {errors.telefono1 && (
-                    <p className="text-red-600 text-xs">
-                      {errors.telefono1.message}
-                    </p>
-                  )}
-                </div>
-                <div className="flex flex-col">
-                  <input
-                    {...register("telefono2", { required: true })}
-                    className="mt-2 border-[1.5px] border-inputBorderSelected w-full rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground 2xl:grow focus:outline outline-3 outline-principalHover"
-                    maxLength={7}
-                    onBlur={() => handleBlurValidation("telefono2")}
-                  />
-                  {errors.telefono2 && (
-                    <p className="text-red-600 text-xs">
-                      {errors.telefono2.message}
-                    </p>
-                  )}
-                </div>
-              </div>
+                )}
+              />
+              {errors.telefono1 && (
+                <p className="text-red-600 text-xs">
+                  {errors.telefono1.message}
+                </p>
+              )}
             </label>
             <label htmlFor="email" className="flex flex-col">
               Email (opcional)
@@ -515,7 +488,7 @@ export default function Form() {
                   <input
                     {...register("contactoW")}
                     type="checkbox"
-                    className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-md checked:bg-inputBorderSelected"
+                    className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-md checked:bg-checkBackground"
                   />{" "}
                   Teléfono
                 </label>
@@ -526,7 +499,7 @@ export default function Form() {
                   <input
                     {...register("contactoM")}
                     type="checkbox"
-                    className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-md checked:bg-inputBorderSelected"
+                    className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-md checked:bg-checkBackground"
                   />{" "}
                   Mail
                 </label>
@@ -1562,12 +1535,12 @@ export default function Form() {
               </div>
             </div>
             <div className="grid grid-cols-2">
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 grow">
                 <p className="text-fondoBlanco font-nunitoSans text-lg">
                   Teléfono
                 </p>
                 <p className="font-nunito text-lg font-bold">
-                  {watch("telefono1")}-{watch("telefono2")}
+                  {watch("telefono1")}
                 </p>
               </div>
               <div className="flex flex-col gap-4">
@@ -1703,7 +1676,7 @@ export default function Form() {
               paso == 3 ? "px-36" : "px-32"
             }`}
           >
-            Los campos obligatorios están marcados con (*)
+            (*) Campos obligatorios
           </p>
         )}
         {paso === 3 && (
@@ -1730,7 +1703,7 @@ export default function Form() {
           }}
         />
         <CustomButton
-          title="Continuar"
+          title={`${paso == 4 ? "Enviar formulario" : "Continuar"}`}
           disabled={!habilitar}
           styles={`${
             habilitar

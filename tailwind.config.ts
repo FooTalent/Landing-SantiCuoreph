@@ -8,10 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'background1': 'url("/images/aboutme/image 28.webp")',
-        'background2': 'url("/images/aboutme/background2.webp")',
-        'background3': 'url("/images/aboutme/MAS QUE UNO BAJA-51 1.webp")',
-        
+        background1: 'url("/images/aboutme/image 28.webp")',
+        background2: 'url("/images/aboutme/background2.webp")',
+        background3: 'url("/images/aboutme/MAS QUE UNO BAJA-51 1.webp")',
+        checkBackground: 'url("/assets/img/check.svg")',
       },
       colors: {
         fondoNegro: "#292319",
