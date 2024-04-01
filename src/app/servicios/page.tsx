@@ -20,7 +20,7 @@ const ServicesPage = () => {
   return (
     <>
 
-    <section className="xl:max-w-screen-xl mx-auto mb-16 md:mb-36 text-fondoBlanco mx-4 md:px-0">
+    <section className="xl:max-w-screen-xl mx-auto mb-16 md:mb-36 text-fondoBlanco mx-10 md:px-0">
       <div className="md:grid md:grid-cols-5 md:gap-3 mb-3 items-stretch overflow-hidden md:max-h-[600px] lg:max-h-[800px] xl:max-h-[928px]">
         <Link href="/fotografia/lorena" className="col-span-2 relative h-full w-full" id="0">
           <div className="texto_image absolute z-30 w-full h-full flex opacity-0 hover:opacity-100 flex-col text-center justify-center items-center cursor-pointer transition-all duration-200 hover:hover:bg-black/50">
