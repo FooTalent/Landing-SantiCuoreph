@@ -94,40 +94,43 @@ html {
   display: block;
 }
 
+.PhoneInputInput {
+  background-color: #42424250;
+  outline: none;
+}
 
-.Sobremi,.SantiagoGarcia {
+.Sobremi,
+.SantiagoGarcia {
   display: grid;
   grid-template-rows: 3;
   grid-template-columns: 1;
   place-content: center;
 }
 
-.quiensoy,.santiagoSaluda {
+.quiensoy,
+.santiagoSaluda {
   grid-row: 1 / 3;
 }
 
-.santiCamera{
+.santiCamera {
   grid-row: 2 / 3;
 }
 
 @media (min-width: 1220px) {
-  .sobremi__Santi{
+  .sobremi__Santi {
     grid-template-rows: 1;
     grid-template-columns: 2;
   }
-  .santiCamera{
+
+  .santiCamera {
     grid-row: 1 / 1;
   }
 
-  .pocodespues{
+  .pocodespues {
     grid-column: 2 / 2;
   }
 
-  body{
+  body {
     overflow: auto;
   }
 }
-
-
-
-

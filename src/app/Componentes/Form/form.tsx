@@ -1,11 +1,14 @@
 "use client";
-import { useForm, SubmitHandler, Controller, set } from "react-hook-form";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import CustomButton from "../CustomButton";
-import {useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Select from "react-select";
 import Image from "next/image";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import "react-phone-number-input/style.css";
+import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
+import Modal from "../Modal";
 
 interface Option {
   label: string;
@@ -17,7 +20,6 @@ type Inputs = {
   nombre: string;
   apellido: string;
   telefono1: number;
-  telefono2: number;
   email: string;
   contactoW: boolean;
   contactoM: boolean;
@@ -44,32 +46,83 @@ const schema = z.object({
     .regex(/^[a-zA-Z\s]*$/, "No se permiten caracteres especiales ni números"),
   email: z.string().email("Formato de email invalido"),
   telefono1: z
-    .string()
-    .regex(/^\d*$/, { message: "Ingrese solo números" })
-    .min(2, "Debes ingresar una característica válida")
-    .max(4),
-  telefono2: z
-    .string()
-    .regex(/^\d*$/, { message: "Ingrese solo números" })
-    .min(4, "No es un número telefonico correcto")
-    .max(7),
+    .string({ required_error: "Campo requerido" })
+    .refine(isValidPhoneNumber, { message: "Teléfono invalido" }),
   ciudad: z.string().min(1, "Debes ingresar una ciudad"),
   comentarios: z.string().max(2000),
 });
 
 export default function Form() {
+  const [showModal, setShowModal] = useState(false);
   const {
     control,
     register,
     handleSubmit,
     watch,
     trigger,
+    getValues,
     formState: { errors },
   } = useForm<Inputs>({
     resolver: zodResolver(schema),
   });
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    const valores = getValues();
+    var datos = {
+      service_id: "service_hjd0tod",
+      template_id: "template_t15hwmx",
+      user_id: "pgqqrrNHA6i0mNJwi",
+      template_params: {
+        nombre: valores.nombre,
+        apellido: valores.apellido,
+        telefono1: valores.telefono1,
+        mail: valores.email,
+        ciudad: valores.ciudad,
+        servicio:
+          valores.servicio === "fotografía"
+            ? "Fotografía"
+            : valores.servicio === "edicion"
+            ? "Edición / Creación de videos"
+            : "Fotografía y Edición / Creación de videos",
+        contactoW: valores.contactoW ? "Si" : "No",
+
+        contactoM: valores.contactoM ? valores.email : "No",
+
+        tipoServFoto: valores.tipoServFoto
+          ? valores.tipoServFoto.label
+          : "No corresponde",
+        tipoServAudVis: valores.tipoServAudVis
+          ? valores.tipoServAudVis.label
+          : "No corresponde",
+        fecha: valores.fecha,
+        duracion: valores.duracion.label,
+        cantidadFotos: valores.cantidadFotos
+          ? valores.cantidadFotos.label
+          : "No corresponde",
+        cantidadVideos: valores.cantidadVideos
+          ? valores.cantidadVideos.label
+          : "",
+        formato: valores.formato ? valores.formato.label : "No corresponde",
+        comentarios: valores.comentarios,
+        whatsapp: contactoW
+          ? `https://api.whatsapp.com/send?phone=${valores.telefono1
+              .toString()
+              .slice(1)}`
+          : "",
+        "g-recaptcha-response": "03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...",
+      },
+    };
+    await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(datos),
+    }).then((response) => {
+      setShowModal(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  };
   const [habilitar, setHabilitar] = useState(false);
   const [paso, setPaso] = useState(0);
   const servFotograficoOptions = [
@@ -128,7 +181,6 @@ export default function Form() {
   const apellido = watch("apellido");
   const nombre = watch("nombre");
   const telefono1 = watch("telefono1");
-  const telefono2 = watch("telefono2");
   const contactoM = watch("contactoM");
   const contactoW = watch("contactoW");
   const ciudad = watch("ciudad");
@@ -150,7 +202,6 @@ export default function Form() {
       nombre &&
       Object.keys(errors).length === 0 &&
       telefono1 &&
-      telefono2 &&
       (contactoW || contactoM)
     ) {
       setHabilitar(true);
@@ -204,7 +255,6 @@ export default function Form() {
     contactoW,
     errors,
     telefono1,
-    telefono2,
     cantidadFotos,
     cantidadVideos,
     ciudad,
@@ -226,6 +276,7 @@ export default function Form() {
   return (
     /**Encabezados */
     <div>
+      <Modal showModal={showModal} setShowModal={setShowModal} redirect={"/"} />
       {paso == 0 && (
         <div className="text-fondoBlanco text-3xl mb-10 font-nunitoSans">
           <h2 className="text-3xl font-bold">
@@ -390,35 +441,27 @@ export default function Form() {
             </label>
             <label htmlFor="telefono" className="flex flex-col">
               Telefono*
-              <div className="flex gap-3 w-full">
-                <div className="flex flex-col">
-                  <input
-                    {...register("telefono1", { required: true })}
-                    className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl w-20 h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
-                    id="telefono"
-                    maxLength={4}
+              <Controller
+                name="telefono1"
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <PhoneInput
+                    className="mt-2 border-[1.5px] border-inputBorderSelected w-full rounded-2xl h-10 text-xl px-4 py-1  bg-formBackground 2xl:grow focus:outline outline-3 outline-principalHover"
+                    placeholder="ingrese su telefono"
+                    onChange={onChange}
+                    countryCallingCodeEditable={false}
+                    defaultCountry="AR"
+                    international
+                    value={value?.toString()}
                     onBlur={() => handleBlurValidation("telefono1")}
                   />
-                  {errors.telefono1 && (
-                    <p className="text-red-600 text-xs">
-                      {errors.telefono1.message}
-                    </p>
-                  )}
-                </div>
-                <div className="flex flex-col">
-                  <input
-                    {...register("telefono2", { required: true })}
-                    className="mt-2 border-[1.5px] border-inputBorderSelected w-full rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground 2xl:grow focus:outline outline-3 outline-principalHover"
-                    maxLength={7}
-                    onBlur={() => handleBlurValidation("telefono2")}
-                  />
-                  {errors.telefono2 && (
-                    <p className="text-red-600 text-xs">
-                      {errors.telefono2.message}
-                    </p>
-                  )}
-                </div>
-              </div>
+                )}
+              />
+              {errors.telefono1 && (
+                <p className="text-red-600 text-xs">
+                  {errors.telefono1.message}
+                </p>
+              )}
             </label>
             <label htmlFor="email" className="flex flex-col">
               Email (opcional)
@@ -445,7 +488,7 @@ export default function Form() {
                   <input
                     {...register("contactoW")}
                     type="checkbox"
-                    className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-md checked:bg-inputBorderSelected"
+                    className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-md checked:bg-checkBackground"
                   />{" "}
                   Teléfono
                 </label>
@@ -456,7 +499,7 @@ export default function Form() {
                   <input
                     {...register("contactoM")}
                     type="checkbox"
-                    className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-md checked:bg-inputBorderSelected"
+                    className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-md checked:bg-checkBackground"
                   />{" "}
                   Mail
                 </label>
@@ -1492,12 +1535,12 @@ export default function Form() {
               </div>
             </div>
             <div className="grid grid-cols-2">
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 grow">
                 <p className="text-fondoBlanco font-nunitoSans text-lg">
                   Teléfono
                 </p>
                 <p className="font-nunito text-lg font-bold">
-                  {watch("telefono1")}-{watch("telefono2")}
+                  {watch("telefono1")}
                 </p>
               </div>
               <div className="flex flex-col gap-4">
@@ -1633,7 +1676,7 @@ export default function Form() {
               paso == 3 ? "px-36" : "px-32"
             }`}
           >
-            Los campos obligatorios están marcados con (*)
+            (*) Campos obligatorios
           </p>
         )}
         {paso === 3 && (
@@ -1649,21 +1692,18 @@ export default function Form() {
       {/*Botones para volver o pasar al siguiente formulario */}
       <div className="flex justify-around ">
         <CustomButton
-          title={`${
-            paso == 4
-              ? "Editar informacion"
-              : "Volver"}`}
+          title={`${paso == 4 ? "Editar informacion" : "Volver"}`}
           styles="bg-principal rounded-[40px] px-14 py-3 font-merriwather font-bold text-3xl mt-16 hover:bg-principalHover"
-          onClick={() =>{
-           if(paso === 4){
-              setPaso(0)
-            }else{
-              setPaso(paso - 1)
+          onClick={() => {
+            if (paso === 4) {
+              setPaso(0);
+            } else {
+              setPaso(paso - 1);
             }
           }}
         />
         <CustomButton
-          title="Continuar"
+          title={`${paso == 4 ? "Enviar formulario" : "Continuar"}`}
           disabled={!habilitar}
           styles={`${
             habilitar
