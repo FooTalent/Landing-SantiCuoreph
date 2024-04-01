@@ -1,5 +1,5 @@
 "use client";
-import { useForm, SubmitHandler, Controller, set } from "react-hook-form";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import CustomButton from "../CustomButton";
 import { useEffect, useState } from "react";
 import Select from "react-select";
@@ -8,6 +8,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import "react-phone-number-input/style.css";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
+import Modal from "../Modal";
 
 interface Option {
   label: string;
@@ -58,18 +59,76 @@ const schema = z.object({
 });
 
 export default function Form() {
+  const [showModal, setShowModal] = useState(false);
   const {
     control,
     register,
     handleSubmit,
     watch,
     trigger,
+    getValues,
     formState: { errors },
   } = useForm<Inputs>({
     resolver: zodResolver(schema),
   });
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    const valores = getValues();
+    var datos = {
+      service_id: "service_hjd0tod",
+      template_id: "template_t15hwmx",
+      user_id: "pgqqrrNHA6i0mNJwi",
+      template_params: {
+        nombre: valores.nombre,
+        apellido: valores.apellido,
+        telefono1: valores.telefono1,
+        mail: valores.email,
+        ciudad: valores.ciudad,
+        servicio:
+          valores.servicio === "fotografía"
+            ? "Fotografía"
+            : valores.servicio === "edicion"
+            ? "Edición / Creación de videos"
+            : "Fotografía y Edición / Creación de videos",
+        contactoW: valores.contactoW ? "Si" : "No",
+
+        contactoM: valores.contactoM ? valores.email : "No",
+
+        tipoServFoto: valores.tipoServFoto
+          ? valores.tipoServFoto.label
+          : "No corresponde",
+        tipoServAudVis: valores.tipoServAudVis
+          ? valores.tipoServAudVis.label
+          : "No corresponde",
+        fecha: valores.fecha,
+        duracion: valores.duracion.label,
+        cantidadFotos: valores.cantidadFotos
+          ? valores.cantidadFotos.label
+          : "No corresponde",
+        cantidadVideos: valores.cantidadVideos
+          ? valores.cantidadVideos.label
+          : "",
+        formato: valores.formato ? valores.formato.label : "No corresponde",
+        comentarios: valores.comentarios,
+        whatsapp: contactoW
+          ? `https://api.whatsapp.com/send?phone=${valores.telefono1
+              .toString()
+              .slice(1)}`
+          : "",
+        "g-recaptcha-response": "03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...",
+      },
+    };
+    await fetch("https://api.emailjs.com/api/v1.0/email/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(datos),
+    }).then((response) => {
+      setShowModal(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  };
   const [habilitar, setHabilitar] = useState(false);
   const [paso, setPaso] = useState(0);
   const servFotograficoOptions = [
@@ -226,6 +285,7 @@ export default function Form() {
   return (
     /**Encabezados */
     <div>
+      <Modal showModal={showModal} setShowModal={setShowModal} redirect={"/"} />
       {paso == 0 && (
         <div className="text-fondoBlanco text-3xl mb-10 font-nunitoSans">
           <h2 className="text-3xl font-bold">
