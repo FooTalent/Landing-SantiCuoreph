@@ -38,17 +38,21 @@ const schema = z.object({
     .string()
     .min(1, "Debes ingresar un nombre")
     .max(30, "Límite de caracteres alcanzado")
-    .regex(/^[a-zA-Z\s]*$/, "Ingrese solo letras"),
+    .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/g, "Ingrese un nombre válido"),
   apellido: z
     .string()
     .min(1, "Debes ingresar un apellido")
     .max(30)
-    .regex(/^[a-zA-Z\s]*$/, "No se permiten caracteres especiales ni números"),
-  email: z.string().email("Formato de email invalido"),
+    .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/g, "Ingrese un apellido válido"),
+  email: z.string().email("Ingrese un formato de email válido"),
   telefono1: z
     .string({ required_error: "Campo requerido" })
-    .refine(isValidPhoneNumber, { message: "Teléfono invalido" }),
-  ciudad: z.string().min(1, "Debes ingresar una ciudad"),
+    .refine(isValidPhoneNumber, {
+      message: "Ingrese un número telefónico válido",
+    }),
+  ciudad: z
+    .string()
+    .min(1, "Ingrese un barrio o ciudad. Por ej: Almagro, Buenos Aires."),
   comentarios: z.string().max(2000),
 });
 
