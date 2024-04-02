@@ -56,12 +56,12 @@ const Header = () => {
   const handleNavigateQuit = () => {
     setShowModal(false);
     document.body.style.overflow = "auto";
-    router.push(toNavigate)
+    router.push(toNavigate);
   };
-  const handleCancelModal = () =>{
-    setShowModal(false)
-    document.body.style.overflow = "auto"
-  }
+  const handleCancelModal = () => {
+    setShowModal(false);
+    document.body.style.overflow = "auto";
+  };
   return (
     <header className="bg-fondo fixed z-40 w-full h-14 md:h-min ">
       {showModal && (
@@ -111,9 +111,9 @@ const Header = () => {
           </div>
         </div>
       )}
-      <nav className="py-3 px-4 md:px-8  xl:max-w-screen-xl xl:mx-[105px] xl:px-0">
-        <div className="flex justify-between">
-          <div className="flex items-center xl:grow-[2]">
+      <nav className="py-3 px-4 md:px-8  xl:mx-[105px] xl:px-0">
+        <div className="flex justify-around">
+          <div className="flex items-center">
             <div className="flex-shrink-0">
               <button
                 onClick={handleLogoLink}
@@ -124,7 +124,7 @@ const Header = () => {
             </div>
           </div>
 
-          <ul className="hidden sm:flex justify-around items-center text-white text-[19px] grow-[2] xl:pr-40">
+          <ul className="hidden sm:flex justify-center gap-10 xl:gap-24 items-center text-white text-[19px] grow-[2] xl:pr-40">
             {navLinks.slice(1).map((link) => {
               return (
                 <li
@@ -175,7 +175,7 @@ const Header = () => {
             <ul
               className={`btn ${
                 isClick ? "right-0" : "right-[-999px] "
-              } flex flex-col bg-fondoGris absolute min-w-[250px] top-0 h-screen items-center justify-between text-white text-2xl font-semibold gap-8 transition-all duration-500 font-nunitoSans font-semibold`}
+              } flex flex-col bg-fondoGris absolute min-w-[250px] top-0 h-screen items-center justify-between text-white text-2xl font-semibold gap-8 transition-all duration-500 font-nunitoSans`}
             >
               <div className="flex-shrink-0 md:hidden">
                 <Link
@@ -205,7 +205,7 @@ const Header = () => {
                   <Whatsapp size={28} />
                 </a>
               </div>
-              <div className="grow justify-end grow"></div>
+              <div className="grow justify-end"></div>
             </ul>
           </div>
         </div>
