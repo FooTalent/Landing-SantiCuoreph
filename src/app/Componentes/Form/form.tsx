@@ -39,7 +39,7 @@ const schema = z.object({
     .string()
     .min(1, "Debes ingresar un nombre")
     .max(30, "Límite de caracteres alcanzado")
-    .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/g, "Ingrese un nombre válido"),
+    .regex(/^[a-zA-Z\s]*$/, "Ingrese solo letras"),
   apellido: z
     .string()
     .min(1, "Debes ingresar un apellido")
