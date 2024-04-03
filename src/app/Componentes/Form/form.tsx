@@ -319,10 +319,10 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               : ""
           } flex justify-between sm:pb-6 items-center`}
         >
-          <h2 className="text-xl sm:text-3xl font-bold">
+          <h2 className="text-lg sm:text-3xl font-bold">
             Servicio de fotografía
           </h2>
-          <h2 className="text-xl sm:text-2xl font-bold font-nunitoSans">
+          <h2 className="text-lg sm:text-2xl font-bold font-nunitoSans">
             {paso} de 4
           </h2>
         </div>
@@ -462,7 +462,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           {paso == 1 && (
             <fieldset
               id="paso1"
-              className="flex flex-col sm:grid sm:grid-cols-2 sm:grid-rows-2 gap-x-24 gap-y-4 text-base sm:text-xl"
+              className="flex flex-col min-w-56 sm:grid sm:grid-cols-2 sm:grid-rows-2 gap-x-24 gap-y-4 text-base sm:text-xl"
             >
               <label htmlFor="nombre" className="flex flex-col pt-3 sm:pt-0">
                 Nombre*
@@ -531,7 +531,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 <h2 className="text-center font-bold">
                   ¿Por qué medio querés recibir tu presupuesto?*
                 </h2>
-                <div className="flex justify-center gap-20 py-5">
+                <div className="flex justify-center gap-8 sm:gap-20 py-5">
                   <label
                     htmlFor="whatsapp"
                     className="flex  gap-1 items-center text-base "
@@ -656,7 +656,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 className="flex flex-col text-base font-bold px-7"
               >
                 ¿En qué fecha estimada se va a realizar la sesión de fotos?*
-                <div className="flex relative max-w-[60%] sm:max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
+                <div className="flex relative sm:max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
                   <Image
                     src="/assets/img/calendar_month_FILL0_wght400_GRAD0_opsz40 1.svg"
                     alt="icon"
@@ -1821,8 +1821,8 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           styles={`${
             paso == 4
               ? "block text-fondoBlanco bg-fondoBlanco/50"
-              : "hidden sm:block"
-          } bg-principal rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover`}
+              : "hidden sm:block bg-principal"
+          }  rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover`}
           onClick={() => {
             if (paso === 0) {
               navigate.push("/contacto");
