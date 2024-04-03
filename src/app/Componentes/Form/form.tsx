@@ -545,12 +545,15 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                   </label>
                   <label
                     htmlFor="mail"
-                    className="flex gap-1 items-center text-base"
+                    className={`${
+                      !watch("email") ? "text-fondoGris" : ""
+                    } flex gap-1 items-center text-base disabled:text-fondoNegro`}
                   >
                     <input
                       {...register("contactoM")}
+                      disabled={!watch("email") ? true : false}
                       type="checkbox"
-                      className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-sm checked:bg-checkBackground"
+                      className={`disabled:border-fondoGris appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-sm checked:bg-checkBackground`}
                     />{" "}
                     Mail
                   </label>
