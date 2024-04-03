@@ -426,7 +426,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
 
               <label
                 htmlFor="fotografia"
-                className="rounded-[20px] border-2 border-inputBorderSelected bg-[#424242] py-[11px] text-base sm:text-lg md:text-xl 2xl:text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft:bg-inputBorderSelected peer-checked/draft:hover:bg-principalHover peer-checked/draft:text-textoInput grow hover:bg-principalHover hover:text-fondoGris transition-all duration-200 align-middle"
+                className="rounded-[15px] border-2 border-inputBorderSelected bg-[#424242] py-[11px] text-base sm:text-lg md:text-xl 2xl:text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft:bg-inputBorderSelected peer-checked/draft:hover:bg-principalHover peer-checked/draft:text-textoInput grow hover:bg-principalHover hover:text-fondoGris transition-all duration-200 align-middle"
               >
                 Fotografía
               </label>
@@ -439,7 +439,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               />
               <label
                 htmlFor="edicion"
-                className="rounded-[20px] border-2 border-inputBorderSelected bg-[#424242cc] py-[11px] text-base sm:text-lg md:text-xl 2xl:text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft1:bg-inputBorderSelected peer-checked/draft1:hover:bg-principalHover peer-checked/draft1:text-textoInput grow hover:bg-principalHover hover:text-fondoGris transition-all duration-200"
+                className="rounded-[15px] border-2 border-inputBorderSelected bg-[#424242cc] py-[11px] text-base sm:text-lg md:text-xl 2xl:text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft1:bg-inputBorderSelected peer-checked/draft1:hover:bg-principalHover peer-checked/draft1:text-textoInput grow hover:bg-principalHover hover:text-fondoGris transition-all duration-200"
               >
                 Edición / Creación de video
               </label>
@@ -452,7 +452,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               />
               <label
                 htmlFor="ambos"
-                className="rounded-[20px] border-2 border-inputBorderSelected bg-[#424242cc] py-[11px] text-base sm:text-lg md:text-xl 2xl:text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft2:bg-inputBorderSelected peer-checked/draft2:hover:bg-principalHover peer-checked/draft2:text-textoInput grow hover:bg-principalHover hover:text-fondoGris transition-all duration-200"
+                className="rounded-[15px] border-2 border-inputBorderSelected bg-[#424242cc] py-[11px] text-base sm:text-lg md:text-xl 2xl:text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft2:bg-inputBorderSelected peer-checked/draft2:hover:bg-principalHover peer-checked/draft2:text-textoInput grow hover:bg-principalHover hover:text-fondoGris transition-all duration-200"
               >
                 Ambos
               </label>
@@ -1815,17 +1815,19 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
         )}
       </div>
       {/*Botones para volver o pasar al siguiente formulario */}
-      <div className="flex flex-col sm:flex-row sm:justify-around md:gap-4">
+      <div className="flex flex-col sm:flex-row sm:justify-around md:gap-4 ">
         <CustomButton
           title={`${paso == 4 ? "Editar información" : "Volver"}`}
           styles={`${
             paso == 4
               ? "block text-fondoBlanco bg-fondoBlanco/50"
               : "hidden sm:block bg-principal"
-          }  rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover`}
+          }  rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover md:w-60`}
           onClick={() => {
             if (paso === 0) {
               navigate.push("/contacto");
+            } else if (paso === 4) {
+              setPaso(1);
             } else {
               setPaso(paso - 1);
             }
@@ -1839,7 +1841,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             habilitar
               ? "bg-principal hover:bg-principalHover"
               : "bg-backgroundDisabled cursor-not-allowed text-textoDisabled"
-          } rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base sm:text-lg md:text-xl lg:text-3xl mt-5 sm:mt-16 sm:w-auto w-full`}
+          } rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base sm:text-lg md:text-xl lg:text-2xl mt-5 sm:mt-16 sm:w-auto w-full md:w-60`}
           onClick={() => {
             if (paso === 4) {
               handleSubmit(onSubmit)();

@@ -28,7 +28,7 @@ const Modal: React.FC<ModalProps> = ({ showModal, setShowModal, redirect }) => {
           }}
         >
           <svg
-            fill="#000000"
+            fill="#ffffff"
             height="20px"
             width="20px"
             version="1.1"
