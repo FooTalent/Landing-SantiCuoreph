@@ -39,12 +39,12 @@ const schema = z.object({
     .string()
     .min(1, "Debes ingresar un nombre")
     .max(30, "Límite de caracteres alcanzado")
-    .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/g, "Ingrese un nombre válido"),
+    .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ ]*$/g, "Ingrese un nombre válido"),
   apellido: z
     .string()
     .min(1, "Debes ingresar un apellido")
     .max(30)
-    .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/g, "Ingrese un apellido válido"),
+    .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ ]*$/g, "Ingrese un apellido válido"),
   email: z
     .string()
     .email("Ingrese un formato de email válido")
@@ -319,7 +319,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               : ""
           } flex justify-between sm:pb-6 items-center`}
         >
-          <h2 className="text-lg sm:text-3xl font-bold">
+          <h2 className="text-lg sm:text-3xl font-bold md:mx-10">
             Servicio de fotografía
           </h2>
           <h2 className="text-lg sm:text-2xl font-bold font-nunitoSans">
@@ -373,7 +373,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
       )}
       {paso == 4 && (
         <div
-          className={`text-fondoBlanco mb-10 flex justify-between sm:pb-6 items-center`}
+          className={`text-fondoBlanco mb-10 flex justify-between sm:pb-6 items-center md:mx-10`}
         >
           <h2 className="text-xl sm:text-3xl font-bold">
             Servicio de fotografía
@@ -390,7 +390,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           onSubmit={handleSubmit(onSubmit)}
           className={`pt-8 pb-8 ${
             paso === 2 || (paso === 4 && watch("servicio"))
-              ? "lg:mx-10 md:mx-10"
+              ? "md:mx-10"
               : "px-9"
           } bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl min-h-[400px] backdrop-shadow-xl`}
         >
@@ -563,7 +563,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           )}
           {/** paso 2a */}
           {paso == 2 && watch("servicio") === "fotografia" && (
-            <fieldset id="paso2" className="flex flex-col gap-6 pb-10 md:px-7">
+            <fieldset id="paso2" className="flex flex-col gap-6 pb-10 md:px-36">
               <label
                 htmlFor="servicio"
                 className="flex flex-col text-base font-bold text-center px-7"
@@ -1810,7 +1810,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             className={`font-nunitoSans text-base font-bold ${
               paso == 3
                 ? "px-36"
-                : "sm:px-32 sm:text-left text-fondoBlanco text-center pt-5"
+                : "sm:px-56  sm:text-left text-fondoBlanco text-center pt-5"
             }`}
           >
             (*) Campos obligatorios
@@ -1818,14 +1818,13 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
         )}
       </div>
       {/*Botones para volver o pasar al siguiente formulario */}
-      <div className="flex flex-col sm:flex-row sm:justify-around md:gap-4 ">
+      <div className="flex flex-col sm:flex-wrap sm:justify-around sm:items-center md:gap-4">
+        {/** Boton extra */}
         <CustomButton
-          title={`${paso == 4 ? "Editar información" : "Volver"}`}
+          title="Editar información"
           styles={`${
-            paso == 4
-              ? "block text-fondoBlanco bg-fondoBlanco/50"
-              : "hidden sm:block bg-principal"
-          }  rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover md:w-60`}
+            paso === 4 ? " bg-fondoBlanco/50" : "hidden"
+          } text-fondoBlanco rounded-[40px] px-14 md:px-10 py-4 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover flex items-center justify-center md:min-w-72`}
           onClick={() => {
             if (paso === 0) {
               navigate.push("/contacto");
@@ -1837,23 +1836,39 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         />
-        <CustomButton
-          title={`${paso == 4 ? "Enviar formulario" : "Continuar"}`}
-          disabled={!habilitar}
-          styles={`${
-            habilitar
-              ? "bg-principal hover:bg-principalHover"
-              : "bg-backgroundDisabled cursor-not-allowed text-textoDisabled"
-          } rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base sm:text-lg md:text-xl lg:text-2xl mt-5 sm:mt-16 sm:w-auto w-full md:w-60`}
-          onClick={() => {
-            if (paso === 4) {
-              handleSubmit(onSubmit)();
-            } else {
-              handleContinuar();
-            }
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        />
+        <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-around sm:gap-4 md:w-full">
+          {/**BOTON VOLVER */}
+          <CustomButton
+            title="Volver"
+            styles="hidden sm:block bg-principal hover:bg-principalHover rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover sm:min-w-60"
+            onClick={() => {
+              if (paso === 0) {
+                navigate.push("/contacto");
+              } else {
+                setPaso(paso - 1);
+              }
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          />
+
+          <CustomButton
+            title={`${paso == 4 ? "Enviar formulario" : "Continuar"}`}
+            disabled={!habilitar}
+            styles={`${
+              habilitar
+                ? "bg-principal hover:bg-principalHover"
+                : "bg-backgroundDisabled cursor-not-allowed text-textoDisabled"
+            } rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base sm:text-lg md:text-xl lg:text-2xl mt-5 sm:mt-16 sm:w-auto w-full sm:min-w-60`}
+            onClick={() => {
+              if (paso === 4) {
+                handleSubmit(onSubmit)();
+              } else {
+                handleContinuar();
+              }
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          />
+        </div>
       </div>
     </div>
   );
