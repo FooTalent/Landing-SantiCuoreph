@@ -59,14 +59,16 @@ const Slideshow = () => {
       <Slide autoplay={false} {...properties} indicators={true} cssClass="pb-5">
         {slideImages.map((slideImage, index) => (
           <div key={index} className="h-full">
-            <div className="h-full relative flex items-center">
+            <div className="h-screen relative flex items-center">
               <Image
                 src={slideImage.url}
                 alt="Slide"
                 width="0"
                 height="0"
                 sizes="100%"
-                className="w-screen h-screen object-cover filter brightness-50"
+                className={`w-screen h-full object-cover ${
+                  index == 0 || index == 3 ? "object-top" : ""
+                } filter brightness-50`}
               />
 
               {/* TEXTO PRINCIPAL Y SECUNDARIO */}

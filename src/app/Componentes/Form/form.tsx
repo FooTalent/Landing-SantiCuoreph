@@ -45,11 +45,7 @@ const schema = z.object({
     .min(1, "Debes ingresar un apellido")
     .max(30)
     .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ ]*$/g, "Ingrese un apellido válido"),
-  email: z
-    .string()
-    .email("Ingrese un formato de email válido")
-    .or(z.literal(""))
-    .optional(),
+  email: z.string().email("Ingrese un formato de email válido"),
   telefono1: z
     .string({ required_error: "Campo requerido" })
     .refine(isValidPhoneNumber, {
@@ -194,6 +190,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
   const servicio = watch("servicio");
   const apellido = watch("apellido");
   const nombre = watch("nombre");
+  const mail = watch("email");
   const telefono1 = watch("telefono1");
   const contactoM = watch("contactoM");
   const contactoW = watch("contactoW");
@@ -214,6 +211,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
       paso === 1 &&
       apellido &&
       nombre &&
+      mail &&
       Object.keys(errors).length === 0 &&
       telefono1 &&
       (contactoW || contactoM)
@@ -263,6 +261,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
   }, [
     paso,
     apellido,
+    mail,
     servicio,
     nombre,
     contactoM,
@@ -515,7 +514,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 )}
               </label>
               <label htmlFor="email" className="flex flex-col pt-3 sm:pt-0">
-                Email (opcional)
+                Email*
                 <input
                   {...register("email")}
                   type="mail"
@@ -545,15 +544,12 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                   </label>
                   <label
                     htmlFor="mail"
-                    className={`${
-                      !watch("email") ? "text-fondoGris" : ""
-                    } flex gap-1 items-center text-base disabled:text-fondoNegro`}
+                    className="flex gap-1 items-center text-base"
                   >
                     <input
                       {...register("contactoM")}
-                      disabled={!watch("email") ? true : false}
                       type="checkbox"
-                      className={`disabled:border-fondoGris appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-sm checked:bg-checkBackground`}
+                      className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-sm checked:bg-checkBackground"
                     />{" "}
                     Mail
                   </label>
