@@ -221,11 +221,11 @@ const Audiovisual = () => {
             "gap-y-2 xl:max-w-screen-xl  px-5 lg:px-0 mx-auto flex flex-col"
           }
         >
-          <div className="flex-col lg:flex space-y-2  lg:space-y-0 lg:flex-row gap-x-2 font-merriwather italic text-fondoBlanco">
+          <div className="flex-col mt-10 lg:flex space-y-2  lg:space-y-0 lg:flex-row gap-x-2 font-merriwather italic text-fondoBlanco">
             <div
               onMouseEnter={() => videoRef1.current.play()}
               onMouseLeave={() => videoRef1.current.pause()}
-              className="relative"
+              className="relative cursor-pointer"
             >
               <video
                 ref={videoRef1}
@@ -253,7 +253,7 @@ const Audiovisual = () => {
             <div
               onMouseEnter={() => videoRef2.current.play()}
               onMouseLeave={() => videoRef2.current.pause()}
-              className="relative"
+              className="relative cursor-pointer"
             >
               <video
                 ref={videoRef2}
@@ -282,7 +282,7 @@ const Audiovisual = () => {
             <div
               onMouseEnter={() => videoRef3.current.play()}
               onMouseLeave={() => videoRef3.current.pause()}
-              className="relative w-full lg:flex lg:w-1/2 text-fondoBlanco "
+              className="relative w-full lg:flex lg:w-1/2 text-fondoBlanco cursor-pointer"
             >
               <video
                 ref={videoRef3}
@@ -311,7 +311,7 @@ const Audiovisual = () => {
               <div
                 onMouseEnter={() => videoRef4.current.play()}
                 onMouseLeave={() => videoRef4.current.pause()}
-                className="relative h-1/2 text-fondoBlanco "
+                className="relative h-1/2 text-fondoBlanco cursor-pointer"
               >
                 <video
                   ref={videoRef4}
@@ -337,7 +337,7 @@ const Audiovisual = () => {
               <div
                 onMouseEnter={() => videoRef5.current.play()}
                 onMouseLeave={() => videoRef5.current.pause()}
-                className="relative h-1/2 text-fondoBlanco "
+                className="relative h-1/2 text-fondoBlanco cursor-pointer"
               >
                 <video
                   ref={videoRef5}
