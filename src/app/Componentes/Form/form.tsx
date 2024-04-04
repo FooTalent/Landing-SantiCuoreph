@@ -122,6 +122,50 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
         "g-recaptcha-response": "03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...",
       },
     };
+    var datosAviso = {
+      service_id: "service_hjd0tod",
+      template_id: "template_u709am4",
+      user_id: "pgqqrrNHA6i0mNJwi",
+      template_params: {
+        nombre: valores.nombre,
+        apellido: valores.apellido,
+        telefono1: valores.telefono1,
+        mail: valores.email,
+        ciudad: valores.ciudad,
+        servicio:
+          valores.servicio === "fotografía"
+            ? "Fotografía"
+            : valores.servicio === "edicion"
+            ? "Edición / Creación de videos"
+            : "Fotografía y Edición / Creación de videos",
+        contactoW: valores.contactoW ? "Si" : "No",
+
+        contactoM: valores.contactoM ? valores.email : "No",
+
+        tipoServFoto: valores.tipoServFoto
+          ? valores.tipoServFoto.label
+          : "No corresponde",
+        tipoServAudVis: valores.tipoServAudVis
+          ? valores.tipoServAudVis.label
+          : "No corresponde",
+        fecha: valores.fecha,
+        duracion: valores.duracion.label,
+        cantidadFotos: valores.cantidadFotos
+          ? valores.cantidadFotos.label
+          : "No corresponde",
+        cantidadVideos: valores.cantidadVideos
+          ? valores.cantidadVideos.label
+          : "",
+        formato: valores.formato ? valores.formato.label : "No corresponde",
+        comentarios: valores.comentarios,
+        whatsapp: contactoW
+          ? `https://api.whatsapp.com/send?phone=${valores.telefono1
+              .toString()
+              .slice(1)}`
+          : "",
+        "g-recaptcha-response": "03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...",
+      },
+    };
     await fetch("https://api.emailjs.com/api/v1.0/email/send", {
       method: "POST",
       headers: {
@@ -129,6 +173,13 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
       },
       body: JSON.stringify(datos),
     }).then((response) => {
+      fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(datosAviso),
+      });
       setShowModal(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     });

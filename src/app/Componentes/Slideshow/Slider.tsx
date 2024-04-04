@@ -40,7 +40,13 @@ const properties = {
   prevArrow: (
     <button className="lg:ml-[115px] ml-4 " style={{ ...buttonStyle }}>
       <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
-        <Image src="/assets/img/ArrowLeft.png" alt="" width={20} height={20} />
+        <Image
+          src="/assets/img/ArrowLeft.png"
+          alt=""
+          style={{ width: "auto", height: "auto" }}
+          width={20}
+          height={20}
+        />
       </div>
     </button>
   ),
@@ -56,7 +62,14 @@ const properties = {
 const Slideshow = () => {
   return (
     <div className="slide-container">
-      <Slide autoplay={false} {...properties} indicators={true} cssClass="pb-5">
+      <Slide
+        autoplay={true}
+        infinite={true}
+        duration={5000}
+        {...properties}
+        indicators={true}
+        cssClass="pb-5"
+      >
         {slideImages.map((slideImage, index) => (
           <div key={index} className="h-full">
             <div className="h-screen relative flex items-center">
