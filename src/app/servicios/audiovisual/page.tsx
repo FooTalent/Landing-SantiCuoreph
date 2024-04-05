@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import flecha from '../../Icon/Group.png'
 const buttonStyle = {
   width: "50px",
   background: "none",
@@ -225,7 +226,7 @@ const Audiovisual = () => {
             <div
               onMouseEnter={() => videoRef1.current.play()}
               onMouseLeave={() => videoRef1.current.pause()}
-              className="relative cursor-pointer"
+              className="relative cursor-pointer group"
             >
               <video
                 ref={videoRef1}
@@ -240,20 +241,21 @@ const Audiovisual = () => {
                 onClick={() => {
                   handleOpenModal(0);
                 }}
-                className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
+                className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
-                <div className="m-auto">
-                  <h1 className=" text-[48px]  italic">Spasio Kinesio</h1>
-                  <p className="text-fondoBlanco font-nunitoSans font-thin text-[30px]">
-                    Creación de video para redes
-                  </p>
-                </div>
+          <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+        <div className="group-hover:pr-20  w-full  transition-all duration-300">
+            <h3 className="text-3xl mb-4 italic">Videos para redes</h3>
+            <h2 className="text-2xl font-thin">Spasio Kinesio</h2>
+            </div>
+            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
+          </div>
               </div>
             </div>
             <div
               onMouseEnter={() => videoRef2.current.play()}
               onMouseLeave={() => videoRef2.current.pause()}
-              className="relative cursor-pointer"
+              className="relative cursor-pointer group"
             >
               <video
                 ref={videoRef2}
@@ -265,16 +267,15 @@ const Audiovisual = () => {
               />
               <div
                 onClick={() => handleOpenModal(1)}
-                className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
+                className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
-                <div className="m-auto">
-                  <h1 className=" text-[48px]  italic">
-                    TOCH en Camping de Palermo
-                  </h1>
-                  <p className="text-fondoBlanco font-nunitoSans font-thin text-[30px]">
-                    Creación de video para redes
-                  </p>
-                </div>
+                <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+        <div className="group-hover:pr-20  w-full  transition-all duration-300">
+            <h3 className="text-3xl mb-4 italic">Videos para redes</h3>
+            <h2 className="text-2xl font-thin">TOCH en Camping de Palermo</h2>
+            </div>
+            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
+          </div>
               </div>
             </div>
           </div>
@@ -282,7 +283,7 @@ const Audiovisual = () => {
             <div
               onMouseEnter={() => videoRef3.current.play()}
               onMouseLeave={() => videoRef3.current.pause()}
-              className="relative w-full lg:flex lg:w-1/2 text-fondoBlanco cursor-pointer"
+              className="relative w-full lg:flex lg:w-1/2 text-fondoBlanco cursor-pointer group"
             >
               <video
                 ref={videoRef3}
@@ -294,16 +295,15 @@ const Audiovisual = () => {
               />
               <div
                 onClick={() => handleOpenModal(2)}
-                className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
+                className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
-                <div className="m-auto">
-                  <h1 className=" text-[48px]  italic">
-                    Backstage de fotos Pasado Pisado{" "}
-                  </h1>
-                  <p className="font-nunitoSans font-thin text-[30px]">
-                    Creación de video para redes{" "}
-                  </p>
-                </div>
+                <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+        <div className="group-hover:pr-20  w-full  transition-all duration-300">
+            <h3 className="text-3xl mb-4 italic">Videos para redes</h3>
+            <h2 className="text-2xl font-thin text-balance">Backstage de fotos Pasado Pisado</h2>
+            </div>
+            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
+          </div>
               </div>
             </div>
 
@@ -311,7 +311,7 @@ const Audiovisual = () => {
               <div
                 onMouseEnter={() => videoRef4.current.play()}
                 onMouseLeave={() => videoRef4.current.pause()}
-                className="relative h-1/2 text-fondoBlanco cursor-pointer"
+                className="relative h-1/2 text-fondoBlanco cursor-pointer group"
               >
                 <video
                   ref={videoRef4}
@@ -322,22 +322,21 @@ const Audiovisual = () => {
                 />
                 <div
                   onClick={() => handleOpenModal(3)}
-                  className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
+                  className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
                 >
-                  <div className="m-auto">
-                    <h1 className="text-xl xl:text-[48px]  italic">
-                      Exposición en Centro Cultural Kirchner{" "}
-                    </h1>
-                    <p className="font-nunitoSans font-thin text-[20px] xl:text-[30px]">
-                      Edición de video{" "}
-                    </p>
-                  </div>
+                   <div className="texto_image absolute bottom-0 z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+        <div className="group-hover:pr-20  w-full  transition-all duration-300">
+            <h3 className="text-3xl mb-4 italic">Edicion de video</h3>
+            <h2 className="text-2xl font-thin text-balance">José Ladislao Biró</h2>
+            </div>
+            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
+          </div>
                 </div>
               </div>
               <div
                 onMouseEnter={() => videoRef5.current.play()}
                 onMouseLeave={() => videoRef5.current.pause()}
-                className="relative h-1/2 text-fondoBlanco cursor-pointer"
+                className="relative h-1/2 text-fondoBlanco cursor-pointer group"
               >
                 <video
                   ref={videoRef5}
@@ -348,16 +347,15 @@ const Audiovisual = () => {
                 />
                 <div
                   onClick={() => handleOpenModal(4)}
-                  className="absolute rounded-xl bg-black/50 top-0 h-full text-center  w-full flex flex-col opacity-0 hover:opacity-100 transition-all ease-in-out duration-300 "
+                  className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
                 >
-                  <div className="m-auto">
-                    <h1 className=" text-xl xl:text-[48px]  italic">
-                      José Ladislao Biró{" "}
-                    </h1>
-                    <p className="text-[20px] font-nunitoSans font-thin xl:text-[30px]">
-                      Edición de video{" "}
-                    </p>
-                  </div>
+                  <div className="texto_image absolute bottom-0 z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+        <div className="group-hover:pr-20  w-full  transition-all duration-300">
+            <h3 className="text-3xl mb-4 italic">Edicion de video</h3>
+            <h2 className="text-2xl font-thin text-balance">Exposición en el Centro Cultural Kirchner</h2>
+            </div>
+            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
+          </div>
                 </div>
               </div>
             </div>
