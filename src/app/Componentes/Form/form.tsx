@@ -39,17 +39,13 @@ const schema = z.object({
     .string()
     .min(1, "Debes ingresar un nombre")
     .max(30, "Límite de caracteres alcanzado")
-    .regex(/^[a-zA-Z\s]*$/, "Ingrese solo letras"),
+    .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ ]*$/g, "Ingrese un nombre válido"),
   apellido: z
     .string()
     .min(1, "Debes ingresar un apellido")
     .max(30)
-    .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ]+$/g, "Ingrese un apellido válido"),
-  email: z
-    .string()
-    .email("Ingrese un formato de email válido")
-    .or(z.literal(""))
-    .optional(),
+    .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ ]*$/g, "Ingrese un apellido válido"),
+  email: z.string().email("Ingrese un formato de email válido"),
   telefono1: z
     .string({ required_error: "Campo requerido" })
     .refine(isValidPhoneNumber, {
@@ -115,6 +111,50 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           : "No corresponde",
         cantidadVideos: valores.cantidadVideos
           ? valores.cantidadVideos.label
+          : "No corresponde",
+        formato: valores.formato ? valores.formato.label : "No corresponde",
+        comentarios: valores.comentarios,
+        whatsapp: contactoW
+          ? `https://api.whatsapp.com/send?phone=${valores.telefono1
+              .toString()
+              .slice(1)}`
+          : "",
+        "g-recaptcha-response": "03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...",
+      },
+    };
+    var datosAviso = {
+      service_id: "service_hjd0tod",
+      template_id: "template_u709am4",
+      user_id: "pgqqrrNHA6i0mNJwi",
+      template_params: {
+        nombre: valores.nombre,
+        apellido: valores.apellido,
+        telefono1: valores.telefono1,
+        mail: valores.email,
+        ciudad: valores.ciudad,
+        servicio:
+          valores.servicio === "fotografía"
+            ? "Fotografía"
+            : valores.servicio === "edicion"
+            ? "Edición / Creación de videos"
+            : "Fotografía y Edición / Creación de videos",
+        contactoW: valores.contactoW ? "Si" : "No",
+
+        contactoM: valores.contactoM ? valores.email : "No",
+
+        tipoServFoto: valores.tipoServFoto
+          ? valores.tipoServFoto.label
+          : "No corresponde",
+        tipoServAudVis: valores.tipoServAudVis
+          ? valores.tipoServAudVis.label
+          : "No corresponde",
+        fecha: valores.fecha,
+        duracion: valores.duracion.label,
+        cantidadFotos: valores.cantidadFotos
+          ? valores.cantidadFotos.label
+          : "No corresponde",
+        cantidadVideos: valores.cantidadVideos
+          ? valores.cantidadVideos.label
           : "",
         formato: valores.formato ? valores.formato.label : "No corresponde",
         comentarios: valores.comentarios,
@@ -133,6 +173,13 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
       },
       body: JSON.stringify(datos),
     }).then((response) => {
+      fetch("https://api.emailjs.com/api/v1.0/email/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(datosAviso),
+      });
       setShowModal(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
@@ -174,12 +221,20 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
     { value: "100+", label: "Mas de 100 fotos" },
     { value: "0", label: "No lo sé" },
   ];
-  const cantidadesVideo = [
+  const cantidadesVideoEdicion = [
+    { value: "3", label: "Hasta 3 videos" },
     { value: "5", label: "Hasta 5 videos" },
     { value: "10", label: "Hasta 10 videos" },
-    { value: "15", label: "Hasta 15 videos" },
-    { value: "20", label: "Hasta 20 videos" },
-    { value: "20+", label: "Mas de 20 videos" },
+    { value: "10+", label: "Mas de 10 videos" },
+    { value: "0", label: "No lo sé" },
+  ];
+  const cantidadesVideoAmbos = [
+    { value: "1", label: "1 video" },
+    { value: "2", label: "2 videos" },
+    { value: "3", label: "3 videos" },
+    { value: "4", label: "4 videos" },
+    { value: "5", label: "5 videos" },
+    { value: "5+", label: "Mas de 5 videos" },
     { value: "0", label: "No lo sé" },
   ];
   const servAudiovisualOptions = [
@@ -194,6 +249,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
   const servicio = watch("servicio");
   const apellido = watch("apellido");
   const nombre = watch("nombre");
+  const mail = watch("email");
   const telefono1 = watch("telefono1");
   const contactoM = watch("contactoM");
   const contactoW = watch("contactoW");
@@ -214,6 +270,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
       paso === 1 &&
       apellido &&
       nombre &&
+      mail &&
       Object.keys(errors).length === 0 &&
       telefono1 &&
       (contactoW || contactoM)
@@ -263,6 +320,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
   }, [
     paso,
     apellido,
+    mail,
     servicio,
     nombre,
     contactoM,
@@ -319,7 +377,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               : ""
           } flex justify-between sm:pb-6 items-center`}
         >
-          <h2 className="text-lg sm:text-3xl font-bold">
+          <h2 className="text-lg sm:text-3xl font-bold md:mx-10">
             Servicio de fotografía
           </h2>
           <h2 className="text-lg sm:text-2xl font-bold font-nunitoSans">
@@ -373,7 +431,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
       )}
       {paso == 4 && (
         <div
-          className={`text-fondoBlanco mb-10 flex justify-between sm:pb-6 items-center`}
+          className={`text-fondoBlanco mb-10 flex justify-between sm:pb-6 items-center md:mx-10`}
         >
           <h2 className="text-xl sm:text-3xl font-bold">
             Servicio de fotografía
@@ -390,7 +448,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           onSubmit={handleSubmit(onSubmit)}
           className={`pt-8 pb-8 ${
             paso === 2 || (paso === 4 && watch("servicio"))
-              ? "lg:mx-10 md:mx-10"
+              ? "md:mx-10"
               : "px-9"
           } bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl min-h-[400px] backdrop-shadow-xl`}
         >
@@ -426,7 +484,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
 
               <label
                 htmlFor="fotografia"
-                className="rounded-[20px] border-2 border-inputBorderSelected bg-[#424242] py-[11px] text-base sm:text-lg md:text-xl 2xl:text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft:bg-inputBorderSelected peer-checked/draft:hover:bg-principalHover peer-checked/draft:text-textoInput grow hover:bg-principalHover hover:text-fondoGris transition-all duration-200 align-middle"
+                className="rounded-[15px] border-2 border-inputBorderSelected bg-[#424242] py-[11px] text-base sm:text-lg md:text-xl 2xl:text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft:bg-inputBorderSelected peer-checked/draft:hover:bg-principalHover peer-checked/draft:text-textoInput grow hover:bg-principalHover hover:text-fondoGris transition-all duration-200 align-middle"
               >
                 Fotografía
               </label>
@@ -439,7 +497,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               />
               <label
                 htmlFor="edicion"
-                className="rounded-[20px] border-2 border-inputBorderSelected bg-[#424242cc] py-[11px] text-base sm:text-lg md:text-xl 2xl:text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft1:bg-inputBorderSelected peer-checked/draft1:hover:bg-principalHover peer-checked/draft1:text-textoInput grow hover:bg-principalHover hover:text-fondoGris transition-all duration-200"
+                className="rounded-[15px] border-2 border-inputBorderSelected bg-[#424242cc] py-[11px] text-base sm:text-lg md:text-xl 2xl:text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft1:bg-inputBorderSelected peer-checked/draft1:hover:bg-principalHover peer-checked/draft1:text-textoInput grow hover:bg-principalHover hover:text-fondoGris transition-all duration-200"
               >
                 Edición / Creación de video
               </label>
@@ -452,7 +510,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               />
               <label
                 htmlFor="ambos"
-                className="rounded-[20px] border-2 border-inputBorderSelected bg-[#424242cc] py-[11px] text-base sm:text-lg md:text-xl 2xl:text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft2:bg-inputBorderSelected peer-checked/draft2:hover:bg-principalHover peer-checked/draft2:text-textoInput grow hover:bg-principalHover hover:text-fondoGris transition-all duration-200"
+                className="rounded-[15px] border-2 border-inputBorderSelected bg-[#424242cc] py-[11px] text-base sm:text-lg md:text-xl 2xl:text-2xl font-semibold text-nunitoSans  flex justify-center cursor-pointer peer-checked/draft2:bg-inputBorderSelected peer-checked/draft2:hover:bg-principalHover peer-checked/draft2:text-textoInput grow hover:bg-principalHover hover:text-fondoGris transition-all duration-200"
               >
                 Ambos
               </label>
@@ -515,7 +573,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 )}
               </label>
               <label htmlFor="email" className="flex flex-col pt-3 sm:pt-0">
-                Email (opcional)
+                Email*
                 <input
                   {...register("email")}
                   type="mail"
@@ -560,7 +618,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           )}
           {/** paso 2a */}
           {paso == 2 && watch("servicio") === "fotografia" && (
-            <fieldset id="paso2" className="flex flex-col gap-6 pb-10 md:px-7">
+            <fieldset id="paso2" className="flex flex-col gap-6 pb-10 md:px-36">
               <label
                 htmlFor="servicio"
                 className="flex flex-col text-base font-bold text-center px-7"
@@ -677,7 +735,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="duracion"
                 className="flex flex-col text-base font-bold px-7"
               >
-                Tiempo estimado de la cobertura del evento / sesión fotográfica*
+                ¿Cuántas horas necesitás el servicio?*
                 <Controller
                   name="duracion"
                   control={control}
@@ -748,7 +806,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="cantidadFotos"
                 className="flex flex-col text-base font-bold px-7"
               >
-                ¿Cuántas fotos editadas y retocadas necesitás?*
+                ¿Cuántas fotos necesitás?*
                 <Controller
                   name="cantidadFotos"
                   control={control}
@@ -896,14 +954,14 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="servicio"
                 className="flex flex-col text-base font-bold text-center px-7"
               >
-                ¿Qué tipo de servicio audiovisual necesitás?*
+                ¿Qué tipo de servicio de video necesitás?*
                 <Controller
                   name="tipoServAudVis"
                   control={control}
                   render={({ field }) => (
                     <Select
                       id="servicio"
-                      placeholder={"Seleccioná un tipo de servicio audiovisual"}
+                      placeholder={"Seleccioná un tipo de servicio de video"}
                       {...field}
                       options={servAudiovisualOptions}
                       styles={{
@@ -972,6 +1030,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                   id="ciudad"
                   className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-base sm:text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
                   onBlur={() => handleBlurValidation("ciudad")}
+                  placeholder="Por ej.: Almagro, Buenos Aires"
                 />
                 {errors.ciudad && (
                   <p className="text-red-600 text-xs">
@@ -1005,7 +1064,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="duracion"
                 className="flex flex-col text-base font-bold text-center px-7"
               >
-                Tiempo estimado de la cobertura del evento / sesión de video*
+                ¿Cuántas horas necesitás el servicio?*
                 <Controller
                   name="duracion"
                   control={control}
@@ -1075,7 +1134,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="cantidadVideos"
                 className="flex flex-col text-base font-bold text-center px-7"
               >
-                ¿Cuántos videos editados necesitás?*
+                ¿Cuántos videos necesitás?*
                 <Controller
                   name="cantidadVideos"
                   control={control}
@@ -1084,7 +1143,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                       id="cantidadVideos"
                       placeholder={"Indicá cuántos videos necesitas"}
                       {...field}
-                      options={cantidadesVideo}
+                      options={cantidadesVideoEdicion}
                       styles={{
                         control: (styles) => ({
                           ...styles,
@@ -1223,14 +1282,14 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="servicio1"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿Qué tipo de servicio audiovisual necesitás?*
+                ¿Qué tipo de servicio de video necesitás?*
                 <Controller
                   name="tipoServAudVis"
                   control={control}
                   render={({ field }) => (
                     <Select
                       id="servicio1"
-                      placeholder={"Seleccioná un tipo de servicio audiovisual"}
+                      placeholder={"Seleccioná un tipo de servicio de video"}
                       {...field}
                       options={servAudiovisualOptions}
                       styles={{
@@ -1299,6 +1358,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                   id="ciudad"
                   className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-base sm:text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
                   onBlur={() => handleBlurValidation("ciudad")}
+                  placeholder="Por ej.: Almagro, Buenos Aires"
                 />
                 {errors.ciudad && (
                   <p className="text-red-600 text-xs">
@@ -1333,8 +1393,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="duracion"
                 className="flex flex-col text-base font-bold text-center"
               >
-                Tiempo estimado de la cobertura del evento o sesión de fotos /
-                video*
+                ¿Cuántas horas necesitás el servicio?*
                 <Controller
                   name="duracion"
                   control={control}
@@ -1404,7 +1463,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="cantidad"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿Cuántas fotos editadas y retocadas necesitás?*
+                ¿Cuántas fotos necesitás?*
                 <Controller
                   name="cantidadFotos"
                   control={control}
@@ -1544,7 +1603,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="cantidad2"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿Cuántos videos editados necesitás?*
+                ¿Cuántos videos necesitás?*
                 <Controller
                   name="cantidadVideos"
                   control={control}
@@ -1553,7 +1612,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                       id="cantidadVideos"
                       placeholder={"Indicá cuántos videos necesitas"}
                       {...field}
-                      options={cantidadesVideo}
+                      options={cantidadesVideoAmbos}
                       styles={{
                         control: (styles) => ({
                           ...styles,
@@ -1656,7 +1715,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               <div className="grid grid-cols-2">
                 <div className="flex flex-col gap-4 grow">
                   <p className="text-fondoBlanco font-nunitoSans text-base sm:text-lg">
-                    Teléfono
+                    Whatsapp
                   </p>
                   <p className="font-nunito text-base sm:text-lg font-bold">
                     {watch("telefono1")}
@@ -1684,7 +1743,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               {watch("tipoServAudVis") && (
                 <div>
                   <p className="text-fondoBlanco font-nunitoSans text-base sm:text-lg text-center sm:text-left pb-2">
-                    ¿Qué tipo de servicio audiovisual necesitás?
+                    ¿Qué tipo de servicio de video necesitás?
                   </p>
                   <p className="font-nunito text-base text-center sm:text-left sm:text-lg font-bold">
                     {watch("tipoServAudVis.label")}
@@ -1738,7 +1797,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 watch("servicio") === "ambos") && (
                 <div>
                   <p className="text-fondoBlanco font-nunitoSans text-base sm:text-lg text-center sm:text-left pb-2">
-                    ¿Cuántas fotos editadas y retocadas necesitás?
+                    ¿Cuántas fotos necesitás?
                   </p>
                   <p className="font-nunito text-center sm:text-left text-base sm:text-lg font-bold">
                     {watch("cantidadFotos.label")}
@@ -1760,7 +1819,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 (watch("servicio") === "ambos" && (
                   <div>
                     <p className="text-fondoBlanco font-nunitoSans text-base sm:text-lg text-center sm:text-left pb-2">
-                      ¿Cuántos videos editados necesitás?
+                      ¿Cuántos videos necesitás?
                     </p>
                     <p className="font-nunito text-center sm:text-left text-base sm:text-lg font-bold">
                       {watch("cantidadVideos.label")}
@@ -1807,7 +1866,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             className={`font-nunitoSans text-base font-bold ${
               paso == 3
                 ? "px-36"
-                : "sm:px-32 sm:text-left text-fondoBlanco text-center pt-5"
+                : "sm:px-56  sm:text-left text-fondoBlanco text-center pt-5"
             }`}
           >
             (*) Campos obligatorios
@@ -1815,40 +1874,57 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
         )}
       </div>
       {/*Botones para volver o pasar al siguiente formulario */}
-      <div className="flex flex-col sm:flex-row sm:justify-around md:gap-4">
+      <div className="flex flex-col sm:flex-wrap sm:justify-around sm:items-center md:gap-4">
+        {/** Boton extra */}
         <CustomButton
-          title={`${paso == 4 ? "Editar información" : "Volver"}`}
+          title="Editar información"
           styles={`${
-            paso == 4
-              ? "block text-fondoBlanco bg-fondoBlanco/50"
-              : "hidden sm:block bg-principal"
-          }  rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover`}
+            paso === 4 ? " bg-fondoBlanco/50" : "hidden"
+          } text-fondoBlanco rounded-[40px] px-14 md:px-10 py-4 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover flex items-center justify-center md:min-w-72`}
           onClick={() => {
             if (paso === 0) {
               navigate.push("/contacto");
+            } else if (paso === 4) {
+              setPaso(1);
             } else {
               setPaso(paso - 1);
             }
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         />
-        <CustomButton
-          title={`${paso == 4 ? "Enviar formulario" : "Continuar"}`}
-          disabled={!habilitar}
-          styles={`${
-            habilitar
-              ? "bg-principal hover:bg-principalHover"
-              : "bg-backgroundDisabled cursor-not-allowed text-textoDisabled"
-          } rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base sm:text-lg md:text-xl lg:text-3xl mt-5 sm:mt-16 sm:w-auto w-full`}
-          onClick={() => {
-            if (paso === 4) {
-              handleSubmit(onSubmit)();
-            } else {
-              handleContinuar();
-            }
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}
-        />
+        <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-around sm:gap-4 md:w-full">
+          {/**BOTON VOLVER */}
+          <CustomButton
+            title="Volver"
+            styles="hidden sm:block bg-principal hover:bg-principalHover rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover sm:min-w-60"
+            onClick={() => {
+              if (paso === 0) {
+                navigate.push("/contacto");
+              } else {
+                setPaso(paso - 1);
+              }
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          />
+
+          <CustomButton
+            title={`${paso == 4 ? "Enviar formulario" : "Continuar"}`}
+            disabled={!habilitar}
+            styles={`${
+              habilitar
+                ? "bg-principal hover:bg-principalHover"
+                : "bg-backgroundDisabled cursor-not-allowed text-textoDisabled"
+            } rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base sm:text-lg md:text-xl lg:text-2xl mt-5 sm:mt-16 sm:w-auto w-full sm:min-w-60`}
+            onClick={() => {
+              if (paso === 4) {
+                handleSubmit(onSubmit)();
+              } else {
+                handleContinuar();
+              }
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          />
+        </div>
       </div>
     </div>
   );

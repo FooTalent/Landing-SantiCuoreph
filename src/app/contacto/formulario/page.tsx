@@ -10,7 +10,7 @@ const Contact = () => {
     <div className="">
       <div
         id="formulario"
-        className="pt-28 pb-28 md:py-40 px-5 md:px-16 lg:px-32"
+        className="pt-28 pb-28 md:py-40 px-5 md:px-16 lg:px-64"
       >
         <div className="flex">
           <CustomButton
