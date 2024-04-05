@@ -20,10 +20,10 @@ const ServicesLayout = ({
   const inactiveStyle = "font-light";
 
     return (
-        <div className="font-merriwather font-bold mx-auto">
-            <section className="xl:max-w-screen-xl mx-auto pb-8 border-b-4 border-black text-fondoNegro mx-4 lg:mx-4 mb-3">
-                <h1 className="text-3xl md:text-5xl xl:text-6xl pt-[5rem] pb-[1rem] md:pt-28 xl:pt-32 pl-5 sm:pl-16 md:pl-24 lg:pl-32 xl:pb-[.4em]">Servicios</h1>
-                <div className="flex gap-8 pl-5 sm:pl-20 md:pl-28 lg:pl-36">
+      <div className="font-merriwather font-bold mx-auto">
+      <section className="max-w-screen-xl pb-8 border-b-4 border-black text-fondoNegro mx-4 lg:m-auto mb-3">
+          <h1 className="text-3xl md:text-5xl xl:text-6xl pt-[5rem] pb-[1rem] md:pt-28 xl:pt-32 pl-5 sm:pl-16 md:pl-24 lg:pl-32 xl:pb-[.4em]">Servicios</h1>
+          <div className="flex gap-8 pl-5 sm:pl-20 md:pl-28 lg:pl-36">
                     {
                         services.map((service, idx) => {
                             const isActive: boolean = pathname.endsWith(service.href);
