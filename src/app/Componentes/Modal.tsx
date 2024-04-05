@@ -28,7 +28,7 @@ const Modal: React.FC<ModalProps> = ({ showModal, setShowModal, redirect }) => {
           }}
         >
           <svg
-            fill="#000000"
+            fill="#ffffff"
             height="20px"
             width="20px"
             version="1.1"
@@ -51,7 +51,7 @@ const Modal: React.FC<ModalProps> = ({ showModal, setShowModal, redirect }) => {
         <div className="flex justify-evenly">
           <button
             onClick={handleCancelModal}
-            className="border w-32 rounded-3xl font-bold py-3 px-9 hover:bg-principalHover transition-all ease-in-out"
+            className="border min-w-32 rounded-3xl font-bold py-3 px-9 bg-principal hover:bg-principalHover transition-all ease-in-out"
           >
             Volver a Inicio
           </button>
