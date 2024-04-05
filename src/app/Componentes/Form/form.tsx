@@ -111,7 +111,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           : "No corresponde",
         cantidadVideos: valores.cantidadVideos
           ? valores.cantidadVideos.label
-          : "",
+          : "No corresponde",
         formato: valores.formato ? valores.formato.label : "No corresponde",
         comentarios: valores.comentarios,
         whatsapp: contactoW
@@ -221,12 +221,20 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
     { value: "100+", label: "Mas de 100 fotos" },
     { value: "0", label: "No lo sé" },
   ];
-  const cantidadesVideo = [
+  const cantidadesVideoEdicion = [
+    { value: "3", label: "Hasta 3 videos" },
     { value: "5", label: "Hasta 5 videos" },
     { value: "10", label: "Hasta 10 videos" },
-    { value: "15", label: "Hasta 15 videos" },
-    { value: "20", label: "Hasta 20 videos" },
-    { value: "20+", label: "Mas de 20 videos" },
+    { value: "10+", label: "Mas de 10 videos" },
+    { value: "0", label: "No lo sé" },
+  ];
+  const cantidadesVideoAmbos = [
+    { value: "1", label: "1 video" },
+    { value: "2", label: "2 videos" },
+    { value: "3", label: "3 videos" },
+    { value: "4", label: "4 videos" },
+    { value: "5", label: "5 videos" },
+    { value: "5+", label: "Mas de 5 videos" },
     { value: "0", label: "No lo sé" },
   ];
   const servAudiovisualOptions = [
@@ -727,7 +735,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="duracion"
                 className="flex flex-col text-base font-bold px-7"
               >
-                Tiempo estimado de la cobertura del evento / sesión fotográfica*
+                ¿Cuántas horas necesitás el servicio?*
                 <Controller
                   name="duracion"
                   control={control}
@@ -798,7 +806,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="cantidadFotos"
                 className="flex flex-col text-base font-bold px-7"
               >
-                ¿Cuántas fotos editadas y retocadas necesitás?*
+                ¿Cuántas fotos necesitás?*
                 <Controller
                   name="cantidadFotos"
                   control={control}
@@ -946,14 +954,14 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="servicio"
                 className="flex flex-col text-base font-bold text-center px-7"
               >
-                ¿Qué tipo de servicio audiovisual necesitás?*
+                ¿Qué tipo de servicio de video necesitás?*
                 <Controller
                   name="tipoServAudVis"
                   control={control}
                   render={({ field }) => (
                     <Select
                       id="servicio"
-                      placeholder={"Seleccioná un tipo de servicio audiovisual"}
+                      placeholder={"Seleccioná un tipo de servicio de video"}
                       {...field}
                       options={servAudiovisualOptions}
                       styles={{
@@ -1022,6 +1030,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                   id="ciudad"
                   className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-base sm:text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
                   onBlur={() => handleBlurValidation("ciudad")}
+                  placeholder="Por ej.: Almagro, Buenos Aires"
                 />
                 {errors.ciudad && (
                   <p className="text-red-600 text-xs">
@@ -1055,7 +1064,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="duracion"
                 className="flex flex-col text-base font-bold text-center px-7"
               >
-                Tiempo estimado de la cobertura del evento / sesión de video*
+                ¿Cuántas horas necesitás el servicio?*
                 <Controller
                   name="duracion"
                   control={control}
@@ -1125,7 +1134,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="cantidadVideos"
                 className="flex flex-col text-base font-bold text-center px-7"
               >
-                ¿Cuántos videos editados necesitás?*
+                ¿Cuántos videos necesitás?*
                 <Controller
                   name="cantidadVideos"
                   control={control}
@@ -1134,7 +1143,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                       id="cantidadVideos"
                       placeholder={"Indicá cuántos videos necesitas"}
                       {...field}
-                      options={cantidadesVideo}
+                      options={cantidadesVideoEdicion}
                       styles={{
                         control: (styles) => ({
                           ...styles,
@@ -1273,14 +1282,14 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="servicio1"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿Qué tipo de servicio audiovisual necesitás?*
+                ¿Qué tipo de servicio de video necesitás?*
                 <Controller
                   name="tipoServAudVis"
                   control={control}
                   render={({ field }) => (
                     <Select
                       id="servicio1"
-                      placeholder={"Seleccioná un tipo de servicio audiovisual"}
+                      placeholder={"Seleccioná un tipo de servicio de video"}
                       {...field}
                       options={servAudiovisualOptions}
                       styles={{
@@ -1349,6 +1358,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                   id="ciudad"
                   className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-base sm:text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
                   onBlur={() => handleBlurValidation("ciudad")}
+                  placeholder="Por ej.: Almagro, Buenos Aires"
                 />
                 {errors.ciudad && (
                   <p className="text-red-600 text-xs">
@@ -1383,8 +1393,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="duracion"
                 className="flex flex-col text-base font-bold text-center"
               >
-                Tiempo estimado de la cobertura del evento o sesión de fotos /
-                video*
+                ¿Cuántas horas necesitás el servicio?*
                 <Controller
                   name="duracion"
                   control={control}
@@ -1454,7 +1463,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="cantidad"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿Cuántas fotos editadas y retocadas necesitás?*
+                ¿Cuántas fotos necesitás?*
                 <Controller
                   name="cantidadFotos"
                   control={control}
@@ -1594,7 +1603,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="cantidad2"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿Cuántos videos editados necesitás?*
+                ¿Cuántos videos necesitás?*
                 <Controller
                   name="cantidadVideos"
                   control={control}
@@ -1603,7 +1612,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                       id="cantidadVideos"
                       placeholder={"Indicá cuántos videos necesitas"}
                       {...field}
-                      options={cantidadesVideo}
+                      options={cantidadesVideoAmbos}
                       styles={{
                         control: (styles) => ({
                           ...styles,
@@ -1706,7 +1715,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               <div className="grid grid-cols-2">
                 <div className="flex flex-col gap-4 grow">
                   <p className="text-fondoBlanco font-nunitoSans text-base sm:text-lg">
-                    Teléfono
+                    Whatsapp
                   </p>
                   <p className="font-nunito text-base sm:text-lg font-bold">
                     {watch("telefono1")}
@@ -1734,7 +1743,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               {watch("tipoServAudVis") && (
                 <div>
                   <p className="text-fondoBlanco font-nunitoSans text-base sm:text-lg text-center sm:text-left pb-2">
-                    ¿Qué tipo de servicio audiovisual necesitás?
+                    ¿Qué tipo de servicio de video necesitás?
                   </p>
                   <p className="font-nunito text-base text-center sm:text-left sm:text-lg font-bold">
                     {watch("tipoServAudVis.label")}
@@ -1788,7 +1797,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 watch("servicio") === "ambos") && (
                 <div>
                   <p className="text-fondoBlanco font-nunitoSans text-base sm:text-lg text-center sm:text-left pb-2">
-                    ¿Cuántas fotos editadas y retocadas necesitás?
+                    ¿Cuántas fotos necesitás?
                   </p>
                   <p className="font-nunito text-center sm:text-left text-base sm:text-lg font-bold">
                     {watch("cantidadFotos.label")}
@@ -1810,7 +1819,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 (watch("servicio") === "ambos" && (
                   <div>
                     <p className="text-fondoBlanco font-nunitoSans text-base sm:text-lg text-center sm:text-left pb-2">
-                      ¿Cuántos videos editados necesitás?
+                      ¿Cuántos videos necesitás?
                     </p>
                     <p className="font-nunito text-center sm:text-left text-base sm:text-lg font-bold">
                       {watch("cantidadVideos.label")}
