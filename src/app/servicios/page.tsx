@@ -123,22 +123,11 @@ const ServicesPage = () => {
           </div>
           <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
           </div>
-        <div className="relative">
-        <picture>
         <Image
           src={img07}
           alt="asds"
-          className="object-cover rounded-b-2xl md:max-h-[300px] opacity-100 group-hover:opacity-0  lg:max-h-[400px] xl:max-h-[456px] object-top rounded-2xl group-hover:brightness-50 transition-all duration-300"
+          className="object-cover rounded-b-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] object-top rounded-2xl group-hover:brightness-50 transition-all duration-300"
         />
-        </picture>
-        <picture className="absolute top-0">
-          <Image
-          src={img04}
-          alt="asds"
-          className="object-cover rounded-b-2xl opacity-0  group-hover:opacity-100 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] object-top rounded-2xl group-hover:brightness-50 transition-all duration-300"
-        />
-        </picture>
-        </div>
       </Link>
     </section>
     </div>
