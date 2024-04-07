@@ -5,7 +5,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import flecha from '../../Icon/Group.png'
+import flecha from "../../Icon/Group.png";
+import { useRouter } from "next/navigation";
 const buttonStyle = {
   width: "50px",
   background: "none",
@@ -22,7 +23,7 @@ function SampleNextArrow(props: any) {
       >
         <div className="bg-slider xl:w-14 w-10 h-10 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
           <Image
-          className="w-[15px] h-[17px] xl:w-20 xl:h-2"
+            className="w-[15px] h-[17px] xl:w-5 xl:h-6"
             src="/assets/img/ArrowRight.png"
             alt=""
             width={20}
@@ -46,7 +47,7 @@ function SamplePrevArrow(props: any) {
       >
         <div className="bg-slider xl:w-14 w-10 h-10 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
           <Image
-          className="w-[15px] h-[17px] xl:w-20 xl:h-20"
+            className="w-[15px] h-[17px] xl:w-5 xl:h-6"
             src="/assets/img/ArrowLeft.png"
             alt=""
             width={20}
@@ -92,6 +93,12 @@ const Audiovisual = () => {
       (document.body.style.overflow = "hidden");
   };
   const carrouselRef: any = useRef<HTMLDivElement>();
+
+  const router = useRouter();
+  const handleNavigateContacto = () => {
+    document.body.style.overflow = "auto";
+    router.push("/contacto");
+  };
   return (
     <section
       className={
@@ -122,8 +129,10 @@ const Audiovisual = () => {
               controls
               src="/videos/-df52-4356-853b-f2fcf5ce094e.mp4"
             />
-            <div className="m-auto text-center text-fondoBlanco">
-              <h1 className=" text-2xl xl:text-[48px]  italic">Spasio Kinesio</h1>
+            <div className="m-auto text-center mt-5 space-y-3 text-fondoBlanco">
+              <h1 className=" text-2xl  xl:text-[48px]  italic">
+                Spasio Kinesio
+              </h1>
               <p className="text-fondoBlanco font-nunitoSans font-thin text-xl md:text-[30px]">
                 Creación de video para redes
               </p>
@@ -137,7 +146,7 @@ const Audiovisual = () => {
               controls
               src="/videos/-aa9d-4724-bd79-6eef7dc35203.mp4"
             />
-            <div className="m-auto text-center text-fondoBlanco">
+            <div className="m-auto text-center mt-5 space-y-3 text-fondoBlanco">
               <h1 className="  text-2xl xl:text-[48px]  italic">
                 TOCH en Camping de Palermo
               </h1>
@@ -155,7 +164,7 @@ const Audiovisual = () => {
               src="/videos/Backstage Microcentro ALTA.mp4"
             />
 
-            <div className="m-auto text-center text-fondoBlanco">
+            <div className="m-auto text-center mt-5 space-y-3 text-fondoBlanco">
               <h1 className="  text-2xl xl:text-[48px]  italic">
                 Backstage de fotos Pasado Pisado{" "}
               </h1>
@@ -172,7 +181,7 @@ const Audiovisual = () => {
               controls
               src="/videos/Sala de Exposiciones.mp4"
             />
-            <div className="m-auto text-center text-fondoBlanco">
+            <div className="m-auto text-center mt-5 space-y-3 text-fondoBlanco">
               <h1 className="  text-2xl xl:text-[48px]  italic">
                 Exposición en Centro Cultural Kirchner{" "}
               </h1>
@@ -183,15 +192,17 @@ const Audiovisual = () => {
           </div>
           <div className=" h-[450px] ">
             <video
-              className="object-contain h-full mx-auto"
+              className="object-contain  h-full mx-auto"
               loop
               onMouseEnter={(e) => e}
               muted
               controls
               src="/videos/Biró.mp4"
             />
-            <div className="m-auto text-center text-fondoBlanco">
-              <h1 className="  text-2xl xl:text-[48px]  italic">José Ladislao Biró </h1>
+            <div className="m-auto text-center mt-5 space-y-3 text-fondoBlanco">
+              <h1 className="  text-2xl xl:text-[48px]  italic">
+                José Ladislao Biró{" "}
+              </h1>
               <p className="font-nunitoSans font-thin  text-xl md:text-[30px]">
                 Edición de video{" "}
               </p>
@@ -205,6 +216,7 @@ const Audiovisual = () => {
                 </p>
                 <div>
                   <Link
+                    onClick={handleNavigateContacto}
                     href="/contacto"
                     className="text-xl transition-all ease-in-out sm:text-2xl md:text-[40px] py-[0.5em] px-[2em] md:px-[81px] md:py-[17px] bg-principal rounded-full merriwather font-semibold text-fondoNegro hover:bg-principalHover hover:font-bold"
                   >
@@ -226,13 +238,13 @@ const Audiovisual = () => {
             <div
               onMouseEnter={() => videoRef1.current.play()}
               onMouseLeave={() => videoRef1.current.pause()}
-              className="relative cursor-pointer group"
+              className="relative cursor-pointer group w-1/2"
             >
               <video
                 ref={videoRef1}
                 className="
                 h-[656.92px]                
-                xl:h-[1344px] rounded-2xl object-cover  w-full"
+                xl:h-[1024px] rounded-2xl object-cover  w-full"
                 loop
                 muted
                 src="/videos/-df52-4356-853b-f2fcf5ce094e.mp4"
@@ -243,24 +255,28 @@ const Audiovisual = () => {
                 }}
                 className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
-          <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
-        <div className="group-hover:pr-20  w-full  transition-all duration-300">
-            <h3 className="text-3xl mb-4 italic">Videos para redes</h3>
-            <h2 className="text-2xl font-thin">Spasio Kinesio</h2>
-            </div>
-            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
-          </div>
+                <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                  <div className="group-hover:pr-20  w-full  transition-all duration-300">
+                    <h3 className="text-3xl mb-4 italic">Videos para redes</h3>
+                    <h2 className="text-2xl font-thin">Spasio Kinesio</h2>
+                  </div>
+                  <Image
+                    src={flecha}
+                    alt=""
+                    className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
+                  ></Image>
+                </div>
               </div>
             </div>
             <div
               onMouseEnter={() => videoRef2.current.play()}
               onMouseLeave={() => videoRef2.current.pause()}
-              className="relative cursor-pointer group"
+              className="relative cursor-pointer group w-1/2"
             >
               <video
                 ref={videoRef2}
                 className="h-[656.92px]                
-                xl:h-[1344px] rounded-2xl object-cover  w-full"
+                xl:h-[1024px] rounded-2xl object-cover  w-full"
                 loop
                 muted
                 src="/videos/-aa9d-4724-bd79-6eef7dc35203.mp4"
@@ -270,12 +286,18 @@ const Audiovisual = () => {
                 className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
                 <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
-        <div className="group-hover:pr-20  w-full  transition-all duration-300">
-            <h3 className="text-3xl mb-4 italic">Videos para redes</h3>
-            <h2 className="text-2xl font-thin">TOCH en Camping de Palermo</h2>
-            </div>
-            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
-          </div>
+                  <div className="group-hover:pr-20  w-full  transition-all duration-300">
+                    <h3 className="text-3xl mb-4 italic">Videos para redes</h3>
+                    <h2 className="text-2xl font-thin">
+                      TOCH en Camping de Palermo
+                    </h2>
+                  </div>
+                  <Image
+                    src={flecha}
+                    alt=""
+                    className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
+                  ></Image>
+                </div>
               </div>
             </div>
           </div>
@@ -288,7 +310,7 @@ const Audiovisual = () => {
               <video
                 ref={videoRef3}
                 className="h-[656.92px]                
-                xl:h-[1344px] rounded-2xl object-cover  w-full"
+                xl:h-[1024px] rounded-2xl object-cover  w-full"
                 loop
                 muted
                 src="/videos/Backstage Microcentro ALTA.mp4"
@@ -297,13 +319,19 @@ const Audiovisual = () => {
                 onClick={() => handleOpenModal(2)}
                 className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
-                <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
-        <div className="group-hover:pr-20  w-full  transition-all duration-300">
-            <h3 className="text-3xl mb-4 italic">Videos para redes</h3>
-            <h2 className="text-2xl font-thin text-balance">Backstage de fotos Pasado Pisado</h2>
-            </div>
-            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
-          </div>
+                <div className="texto_image absolute rounded-xl bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                  <div className="group-hover:pr-20  w-full  transition-all duration-300">
+                    <h3 className="text-3xl mb-4 italic">Videos para redes</h3>
+                    <h2 className="text-2xl font-thin text-balance">
+                      Backstage de fotos Pasado Pisado
+                    </h2>
+                  </div>
+                  <Image
+                    src={flecha}
+                    alt=""
+                    className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
+                  ></Image>
+                </div>
               </div>
             </div>
 
@@ -315,7 +343,7 @@ const Audiovisual = () => {
               >
                 <video
                   ref={videoRef4}
-                  className=" object-cover rounded-2xl h-full w-full "
+                  className=" object-cover xl:h-[512px]  rounded-2xl h-full w-full "
                   loop
                   muted
                   src="/videos/Sala de Exposiciones.mp4"
@@ -324,23 +352,29 @@ const Audiovisual = () => {
                   onClick={() => handleOpenModal(3)}
                   className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
                 >
-                   <div className="texto_image absolute bottom-0 z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
-        <div className="group-hover:pr-20  w-full  transition-all duration-300">
-            <h3 className="text-3xl mb-4 italic">Edicion de video</h3>
-            <h2 className="text-2xl font-thin text-balance">José Ladislao Biró</h2>
-            </div>
-            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
-          </div>
+                  <div className="texto_image rounded-xl absolute bottom-0 z-30 w-full h-40  flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                    <div className="group-hover:pr-20  w-full  transition-all duration-300">
+                      <h3 className="text-3xl mb-4 italic">Edicion de video</h3>
+                      <h2 className="text-2xl font-thin text-balance">
+                        José Ladislao Biró
+                      </h2>
+                    </div>
+                    <Image
+                      src={flecha}
+                      alt=""
+                      className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
+                    ></Image>
+                  </div>
                 </div>
               </div>
               <div
                 onMouseEnter={() => videoRef5.current.play()}
                 onMouseLeave={() => videoRef5.current.pause()}
-                className="relative h-1/2 text-fondoBlanco cursor-pointer group"
+                className="relative h-1/2 text-fondoBlanco cursor-pointer group "
               >
                 <video
                   ref={videoRef5}
-                  className=" object-cover rounded-2xl h-full w-full"
+                  className=" object-cover rounded-2xl xl:h-[506px]  h-full w-full"
                   loop
                   muted
                   src="/videos/Biró.mp4"
@@ -349,13 +383,19 @@ const Audiovisual = () => {
                   onClick={() => handleOpenModal(4)}
                   className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
                 >
-                  <div className="texto_image absolute bottom-0 z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
-        <div className="group-hover:pr-20  w-full  transition-all duration-300">
-            <h3 className="text-3xl mb-4 italic">Edicion de video</h3>
-            <h2 className="text-2xl font-thin text-balance">Exposición en el Centro Cultural Kirchner</h2>
-            </div>
-            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
-          </div>
+                  <div className="texto_image  rounded-xl absolute bottom-0 z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                    <div className="group-hover:pr-20  w-full  transition-all duration-300">
+                      <h3 className="text-3xl mb-4 italic">Edicion de video</h3>
+                      <h2 className="text-2xl font-thin text-balance">
+                        Exposición en el Centro Cultural Kirchner
+                      </h2>
+                    </div>
+                    <Image
+                      src={flecha}
+                      alt=""
+                      className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
+                    ></Image>
+                  </div>
                 </div>
               </div>
             </div>
