@@ -247,6 +247,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
   ];
   const handleBlurValidation = async (fieldName: any) => {
     await trigger(fieldName); // Disparar la validación para el campo especificado
+    funcionControladora();
   };
   const today = new Date().toISOString().split("T")[0];
   const servicio = watch("servicio");
@@ -265,8 +266,8 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
   const comentarios = watch("comentarios");
   const tipoServFoto = watch("tipoServFoto");
   const tipoServAudVis = watch("tipoServAudVis");
-  //control paso 0
-  useEffect(() => {
+
+  const funcionControladora = () => {
     if (paso === 0 && servicio) {
       setHabilitar(true);
     } else if (
@@ -320,6 +321,12 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
     } else {
       setHabilitar(false);
     }
+  };
+
+  //control paso 0
+
+  useEffect(() => {
+    funcionControladora();
   }, [
     paso,
     apellido,
