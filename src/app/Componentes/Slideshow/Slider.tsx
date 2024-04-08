@@ -24,7 +24,7 @@ const slideImages = [
   },
   {
     index: 3,
-    url: "/assets/img/PasadoPisado.JPG",
+    url: "/assets/img/PasadoPisado.png",
     caption: "Pasado Pisado",
     caption2: "Fotografía artística",
     link: "/fotografia/pasado-pisado",
@@ -68,7 +68,7 @@ const Slideshow = () => {
       <Slide
         autoplay={true}
         infinite={true}
-        duration={5000}
+        duration={8000}
         {...properties}
         indicators={true}
         cssClass="pb-5"
@@ -85,14 +85,14 @@ const Slideshow = () => {
                   sizes="100%"
                   className={`w-screen h-full object-cover ${
                     index == 0 || index == 3 ? "object-top" : ""
-                  } filter brightness-50`}
+                  } filter brightness-90`}
                 />
 
                 {/* TEXTO PRINCIPAL Y SECUNDARIO */}
-                <p className="text-fondoBlanco absolute font-merriwather font-bold italic lg:text-[4rem] text-[2rem] lg:left-[105px] left-4 lg:bottom-32 bottom-48">
+                <p className="text-fondoBlanco absolute font-merriwather font-bold italic lg:text-[4rem] text-[2rem] lg:left-[105px] left-4 lg:bottom-32 bottom-48 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
                   {slideImage.caption2}
                 </p>
-                <p className="lg:left-[105px] font-nunitoSans absolute font-light text-fondoBlanco md:text-[2rem] text-[1.5rem] left-4 lg:bottom-24 bottom-36">
+                <p className="lg:left-[105px] font-nunitoSans absolute font-light text-fondoBlanco md:text-[2rem] text-[1.5rem] left-4 lg:bottom-24 bottom-36 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
                   {slideImage.caption}
                 </p>
               </div>

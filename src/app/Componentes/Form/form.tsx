@@ -692,6 +692,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                           maxHeight: "auto",
                           padding: "0",
                           overflow: "hidden",
+                          textAlign: "left",
                         }),
                       }}
                       // Otros props de React Select según tus necesidades
