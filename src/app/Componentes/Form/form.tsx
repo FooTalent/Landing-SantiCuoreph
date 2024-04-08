@@ -599,7 +599,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                       type="checkbox"
                       className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-sm checked:bg-checkBackground"
                     />{" "}
-                    Teléfono
+                    Whatsapp
                   </label>
                   <label
                     htmlFor="mail"
