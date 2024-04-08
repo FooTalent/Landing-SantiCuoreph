@@ -45,7 +45,10 @@ const schema = z.object({
     .min(1, "Debes ingresar un apellido")
     .max(30)
     .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ ]*$/g, "Ingrese un apellido válido"),
-  email: z.string().email("Ingrese un formato de email válido"),
+  email: z
+    .string()
+    .min(1, "Debes ingresar un mail")
+    .email("Ingrese un formato de email válido"),
   telefono1: z
     .string({ required_error: "Campo requerido" })
     .refine(isValidPhoneNumber, {
@@ -546,10 +549,16 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                   id="apellido"
                   className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
                   maxLength={30}
+                  onBlur={() => handleBlurValidation("apellido")}
                 />
+                {errors.apellido && (
+                  <p className="text-red-600 text-xs">
+                    {errors.apellido.message}
+                  </p>
+                )}
               </label>
               <label htmlFor="telefono" className="flex flex-col pt-3 sm:pt-0">
-                Telefono*
+                Teléfono*
                 <Controller
                   name="telefono1"
                   control={control}
