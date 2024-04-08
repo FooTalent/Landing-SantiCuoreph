@@ -10,7 +10,7 @@ import "react-slideshow-image/dist/styles.css";
 const slideImages = [
   {
     index: 1,
-    url: "/assets/img/Masq1.JPG",
+    url: "/images/mas-que-uno/mu01.jpg",
     caption: "Más que uno: 10 años",
     caption2: "Cobertura de evento",
     link: "/fotografia/mas-que-uno",

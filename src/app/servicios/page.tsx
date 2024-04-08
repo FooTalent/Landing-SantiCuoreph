@@ -50,12 +50,12 @@ const ServicesPage = () => {
             <Image
               src={img03}
               alt="asd"
-              className="object-cover h-full rounded-b-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[464px] rounded-2xl  group-hover:brightness-50"
+              className="object-cover h-full rounded-b-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[464px]  group-hover:brightness-50"
             />
           </Link>
         </div>
         <Link href="/fotografia/lorena" className="col-span-2 relative h-full w-full group" id="0">
-          <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+          <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
         <div className="group-hover:pr-20  w-full  transition-all duration-300">
             <h3 className="text-3xl mb-4 italic">Retrato Artístico</h3>
             <h2 className="text-2xl font-thin">Lorena</h2>
@@ -65,7 +65,7 @@ const ServicesPage = () => {
           <Image
             src={img01}
             alt="asd"
-            className="object-cover rounded-b-2xl h-full md:max-h-[600px] lg:max-h-[800px] xl:max-h-[928px] rounded-2xl  group-hover:brightness-50"
+            className="object-cover  h-full md:max-h-[600px] lg:max-h-[800px] xl:max-h-[928px] rounded-2xl  group-hover:brightness-50"
           />
         </Link>
       </div>
@@ -126,7 +126,7 @@ const ServicesPage = () => {
         <Image
           src={img07}
           alt="asds"
-          className="object-cover rounded-b-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] object-top rounded-2xl  group-hover:brightness-50"
+          className="object-cover rounded-b-2xl md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] object-top rounded-2xl group-hover:brightness-50 transition-all duration-300"
         />
       </Link>
     </section>

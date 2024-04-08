@@ -15,8 +15,7 @@ const page = () => {
         <div className="absolute  -z-10 top-0 bg-black/30 h-full w-full rounded-2xl"></div>
         <div className="xl:flex xl:flex-row flex-col flex z-20  px-5 xl:px-40 ">
           <h3 className="text-[16px] pb-10 xl:pb-0 text-center xl:text-left xl:text-[40px] my-auto font-semibold  text-white">
-            Contenido fotográfico y audiovisual de calidad, a un mensaje de
-            distancia
+            Contenido fotográfico <br /> y audiovisual de calidad,<br /> a un mensaje de distancia
           </h3>
           <img
             src="/assets/img/fondoContact1.jpeg"

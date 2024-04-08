@@ -16,7 +16,7 @@ const slideImages = [
     caption2: "Guido Vitale",
   },
   {
-    url: "/assets/img/Test2.JPG",
+    url: "/assets/img/Test1.JPG",
     caption: `"La experiencia con Santi fue excelente. Hicimos unas fotos en exteriores para la banda. La jornada fue muy buena y productiva. Santi es un tipo muy criterioso y nos sentimos muy cómodos. La experiencia fue muy buena, cubrió las expectativas de todos los que somos parte de la banda."`,
     caption2: "Lucas, bajista de Pasado Pisado",
   },
