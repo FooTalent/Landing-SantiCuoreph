@@ -89,7 +89,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
         mail: valores.email,
         ciudad: valores.ciudad,
         servicio:
-          valores.servicio === "fotografía"
+          valores.servicio === "fotografia"
             ? "Fotografía"
             : valores.servicio === "edicion"
             ? "Edición / Creación de videos"

@@ -5,7 +5,7 @@ import CustomButton from "../Componentes/CustomButton";
 const page = () => {
   return (
     <>
-      <section className="xl:max-w-screen-xl mx-4 text-4xl xl:mx-auto pt-14 xl:pt-0 pb-8 border-b-4 border-black text-fondoNegro md:text-7xl 2xl:text-8xl pl-[1.5em] mb-[1em]">
+      <section className="xl:max-w-screen-xl mx-4 text-2xl xl:mx-auto pt-14 xl:pt-0 pb-8 border-b-4 border-black text-fondoNegro md:text-3xl 2xl:text-7xl pl-[1.5em] mb-[1em]">
         <h1 className="pt-[1.6em] pb-[.4em] font-bold">Contacto</h1>
       </section>
       <section
@@ -29,14 +29,20 @@ const page = () => {
             Solicitá hoy tu presupuesto completando el siguiente formulario
             Tendrás una respuesta en un plazo de 48 horas
           </p>
-          <Link href={"/contacto/formulario"} className="bg-principal hidden xl:block xl:mx-auto py-5 px-7 hover:bg-principalHover ease-in-out transition-all text-3xl rounded-full font-bold text-black w-max">
+          <Link
+            href={"/contacto/formulario"}
+            className="bg-principal hidden xl:block xl:mx-auto py-5 px-7 hover:bg-principalHover ease-in-out transition-all text-3xl rounded-full font-bold text-black w-max"
+          >
             Solicitar presupuesto
           </Link>
         </div>
       </section>
       <section className="xl:max-w-screen-xl xl:pt-5 font-merriwather mx-auto">
         <div className="w-full flex mt-5 xl:hidden ">
-          <Link href={"/contacto/formulario"} className="bg-principal p-10 mx-auto  xl:hidden   py-3 px-4 hover:bg-principalHover ease-in-out transition-all text-2xl rounded-full font-bold text-black">
+          <Link
+            href={"/contacto/formulario"}
+            className="bg-principal p-10 mx-auto  xl:hidden   py-3 px-4 hover:bg-principalHover ease-in-out transition-all text-2xl rounded-full font-bold text-black"
+          >
             Solicitar presupuesto
           </Link>
         </div>
@@ -48,7 +54,10 @@ const page = () => {
           <div className="flex xl:text-3xl flex-col xl:flex-row text-xl font-bold xl:flex justify-evenly">
             <p className="text-center ">Escribime a </p>
             <a href="mailto:santicuroeph@gmail.com">
-            <CustomButton title="santicuoreph@gmail.com" styles="xl:bg-slate-100  xl:border-none px-4 py-4 w-max mx-auto xl:mx-0 border xl:shadow-none shadow-md bg-white rounded-2xl hover:bg-principalHover"  />
+              <CustomButton
+                title="santicuoreph@gmail.com"
+                styles="xl:bg-slate-100  xl:border-none px-4 py-4 w-max mx-auto xl:mx-0 border xl:shadow-none shadow-md bg-white rounded-2xl hover:bg-principalHover"
+              />
             </a>
           </div>
         </div>
