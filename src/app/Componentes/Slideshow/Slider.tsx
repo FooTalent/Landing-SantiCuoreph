@@ -12,7 +12,7 @@ const slideImages = [
     index: 1,
     url: "/assets/img/Masq1.JPG",
     caption: "Más que uno: 10 años",
-    caption2: "Cobertura de evento artístico",
+    caption2: "Cobertura de evento",
     link: "/fotografia/mas-que-uno",
   },
   {
@@ -34,7 +34,7 @@ const slideImages = [
     index: 4,
     url: "/assets/img/Toch.JPG",
     caption: "TOCH",
-    caption2: "Cobertura de evento artístico",
+    caption2: "Cobertura de evento",
     link: "/servicios/audiovisual",
   },
 ];
@@ -74,18 +74,18 @@ const Slideshow = () => {
         cssClass="pb-5"
       >
         {slideImages.map((slideImage, index) => (
-          <div key={slideImage.index} className="h-full">
+          <div key={slideImage.index} className="h-[438px] md:h-full">
             <Link href={slideImage.link}>
-              <div className="h-screen relative flex items-center">
+              <div className="md:h-screen relative flex items-center">
                 <Image
                   src={slideImage.url}
                   alt="Slide"
                   width="0"
                   height="0"
                   sizes="100%"
-                  className={`w-screen h-full object-cover ${
-                    index == 0 || index == 3 ? "object-top" : ""
-                  } filter brightness-90`}
+                  className={`w-screen h-[438px] md:h-full object-cover ${
+                    index !== 3 && index !== 1 ? "object-top" : ""
+                  } filter brightness-90  md:pt-[75px]`}
                 />
 
                 {/* TEXTO PRINCIPAL Y SECUNDARIO */}
