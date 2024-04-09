@@ -10,7 +10,7 @@ const Contact = () => {
     <div className="">
       <div
         id="formulario"
-        className="pt-28 pb-28 md:py-40 px-5 md:px-16 lg:px-64"
+        className="pt-20 pb-[107px] md:py-40 px-5 md:px-16 lg:px-64"
       >
         <div className="flex">
           <CustomButton
@@ -28,7 +28,7 @@ const Contact = () => {
             Solicitud de presupuesto
           </h1>
         </div>
-        <div className="border-[1.5px] border-fondoBlanco my-9 "></div>
+        <div className="border-[1.5px] border-fondoBlanco my-5 "></div>
         <Form paso={paso} setPaso={setPaso} />
       </div>
     </div>

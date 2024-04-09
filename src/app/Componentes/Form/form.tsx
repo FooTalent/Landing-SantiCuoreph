@@ -360,7 +360,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
     <div>
       <Modal showModal={showModal} setShowModal={setShowModal} redirect={"/"} />
       {paso == 0 && (
-        <div className="text-fondoBlanco sm:text-3xl mb-10 font-nunitoSans mx-9">
+        <div className="text-fondoBlanco sm:text-3xl mb-9 font-nunitoSans mx-5">
           <h2 className="text-base sm:text-xl lg:text-3xl font-bold mb-3">
             Solicitá hoy tu presupuesto completando el siguiente formulario.
           </h2>
@@ -370,8 +370,8 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
         </div>
       )}
       {paso == 1 && (
-        <div className="text-fondoBlanco text-3xl mb-10  flex justify-between pb-6 items-center">
-          <h2 className="text-xl sm:text-3xl font-bold font-merriwather">
+        <div className="text-fondoBlanco text-xl mb-8  flex justify-between items-center px-6">
+          <h2 className="sm:text-3xl font-bold font-merriwather">
             Información de contacto
           </h2>
           <h2 className="text-xl sm:text-2xl font-bold font-nunitoSans">
@@ -453,25 +453,25 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
       )}
 
       {/**Formulario */}
-      <div className="backdrop-blur-sm">
+      <div className="backdrop-blur-md">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className={`pt-8 pb-8 ${
+          className={`${
             paso === 2 || (paso === 4 && watch("servicio"))
               ? "md:mx-10"
               : "px-9"
-          } bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl min-h-[400px] backdrop-shadow-xl`}
+          } bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl min-h-[372px] backdrop-shadow-xl`}
         >
           {/**Encabezados de Formulario */}
           {paso == 0 && (
-            <div className="flex justify-between pb-10 font-nunitoSans">
+            <div className="flex justify-between py-10 font-nunitoSans">
               <h2 className="text-xl sm:text-2xl font-bold">
                 ¿Qué tipo de servicio necesitás?
               </h2>
             </div>
           )}
           {paso == 1 && (
-            <div className="pb-6">
+            <div className="py-8">
               <h2 className="text-base sm:text-left text-center sm:text-2xl font-bold">
                 Ingresá tus datos de contacto
               </h2>
@@ -533,13 +533,14 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               className="flex flex-col min-w-56 sm:grid sm:grid-cols-2 sm:grid-rows-2 gap-x-24 gap-y-4 text-base sm:text-xl"
             >
               <label htmlFor="nombre" className="flex flex-col pt-3 sm:pt-0">
-                Nombre*
+                Nombre *
                 <input
                   {...register("nombre", { required: true })}
                   id="nombre"
-                  className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-[2px] outline-principalHover"
+                  className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-lg px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-[2px] outline-principalHover placeholder:italic placeholder:text-[14px]"
                   maxLength={30}
                   onBlur={() => handleBlurValidation("nombre")}
+                  placeholder="Ingresá tu(s) nombre(s)"
                 />
                 {errors.nombre && (
                   <p className="text-red-600 text-xs">
@@ -554,9 +555,10 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                     required: true,
                   })}
                   id="apellido"
-                  className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
+                  className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover placeholder:italic"
                   maxLength={30}
                   onBlur={() => handleBlurValidation("apellido")}
+                  placeholder="Ingresá tu(s) apellido(s)"
                 />
                 {errors.apellido && (
                   <p className="text-red-600 text-xs">
@@ -1931,7 +1933,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               habilitar
                 ? "bg-principal hover:bg-principalHover"
                 : "bg-backgroundDisabled cursor-not-allowed text-textoDisabled"
-            } rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base sm:text-lg md:text-xl lg:text-2xl mt-5 sm:mt-16 sm:w-auto w-full sm:min-w-60`}
+            } rounded-[40px] px-14 md:px-10 py-2 font-merriwather font-bold text-base sm:text-lg md:text-xl lg:text-2xl mt-5 sm:mt-16 sm:w-auto w-full sm:min-w-60`}
             onClick={() => {
               if (paso === 4) {
                 handleSubmit(onSubmit)();
