@@ -453,14 +453,16 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
       )}
 
       {/**Formulario */}
-      <div className="backdrop-blur-md">
+      <div className="backdrop-blur-2xl">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className={`${
             paso === 2 || (paso === 4 && watch("servicio"))
               ? "md:mx-10"
               : "px-9"
-          } bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl min-h-[372px] backdrop-shadow-xl`}
+          } bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl min-h-[372px] backdrop-shadow-xl ${
+            paso === 3 ? "pb-[59px]" : ""
+          }`}
         >
           {/**Encabezados de Formulario */}
           {paso == 0 && (
@@ -549,13 +551,13 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 )}
               </label>
               <label htmlFor="apellido" className="flex flex-col pt-3 sm:pt-0">
-                Apellido*
+                Apellido *
                 <input
                   {...register("apellido", {
                     required: true,
                   })}
                   id="apellido"
-                  className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover placeholder:italic"
+                  className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-lg px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover placeholder:italic placeholder:text-[14px]"
                   maxLength={30}
                   onBlur={() => handleBlurValidation("apellido")}
                   placeholder="Ingresá tu(s) apellido(s)"
@@ -567,13 +569,13 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 )}
               </label>
               <label htmlFor="telefono" className="flex flex-col pt-3 sm:pt-0">
-                Teléfono*
+                Teléfono *
                 <Controller
                   name="telefono1"
                   control={control}
                   render={({ field: { onChange, value } }) => (
                     <PhoneInput
-                      className="mt-2 border-[1.5px] border-inputBorderSelected w-full rounded-2xl h-10 text-xl px-4 py-1  bg-formBackground 2xl:grow focus:outline outline-3 outline-principalHover"
+                      className="mt-2 border-[1.5px] border-inputBorderSelected w-full rounded-2xl h-10 text-lg px-4 py-1  bg-formBackground 2xl:grow focus:outline outline-3 outline-principalHover"
                       placeholder="ingrese su telefono"
                       onChange={onChange}
                       countryCallingCodeEditable={false}
@@ -591,26 +593,27 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 )}
               </label>
               <label htmlFor="email" className="flex flex-col pt-3 sm:pt-0">
-                Email*
+                Email *
                 <input
                   {...register("email")}
                   type="mail"
-                  className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
+                  className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-lg px-4 py-3 text-fondoBlanco bg-formBackground focus:outline placeholder:italic placeholder:text-[14px] outline-3 outline-principalHover"
                   id="email"
                   onBlur={() => handleBlurValidation("email")}
+                  placeholder="ejemplocorreo@mail.com"
                 />
                 {errors.email && (
                   <p className="text-red-600 text-xs">{errors.email.message}</p>
                 )}
               </label>
               <div className="sm:col-span-2 w-full pt-3 sm:pt-0">
-                <h2 className="text-center font-bold">
-                  ¿Por qué medio querés recibir tu presupuesto?*
+                <h2 className="text-center font-nunitoSans text-[15px] font-bold">
+                  ¿Por qué medio querés recibir tu presupuesto? *
                 </h2>
-                <div className="flex justify-center gap-8 sm:gap-20 py-5">
+                <div className="flex font-nunitoSans text-[15px] justify-center gap-8 sm:gap-20 py-5 ">
                   <label
                     htmlFor="whatsapp"
-                    className="flex  gap-1 items-center text-base "
+                    className="flex gap-1 items-center text-base "
                   >
                     <input
                       {...register("contactoW")}
@@ -636,12 +639,15 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           )}
           {/** paso 2a */}
           {paso == 2 && watch("servicio") === "fotografia" && (
-            <fieldset id="paso2" className="flex flex-col gap-6 pb-10 md:px-36">
+            <fieldset
+              id="paso2"
+              className="flex flex-col gap-6 pt-9 pb-10 md:px-36 font-nunitoSans"
+            >
               <label
                 htmlFor="servicio"
                 className="flex flex-col text-base font-bold text-center px-7"
               >
-                ¿Qué tipo de servicio fotográfico necesitás?*
+                ¿Qué tipo de servicio fotográfico necesitás? *
                 <Controller
                   name="tipoServFoto"
                   control={control}
@@ -661,6 +667,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                           border: "1px solid #FCCD35",
                           color: "#f2f2f2",
                           fontSize: "16px",
+                          fontWeight: 400,
                           margin: "20px 0",
                           overlay: "none",
                           textAlign: "left",
@@ -713,11 +720,11 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="ciudad"
                 className="flex flex-col text-base font-bold px-7"
               >
-                ¿En qué ciudad se va a realizar la sesión fotográfica?*
+                ¿En qué ciudad se va a realizar la sesión fotográfica? *
                 <input
                   {...register("ciudad", { required: true })}
                   id="ciudad"
-                  className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
+                  className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-lg px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover placeholder:text-[14px] placeholder:italic"
                   maxLength={30}
                   onBlur={() => handleBlurValidation("ciudad")}
                   placeholder="Por ej.: Almagro, Buenos Aires"
@@ -732,20 +739,20 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="fecha"
                 className="flex flex-col text-base font-bold px-7"
               >
-                ¿En qué fecha estimada se va a realizar la sesión de fotos?*
+                ¿En qué fecha estimada se va a realizar la sesión de fotos? *
                 <div className="flex relative sm:max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
                   <Image
                     src="/assets/img/calendar_month_FILL0_wght400_GRAD0_opsz40 1.svg"
                     alt="icon"
                     width={30}
                     height={30}
-                    className="absolute top-[50%] translate-y-[-50%] sm:left-6 left-1"
+                    className="absolute top-[50%] translate-y-[-50%] left-8"
                   />
                   <input
                     type="date"
                     {...register("fecha", { required: true })}
                     id="fecha"
-                    className="appearance-none border-l-[1.5px] border-inputBorderSelected text-center mx-auto text-base sm:text-xl  text-fondoBlanco bg-formBackground outline-none  py-3"
+                    className="appearance-none border-l-[1.5px] border-inputBorderSelected text-center mx-auto text-base sm:text-lg  text-fondoBlanco bg-formBackground outline-none  py-3 pl-8"
                     min={today}
                   />
                 </div>
@@ -754,7 +761,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="duracion"
                 className="flex flex-col text-base font-bold px-7"
               >
-                ¿Cuántas horas necesitás el servicio?*
+                ¿Cuántas horas necesitás el servicio? *
                 <Controller
                   name="duracion"
                   control={control}
@@ -776,6 +783,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                           color: "#f2f2f2",
                           fontSize: "16px",
                           margin: "20px 0",
+                          fontWeight: 400,
                           overlay: "none",
                           ":hover": {
                             ...styles[":hover"],
@@ -825,7 +833,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="cantidadFotos"
                 className="flex flex-col text-base font-bold px-7"
               >
-                ¿Cuántas fotos necesitás?*
+                ¿Cuántas fotos necesitás? *
                 <Controller
                   name="cantidadFotos"
                   control={control}
@@ -845,6 +853,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                           border: "1px solid #FCCD35",
                           color: "#f2f2f2",
                           fontSize: "16px",
+                          fontWeight: 400,
                           margin: "20px 0",
                           overlay: "none",
                           ":hover": {
@@ -895,7 +904,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="formato"
                 className="flex flex-col text-base font-bold px-7"
               >
-                ¿En qué formato necesitás las fotos?*
+                ¿En qué formato necesitás las fotos? *
                 <Controller
                   name="formato"
                   control={control}
@@ -915,6 +924,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                           border: "1px solid #FCCD35",
                           color: "#f2f2f2",
                           fontSize: "16px",
+                          fontWeight: 400,
                           margin: "20px 0",
                           overlay: "none",
                           ":hover": {
@@ -973,7 +983,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="servicio"
                 className="flex flex-col text-base font-bold text-center px-7"
               >
-                ¿Qué tipo de servicio de video necesitás?*
+                ¿Qué tipo de servicio de video necesitás? *
                 <Controller
                   name="tipoServAudVis"
                   control={control}
@@ -1043,7 +1053,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="ciudad"
                 className="flex flex-col text-base font-bold text-center px-7"
               >
-                ¿En qué ciudad se va a realizar la sesión de video?*
+                ¿En qué ciudad se va a realizar la sesión de video? *
                 <input
                   {...register("ciudad", { required: true })}
                   id="ciudad"
@@ -1061,7 +1071,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="fecha"
                 className="flex flex-col text-base font-bold text-center px-7"
               >
-                ¿En qué fecha estimada se va a realizar la sesión de video?*
+                ¿En qué fecha estimada se va a realizar la sesión de video? *
                 <div className="flex relative max-w-[60%] sm:max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
                   <Image
                     src="/assets/img/calendar_month_FILL0_wght400_GRAD0_opsz40 1.svg"
@@ -1083,7 +1093,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="duracion"
                 className="flex flex-col text-base font-bold text-center px-7"
               >
-                ¿Cuántas horas necesitás el servicio?*
+                ¿Cuántas horas necesitás el servicio? *
                 <Controller
                   name="duracion"
                   control={control}
@@ -1153,7 +1163,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="cantidadVideos"
                 className="flex flex-col text-base font-bold text-center px-7"
               >
-                ¿Cuántos videos necesitás?*
+                ¿Cuántos videos necesitás? *
                 <Controller
                   name="cantidadVideos"
                   control={control}
@@ -1231,7 +1241,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="servicio"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿Qué tipo de servicio fotográfico necesitás?*
+                ¿Qué tipo de servicio fotográfico necesitás? *
                 <Controller
                   name="tipoServFoto"
                   control={control}
@@ -1301,7 +1311,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="servicio1"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿Qué tipo de servicio de video necesitás?*
+                ¿Qué tipo de servicio de video necesitás? *
                 <Controller
                   name="tipoServAudVis"
                   control={control}
@@ -1371,7 +1381,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="ciudad"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿En qué ciudad se va a realizar la sesión de fotos / video?*
+                ¿En qué ciudad se va a realizar la sesión de fotos / video? *
                 <input
                   {...register("ciudad", { required: true })}
                   id="ciudad"
@@ -1390,7 +1400,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 className="flex flex-col text-base font-bold text-center"
               >
                 ¿En qué fecha estimada se va a realizar la sesión de fotos /
-                video?*
+                video? *
                 <div className="flex relative max-w-[60%] sm:max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
                   <Image
                     src="/assets/img/calendar_month_FILL0_wght400_GRAD0_opsz40 1.svg"
@@ -1412,7 +1422,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="duracion"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿Cuántas horas necesitás el servicio?*
+                ¿Cuántas horas necesitás el servicio? *
                 <Controller
                   name="duracion"
                   control={control}
@@ -1482,7 +1492,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="cantidad"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿Cuántas fotos necesitás?*
+                ¿Cuántas fotos necesitás? *
                 <Controller
                   name="cantidadFotos"
                   control={control}
@@ -1552,7 +1562,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="formato"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿En qué formato necesitás las fotos?*
+                ¿En qué formato necesitás las fotos? *
                 <Controller
                   name="formato"
                   control={control}
@@ -1622,7 +1632,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 htmlFor="cantidad2"
                 className="flex flex-col text-base font-bold text-center"
               >
-                ¿Cuántos videos necesitás?*
+                ¿Cuántos videos necesitás? *
                 <Controller
                   name="cantidadVideos"
                   control={control}
@@ -1692,13 +1702,13 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           )}
           {/** paso 3 */}
           {paso === 3 && (
-            <fieldset className="flex flex-col gap-4 md:px-7">
+            <fieldset className="flex flex-col gap-4 md:px-7 pt-9">
               <h2 className="text-fondoBlanco font-nunitoSans text-base sm:text-2xl font-bold text-center sm:text-left">
                 Información adicional (opcional)
               </h2>
               <label className="flex flex-col text-fondoBlanco font-nunitoSans text-lg font-bold">
                 <textarea
-                  className="my-4 bg-fondoGris rounded-2xl h-64 sm:h-96 border p-2 sm:p-6 border-inputBorderSelected font-nunitoSans font-light italic text-base text-white"
+                  className="my-4 bg-fondoGris rounded-2xl h-52 sm:h-96 border p-2 sm:p-6 border-inputBorderSelected font-nunitoSans font-light italic text-base text-white placeholder:text-fondoBlanco"
                   {...register("comentarios")}
                   placeholder="Detallá cualquier información relevante relacionada con tu
                 pedido"
@@ -1709,7 +1719,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           )}
           {/** paso 4 */}
           {paso === 4 && (
-            <fieldset className="flex flex-col gap-8 px-4 pb-12 sm:py-auto sm:px-32 md:px-10">
+            <fieldset className="flex flex-col gap-8 px-4 pt-5 pb-12 sm:py-auto sm:px-32 md:px-10">
               <h2 className="text-fondoBlanco font-nunitoSans text-xl sm:text-2xl font-bold">
                 Revisá que la información sea correcta
               </h2>
@@ -1893,12 +1903,12 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
         )}
       </div>
       {/*Botones para volver o pasar al siguiente formulario */}
-      <div className="flex flex-col sm:flex-wrap sm:justify-around sm:items-center md:gap-4">
+      <div className="flex flex-col sm:flex-wrap pt-10 sm:justify-around sm:items-center gap-6 md:gap-4">
         {/** Boton extra */}
         <CustomButton
           title="Editar información"
           styles={`${
-            paso === 4 ? " bg-fondoBlanco/50" : "hidden"
+            paso === 4 ? " bg-fondoBlanco/50 h-10" : "hidden"
           } text-fondoBlanco rounded-[40px] px-14 md:px-10 py-4 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover flex items-center justify-center md:min-w-72`}
           onClick={() => {
             if (paso === 0) {
