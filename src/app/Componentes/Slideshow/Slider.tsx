@@ -47,15 +47,21 @@ const buttonStyle = {
 };
 const properties = {
   prevArrow: (
-    <button className="lg:ml-[115px] ml-4 " style={{ ...buttonStyle }}>
-      <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
+    <button
+      className="lg:ml-[115px] ml-4 hidden sm:block"
+      style={{ ...buttonStyle }}
+    >
+      <div className=" bg-slider w-12 h-12 flex justify-center items-center hover:bg-sliderHover rounded-full">
         <Image src="/assets/img/ArrowLeft.png" alt="" width={20} height={20} />
       </div>
     </button>
   ),
   nextArrow: (
-    <button className="lg:mr-[115px] mr-4" style={{ ...buttonStyle }}>
-      <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
+    <button
+      className="lg:mr-[115px] mr-4 hidden sm:block"
+      style={{ ...buttonStyle }}
+    >
+      <div className="bg-slider w-12 h-12 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
         <Image src="/assets/img/ArrowRight.png" alt="" width={20} height={20} />
       </div>
     </button>
@@ -85,14 +91,14 @@ const Slideshow = () => {
                   sizes="100%"
                   className={`w-screen h-[438px] md:h-full object-cover ${
                     index !== 3 && index !== 1 ? "object-top" : ""
-                  } filter brightness-90  md:pt-[75px]`}
+                  } filter brightness-90 pt-14 md:pt-[75px]`}
                 />
 
                 {/* TEXTO PRINCIPAL Y SECUNDARIO */}
-                <p className="text-fondoBlanco absolute font-merriwather font-bold italic lg:text-[4rem] text-[2rem] lg:left-[105px] left-4 lg:bottom-32 bottom-48 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
+                <p className="text-fondoBlanco absolute font-merriwather font-bold italic lg:text-4xl text-xl md:text-[2rem] lg:left-[105px] left-10 lg:bottom-44 bottom-28 md:bottom-56 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
                   {slideImage.caption2}
                 </p>
-                <p className="lg:left-[105px] font-nunitoSans absolute font-light text-fondoBlanco md:text-[2rem] text-[1.5rem] left-4 lg:bottom-24 bottom-36 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
+                <p className="lg:left-[105px] font-nunitoSans absolute font-light text-fondoBlanco md:text-[2rem] left-10 lg:bottom-24 md:bottom-36 bottom-20 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
                   {slideImage.caption}
                 </p>
               </div>
