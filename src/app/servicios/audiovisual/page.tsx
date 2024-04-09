@@ -234,11 +234,11 @@ const Audiovisual = () => {
             "gap-y-2 xl:max-w-screen-xl  px-5 lg:px-0 mx-auto flex flex-col"
           }
         >
-          <div className="flex-col mt-10 lg:flex space-y-2  lg:space-y-0 lg:flex-row gap-x-2 font-merriwather italic text-fondoBlanco">
+          <div className="flex-col mt-10  lg:flex space-y-2  lg:space-y-0 lg:flex-row gap-x-2 font-merriwather italic text-fondoBlanco">
             <div
               onMouseEnter={() => videoRef1.current.play()}
               onMouseLeave={() => videoRef1.current.pause()}
-              className="relative cursor-pointer group w-1/2"
+              className="relative cursor-pointer group xl:w-1/2 w-full"
             >
               <video
                 ref={videoRef1}
@@ -255,10 +255,10 @@ const Audiovisual = () => {
                 }}
                 className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
-                <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                   <div className="group-hover:pr-20  w-full  transition-all duration-300">
-                    <h3 className="text-3xl mb-4 italic">Videos para redes</h3>
-                    <h2 className="text-2xl font-thin">Spasio Kinesio</h2>
+                    <h3 className="xl:text-3xl text-xl mb-4 italic">Videos para redes</h3>
+                    <h2 className="xl:text-2xl text-lg font-thin">Spasio Kinesio</h2>
                   </div>
                   <Image
                     src={flecha}
@@ -271,7 +271,7 @@ const Audiovisual = () => {
             <div
               onMouseEnter={() => videoRef2.current.play()}
               onMouseLeave={() => videoRef2.current.pause()}
-              className="relative cursor-pointer group w-1/2"
+              className="relative cursor-pointer group xl:w-1/2 w-full"
             >
               <video
                 ref={videoRef2}
@@ -285,10 +285,10 @@ const Audiovisual = () => {
                 onClick={() => handleOpenModal(1)}
                 className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
-                <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                   <div className="group-hover:pr-20  w-full  transition-all duration-300">
-                    <h3 className="text-3xl mb-4 italic">Videos para redes</h3>
-                    <h2 className="text-2xl font-thin">
+                    <h3 className="xl:text-3xl text-xl mb-4 italic">Videos para redes</h3>
+                    <h2 className="xl:text-2xl text-lg font-thin">
                       TOCH en Camping de Palermo
                     </h2>
                   </div>
@@ -319,10 +319,10 @@ const Audiovisual = () => {
                 onClick={() => handleOpenModal(2)}
                 className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
-                <div className="texto_image absolute rounded-xl bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                <div className="texto_image absolute rounded-xl bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                   <div className="group-hover:pr-20  w-full  transition-all duration-300">
-                    <h3 className="text-3xl mb-4 italic">Videos para redes</h3>
-                    <h2 className="text-2xl font-thin text-balance">
+                    <h3 className="xl:text-3xl text-xl mb-4 italic">Videos para redes</h3>
+                    <h2 className="xl:text-2xl text-lg font-thin text-balance">
                       Backstage de fotos Pasado Pisado
                     </h2>
                   </div>
@@ -352,10 +352,10 @@ const Audiovisual = () => {
                   onClick={() => handleOpenModal(3)}
                   className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
                 >
-                  <div className="texto_image rounded-xl absolute bottom-0 z-30 w-full h-40  flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                  <div className="texto_image rounded-xl absolute bottom-0 z-30 w-full h-40  flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                     <div className="group-hover:pr-20  w-full  transition-all duration-300">
-                      <h3 className="text-3xl mb-4 italic">Edicion de video</h3>
-                      <h2 className="text-2xl font-thin text-balance">
+                      <h3 className="xl:text-3xl text-xl mb-4 italic">Edicion de video</h3>
+                      <h2 className="xl:text-2xl text-lg font-thin text-balance">
                         José Ladislao Biró
                       </h2>
                     </div>
@@ -383,10 +383,10 @@ const Audiovisual = () => {
                   onClick={() => handleOpenModal(4)}
                   className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
                 >
-                  <div className="texto_image  rounded-xl absolute bottom-0 z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                  <div className="texto_image  rounded-xl absolute bottom-0 z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                     <div className="group-hover:pr-20  w-full  transition-all duration-300">
-                      <h3 className="text-3xl mb-4 italic">Edicion de video</h3>
-                      <h2 className="text-2xl font-thin text-balance">
+                      <h3 className="xl:text-3xl text-lg mb-4 italic">Edicion de video</h3>
+                      <h2 className="xl:text-2xl text-md font-thin text-balance">
                         Exposición en el Centro Cultural Kirchner
                       </h2>
                     </div>
