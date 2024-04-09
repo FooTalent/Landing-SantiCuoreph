@@ -111,7 +111,7 @@ const Header = () => {
           </div>
         </div>
       )}
-      <nav className="py-3 px-4 md:px-8  xl:mx-[105px] xl:px-0">
+      <nav className="py-3 px-4 md:px-8 lg:px-28 xl:mx-[105px] xl:px-0">
         <div className="flex justify-around">
           <div className="flex items-center">
             <div className="flex-shrink-0">
