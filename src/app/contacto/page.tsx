@@ -1,11 +1,10 @@
 "use client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React from "react";
 import CustomButton from "../Componentes/CustomButton";
+import Images from "./components/Images";
 const page = () => {
-  const [setHoveredW, setSetHoveredW] = useState<boolean>(false);
-  const [setHoveredI, setSetHoveredI] = useState<boolean>(false);
+ 
   return (
     <>
       <section className="xl:w-[1236px] mx-4  pb-[24px] text-[24px] xl:mx-auto pt-14 xl:pt-0  xl:border-b-4 border-b border-black text-fondoNegro md:text-3xl xl:text-[46px]  mb-[1em]">
@@ -74,44 +73,7 @@ const page = () => {
               ¡Contactame a través de mis redes!
             </h3>
             <div className="flex text-3xl pb-10 xl:pb-0 xl:space-x-16 font-bold justify-evenly">
-              <Link
-                onMouseEnter={() => setSetHoveredW(true)}
-                onMouseLeave={() => setSetHoveredW(false)}
-                href="https://www.instagram.com/santicuore.ph/"
-              >
-                {setHoveredW ? (
-                  <img
-                    className="w-[89.46px] xl:w-[122px] hover:"
-                    src="/images/whasshovered.png"
-                    alt=""
-                  />
-                ) : (
-                  <img
-                    className="w-[89.46px] xl:w-[122px] hover:"
-                    src="/images/whass.png"
-                    alt=""
-                  />
-                )}
-              </Link>
-              <Link
-                onMouseEnter={() => setSetHoveredI(true)}
-                onMouseLeave={() => setSetHoveredI(false)}
-                href={"https://www.instagram.com/santicuore.ph/"}
-              >
-                {setHoveredI ? (
-                  <img
-                    className="w-[89.46px] xl:w-[122px] hover:"
-                    src="/images/instahovered.png"
-                    alt=""
-                  />
-                ) : (
-                  <img
-                    className="w-[89.46px] xl:w-[122px] hover:"
-                    src="/images/insta.png"
-                    alt=""
-                  />
-                )}
-              </Link>
+             <Images />
             </div>
           </div>
         </div>
