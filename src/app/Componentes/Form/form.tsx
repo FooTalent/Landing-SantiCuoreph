@@ -45,7 +45,10 @@ const schema = z.object({
     .min(1, "Debes ingresar un apellido")
     .max(30)
     .regex(/^[A-Za-zÀ-ÖØ-öø-ÿ ]*$/g, "Ingrese un apellido válido"),
-  email: z.string().email("Ingrese un formato de email válido"),
+  email: z
+    .string()
+    .min(1, "Debes ingresar un mail")
+    .email("Ingrese un formato de email válido"),
   telefono1: z
     .string({ required_error: "Campo requerido" })
     .refine(isValidPhoneNumber, {
@@ -89,7 +92,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
         mail: valores.email,
         ciudad: valores.ciudad,
         servicio:
-          valores.servicio === "fotografía"
+          valores.servicio === "fotografia"
             ? "Fotografía"
             : valores.servicio === "edicion"
             ? "Edición / Creación de videos"
@@ -244,6 +247,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
   ];
   const handleBlurValidation = async (fieldName: any) => {
     await trigger(fieldName); // Disparar la validación para el campo especificado
+    funcionControladora();
   };
   const today = new Date().toISOString().split("T")[0];
   const servicio = watch("servicio");
@@ -262,8 +266,8 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
   const comentarios = watch("comentarios");
   const tipoServFoto = watch("tipoServFoto");
   const tipoServAudVis = watch("tipoServAudVis");
-  //control paso 0
-  useEffect(() => {
+
+  const funcionControladora = () => {
     if (paso === 0 && servicio) {
       setHabilitar(true);
     } else if (
@@ -317,6 +321,12 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
     } else {
       setHabilitar(false);
     }
+  };
+
+  //control paso 0
+
+  useEffect(() => {
+    funcionControladora();
   }, [
     paso,
     apellido,
@@ -546,10 +556,16 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                   id="apellido"
                   className="mt-2 border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl px-4 py-3 text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover"
                   maxLength={30}
+                  onBlur={() => handleBlurValidation("apellido")}
                 />
+                {errors.apellido && (
+                  <p className="text-red-600 text-xs">
+                    {errors.apellido.message}
+                  </p>
+                )}
               </label>
               <label htmlFor="telefono" className="flex flex-col pt-3 sm:pt-0">
-                Telefono*
+                Teléfono*
                 <Controller
                   name="telefono1"
                   control={control}
@@ -599,7 +615,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                       type="checkbox"
                       className="appearance-none w-7 h-7 border-2 border-inputBorderSelected rounded-sm checked:bg-checkBackground"
                     />{" "}
-                    Teléfono
+                    Whatsapp
                   </label>
                   <label
                     htmlFor="mail"
@@ -683,6 +699,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                           maxHeight: "auto",
                           padding: "0",
                           overflow: "hidden",
+                          textAlign: "left",
                         }),
                       }}
                       // Otros props de React Select según tus necesidades

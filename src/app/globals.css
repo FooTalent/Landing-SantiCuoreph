@@ -28,6 +28,8 @@ html {
 
 }
 
+
+
 .indicators {
   position: absolute;
   bottom: 5%;
@@ -132,5 +134,29 @@ html {
 
   body {
     overflow: auto;
+  }
+}
+
+@media(max-width:430px) {
+  .indicators {
+    bottom: 55%;
+  }
+
+  .indicators li button:before {
+
+    width: 15px !important;
+    height: 15px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .indicators {
+    bottom: 42%;
+  }
+
+  .indicators li button:before {
+
+    width: 15px !important;
+    height: 15px !important;
   }
 }
