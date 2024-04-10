@@ -28,9 +28,13 @@ html {
 
 }
 
+.slide-principal {
+  position: relative;
+}
 
 
-.indicators {
+
+.slide-container>div>.indicators {
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -62,9 +66,9 @@ html {
 
 
 #formulario {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(/assets/img/fondoContact.png) no-repeat;
+  background: linear-gradient(0deg, rgba(3, 0, 22, 0.65) 0%, rgba(3, 0, 22, 0.65) 100%), url(/assets/img/fondoContact1.jpeg) lightgray 50% / cover no-repeat;
   background-size: cover;
+  background-position: 100% -10%;
 }
 
 
@@ -138,9 +142,7 @@ html {
 }
 
 @media(max-width:430px) {
-  .indicators {
-    bottom: 55%;
-  }
+
 
   .indicators li button:before {
 
