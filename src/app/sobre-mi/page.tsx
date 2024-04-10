@@ -1,12 +1,8 @@
-import santi from '../../../public/images/aboutme/Foto Sanit 2.webp'
-import santiCuorePH from '../../../public/images/aboutme/08_FotografiaSantiagoGarcia.webp'
-import santiago from '../../../public/images/aboutme/Foto Santi.webp'
+import santi from '../../../public/images/aboutme/FotografiaSantiagoGarcia.jpeg'
+import santiCuorePH from '../../../public/images/aboutme/2_FotografiaSantiagoGarcia.jpeg'
+import santiago from '../../../public/images/aboutme/image 103.jpg'
 import Image from 'next/image';
-import background1 from '../../../public/images/aboutme/image 28.jpg'
-import background2 from '../../../public/images/aboutme/background2.jpg'
-import background3 from '../../../public/images/aboutme/MAS QUE UNO BAJA-51 1.jpg'
 import ServiceBanner from '../servicios/components/ServiceBanner'
-import { url } from 'inspector';
 const AboutMe = () => {
     return (
         <>
@@ -35,7 +31,7 @@ const AboutMe = () => {
             </div>
         </section>
         <picture className=''>
-        <div className='bg-fixed  h-screen bg-background1' >
+        <div className='bg-fixed  h-screen bg-background1 bg-cover bg-center' >
         </div>
         </picture>
         <section className='sobremi__Santi w-full grid grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 h-full place-content-center  nunitoSans text-xl lg:text-2xl max-w-[590px] max-w-fit m-auto'>
@@ -56,14 +52,14 @@ const AboutMe = () => {
                     </Image>
                 </picture>
         </section>
-        <div className='bg-fixed  h-screen flex items-center justify-center bg-background2'  >
+        <div className='bg-fixed  h-screen flex items-center justify-center bg-background2 bg-cover bg-top'  >
             <h2 className='text-xl text-center md:text-2xl lg:text-5xl font-bold text-white m-4'>Creando recuerdos, construyendo historias...</h2>
         </div>
         <section className='w-full flex flex-col items-start justify-center max-w-[1100px] my-36 p-10  m-auto text-xl lg:text-2xl gap-20 nunitoSans'>
             <p>Estoy convencido de que una buena presencia en redes es fundamental para cualquier marca. Por eso también me encargo de crear contenido impactante y de calidad para distintas empresas y organizaciones. </p>
             <p className='font-bold'>Con mi trabajo ayudo a potenciar y fortalecer la imagen de distintas marcas a través de la creación de contenido para redes como TikTok e Instagram.</p>
         </section>
-        <div className='bg-fixed  h-screen bg-background3'  >
+        <div className='bg-fixed  h-screen bg-background3 bg-cover bg-center'   >
         </div>
         <section className='w-full grid grid-cols-1 lg:grid-cols-2  nunitoSans max-w-[590px] lg:max-w-fit m-auto mb-20 lg:mb-0 text-lg text-start'>
         <div className=' flex flex-col lg:hidden gap-10 mx-8  mt-10'>
@@ -75,17 +71,19 @@ const AboutMe = () => {
                     src={santiago}
                     width={678}
                     height={792}
-                    alt='santiCuorepH'
+                    alt='santiCuorepH Camera'
                     className=''
                     >
                     </Image>
                 </picture>
-        <div className='sobremi__text mx-8'>
+        <div className='sobremi__text mx-14'>
             <div className='text-balance flex flex-col gap-10 mt-0'>
                         <p className='hidden lg:block mt-10'>Mi enfoque va más allá de simplemente capturar imágenes y editar videos:</p>  
                         <p className='hidden lg:block font-bold'>Me encargo de crear recuerdos y construir historias que perduren en el tiempo</p>
+                        <div className='flex flex-col gap-10 lg:items-center mt-20'>
                         <p >Ahora que ya sabés un poco mas sobre mí...</p>
                         <p className='font-bold'>¡Es hora de conocernos!</p>
+                        </div>
                     </div>
             </div>
         </section>

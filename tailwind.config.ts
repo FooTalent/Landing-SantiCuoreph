@@ -10,7 +10,7 @@ const config: Config = {
       backgroundImage: {
         background1: 'url("/images/aboutme/image 28.webp")',
         background2: 'url("/images/aboutme/background2.webp")',
-        background3: 'url("/images/aboutme/MAS QUE UNO BAJA-51 1.webp")',
+        background3: 'url("/images/aboutme/image 129.jpg")',
         checkBackground: 'url("/assets/img/check.svg")',
       },
       colors: {
