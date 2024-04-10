@@ -9,7 +9,7 @@ import "react-slideshow-image/dist/styles.css";
 const ServiceBanner = () => {
   const images = [
     {
-      url: "/images/services/photography/banner/banner01.jpg",
+      url: "/images/services/photography/banner/banner.jpg",
       caption:
         "Producciones fotográficas de calidad y la mejor cobertura para tus eventos",
     },

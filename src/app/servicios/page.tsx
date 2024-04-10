@@ -12,6 +12,7 @@ import flecha from "../Icon/Group.png";
 import Link from "next/link";
 //md:max-h-[600px] lg:max-h-[800px]
 //tamanos foto 2 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[464px]
+//TODO AGREGAR OPACITY 0
 const ServicesPage = () => {
   return (
     <div className="mx-4">
@@ -43,6 +44,7 @@ const ServicesPage = () => {
                 className="object-cover  h-full rounded-2xl  group-hover:brightness-50"
               />
             </Link>
+
           </div>
 
           <div className="md:col-span-7 md:row-start-1 md:row-span-2 flex" >
@@ -89,7 +91,7 @@ const ServicesPage = () => {
                 <Image
                   src={flecha}
                   alt=""
-                  className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
+                  className="invert lg:opacity-0  opacity-0 group-hover:opacity-100 transition-all duration-300"
                 ></Image>
               </div>
               <Image
@@ -98,6 +100,7 @@ const ServicesPage = () => {
                 className="object-cover rounded-b-2xl h-full rounded-2xl group-hover:brightness-50"
               />
             </Link>
+
           </div>
         </div>
 
@@ -118,6 +121,7 @@ const ServicesPage = () => {
               alt=""
               className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
             ></Image>
+
           </div>
           <Image
             src={img04}
@@ -190,6 +194,7 @@ const ServicesPage = () => {
               alt=""
               className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
             ></Image>
+
           </div>
           <Image
             src={img07}
@@ -198,6 +203,7 @@ const ServicesPage = () => {
           />
         </Link>
       </section>
+
     </div>
   );
 };
