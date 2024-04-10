@@ -68,7 +68,7 @@ html {
 #formulario {
   background: linear-gradient(0deg, rgba(3, 0, 22, 0.65) 0%, rgba(3, 0, 22, 0.65) 100%), url(/assets/img/fondoContact1.jpeg) lightgray 50% / cover no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 100% -10%;
 }
 
 

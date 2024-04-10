@@ -82,7 +82,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     const valores = getValues();
     var datos = {
-      service_id: "service_hjd0tod",
+      service_id: "service_s8y0e0y",
       template_id: "template_t15hwmx",
       user_id: "pgqqrrNHA6i0mNJwi",
       template_params: {
@@ -126,7 +126,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
       },
     };
     var datosAviso = {
-      service_id: "service_hjd0tod",
+      service_id: "service_s8y0e0y",
       template_id: "template_u709am4",
       user_id: "pgqqrrNHA6i0mNJwi",
       template_params: {
@@ -360,7 +360,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
     <div>
       <Modal showModal={showModal} setShowModal={setShowModal} redirect={"/"} />
       {paso == 0 && (
-        <div className="text-fondoBlanco sm:text-3xl mb-9 font-nunitoSans mx-5">
+        <div className="text-fondoBlanco sm:text-3xl mb-9 font-nunitoSans mx-5 2xl:mx-0">
           <h2 className="text-base sm:text-xl lg:text-3xl font-bold mb-3">
             Solicitá hoy tu presupuesto completando el siguiente formulario.
           </h2>
@@ -370,7 +370,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
         </div>
       )}
       {paso == 1 && (
-        <div className="text-fondoBlanco text-xl mb-8  flex justify-between items-center px-6">
+        <div className="text-fondoBlanco text-xl mb-8  flex justify-between items-center px-6 md:px-0">
           <h2 className="sm:text-3xl font-bold font-merriwather">
             Información de contacto
           </h2>
@@ -381,16 +381,16 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
       )}
       {paso == 2 && watch("servicio") === "fotografia" && (
         <div
-          className={`text-fondoBlanco mb-10 ${
+          className={`text-fondoBlanco mb-10  ${
             paso === 2 || (paso === 4 && watch("servicio"))
               ? "mx-7 sm:mx-8 md:mx-10"
               : ""
-          } flex justify-between sm:pb-6 items-center`}
+          } flex justify-between items-center`}
         >
           <h2 className="text-lg sm:text-3xl font-bold md:mx-10">
             Servicio de fotografía
           </h2>
-          <h2 className="text-lg sm:text-2xl font-bold font-nunitoSans">
+          <h2 className="text-lg sm:text-2xl font-bold font-nunitoSans md:mx-10">
             {paso} de 4
           </h2>
         </div>
@@ -429,7 +429,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
       )}
       {paso == 3 && (
         <div
-          className={`text-fondoBlanco mb-10 flex justify-between sm:pb-6 items-center`}
+          className={`text-fondoBlanco mb-10 2xl:mb-0 flex justify-between sm:pb-6 items-center`}
         >
           <h2 className="text-xl sm:text-3xl font-bold">
             Servicio de fotografía
@@ -441,26 +441,26 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
       )}
       {paso == 4 && (
         <div
-          className={`text-fondoBlanco mb-10 flex justify-between sm:pb-6 items-center md:mx-10`}
+          className={`text-fondoBlanco mb-10  flex justify-between sm:pb-6 items-center md:mx-10`}
         >
-          <h2 className="text-xl sm:text-3xl font-bold">
+          <h2 className="text-xl sm:text-3xl font-bold lg:mx-14">
             Servicio de fotografía
           </h2>
-          <h2 className="text-xl sm:text-2xl font-bold font-nunitoSans">
+          <h2 className="text-xl sm:text-2xl font-bold font-nunitoSans lg:max-w-36 lg:mx-14">
             {paso} de 4
           </h2>
         </div>
       )}
 
       {/**Formulario */}
-      <div className="backdrop-blur-2xl">
+      <div className="">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className={`${
             paso === 2 || (paso === 4 && watch("servicio"))
-              ? "md:mx-10"
+              ? "md:mx-20"
               : "px-9"
-          } bg-formBackground rounded-[32px] font-nunitoSans text-fondoBlanco text-3xl min-h-[372px] backdrop-shadow-xl ${
+          } bg-formBackground rounded-[32px] font-nunitoSans backdrop-blur-2xl text-fondoBlanco text-3xl min-h-[372px] xl:min-h-[224px] 2xl:min-h-[224px] backdrop-shadow-xl ${
             paso === 3 ? "pb-[59px]" : ""
           }`}
         >
@@ -473,7 +473,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             </div>
           )}
           {paso == 1 && (
-            <div className="py-8">
+            <div className="py-8 md:pt-11 md:pb-6">
               <h2 className="text-base sm:text-left text-center sm:text-2xl font-bold">
                 Ingresá tus datos de contacto
               </h2>
@@ -532,7 +532,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           {paso == 1 && (
             <fieldset
               id="paso1"
-              className="flex flex-col min-w-56 sm:grid sm:grid-cols-2 sm:grid-rows-2 gap-x-24 gap-y-4 text-base sm:text-xl"
+              className="flex flex-col min-w-56 lg:grid lg:grid-cols-2 lg:grid-rows-2 gap-x-24 gap-y-4 text-base sm:text-lg px-7 2xl:px-0"
             >
               <label htmlFor="nombre" className="flex flex-col pt-3 sm:pt-0">
                 Nombre *
@@ -607,7 +607,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                 )}
               </label>
               <div className="sm:col-span-2 w-full pt-3 sm:pt-0">
-                <h2 className="text-center font-nunitoSans text-[15px] font-bold">
+                <h2 className="text-center font-nunitoSans text-[15px] md:text-lg md:font-normal font-bold">
                   ¿Por qué medio querés recibir tu presupuesto? *
                 </h2>
                 <div className="flex font-nunitoSans text-[15px] justify-center gap-8 sm:gap-20 py-5 ">
@@ -641,11 +641,11 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           {paso == 2 && watch("servicio") === "fotografia" && (
             <fieldset
               id="paso2"
-              className="flex flex-col gap-6 pt-9 pb-10 md:px-36 font-nunitoSans"
+              className="flex flex-col gap-6 pt-9 pb-10 lg:px-[136px] font-nunitoSans px-7"
             >
               <label
                 htmlFor="servicio"
-                className="flex flex-col text-base font-bold text-center px-7"
+                className="flex flex-col text-base font-bold text-center"
               >
                 ¿Qué tipo de servicio fotográfico necesitás? *
                 <Controller
@@ -718,7 +718,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="ciudad"
-                className="flex flex-col text-base font-bold px-7"
+                className="flex flex-col text-base font-bold"
               >
                 ¿En qué ciudad se va a realizar la sesión fotográfica? *
                 <input
@@ -737,29 +737,29 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="fecha"
-                className="flex flex-col text-base font-bold px-7"
+                className="flex flex-col text-base font-bold"
               >
                 ¿En qué fecha estimada se va a realizar la sesión de fotos? *
-                <div className="flex relative sm:max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
+                <div className="flex relative sm:max-w-[50%] border-[1.5px] lg:max-w-[70%] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
                   <Image
                     src="/assets/img/calendar_month_FILL0_wght400_GRAD0_opsz40 1.svg"
                     alt="icon"
                     width={30}
                     height={30}
-                    className="absolute top-[50%] translate-y-[-50%] left-8"
+                    className="absolute top-[50%] translate-y-[-50%] left-8 lg:left-6 2xl:left-5"
                   />
                   <input
                     type="date"
                     {...register("fecha", { required: true })}
                     id="fecha"
-                    className="appearance-none border-l-[1.5px] border-inputBorderSelected text-center mx-auto text-base sm:text-lg  text-fondoBlanco bg-formBackground outline-none  py-3 pl-8"
+                    className="appearance-none border-l-[1.5px] border-inputBorderSelected text-center mx-auto text-base sm:text-lg  text-fondoBlanco bg-formBackground outline-none  py-3 xl:pl-8 lg:pl-4"
                     min={today}
                   />
                 </div>
               </label>
               <label
                 htmlFor="duracion"
-                className="flex flex-col text-base font-bold px-7"
+                className="flex flex-col text-base font-bold"
               >
                 ¿Cuántas horas necesitás el servicio? *
                 <Controller
@@ -831,7 +831,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="cantidadFotos"
-                className="flex flex-col text-base font-bold px-7"
+                className="flex flex-col text-base font-bold"
               >
                 ¿Cuántas fotos necesitás? *
                 <Controller
@@ -902,7 +902,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="formato"
-                className="flex flex-col text-base font-bold px-7"
+                className="flex flex-col text-base font-bold"
               >
                 ¿En qué formato necesitás las fotos? *
                 <Controller
@@ -981,7 +981,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             >
               <label
                 htmlFor="servicio"
-                className="flex flex-col text-base font-bold text-center px-7"
+                className="flex flex-col text-base font-bold text-center"
               >
                 ¿Qué tipo de servicio de video necesitás? *
                 <Controller
@@ -1051,7 +1051,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="ciudad"
-                className="flex flex-col text-base font-bold text-center px-7"
+                className="flex flex-col text-base font-bold text-center"
               >
                 ¿En qué ciudad se va a realizar la sesión de video? *
                 <input
@@ -1069,7 +1069,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="fecha"
-                className="flex flex-col text-base font-bold text-center px-7"
+                className="flex flex-col text-base font-bold text-center"
               >
                 ¿En qué fecha estimada se va a realizar la sesión de video? *
                 <div className="flex relative max-w-[60%] sm:max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
@@ -1091,7 +1091,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="duracion"
-                className="flex flex-col text-base font-bold text-center px-7"
+                className="flex flex-col text-base font-bold text-center"
               >
                 ¿Cuántas horas necesitás el servicio? *
                 <Controller
@@ -1161,7 +1161,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="cantidadVideos"
-                className="flex flex-col text-base font-bold text-center px-7"
+                className="flex flex-col text-base font-bold text-center"
               >
                 ¿Cuántos videos necesitás? *
                 <Controller
@@ -1708,7 +1708,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </h2>
               <label className="flex flex-col text-fondoBlanco font-nunitoSans text-lg font-bold">
                 <textarea
-                  className="my-4 bg-fondoGris rounded-2xl h-52 sm:h-96 border p-2 sm:p-6 border-inputBorderSelected font-nunitoSans font-light italic text-base text-white placeholder:text-fondoBlanco"
+                  className="my-4 bg-fondoGris rounded-2xl h-52 sm:h-36 border px-6 py-2  border-inputBorderSelected font-nunitoSans font-light italic text-base lg:text-lg text-white placeholder:text-fondoBlanco placeholder:lg:text-lg"
                   {...register("comentarios")}
                   placeholder="Detallá cualquier información relevante relacionada con tu
                 pedido"
@@ -1719,7 +1719,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           )}
           {/** paso 4 */}
           {paso === 4 && (
-            <fieldset className="flex flex-col gap-8 px-4 pt-5 pb-12 sm:py-auto sm:px-32 md:px-10">
+            <fieldset className="flex flex-col gap-8 px-4 pt-5 lg:pt-9 pb-12 sm:py-auto sm:px-32 md:px-10 lg:pl-32 lg:pr-24">
               <h2 className="text-fondoBlanco font-nunitoSans text-xl sm:text-2xl font-bold">
                 Revisá que la información sea correcta
               </h2>
@@ -1894,9 +1894,9 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           <p
             className={`font-nunitoSans text-base font-bold ${
               paso == 3
-                ? "px-36"
-                : "sm:px-56  sm:text-left text-fondoBlanco text-center pt-5"
-            }`}
+                ? "px-36 "
+                : "sm:px-56  sm:text-left text-fondoBlanco text-center pt-5 "
+            } ${paso == 2 ? "md:px-18" : "md:px-16 2xl:px-11"}`}
           >
             (*) Campos obligatorios
           </p>
@@ -1909,7 +1909,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           title="Editar información"
           styles={`${
             paso === 4 ? " bg-fondoBlanco/50 h-10" : "hidden"
-          } text-fondoBlanco rounded-[40px] px-14 md:px-10 py-4 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover flex items-center justify-center md:min-w-72`}
+          } text-fondoBlanco rounded-[40px] px-14 md:px-10 py-6 font-merriwather font-bold text-base md:text-lg lg:text-xl mt-5 sm:mt-0 hover:bg-principalHover flex items-center justify-center md:min-w-72`}
           onClick={() => {
             if (paso === 0) {
               navigate.push("/contacto");
@@ -1925,7 +1925,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
           {/**BOTON VOLVER */}
           <CustomButton
             title="Volver"
-            styles="hidden sm:block bg-principal hover:bg-principalHover rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base md:text-lg lg:text-2xl mt-5 sm:mt-16 hover:bg-principalHover sm:min-w-60"
+            styles="hidden sm:block bg-principal hover:bg-principalHover rounded-[40px] px-14 md:px-10 py-3 font-merriwather font-bold text-base md:text-lg lg:text-xl mt-5 sm:mt-6 hover:bg-principalHover sm:min-w-60"
             onClick={() => {
               if (paso === 0) {
                 navigate.push("/contacto");
@@ -1943,7 +1943,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               habilitar
                 ? "bg-principal hover:bg-principalHover"
                 : "bg-backgroundDisabled cursor-not-allowed text-textoDisabled"
-            } rounded-[40px] px-14 md:px-10 py-2 font-merriwather font-bold text-base sm:text-lg md:text-xl lg:text-2xl mt-5 sm:mt-16 sm:w-auto w-full sm:min-w-60`}
+            } rounded-[40px] px-14 md:px-10 py-2 font-merriwather font-bold text-base sm:text-lg md:text-xl lg:text-xl mt-5 sm:mt-6 sm:w-auto w-full sm:min-w-60`}
             onClick={() => {
               if (paso === 4) {
                 handleSubmit(onSubmit)();
