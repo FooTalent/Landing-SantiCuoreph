@@ -21,16 +21,16 @@ const ServicesLayout = ({
 
     return (
       <div className="font-merriwather mx-auto">
-      <section className="max-w-screen-xl pb-8 border-b-2 md:border-b-4 border-black text-fondoNegro mx-4 lg:m-auto mb-3">
-          <h1 className="text-3xl font-semibold md:text-5xl xl:text-6xl pt-[5rem] pb-[1rem] md:pt-28 xl:pt-32 pl-5 sm:pl-16 md:pl-24 lg:pl-32 xl:pb-[.4em]">Servicios</h1>
-          <div className="flex gap-8 pl-5 sm:pl-20 md:pl-28 lg:pl-36">
+      <section className="max-w-screen-xl pb-4 border-b-2 border-black text-fondoNegro mx-4 lg:m-auto mb-3">
+          <h1 className="text-3xl font-semibold md:text-5xl pt-[5rem] pb-[1rem] md:pt-28 xl:pt-24 xl:pb-[.4em]">Servicios</h1>
+          <div className="flex justify-center xl:gap-32">
                     {
                         services.map((service, idx) => {
                             const isActive: boolean = pathname.endsWith(service.href);
                             return <div key={idx}>
-                                        <Link href={service.href}  className={`${isActive ? activeStyle : inactiveStyle} text-base md:text-3xl xl:text-4xl`}>{service.name}</Link>
+                                        <Link href={service.href}  className={`${isActive ? activeStyle : inactiveStyle} text-base md:text-3xl`}>{service.name}</Link>
                                         {
-                                            isActive && <div className="md:pt-[0.5em] md:mx-auto md:w-4/5 md:border-b-8 md:border-yellow-500"></div>
+                                            isActive && <div className="md:pt-[0.5em] md:mx-auto md:w-[117px] md:border-b-8 md:border-yellow-500"></div>
                                         }
                                     </div>
                         })
