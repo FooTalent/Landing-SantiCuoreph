@@ -27,10 +27,10 @@ const ServicesPage = () => {
         
           <div className="texto_image bottom-0  rounded-b-2xl absolute z-30 w-full h-40 flex flex-row text-center justify-between px-10 items-center cursor-pointer transition-all duration-200 bg-black/50">
             <div className="group-hover:pr-20  w-full  transition-all duration-300">
-            <h3 className="text-3xl mb-4 italic">Fotografía comercial</h3>
-            <h2 className="text-2xl font-thin">Aura Gin</h2>
+            <h3 className="text-2xl lg:text-3xl mb-4 italic">Fotografía comercial</h3>
+            <h2 className="text-xl lg:text-2xl font-thin">Aura Gin</h2>
             </div>
-            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
+            <Image src={flecha} alt="" className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
           </div>
             <Image
               src={img02}
@@ -42,10 +42,10 @@ const ServicesPage = () => {
           <Link href="/fotografia/pasado-pisado" className="relative group" id="2">
           <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 px-10 w-full h-40 flex  flex-row text-center justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
           <div className="group-hover:pr-20  w-full  transition-all duration-300">
-            <h3 className="text-3xl mb-4 italic">Fotografía artística</h3>
-            <h2 className="text-2xl font-thin">Pasado Pisado</h2>
+            <h3 className="text-2xl lg:text-3xl mb-4 italic">Fotografía artística</h3>
+            <h2 className="text-xl lg:text-2xl font-thin">Pasado Pisado</h2>
           </div>
-            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
+            <Image src={flecha} alt="" className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
           </div>
             <Image
               src={img03}
@@ -57,10 +57,10 @@ const ServicesPage = () => {
         <Link href="/fotografia/lorena" className="col-span-2 relative h-full w-full group" id="0">
           <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
         <div className="group-hover:pr-20  w-full  transition-all duration-300">
-            <h3 className="text-3xl mb-4 italic">Retrato Artístico</h3>
-            <h2 className="text-2xl font-thin">Lorena</h2>
+            <h3 className="text-2xl lg:text-3xl mb-4 italic">Retrato Artístico</h3>
+            <h2 className="text-xl lg:text-2xl font-thin">Lorena</h2>
             </div>
-            <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
+            <Image src={flecha} alt="" className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
           </div>
           <Image
             src={img01}
@@ -73,10 +73,10 @@ const ServicesPage = () => {
       <Link href="/fotografia/jettatore" className="mb-3 flex md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] relative group" id="3">
       <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
       <div className="group-hover:pr-20  w-full  transition-all duration-300">
-            <h3 className="text-3xl mb-4 italic">Cobertura de evento artístico</h3>
-            <h2 className="text-2xl font-thin">Jettatore - Obra teatral</h2>
+            <h3 className="text-2xl lg:text-3xl mb-4 italic">Cobertura de evento artístico</h3>
+            <h2 className="text-xl lg:text-2xl font-thin">Jettatore - Obra teatral</h2>
           </div>
-          <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
+          <Image src={flecha} alt="" className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
           </div>
         <Image
           src={img04}
@@ -89,10 +89,10 @@ const ServicesPage = () => {
         <Link href="/fotografia/one-bar" className="col-span-1 md:max-h-[300px] lg:max-h-[400px] xl:max-h-[456px] relative pb-3 md:pb-0 group">
         <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-40 flex  flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
       <div className="group-hover:pr-20  w-full  transition-all duration-300">
-            <h3 className="text-3xl mb-4 italic">Cobertura de evento social</h3>
-            <h2 className="text-2xl font-thin">One-bar</h2>
+            <h3 className="text-2xl lg:text-3xl mb-4 italic">Cobertura de evento social</h3>
+            <h2 className="text-xl lg:text-2xl font-thin">One-bar</h2>
           </div>
-          <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
+          <Image src={flecha} alt="" className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
           </div>
           <Image
             src={img05}
@@ -103,10 +103,10 @@ const ServicesPage = () => {
         <Link href="/fotografia/mas-que-uno" className="col-span-1 h-full relative group">
         <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
       <div className="group-hover:pr-20  w-full  transition-all duration-300">
-            <h3 className="text-3xl mb-4 italic">Cobertura de evento artístico</h3>
-            <h2 className="text-2xl font-thin">Más que uno</h2>
+            <h3 className="text-2xl lg:text-3xl mb-4 italic">Cobertura de evento artístico</h3>
+            <h2 className="text-xl lg:text-2xl font-thin">Más que uno</h2>
           </div>
-          <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
+          <Image src={flecha} alt="" className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
           </div>
           <Image
             src={img06}
@@ -118,10 +118,10 @@ const ServicesPage = () => {
       <Link href="/fotografia/mas-que-uno" className="mb-3 flex relative group">
       <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-40 flex flex-row text-center px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
       <div className="group-hover:pr-20  w-full  transition-all duration-300">
-            <h3 className="text-3xl mb-4 italic">Cobertura de evento artístico</h3>
-            <h2 className="text-2xl font-thin">Más que uno</h2>
+            <h3 className="text-2xl lg:text-3xl mb-4 italic">Cobertura de evento artístico</h3>
+            <h2 className="text-xl lg:text-2xl font-thin">Más que uno</h2>
           </div>
-          <Image src={flecha} alt="" className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
+          <Image src={flecha} alt="" className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"></Image>
           </div>
         <Image
           src={img07}
