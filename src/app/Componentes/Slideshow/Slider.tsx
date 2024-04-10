@@ -70,7 +70,7 @@ const properties = {
 
 const Slideshow = () => {
   return (
-    <div className="slide-container">
+    <div className="slide-container slide-principal">
       <Slide
         autoplay={true}
         infinite={true}
@@ -98,7 +98,7 @@ const Slideshow = () => {
                 <p className="text-fondoBlanco absolute font-merriwather font-bold italic lg:text-4xl text-xl md:text-[2rem] lg:left-[105px] left-10 lg:bottom-44 bottom-28 md:bottom-56 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
                   {slideImage.caption2}
                 </p>
-                <p className="lg:left-[105px] font-nunitoSans absolute font-light text-fondoBlanco md:text-[2rem] left-10 lg:bottom-24 md:bottom-36 bottom-20 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
+                <p className="lg:left-[105px] font-nunitoSans absolute font-light text-fondoBlanco md:text-[2rem] left-10 lg:bottom-28 md:bottom-40 bottom-20 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
                   {slideImage.caption}
                 </p>
               </div>
