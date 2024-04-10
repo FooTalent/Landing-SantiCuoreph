@@ -263,7 +263,7 @@ const Audiovisual = () => {
                   <Image
                     src={flecha}
                     alt=""
-                    className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
+                    className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"
                   ></Image>
                 </div>
               </div>
@@ -295,7 +295,7 @@ const Audiovisual = () => {
                   <Image
                     src={flecha}
                     alt=""
-                    className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
+                    className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"
                   ></Image>
                 </div>
               </div>
@@ -329,7 +329,7 @@ const Audiovisual = () => {
                   <Image
                     src={flecha}
                     alt=""
-                    className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
+                    className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"
                   ></Image>
                 </div>
               </div>
@@ -362,7 +362,7 @@ const Audiovisual = () => {
                     <Image
                       src={flecha}
                       alt=""
-                      className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
+                      className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"
                     ></Image>
                   </div>
                 </div>
@@ -393,7 +393,7 @@ const Audiovisual = () => {
                     <Image
                       src={flecha}
                       alt=""
-                      className="invert opacity-0 group-hover:opacity-100 transition-all duration-300"
+                      className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"
                     ></Image>
                   </div>
                 </div>
