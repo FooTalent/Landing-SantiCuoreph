@@ -283,7 +283,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
   if (session) {
     return (
       <div className="bg-fondoNegro">
-        <section className=" pt-32 xl:max-w-screen-xl mx-auto">
+        <section className=" pt-32 max-w-screen-xl mx-auto">
           <div className="flex justify-between">
             <div className="text-fondoBlanco">
               <h1 className="text-5xl merriwather italic font-bold">
@@ -302,15 +302,15 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
             </div>
           </div>
 
-          <div className="session-container pb-20">
+          <div className="session-container min-w-[320px] pb-20">
             {session.images.map((image, idx) => {
               return (
                 <div
                   key={idx}
-                  className="image-container"
+                  className="image-container max-w-fit"
                   onClick={() => setShowModal(true)}
                 >
-                  <Image src={image.url} width={600} height={1000} alt={image.alt} />
+                  <Image src={image.url} width={500} height={1000} alt={image.alt} className="max-w-[320px] sm:max-w-fit" />
                 </div>
               );
             })}
