@@ -370,7 +370,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
         </div>
       )}
       {paso == 1 && (
-        <div className="text-fondoBlanco text-xl mb-8  flex justify-between items-center px-6 md:px-0">
+        <div className="text-fondoBlanco text-xl mb-8  flex justify-between items-center px-4 md:px-0">
           <h2 className="sm:text-3xl font-bold font-merriwather">
             Información de contacto
           </h2>
