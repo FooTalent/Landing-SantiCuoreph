@@ -356,15 +356,17 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
             </div>
           </div>
 
-          <div className="session-container pb-20">
+          <div className="session-container pb-20 grid">
             {session.images.map((image, idx) => {
               return (
                 <div
                   key={idx}
-                  className="image-container"
+                  className="image-container "
                   onClick={() => setShowModal(true)}
                 >
-                  <Image src={image.url} width={600} height={1000} alt={image.alt} />
+                  <div className="relative h-[100px]">
+                  <Image src={image.url} objectFit="cover" fill alt={image.alt} />
+                  </div>
                 </div>
               );
             })}
