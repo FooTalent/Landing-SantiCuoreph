@@ -17,7 +17,7 @@ const AboutMe = () => {
 
                 </Image>
             </picture>
-            <div className="quiensoy lg:row-span-1 Merriweather w-fit max-w-sm ml-3">
+            <div className="quiensoy lg:row-span-1 Merriweather w-fit max-w-sm">
             <h2 className="nunitoSans font-bold text-4xl mb-5">Sobre mí</h2>
             <p className="text-balance text-xl">¡Hola! Soy Santiago García, creador de <b>SantiCuorePH</b>, y soy...</p>
             </div>
