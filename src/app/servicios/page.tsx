@@ -18,7 +18,7 @@ const ServicesPage = () => {
         <div className="md:grid md:grid-cols-12 md:grid-rows-4 md:gap-3 mb-3 items-stretch overflow-hidden md:h-[800px] lg:h-[941px] space-y-4 md:space-y-0">
           <div className="md:col-span-5 md:col-start-8 h-[600px] md:h-[800px] lg:h-[941px] rounded-2xl">
             <Link
-              href="/fotografia/lorena"
+              href="/fotografia/moda-subte"
               className="block md:col-span-2 relative h-full w-full group "
               id="0"
             >
@@ -174,7 +174,7 @@ const ServicesPage = () => {
           </Link>
         </div>
         <Link
-          href="/fotografia/mas-que-uno"
+          href="/fotografia/toch"
           className="mb-3 flex relative group"
         >
           <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-[69px] sm:h-[80px] md:h-40 flex flex-row gap-2 text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
