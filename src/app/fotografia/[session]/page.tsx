@@ -372,7 +372,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
                   className={`image-container ${idx}`}
                   onClick={() => setShowModal(true)}
                 >
-                  <div className={`relative ${session.verticalImage ? "h-[350px] md:h-[430px]" : "h-[280px] md:h-[315px]"}`}>
+                  <div className={`relative ${session.verticalImage ? "h-[350px] md:h-[430px]" : "h-[280px] md:h-[315px]"} hover:cursor-pointer`}>
                   <Image src={image.url} className={`object-cover`} fill alt={image.alt} 
                     style={{objectPosition: `${idx === 2 || idx===7 ? "20% 50%" : "50% 50%"}`}}
                   />
