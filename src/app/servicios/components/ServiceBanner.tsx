@@ -46,7 +46,7 @@ const ServiceBanner = () => {
                 />
                 <div className="absolute flex flex-col md:flex-row inset-0 px-4 xl:max-w-screen-xl xl:px-0 mx-auto items-center gap-10 sm:gap-16 md:gap-0 pt-16 sm:pt-24 md:pt-0 lg:flex-nowrap xl:gap-20">
                   <div className="">
-                    <h3 className="text-xl text-center md:text-left sm:text-3xl xl:text-[43px] text-fondoBlanco font-nunitoSans">
+                    <h3 className="text-xl text-center md:text-left sm:text-3xl xl:text-[43px] text-fondoBlanco font-nunitoSans font-bold" style={{lineHeight: "50px"}}>
                       {image.caption}
                     </h3>
                   </div>
