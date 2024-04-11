@@ -15,6 +15,8 @@ import CloseButton from "./close-btn";
 import { useState } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import { redirect } from "next/navigation";
+import { NextURL } from "next/dist/server/web/next-url";
 
 const buttonStyle = {
   width: "50px",
@@ -23,34 +25,46 @@ const buttonStyle = {
 };
 const properties = {
   prevArrow: (
-    <button className="lg:ml-40 ml-4 " style={{ ...buttonStyle }}>
-      <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
-        <Image src="/assets/img/ArrowLeft.png" alt="" width={20} height={20} />
+    <button className="ml-2 md:ml-4 lg:ml-10 " style={{ ...buttonStyle }}>
+      <div className="bg-slider w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] xl:w-14 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
+        <Image
+          src="/assets/img/ArrowLeft.png"
+          alt=""
+          width={20}
+          height={20}
+          className="sm:w-[16px]"
+        />
       </div>
     </button>
   ),
   nextArrow: (
-    <button className="lg:mr-40 mr-4" style={{ ...buttonStyle }}>
-      <div className="bg-slider w-14 h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
-        <Image src="/assets/img/ArrowRight.png" alt="" width={20} height={20} />
+    <button className="mr-2 md:mr-4 lg:mr-10" style={{ ...buttonStyle }}>
+      <div className="bg-slider w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] xl:w-14 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
+        <Image
+          src="/assets/img/ArrowRight.png"
+          alt=""
+          width={20}
+          height={20}
+          className="w-[10px] sm:w-[16px]"
+        />
       </div>
     </button>
   ),
   autoplay: false,
   indicators: false,
+  defaultIndex: 5
 };
 
-
 type imageInfo = {
-  url: string,
-  alt: string,
-}
+  url: string;
+  alt: string;
+};
 
 type SessionInfoType = {
   title: string;
   subtitle: string;
   path: string;
-  verticalImage: boolean,
+  verticalImage: boolean;
   images: imageInfo[];
 };
 
@@ -63,37 +77,37 @@ const sessionInfo: SessionInfoType[] = [
     images: [
       {
         url: "/images/moda/ms01.jpg",
-        alt: "Moda subte 01"
+        alt: "Moda subte 01",
       },
       {
         url: "/images/moda/ms02.jpg",
-        alt: "Moda subte 02"
+        alt: "Moda subte 02",
       },
       {
         url: "/images/moda/ms03.jpg",
-        alt: "Moda subte 03"
+        alt: "Moda subte 03",
       },
       {
         url: "/images/moda/ms04.jpg",
-        alt: "Moda subte 04"
+        alt: "Moda subte 04",
       },
       {
         url: "/images/moda/ms05.jpg",
-        alt: "Moda subte 05"
+        alt: "Moda subte 05",
       },
       {
         url: "/images/moda/ms06.jpg",
-        alt: "Moda subte 06"
+        alt: "Moda subte 06",
       },
       {
         url: "/images/moda/ms07.jpg",
-        alt: "Moda subte 07"
+        alt: "Moda subte 07",
       },
       {
         url: "/images/moda/ms08.jpg",
-        alt: "Moda subte 08"
-      }
-    ]
+        alt: "Moda subte 08",
+      },
+    ],
   },
   {
     title: "AURA Gin",
@@ -103,35 +117,35 @@ const sessionInfo: SessionInfoType[] = [
     images: [
       {
         url: "/images/aura/aura01.jpg",
-        alt: "Aura gin"
+        alt: "Aura gin",
       },
       {
         url: "/images/aura/aura02.jpg",
-        alt: "Aura gin 02"
+        alt: "Aura gin 02",
       },
       {
         url: "/images/aura/aura03.jpg",
-        alt: "Aura gin 03"
+        alt: "Aura gin 03",
       },
       {
         url: "/images/aura/aura04.jpg",
-        alt: "Aura gin 04"
+        alt: "Aura gin 04",
       },
       {
         url: "/images/aura/aura05.jpg",
-        alt: "Aura gin 05"
+        alt: "Aura gin 05",
       },
       {
         url: "/images/aura/aura06.jpg",
-        alt: "Aura gin 06"
+        alt: "Aura gin 06",
       },
       {
         url: "/images/aura/aura07.jpg",
-        alt: "Aura gin 07"
+        alt: "Aura gin 07",
       },
       {
         url: "/images/aura/aura08.jpg",
-        alt: "Aura gin 08"
+        alt: "Aura gin 08",
       },
     ],
   },
@@ -143,37 +157,37 @@ const sessionInfo: SessionInfoType[] = [
     images: [
       {
         url: "/images/pasado-pisado/pp01.jpg",
-        alt: "Pasado pisado"
+        alt: "Pasado pisado",
       },
       {
         url: "/images/pasado-pisado/pp02.jpg",
-        alt: "Pasado pisado 02"
+        alt: "Pasado pisado 02",
       },
       {
         url: "/images/pasado-pisado/pp03.jpg",
-        alt: "Pasado pisado 03"
+        alt: "Pasado pisado 03",
       },
       {
         url: "/images/pasado-pisado/pp04.jpg",
-        alt: "Pasado pisado 04"
+        alt: "Pasado pisado 04",
       },
       {
         url: "/images/pasado-pisado/pp05.jpg",
-        alt: "Pasado pisado 05"
+        alt: "Pasado pisado 05",
       },
       {
         url: "/images/pasado-pisado/pp06.jpg",
-        alt: "Pasado pisado 06"
+        alt: "Pasado pisado 06",
       },
       {
         url: "/images/pasado-pisado/pp07.jpg",
-        alt: "Pasado pisado 07"
+        alt: "Pasado pisado 07",
       },
       {
         url: "/images/pasado-pisado/pp08.jpg",
-        alt: "Pasado pisado 08"
+        alt: "Pasado pisado 08",
       },
-    ]
+    ],
   },
   {
     title: "Jettatore - Obra teatral",
@@ -183,37 +197,37 @@ const sessionInfo: SessionInfoType[] = [
     images: [
       {
         url: "/images/jettatore/jt01.jpg",
-        alt: "Jettatore 01"
+        alt: "Jettatore 01",
       },
       {
         url: "/images/jettatore/jt02.jpg",
-        alt: "Jettatore 02"
+        alt: "Jettatore 02",
       },
       {
         url: "/images/jettatore/jt03.jpg",
-        alt: "Jettatore 03"
+        alt: "Jettatore 03",
       },
       {
         url: "/images/jettatore/jt04.jpg",
-        alt: "Jettatore 04"
+        alt: "Jettatore 04",
       },
       {
         url: "/images/jettatore/jt05.jpg",
-        alt: "Jettatore 05"
+        alt: "Jettatore 05",
       },
       {
         url: "/images/jettatore/jt06.jpg",
-        alt: "Jettatore 06"
+        alt: "Jettatore 06",
       },
       {
         url: "/images/jettatore/jt07.jpg",
-        alt: "Jettatore 07"
+        alt: "Jettatore 07",
       },
       {
         url: "/images/jettatore/jt08.jpg",
-        alt: "Jettatore 08"
+        alt: "Jettatore 08",
       },
-    ]
+    ],
   },
   {
     title: "One - Bar",
@@ -223,37 +237,37 @@ const sessionInfo: SessionInfoType[] = [
     images: [
       {
         url: "/images/one-bar/ob01.jpg",
-        alt: "One Bar"
+        alt: "One Bar",
       },
       {
         url: "/images/one-bar/ob02.jpg",
-        alt: "One Bar 02"
+        alt: "One Bar 02",
       },
       {
         url: "/images/one-bar/ob03.jpg",
-        alt: "One Bar 03"
+        alt: "One Bar 03",
       },
       {
         url: "/images/one-bar/ob04.jpg",
-        alt: "One Bar 04"
+        alt: "One Bar 04",
       },
       {
         url: "/images/one-bar/ob05.jpg",
-        alt: "One Bar 05"
+        alt: "One Bar 05",
       },
       {
         url: "/images/one-bar/ob06.jpg",
-        alt: "One Bar 06"
+        alt: "One Bar 06",
       },
       {
         url: "/images/one-bar/ob07.jpg",
-        alt: "One Bar 07"
+        alt: "One Bar 07",
       },
       {
         url: "/images/one-bar/ob08.jpg",
-        alt: "One Bar 08"
+        alt: "One Bar 08",
       },
-    ]
+    ],
   },
   {
     title: "Más que uno",
@@ -263,37 +277,37 @@ const sessionInfo: SessionInfoType[] = [
     images: [
       {
         url: "/images/mas-que-uno/mu01.jpg",
-        alt: "Mas que uno"
+        alt: "Mas que uno",
       },
       {
         url: "/images/mas-que-uno/mu02.jpg",
-        alt: "Mas que uno 02"
+        alt: "Mas que uno 02",
       },
       {
         url: "/images/mas-que-uno/mu03.jpg",
-        alt: "Mas que uno 03"
+        alt: "Mas que uno 03",
       },
       {
         url: "/images/mas-que-uno/mu04.jpg",
-        alt: "Mas que uno 04"
+        alt: "Mas que uno 04",
       },
       {
         url: "/images/mas-que-uno/mu05.jpg",
-        alt: "Mas que uno 05"
+        alt: "Mas que uno 05",
       },
       {
         url: "/images/mas-que-uno/mu06.jpg",
-        alt: "Mas que uno 06"
+        alt: "Mas que uno 06",
       },
       {
         url: "/images/mas-que-uno/mu07.jpg",
-        alt: "Mas que uno 07"
+        alt: "Mas que uno 07",
       },
       {
         url: "/images/mas-que-uno/mu08.jpg",
-        alt: "Mas que uno 08"
+        alt: "Mas que uno 08",
       },
-    ]
+    ],
   },
   {
     title: "Cobertura de evento",
@@ -303,50 +317,91 @@ const sessionInfo: SessionInfoType[] = [
     images: [
       {
         url: "/images/toch/to01.jpg",
-        alt: "TOCH 01"
+        alt: "TOCH 01",
       },
       {
         url: "/images/toch/to02.jpg",
-        alt: "TOCH 02"
+        alt: "TOCH 02",
       },
       {
         url: "/images/toch/to03.jpg",
-        alt: "TOCH 03"
+        alt: "TOCH 03",
       },
       {
         url: "/images/toch/to04.jpg",
-        alt: "TOCH 04"
+        alt: "TOCH 04",
       },
       {
         url: "/images/toch/to05.jpg",
-        alt: "TOCH 05"
+        alt: "TOCH 05",
       },
       {
         url: "/images/toch/to06.jpg",
-        alt: "TOCH 06"
+        alt: "TOCH 06",
       },
       {
         url: "/images/toch/to07.jpg",
-        alt: "TOCH 07"
+        alt: "TOCH 07",
       },
       {
         url: "/images/toch/to08.jpg",
-        alt: "TOCH 08"
+        alt: "TOCH 08",
       },
-    ]
-  }
+    ],
+  },
 ];
-//<Image src={image.url} className={`object-cover ${idx === 2 || idx === 7 ? "object-left" : "object-center"}`} fill alt={image.alt} 
+//<Image src={image.url} className={`object-cover ${idx === 2 || idx === 7 ? "object-left" : "object-center"}`} fill alt={image.alt}
 const SessionPage = ({ params }: { params: { session: string } }) => {
   const path = params.session;
   const session = sessionInfo.find((session) => session.path === path);
+  const sessionsLength:number = sessionInfo.length
+  const currIndex: number = getCurrentIndex(sessionInfo);
+  const urlSessions: string[] = sessionInfo.map((session) => session.path);
+  const previousUrl:string = getPreviousUrl();
+  const nextUrl: string = getNextUrl();
+
+  function getPreviousUrl(): string {
+    let goTo: string = "";
+    if (currIndex === 0) {
+      goTo = sessionInfo[sessionsLength - 1].path
+    } else {
+      goTo = sessionInfo[currIndex - 1].path
+    }
+    return "/fotografia/" + goTo;
+  }
+
+  function getNextUrl(): string {
+    let goTo: string = "";
+    if (currIndex === (sessionsLength - 1)) {
+      goTo = sessionInfo[0].path;
+    } else {
+      goTo = sessionInfo[currIndex + 1].path;
+    } 
+
+    return "/fotografia/" + goTo;
+  }
+
+  function getCurrentIndex(sessions: SessionInfoType[]): number {
+    let index: number = 0;
+
+    for (let i = 0; i < sessions.length; i++) {
+      if (sessions[i].path === path) {
+        index = i;
+      }
+    }
+
+    return index;
+  }
+
+  
+
+  console.log(urlSessions)
   const [showModal, setShowModal] = useState(false);
 
   if (session) {
     return (
       <div className="bg-fondoNegro">
-        <section className=" pt-32 xl:max-w-screen-xl mx-4">
-
+        <section className=" pt-32 xl:max-w-screen-xl mx-4 mx-auto">
           <div className="flex justify-between">
             <div className="text-fondoBlanco">
               <h1 className="text-3xl md:text-4xl xl:text-5xl merriwather font-bold">
@@ -365,8 +420,13 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
             </div>
           </div>
 
-          <div className={`${session.verticalImage ? "session-container-vertical" : "session-container-horizontal"} pb-20 grid`}>
-
+          <div
+            className={`${
+              session.verticalImage
+                ? "session-container-vertical"
+                : "session-container-horizontal"
+            } pb-8 grid`}
+          >
             {session.images.map((image, idx) => {
               return (
                 <div
@@ -374,12 +434,25 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
                   className={`image-container ${idx}`}
                   onClick={() => setShowModal(true)}
                 >
-                  <div className={`relative ${session.verticalImage ? "h-[350px] md:h-[430px]" : "h-[280px] md:h-[315px]"} hover:cursor-pointer`}>
-                  <Image src={image.url} className={`object-cover`} fill alt={image.alt} 
-                    style={{objectPosition: `${idx === 2 || idx===7 ? "20% 50%" : "50% 50%"}`}}
-                  />
+                  <div
+                    className={`relative ${
+                      session.verticalImage
+                        ? "h-[350px] md:h-[430px]"
+                        : "h-[280px] md:h-[315px]"
+                    } hover:cursor-pointer`}
+                  >
+                    <Image
+                      src={image.url}
+                      className={`object-cover`}
+                      fill
+                      alt={image.alt}
+                      style={{
+                        objectPosition: `${
+                          idx === 2 || idx === 7 ? "20% 50%" : "50% 50%"
+                        }`,
+                      }}
+                    />
                   </div>
-
                 </div>
               );
             })}
@@ -393,16 +466,16 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
                 {/*content*/}
                 <div className="relative flex flex-col w-full outline-none focus:outline-none">
                   {/*header*/}
-                  
-                    <button
-                      className="absolute z-50 end-0 p-4 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                      onClick={() => setShowModal(false)}
-                    >
-                                      <div className="p-3 bg-slider hover:bg-sliderHover rounded-full">
-                  <CloseButton />
-                </div>
-                    </button>
-                  
+
+                  <button
+                    className="absolute z-50 end-0 p-4 md:mr-4 lg:mr-8 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    onClick={() => setShowModal(false)}
+                  >
+                    <div className="p-3 lg:p-4 bg-slider hover:bg-sliderHover rounded-full">
+                      <CloseButton />
+                    </div>
+                  </button>
+
                   <div className="">
                     <section className="slider-container backdrop-blur-xl bg-black/15">
                       <Slide {...properties}>
@@ -415,7 +488,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
                               <Image
                                 src={image.url}
                                 fill={true}
-                                className="max-w-screen-xl mx-auto h-[300px] py-5 object-contain"
+                                className="max-w-screen-xl mx-auto md:px-4 py-4 object-contain"
                                 alt={image.alt}
                               />
                             </div>
@@ -424,13 +497,17 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
                       </Slide>
                     </section>
                   </div>
-                 
                 </div>
               </div>
             </div>
             <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
           </>
         ) : null}
+        <section className="flex flex-row justify-between max-w-screen-xl mx-auto text-principal pb-8">
+          <div className="hover:cursor-pointer"><Link href={previousUrl}>Anterior</Link></div>
+          <div className="hover:cursor-pointer"><Link href="/servicios" className="">Volver</Link></div>
+          <div className="hover:cursor-pointer"><Link href={nextUrl}>Siguiente</Link></div>
+        </section>
       </div>
     );
   }
