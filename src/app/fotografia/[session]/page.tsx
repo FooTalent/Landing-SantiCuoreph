@@ -15,8 +15,7 @@ import CloseButton from "./close-btn";
 import { useState } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import { redirect } from "next/navigation";
-import { NextURL } from "next/dist/server/web/next-url";
+import flecha from "../../../../public/images/arrow.png";
 
 const buttonStyle = {
   width: "50px",
@@ -32,7 +31,7 @@ const properties = {
           alt=""
           width={20}
           height={20}
-          className="sm:w-[16px]"
+          className="w-[10px] sm:w-[16px]"
         />
       </div>
     </button>
@@ -52,7 +51,8 @@ const properties = {
   ),
   autoplay: false,
   indicators: false,
-  defaultIndex: 5
+  defaultIndex: 5,
+  transitionDuration: 500
 };
 
 type imageInfo = {
@@ -350,7 +350,7 @@ const sessionInfo: SessionInfoType[] = [
     ],
   },
 ];
-//<Image src={image.url} className={`object-cover ${idx === 2 || idx === 7 ? "object-left" : "object-center"}`} fill alt={image.alt}
+
 const SessionPage = ({ params }: { params: { session: string } }) => {
   const path = params.session;
   const session = sessionInfo.find((session) => session.path === path);
@@ -401,15 +401,15 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
   if (session) {
     return (
       <div className="bg-fondoNegro">
-        <section className=" pt-32 xl:max-w-screen-xl mx-4 mx-auto">
+        <section className="pt-20 xl:pt-32 xl:max-w-screen-xl mx-4 xl:mx-auto">
           <div className="flex justify-between">
             <div className="text-fondoBlanco">
-              <h1 className="text-3xl md:text-4xl xl:text-5xl merriwather font-bold">
+              <h2 className="text-2xl md:text-4xl xl:text-5xl merriwather font-bold">
                 {session.subtitle}
-              </h1>
-              <h2 className="text-2xl md:text-3xl pt-1 pb-4 xl:pt-3 xl:pb-6 merriwather font-semibold italic">
-                {session.title}
               </h2>
+              <h3 className="text-xl md:text-3xl pt-1 pb-4 xl:pt-3 xl:pb-6 merriwather font-semibold italic">
+                {session.title}
+              </h3>
             </div>
             <div>
               <Link href="/servicios">
@@ -439,7 +439,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
                       session.verticalImage
                         ? "h-[350px] md:h-[430px]"
                         : "h-[280px] md:h-[315px]"
-                    } hover:cursor-pointer`}
+                    } hover:cursor-zoom-in`}
                   >
                     <Image
                       src={image.url}
@@ -503,10 +503,13 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
             <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
           </>
         ) : null}
-        <section className="flex flex-row justify-between max-w-screen-xl mx-auto text-principal pb-8">
+        <section className="flex flex-row justify-between max-w-screen-xl mx-4 xl:mx-auto text-principal pb-8 text-base md:text-xl font-bold">
           <div className="hover:cursor-pointer"><Link href={previousUrl}>Anterior</Link></div>
           <div className="hover:cursor-pointer"><Link href="/servicios" className="">Volver</Link></div>
-          <div className="hover:cursor-pointer"><Link href={nextUrl}>Siguiente</Link></div>
+          <div className="hover:cursor-pointer"><Link href={nextUrl} className="flex gap-3 items-center">
+            <Image src={flecha} alt="Rigth arrow" className="invert md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-[40px]" />
+            Siguiente
+            </Link></div>
         </section>
       </div>
     );

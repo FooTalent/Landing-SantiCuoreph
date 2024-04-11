@@ -27,8 +27,8 @@ const ServicesPage = () => {
             justify-between items-center cursor-pointer transition-all duration-200 bg-black/50"
               >
                 <div className="md:group-hover:pr-10  w-full  transition-all duration-300">
-                  <h3 className="text-2xl sm:text-3xl md:mb-4 italic">Retrato Artístico</h3>
-                  <h2 className="text-md sm:text-2xl font-thin">Moda subte</h2>
+                  <h3 className="text-2xl sm:text-3xl md:mb-4 font-bold">Retrato Artístico</h3>
+                  <h2 className="text-md sm:text-2xl font-thin italic">Moda subte</h2>
                 </div>
                 <Image
                   src={flecha}
@@ -52,10 +52,10 @@ const ServicesPage = () => {
             >
               <div className="texto_image bottom-0 rounded-b-2xl absolute z-30 w-full h-1/3 MD:h-40 flex flex-row text-center justify-between px-4 sm:px-10 items-center cursor-pointer transition-all duration-200 bg-black/50">
                 <div className="md:group-hover:pr-5 w-full  transition-all duration-300">
-                <h3 className="text-2xl md:text-3xl md:pb-2 lg:mb-4 italic">
+                <h3 className="text-2xl md:text-3xl md:pb-2 lg:mb-4 font-bold">
                     Fotografía comercial
                   </h3>
-                  <h2 className="text-md md:text-2xl font-thin">AURA Gin</h2>
+                  <h2 className="text-md md:text-2xl font-thin italic">AURA Gin</h2>
                 </div>
                 <Image
                   src={flecha}
@@ -79,10 +79,10 @@ const ServicesPage = () => {
             >
               <div className="texto_image bottom-0 rounded-b-2xl absolute z-30 px-10 w-full h-1/3 md:h-40 flex  flex-row text-center justify-between px-4 sm:px-10 items-center cursor-pointer transition-all duration-200 bg-black/50">
                 <div className="md:group-hover:pr-10  w-full  transition-all duration-300">
-                  <h3 className="text-2xl md:text-3xl md:mb-4 italic">
+                  <h3 className="text-2xl md:text-3xl md:mb-4 font-bold">
                     Fotografía artística
                   </h3>
-                  <h2 className="text-md md:text-2xl font-thin">Pasado Pisado</h2>
+                  <h2 className="text-md md:text-2xl font-thin italic">Pasado Pisado</h2>
                 </div>
                 <Image
                   src={flecha}
@@ -106,10 +106,10 @@ const ServicesPage = () => {
           >
             <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-1/2 md:h-1/3 flex flex-row text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
               <div className="md:group-hover:pr-10  w-full  transition-all duration-300">
-                <h3 className="text-2xl md:text-3xl md:mb-4 italic">
+                <h3 className="text-2xl md:text-3xl md:mb-4 font-bold">
                   Evento artístico
                 </h3>
-                <h2 className="text-md md:text-2xl font-thin">Jettatore - Obra teatral</h2>
+                <h2 className="text-md md:text-2xl font-thin italic">Jettatore - Obra teatral</h2>
               </div>
               <Image
                 src={flecha}
@@ -131,10 +131,10 @@ const ServicesPage = () => {
           >
             <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-1/3 md:h-40 flex  flex-row text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
               <div className="md:group-hover:pr-5  w-full  transition-all duration-300">
-                <h3 className="text-2xl md:text-3xl md:mb-4 italic">
+                <h3 className="text-2xl md:text-3xl md:mb-4 font-bold">
                   Evento social
                 </h3>
-                <h2 className="text-md md:text-2xl  font-thin">One-bar</h2>
+                <h2 className="text-md md:text-2xl  font-thin italic">One-bar</h2>
               </div>
               <Image
                 src={flecha}
@@ -155,10 +155,10 @@ const ServicesPage = () => {
           >
             <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-1/3 md:h-40 flex flex-row text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
               <div className="md:group-hover:pr-3  w-full  transition-all duration-300">
-                <h3 className="text-2xl md:text-3xl md:mb-4 italic">
+                <h3 className="text-2xl md:text-3xl md:mb-4 font-bold">
                   Evento artístico
                 </h3>
-                <h2 className="text-md md:text-2xl font-thin">Más que uno: 10 años</h2>
+                <h2 className="text-md md:text-2xl font-thin italic">Más que uno: 10 años</h2>
               </div>
               <Image
                 src={flecha}
@@ -179,10 +179,10 @@ const ServicesPage = () => {
         >
           <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-[69px] sm:h-[80px] md:h-40 flex flex-row gap-2 text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
             <div className="md:group-hover:pr-10  w-full  transition-all duration-300">
-              <h3 className="text-2xl md:text-3xl md:mb-4 italic">
+              <h3 className="text-2xl md:text-3xl md:mb-4 font-bold">
                 Evento artístico
               </h3>
-              <h2 className="text-md md:text-2xl font-thin">TOCH en Camping Palermo</h2>
+              <h2 className="text-md md:text-2xl font-thin italic">TOCH en Camping Palermo</h2>
             </div>
             <Image
               src={flecha}
