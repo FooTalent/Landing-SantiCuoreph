@@ -4,10 +4,9 @@ import React from "react";
 import CustomButton from "../Componentes/CustomButton";
 import Images from "./components/Images";
 const page = () => {
- 
   return (
     <>
-      <section className="xl:w-[1236px] mx-4  pb-[24px] text-[24px] xl:mx-auto pt-14 xl:pt-0   border-b-[2px] border-black text-fondoNegro md:text-3xl xl:text-[46px]  mb-[1em]">
+      <section className="xl:w-[1236px] px-10 md:px-0 mx-4  pb-[24px] text-[24px] xl:mx-auto pt-8 xl:pt-0   border-b-[2px] border-black text-fondoNegro md:text-3xl xl:text-[46px]  mb-[1em]">
         <h1 className="pt-[2.4em]  font-semibold ">Contacto</h1>
       </section>
       <section
@@ -17,7 +16,8 @@ const page = () => {
         <div className="absolute  -z-10 top-0 bg-black/30 h-full w-full rounded-2xl"></div>
         <div className="xl:flex xl:flex-row flex-col flex z-20  px-5 xl:px-40 ">
           <h3 className="text-[16px] w-full pb-10 xl:pb-0 font-merriwather  font-thin  xl:font-bold text-center xl:text-left xl:text-[36px] my-auto  text-white">
-            Contenido fotográfico <br className="hidden xl:block" /> y audiovisual de calidad,
+            Contenido fotográfico <br className="hidden xl:block" /> y
+            audiovisual de calidad,
             <br className="hidden xl:block" /> a un mensaje de distancia
           </h3>
           <img
@@ -73,7 +73,7 @@ const page = () => {
               ¡Contactame a través de mis redes!
             </h3>
             <div className="flex text-3xl pb-10 xl:pb-0 xl:space-x-16 font-bold justify-evenly">
-             <Images />
+              <Images />
             </div>
           </div>
         </div>
