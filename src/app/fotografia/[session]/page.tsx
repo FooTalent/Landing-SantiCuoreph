@@ -346,6 +346,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
     return (
       <div className="bg-fondoNegro">
         <section className=" pt-32 xl:max-w-screen-xl mx-4">
+
           <div className="flex justify-between">
             <div className="text-fondoBlanco">
               <h1 className="text-3xl md:text-4xl xl:text-5xl merriwather font-bold">
@@ -365,6 +366,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
           </div>
 
           <div className={`${session.verticalImage ? "session-container-vertical" : "session-container-horizontal"} pb-20 grid`}>
+
             {session.images.map((image, idx) => {
               return (
                 <div
@@ -377,6 +379,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
                     style={{objectPosition: `${idx === 2 || idx===7 ? "20% 50%" : "50% 50%"}`}}
                   />
                   </div>
+
                 </div>
               );
             })}
