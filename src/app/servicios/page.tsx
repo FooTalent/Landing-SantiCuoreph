@@ -193,7 +193,8 @@ const ServicesPage = () => {
           <Image
             src={img07}
             alt="asds"
-            className="object-cover rounded-b-2xl h-[138px] sm:h-[200px] md:h-[300px] lg:h-[434px] object-top rounded-2xl group-hover:brightness-50 transition-all duration-300"
+            className="object-cover rounded-b-2xl h-[138px] sm:h-[200px] md:h-[300px] lg:h-[434px] rounded-2xl group-hover:brightness-50 transition-all duration-300"
+            style={{objectPosition: "50% 40%"}}
           />
         </Link>
       </section>
