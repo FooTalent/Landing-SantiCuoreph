@@ -13,9 +13,9 @@ const Footer = () => {
         <a href='' className='p-2.5'><Whatsapp size={40} /></a>
         <hr className="min-w-[500px] hidden lg:block"></hr>
         </picture>
-        <p>Prohibida la reproducción total o parcial de este sitio y su contenido.</p>
-        <p>Sitio web diseñado y desarrollado por Foo Talent Group.</p>
-        <p><b>Santiago García. 2024.</b> Buenos Aires, Argentina.</p>
+        <p className="text-sm lg:text-base">Prohibida la reproducción total o parcial de este sitio y su contenido.</p>
+        <p className="text-sm lg:text-base">Sitio web diseñado y desarrollado por Foo Talent Group.</p>
+        <p className="text-sm lg:text-base"><b>Santiago García. 2024.</b> Buenos Aires, Argentina.</p>
        </footer>
 
        </> 
