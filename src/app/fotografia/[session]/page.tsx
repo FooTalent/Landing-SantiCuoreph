@@ -50,6 +50,7 @@ type SessionInfoType = {
   title: string;
   subtitle: string;
   path: string;
+  verticalImage: boolean,
   images: imageInfo[];
 };
 
@@ -58,6 +59,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "Moda subte",
     subtitle: "Retrato artístico",
     path: "moda-subte",
+    verticalImage: true,
     images: [
       {
         url: "/images/moda/ms01.jpg",
@@ -97,6 +99,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "AURA Gin",
     subtitle: "Fotografía comercial",
     path: "aura-gin",
+    verticalImage: true,
     images: [
       {
         url: "/images/aura/aura01.jpg",
@@ -136,6 +139,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "Pasado Pisado",
     subtitle: "Fotografía artística",
     path: "pasado-pisado",
+    verticalImage: false,
     images: [
       {
         url: "/images/pasado-pisado/pp01.jpg",
@@ -175,6 +179,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "Jettatore - Obra teatral",
     subtitle: "Cobertura de evento artístico",
     path: "jettatore",
+    verticalImage: false,
     images: [
       {
         url: "/images/jettatore/jt01.jpg",
@@ -214,6 +219,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "One - Bar",
     subtitle: "Cobertura de evento social",
     path: "one-bar",
+    verticalImage: true,
     images: [
       {
         url: "/images/one-bar/ob01.jpg",
@@ -253,6 +259,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "Más que uno",
     subtitle: "Cobertura de evento artístico",
     path: "mas-que-uno",
+    verticalImage: false,
     images: [
       {
         url: "/images/mas-que-uno/mu01.jpg",
@@ -292,6 +299,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "Cobertura de evento",
     subtitle: "TOCH en Camping Palermo",
     path: "toch",
+    verticalImage: false,
     images: [
       {
         url: "/images/toch/to01.jpg",
@@ -328,7 +336,7 @@ const sessionInfo: SessionInfoType[] = [
     ]
   }
 ];
-
+//<Image src={image.url} className={`object-cover ${idx === 2 || idx === 7 ? "object-left" : "object-center"}`} fill alt={image.alt} 
 const SessionPage = ({ params }: { params: { session: string } }) => {
   const path = params.session;
   const session = sessionInfo.find((session) => session.path === path);
@@ -337,34 +345,41 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
   if (session) {
     return (
       <div className="bg-fondoNegro">
-        <section className=" pt-32 max-w-screen-xl mx-auto">
+        <section className=" pt-32 xl:max-w-screen-xl mx-4">
+
           <div className="flex justify-between">
             <div className="text-fondoBlanco">
-              <h1 className="text-5xl merriwather italic font-bold">
-                {session.title}
-              </h1>
-              <h2 className="text-3xl py-8 merriwather font-semibold">
+              <h1 className="text-3xl md:text-4xl xl:text-5xl merriwather font-bold">
                 {session.subtitle}
+              </h1>
+              <h2 className="text-2xl md:text-3xl pt-1 pb-4 xl:pt-3 xl:pb-6 merriwather font-semibold italic">
+                {session.title}
               </h2>
             </div>
             <div>
               <Link href="/servicios">
-                <div className="p-3 hover:rounded-md hover:bg-fondoGris">
+                <div className="p-3 bg-fondoGris rounded-md md:hover:rounded-md md:hover:bg-fondoGris">
                   <CloseButton />
                 </div>
               </Link>
             </div>
           </div>
 
-          <div className="session-container min-w-[320px] pb-20">
+          <div className={`${session.verticalImage ? "session-container-vertical" : "session-container-horizontal"} pb-20 grid`}>
+
             {session.images.map((image, idx) => {
               return (
                 <div
                   key={idx}
-                  className="image-container max-w-fit"
+                  className={`image-container ${idx}`}
                   onClick={() => setShowModal(true)}
                 >
-                  <Image src={image.url} width={500} height={1000} alt={image.alt} className="max-w-[320px] sm:max-w-fit" />
+                  <div className={`relative ${session.verticalImage ? "h-[350px] md:h-[430px]" : "h-[280px] md:h-[315px]"} hover:cursor-pointer`}>
+                  <Image src={image.url} className={`object-cover`} fill alt={image.alt} 
+                    style={{objectPosition: `${idx === 2 || idx===7 ? "20% 50%" : "50% 50%"}`}}
+                  />
+                  </div>
+
                 </div>
               );
             })}
