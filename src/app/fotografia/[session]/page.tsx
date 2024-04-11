@@ -50,6 +50,7 @@ type SessionInfoType = {
   title: string;
   subtitle: string;
   path: string;
+  verticalImage: boolean,
   images: imageInfo[];
 };
 
@@ -58,6 +59,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "Moda subte",
     subtitle: "Retrato artístico",
     path: "moda-subte",
+    verticalImage: true,
     images: [
       {
         url: "/images/moda/ms01.jpg",
@@ -97,6 +99,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "AURA Gin",
     subtitle: "Fotografía comercial",
     path: "aura-gin",
+    verticalImage: true,
     images: [
       {
         url: "/images/aura/aura01.jpg",
@@ -136,6 +139,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "Pasado Pisado",
     subtitle: "Fotografía artística",
     path: "pasado-pisado",
+    verticalImage: false,
     images: [
       {
         url: "/images/pasado-pisado/pp01.jpg",
@@ -175,6 +179,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "Jettatore - Obra teatral",
     subtitle: "Cobertura de evento artístico",
     path: "jettatore",
+    verticalImage: false,
     images: [
       {
         url: "/images/jettatore/jt01.jpg",
@@ -214,6 +219,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "One - Bar",
     subtitle: "Cobertura de evento social",
     path: "one-bar",
+    verticalImage: true,
     images: [
       {
         url: "/images/one-bar/ob01.jpg",
@@ -253,6 +259,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "Más que uno",
     subtitle: "Cobertura de evento artístico",
     path: "mas-que-uno",
+    verticalImage: false,
     images: [
       {
         url: "/images/mas-que-uno/mu01.jpg",
@@ -292,6 +299,7 @@ const sessionInfo: SessionInfoType[] = [
     title: "Cobertura de evento",
     subtitle: "TOCH en Camping Palermo",
     path: "toch",
+    verticalImage: false,
     images: [
       {
         url: "/images/toch/to01.jpg",
@@ -328,7 +336,7 @@ const sessionInfo: SessionInfoType[] = [
     ]
   }
 ];
-
+//<Image src={image.url} className={`object-cover ${idx === 2 || idx === 7 ? "object-left" : "object-center"}`} fill alt={image.alt} 
 const SessionPage = ({ params }: { params: { session: string } }) => {
   const path = params.session;
   const session = sessionInfo.find((session) => session.path === path);
@@ -356,16 +364,18 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
             </div>
           </div>
 
-          <div className="session-container pb-20 grid">
+          <div className={`${session.verticalImage ? "session-container-vertical" : "session-container-horizontal"} pb-20 grid`}>
             {session.images.map((image, idx) => {
               return (
                 <div
                   key={idx}
-                  className="image-container "
+                  className={`image-container ${idx}`}
                   onClick={() => setShowModal(true)}
                 >
-                  <div className="relative h-[100px]">
-                  <Image src={image.url} objectFit="cover" fill alt={image.alt} />
+                  <div className={`relative ${session.verticalImage ? "h-[350px] md:h-[430px]" : "h-[200px] xl:h-[315px]"}`}>
+                  <Image src={image.url} className={`object-cover`} fill alt={image.alt} 
+                    style={{objectPosition: `${idx === 2 || idx===7 ? "20% 50%" : "50% 50%"}`}}
+                  />
                   </div>
                 </div>
               );
