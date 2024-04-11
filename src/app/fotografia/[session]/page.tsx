@@ -52,6 +52,7 @@ const properties = {
   ),
   autoplay: false,
   indicators: false,
+  defaultIndex: 5
 };
 
 type imageInfo = {
@@ -400,7 +401,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
   if (session) {
     return (
       <div className="bg-fondoNegro">
-        <section className=" pt-32 xl:max-w-screen-xl mx-4">
+        <section className=" pt-32 xl:max-w-screen-xl mx-4 mx-auto">
           <div className="flex justify-between">
             <div className="text-fondoBlanco">
               <h1 className="text-3xl md:text-4xl xl:text-5xl merriwather font-bold">
@@ -424,7 +425,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
               session.verticalImage
                 ? "session-container-vertical"
                 : "session-container-horizontal"
-            } pb-20 grid`}
+            } pb-8 grid`}
           >
             {session.images.map((image, idx) => {
               return (
@@ -487,7 +488,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
                               <Image
                                 src={image.url}
                                 fill={true}
-                                className="max-w-screen-xl mx-auto md:px-4 object-contain"
+                                className="max-w-screen-xl mx-auto md:px-4 py-4 object-contain"
                                 alt={image.alt}
                               />
                             </div>
@@ -502,9 +503,9 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
             <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
           </>
         ) : null}
-        <section className="flex flex-row justify-between">
+        <section className="flex flex-row justify-between max-w-screen-xl mx-auto text-principal pb-8">
           <div className="hover:cursor-pointer"><Link href={previousUrl}>Anterior</Link></div>
-          <div className="hover:cursor-pointer"><Link href="/servicios">Volver</Link></div>
+          <div className="hover:cursor-pointer"><Link href="/servicios" className="">Volver</Link></div>
           <div className="hover:cursor-pointer"><Link href={nextUrl}>Siguiente</Link></div>
         </section>
       </div>
