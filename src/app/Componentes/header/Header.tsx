@@ -152,7 +152,7 @@ const Header = () => {
               </a>
             </div>
             <div className="hidden sm:flex grow justify-end items-center gap-10">
-              <a href="" target="_blank">
+              <a href="https://api.whatsapp.com/send/?phone=5491153748531&text=%C2%A1Hola%2C+Santi%21+Estoy+interesado+en+tus+servicios.&type=phone_number&app_absent=0" target="_blank">
                 <Whatsapp size={28} />
               </a>
             </div>
@@ -201,7 +201,7 @@ const Header = () => {
                 >
                   <InstagramLogo size={26} />
                 </a>
-                <a href="" target="_blank">
+                <a href="https://api.whatsapp.com/send/?phone=5491153748531&text=%C2%A1Hola%2C+Santi%21+Estoy+interesado+en+tus+servicios.&type=phone_number&app_absent=0" target="_blank">
                   <Whatsapp size={28} />
                 </a>
               </div>
