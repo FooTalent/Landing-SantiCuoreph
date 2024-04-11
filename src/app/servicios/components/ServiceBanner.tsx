@@ -41,6 +41,7 @@ const ServiceBanner = () => {
                   height="0"
                   sizes="100%"
                   className="w-screen h-[250px] sm:h-[350px] xl:h-[400px] object-cover"
+                  style={{objectPosition: "50% 20%"}}
                   alt="Imagen 01"
                 />
                 <div className="absolute flex flex-col md:flex-row inset-0 px-4 xl:max-w-screen-xl xl:px-0 mx-auto items-center gap-10 sm:gap-16 md:gap-0 pt-16 sm:pt-24 md:pt-0 lg:flex-nowrap xl:gap-20">
