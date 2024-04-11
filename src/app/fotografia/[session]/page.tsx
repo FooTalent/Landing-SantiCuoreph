@@ -55,32 +55,43 @@ type SessionInfoType = {
 
 const sessionInfo: SessionInfoType[] = [
   {
-    title: "Lorena",
+    title: "Moda subte",
     subtitle: "Retrato artístico",
-    path: "lorena",
+    path: "moda-subte",
     images: [
       {
-        url: "/images/lorena/lor01.jpg",
-        alt: "Lorena"
+        url: "/images/moda/ms01.jpg",
+        alt: "Moda subte 01"
       },
       {
-        url: "/images/lorena/lor02.jpg",
-        alt: "Lorena 02"
+        url: "/images/moda/ms02.jpg",
+        alt: "Moda subte 02"
       },
       {
-        url: "/images/lorena/lor03.jpg",
-        alt: "Lorena 03"
+        url: "/images/moda/ms03.jpg",
+        alt: "Moda subte 03"
       },
       {
-        url: "/images/lorena/lor04.jpg",
-        alt: "Lorena 04"
+        url: "/images/moda/ms04.jpg",
+        alt: "Moda subte 04"
       },
       {
-        url: "/images/lorena/lor05.jpg",
-        alt: "Lorena 05"
+        url: "/images/moda/ms05.jpg",
+        alt: "Moda subte 05"
       },
-
-    ],
+      {
+        url: "/images/moda/ms06.jpg",
+        alt: "Moda subte 06"
+      },
+      {
+        url: "/images/moda/ms07.jpg",
+        alt: "Moda subte 07"
+      },
+      {
+        url: "/images/moda/ms08.jpg",
+        alt: "Moda subte 08"
+      }
+    ]
   },
   {
     title: "AURA Gin",
@@ -165,6 +176,10 @@ const sessionInfo: SessionInfoType[] = [
     subtitle: "Cobertura de evento artístico",
     path: "jettatore",
     images: [
+      {
+        url: "/images/jettatore/jt01.jpg",
+        alt: "Jettatore 01"
+      },
       {
         url: "/images/jettatore/jt02.jpg",
         alt: "Jettatore 02"
@@ -270,6 +285,45 @@ const sessionInfo: SessionInfoType[] = [
       {
         url: "/images/mas-que-uno/mu08.jpg",
         alt: "Mas que uno 08"
+      },
+    ]
+  },
+  {
+    title: "Cobertura de evento",
+    subtitle: "TOCH en Camping Palermo",
+    path: "toch",
+    images: [
+      {
+        url: "/images/toch/to01.jpg",
+        alt: "TOCH 01"
+      },
+      {
+        url: "/images/toch/to02.jpg",
+        alt: "TOCH 02"
+      },
+      {
+        url: "/images/toch/to03.jpg",
+        alt: "TOCH 03"
+      },
+      {
+        url: "/images/toch/to04.jpg",
+        alt: "TOCH 04"
+      },
+      {
+        url: "/images/toch/to05.jpg",
+        alt: "TOCH 05"
+      },
+      {
+        url: "/images/toch/to06.jpg",
+        alt: "TOCH 06"
+      },
+      {
+        url: "/images/toch/to07.jpg",
+        alt: "TOCH 07"
+      },
+      {
+        url: "/images/toch/to08.jpg",
+        alt: "TOCH 08"
       },
     ]
   }
