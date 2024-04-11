@@ -15,6 +15,8 @@ import CloseButton from "./close-btn";
 import { useState } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import { redirect } from "next/navigation";
+import { NextURL } from "next/dist/server/web/next-url";
 
 const buttonStyle = {
   width: "50px",
@@ -351,6 +353,48 @@ const sessionInfo: SessionInfoType[] = [
 const SessionPage = ({ params }: { params: { session: string } }) => {
   const path = params.session;
   const session = sessionInfo.find((session) => session.path === path);
+  const sessionsLength:number = sessionInfo.length
+  const currIndex: number = getCurrentIndex(sessionInfo);
+  const urlSessions: string[] = sessionInfo.map((session) => session.path);
+  const previousUrl:string = getPreviousUrl();
+  const nextUrl: string = getNextUrl();
+
+  function getPreviousUrl(): string {
+    let goTo: string = "";
+    if (currIndex === 0) {
+      goTo = sessionInfo[sessionsLength - 1].path
+    } else {
+      goTo = sessionInfo[currIndex - 1].path
+    }
+    return "/fotografia/" + goTo;
+  }
+
+  function getNextUrl(): string {
+    let goTo: string = "";
+    if (currIndex === (sessionsLength - 1)) {
+      goTo = sessionInfo[0].path;
+    } else {
+      goTo = sessionInfo[currIndex + 1].path;
+    } 
+
+    return "/fotografia/" + goTo;
+  }
+
+  function getCurrentIndex(sessions: SessionInfoType[]): number {
+    let index: number = 0;
+
+    for (let i = 0; i < sessions.length; i++) {
+      if (sessions[i].path === path) {
+        index = i;
+      }
+    }
+
+    return index;
+  }
+
+  
+
+  console.log(urlSessions)
   const [showModal, setShowModal] = useState(false);
 
   if (session) {
@@ -458,6 +502,11 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
             <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
           </>
         ) : null}
+        <section className="flex flex-row justify-between">
+          <div className="hover:cursor-pointer"><Link href={previousUrl}>Anterior</Link></div>
+          <div className="hover:cursor-pointer"><Link href="/servicios">Volver</Link></div>
+          <div className="hover:cursor-pointer"><Link href={nextUrl}>Siguiente</Link></div>
+        </section>
       </div>
     );
   }
