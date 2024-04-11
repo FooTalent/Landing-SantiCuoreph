@@ -7,7 +7,7 @@ const page = () => {
  
   return (
     <>
-      <section className="xl:w-[1236px] mx-4  pb-[24px] text-[24px] xl:mx-auto pt-14 xl:pt-0  xl:border-b-4 border-b border-black text-fondoNegro md:text-3xl xl:text-[46px]  mb-[1em]">
+      <section className="xl:w-[1236px] mx-4  pb-[24px] text-[24px] xl:mx-auto pt-14 xl:pt-0   border-b-[2.5px] border-black text-fondoNegro md:text-3xl xl:text-[46px]  mb-[1em]">
         <h1 className="pt-[2.4em]  font-semibold ">Contacto</h1>
       </section>
       <section
