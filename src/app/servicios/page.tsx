@@ -10,6 +10,7 @@ import img06 from "../../../public/images/services/photography/img06.jpg";
 import img07 from "../../../public/images/services/photography/img07.jpg";
 import flecha from "../Icon/Group.png";
 import Link from "next/link";
+import "./styles.css"
 
 const ServicesPage = () => {
   return (
@@ -23,12 +24,12 @@ const ServicesPage = () => {
               id="0"
             >
               <div
-                className="texto_image w-full absolute bottom-1/2 top-2/4  z-30 h-28 md:h-40 flex flex-row text-center px-4 sm:px-10
-            justify-between items-center cursor-pointer transition-all duration-200 bg-black/50"
+                className="w-full absolute bottom-1/2 top-2/4  z-30 h-28 md:h-40 flex flex-row text-center px-4 sm:px-10
+            justify-between items-center cursor-pointer transition-all duration-200 bg-black/50 cardBg"
               >
                 <div className="md:group-hover:pr-10  w-full  transition-all duration-300">
-                  <h3 className="text-2xl sm:text-3xl md:mb-4 italic">Retrato Artístico</h3>
-                  <h2 className="text-md sm:text-2xl font-thin">Moda subte</h2>
+                  <h3 className="text-2xl sm:text-3xl md:mb-4 font-bold">Retrato Artístico</h3>
+                  <h2 className="text-md sm:text-2xl font-thin italic">Moda subte</h2>
                 </div>
                 <Image
                   src={flecha}
@@ -50,12 +51,12 @@ const ServicesPage = () => {
               className="relative md:pt-0 group"
               id="1"
             >
-              <div className="texto_image bottom-0 rounded-b-2xl absolute z-30 w-full h-1/3 MD:h-40 flex flex-row text-center justify-between px-4 sm:px-10 items-center cursor-pointer transition-all duration-200 bg-black/50">
+              <div className="cardBg bottom-0 rounded-b-2xl absolute z-30 w-full h-1/3 MD:h-40 flex flex-row text-center justify-between px-4 sm:px-10 items-center cursor-pointer transition-all duration-200 bg-black/50">
                 <div className="md:group-hover:pr-5 w-full  transition-all duration-300">
-                <h3 className="text-2xl md:text-3xl md:pb-2 lg:mb-4 italic">
+                <h3 className="text-2xl md:text-3xl md:pb-2 lg:mb-4 font-bold">
                     Fotografía comercial
                   </h3>
-                  <h2 className="text-md md:text-2xl font-thin">AURA Gin</h2>
+                  <h2 className="text-md md:text-2xl font-thin italic">AURA Gin</h2>
                 </div>
                 <Image
                   src={flecha}
@@ -77,12 +78,12 @@ const ServicesPage = () => {
               className="relative group"
               id="2"
             >
-              <div className="texto_image bottom-0 rounded-b-2xl absolute z-30 px-10 w-full h-1/3 md:h-40 flex  flex-row text-center justify-between px-4 sm:px-10 items-center cursor-pointer transition-all duration-200 bg-black/50">
+              <div className="cardBg bottom-0 rounded-b-2xl absolute z-30 px-10 w-full h-1/3 md:h-40 flex  flex-row text-center justify-between px-4 sm:px-10 items-center cursor-pointer transition-all duration-200 bg-black/50">
                 <div className="md:group-hover:pr-10  w-full  transition-all duration-300">
-                  <h3 className="text-2xl md:text-3xl md:mb-4 italic">
+                  <h3 className="text-2xl md:text-3xl md:mb-4 font-bold">
                     Fotografía artística
                   </h3>
-                  <h2 className="text-md md:text-2xl font-thin">Pasado Pisado</h2>
+                  <h2 className="text-md md:text-2xl font-thin italic">Pasado Pisado</h2>
                 </div>
                 <Image
                   src={flecha}
@@ -104,12 +105,12 @@ const ServicesPage = () => {
             className="mb-3 block h-[138px] sm:h-[250px] md:h-[300px] lg:h-[434px] relative group "
             id="3"
           >
-            <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-1/2 md:h-1/3 flex flex-row text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+            <div className="cardBg absolute bottom-0 rounded-b-2xl z-30 w-full h-1/2 md:h-1/3 flex flex-row text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
               <div className="md:group-hover:pr-10  w-full  transition-all duration-300">
-                <h3 className="text-2xl md:text-3xl md:mb-4 italic">
+                <h3 className="text-2xl md:text-3xl md:mb-4 font-bold">
                   Evento artístico
                 </h3>
-                <h2 className="text-md md:text-2xl font-thin">Jettatore - Obra teatral</h2>
+                <h2 className="text-md md:text-2xl font-thin italic">Jettatore - Obra teatral</h2>
               </div>
               <Image
                 src={flecha}
@@ -129,12 +130,12 @@ const ServicesPage = () => {
             href="/fotografia/one-bar"
             className="h-[291px] sm:h-[320px] lg:h-[458px] relative pb-3 md:pb-0 group flex mb-3 md:mb-0"
           >
-            <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-1/3 md:h-40 flex  flex-row text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+            <div className="cardBg absolute bottom-0 rounded-b-2xl z-30 w-full h-1/3 md:h-40 flex  flex-row text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
               <div className="md:group-hover:pr-5  w-full  transition-all duration-300">
-                <h3 className="text-2xl md:text-3xl md:mb-4 italic">
+                <h3 className="text-2xl md:text-3xl md:mb-4 font-bold">
                   Evento social
                 </h3>
-                <h2 className="text-md md:text-2xl  font-thin">One-bar</h2>
+                <h2 className="text-md md:text-2xl  font-thin italic">One-bar</h2>
               </div>
               <Image
                 src={flecha}
@@ -153,12 +154,12 @@ const ServicesPage = () => {
             href="/fotografia/mas-que-uno"
             className="col-span-1 h-[267px] sm:h-[300px] md:h-[320px] lg:h-[458px] relative group flex"
           >
-            <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-1/3 md:h-40 flex flex-row text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+            <div className="cardBg absolute bottom-0 rounded-b-2xl z-30 w-full h-1/3 md:h-40 flex flex-row text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
               <div className="md:group-hover:pr-3  w-full  transition-all duration-300">
-                <h3 className="text-2xl md:text-3xl md:mb-4 italic">
+                <h3 className="text-2xl md:text-3xl md:mb-4 font-bold">
                   Evento artístico
                 </h3>
-                <h2 className="text-md md:text-2xl font-thin">Más que uno: 10 años</h2>
+                <h2 className="text-md md:text-2xl font-thin italic">Más que uno: 10 años</h2>
               </div>
               <Image
                 src={flecha}
@@ -177,12 +178,12 @@ const ServicesPage = () => {
           href="/fotografia/toch"
           className="mb-3 flex relative group"
         >
-          <div className="texto_image absolute bottom-0 rounded-b-2xl z-30 w-full h-[69px] sm:h-[80px] md:h-40 flex flex-row gap-2 text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+          <div className="cardBg absolute bottom-0 rounded-b-2xl z-30 w-full h-[69px] sm:h-[80px] md:h-40 flex flex-row gap-2 text-center px-4 sm:px-10 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
             <div className="md:group-hover:pr-10  w-full  transition-all duration-300">
-              <h3 className="text-2xl md:text-3xl md:mb-4 italic">
+              <h3 className="text-2xl md:text-3xl md:mb-4 font-bold">
                 Evento artístico
               </h3>
-              <h2 className="text-md md:text-2xl font-thin">TOCH en Camping Palermo</h2>
+              <h2 className="text-md md:text-2xl font-thin italic">TOCH en Camping Palermo</h2>
             </div>
             <Image
               src={flecha}

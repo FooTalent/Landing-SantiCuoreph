@@ -12,47 +12,18 @@ import Image from "next/image";
 import "./styles.css";
 import Link from "next/link";
 import CloseButton from "./close-btn";
-import { useState } from "react";
+import { MouseEvent, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import { redirect } from "next/navigation";
-import { NextURL } from "next/dist/server/web/next-url";
+import flecha from "../../../../public/images/arrow.png";
+import Arrow from "./arrow";
+import ArrowNav from "./arrow";
+import { useSearchParams } from "next/navigation";
 
 const buttonStyle = {
   width: "50px",
   background: "none",
   border: "0px",
-};
-const properties = {
-  prevArrow: (
-    <button className="ml-2 md:ml-4 lg:ml-10 " style={{ ...buttonStyle }}>
-      <div className="bg-slider w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] xl:w-14 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
-        <Image
-          src="/assets/img/ArrowLeft.png"
-          alt=""
-          width={20}
-          height={20}
-          className="sm:w-[16px]"
-        />
-      </div>
-    </button>
-  ),
-  nextArrow: (
-    <button className="mr-2 md:mr-4 lg:mr-10" style={{ ...buttonStyle }}>
-      <div className="bg-slider w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] xl:w-14 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
-        <Image
-          src="/assets/img/ArrowRight.png"
-          alt=""
-          width={20}
-          height={20}
-          className="w-[10px] sm:w-[16px]"
-        />
-      </div>
-    </button>
-  ),
-  autoplay: false,
-  indicators: false,
-  defaultIndex: 5
 };
 
 type imageInfo = {
@@ -116,11 +87,11 @@ const sessionInfo: SessionInfoType[] = [
     verticalImage: true,
     images: [
       {
-        url: "/images/aura/aura01.jpg",
+        url: "/images/aura/aura01.png",
         alt: "Aura gin",
       },
       {
-        url: "/images/aura/aura02.jpg",
+        url: "/images/aura/aura02.png",
         alt: "Aura gin 02",
       },
       {
@@ -140,7 +111,7 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Aura gin 06",
       },
       {
-        url: "/images/aura/aura07.jpg",
+        url: "/images/aura/aura07.png",
         alt: "Aura gin 07",
       },
       {
@@ -300,11 +271,11 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Mas que uno 06",
       },
       {
-        url: "/images/mas-que-uno/mu07.jpg",
+        url: "/images/mas-que-uno/mu7.jpg",
         alt: "Mas que uno 07",
       },
       {
-        url: "/images/mas-que-uno/mu08.jpg",
+        url: "/images/mas-que-uno/mu8.jpg",
         alt: "Mas que uno 08",
       },
     ],
@@ -350,15 +321,60 @@ const sessionInfo: SessionInfoType[] = [
     ],
   },
 ];
-//<Image src={image.url} className={`object-cover ${idx === 2 || idx === 7 ? "object-left" : "object-center"}`} fill alt={image.alt}
+
+type ModalInfo = {
+  open: boolean,
+  defaultIndex: number
+}
+
 const SessionPage = ({ params }: { params: { session: string } }) => {
   const path = params.session;
   const session = sessionInfo.find((session) => session.path === path);
   const sessionsLength:number = sessionInfo.length
   const currIndex: number = getCurrentIndex(sessionInfo);
-  const urlSessions: string[] = sessionInfo.map((session) => session.path);
   const previousUrl:string = getPreviousUrl();
   const nextUrl: string = getNextUrl();
+
+  const searchParams = useSearchParams()
+  const goBackUrl = searchParams.has("home") ? "/" : "/servicios"
+
+  const [modal, setModal] = useState<ModalInfo>({
+    open: false,
+    defaultIndex: 0
+  })
+
+  const properties = {
+    prevArrow: (
+      <button className="ml-2 md:ml-4 lg:ml-10 " style={{ ...buttonStyle }}>
+        <div className="bg-slider w-[35px] h-[35px] sm:w-[40px] sm:h-[40px] xl:w-14 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
+          <Image
+            src="/assets/img/ArrowLeft.png"
+            alt=""
+            width={20}
+            height={20}
+            className="w-[10px] sm:w-[14px]"
+          />
+        </div>
+      </button>
+    ),
+    nextArrow: (
+      <button className="md:mr-4 lg:mr-10" style={{ ...buttonStyle }}>
+        <div className="bg-slider w-[35px] h-[35px] sm:w-[40px] sm:h-[40px] xl:w-[50px] xl:h-[50px] flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
+          <Image
+            src="/assets/img/ArrowRight.png"
+            alt=""
+            width={20}
+            height={20}
+            className="w-[10px] sm:w-[14px]"
+          />
+        </div>
+      </button>
+    ),
+    autoplay: false,
+    indicators: false,
+    defaultIndex: modal.defaultIndex,
+    transitionDuration: 500
+  };
 
   function getPreviousUrl(): string {
     let goTo: string = "";
@@ -393,26 +409,32 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
     return index;
   }
 
-  
+  function handleOpenModal(open: boolean, index: number) {
+    setModal({
+      open: open,
+      defaultIndex: index
+    })
+  }
 
-  console.log(urlSessions)
-  const [showModal, setShowModal] = useState(false);
+  function handleHoverImage(index: number) {
+    setModal({...modal, defaultIndex: index})
+  }
 
   if (session) {
     return (
       <div className="bg-fondoNegro">
-        <section className=" pt-32 xl:max-w-screen-xl mx-4 mx-auto">
+        <section className="pt-20 xl:pt-32 xl:max-w-screen-xl mx-4 xl:mx-auto">
           <div className="flex justify-between">
             <div className="text-fondoBlanco">
-              <h1 className="text-3xl md:text-4xl xl:text-5xl merriwather font-bold">
+              <h2 className="text-2xl md:text-4xl xl:text-5xl merriwather font-bold">
                 {session.subtitle}
-              </h1>
-              <h2 className="text-2xl md:text-3xl pt-1 pb-4 xl:pt-3 xl:pb-6 merriwather font-semibold italic">
-                {session.title}
               </h2>
+              <h3 className="text-xl md:text-3xl pt-1 pb-4 xl:pt-3 xl:pb-6 merriwather font-semibold italic">
+                {session.title}
+              </h3>
             </div>
             <div>
-              <Link href="/servicios">
+              <Link href={goBackUrl}>
                 <div className="p-3 bg-fondoGris rounded-md md:hover:rounded-md md:hover:bg-fondoGris">
                   <CloseButton />
                 </div>
@@ -432,14 +454,17 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
                 <div
                   key={idx}
                   className={`image-container ${idx}`}
-                  onClick={() => setShowModal(true)}
+                  onClick={() => handleOpenModal(true, idx)}
+                  onMouseEnter={() => {
+                    handleHoverImage(idx)
+                  }}
                 >
                   <div
                     className={`relative ${
                       session.verticalImage
                         ? "h-[350px] md:h-[430px]"
                         : "h-[280px] md:h-[315px]"
-                    } hover:cursor-pointer`}
+                    } hover:cursor-zoom-in`}
                   >
                     <Image
                       src={image.url}
@@ -459,19 +484,19 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
           </div>
         </section>
 
-        {showModal ? (
+        {modal.open ? (
           <>
             <div className="h-screen w-screen fixed inset-0 z-50 outline-none focus:outline-none">
               <div className="relative">
-                {/*content*/}
                 <div className="relative flex flex-col w-full outline-none focus:outline-none">
-                  {/*header*/}
-
                   <button
-                    className="absolute z-50 end-0 p-4 md:mr-4 lg:mr-8 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setShowModal(false)}
+                    className="absolute z-50 p-4 sm:p-3 lg:p-4 end-0 md:mr-4 lg:mr-6 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    onClick={() => setModal({
+                      open: false,
+                      defaultIndex: 0
+                    })}
                   >
-                    <div className="p-3 lg:p-4 bg-slider hover:bg-sliderHover rounded-full">
+                    <div className="p-3 xl:p-4 bg-slider hover:bg-sliderHover rounded-full">
                       <CloseButton />
                     </div>
                   </button>
@@ -503,10 +528,18 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
             <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
           </>
         ) : null}
-        <section className="flex flex-row justify-between max-w-screen-xl mx-auto text-principal pb-8">
-          <div className="hover:cursor-pointer"><Link href={previousUrl}>Anterior</Link></div>
-          <div className="hover:cursor-pointer"><Link href="/servicios" className="">Volver</Link></div>
-          <div className="hover:cursor-pointer"><Link href={nextUrl}>Siguiente</Link></div>
+        <section className="flex flex-row items-center justify-between max-w-screen-xl mx-4 xl:mx-auto text-principal pb-8 text-base sm:text-xl lg:text-2xl font-bold">
+          <div className="hover:cursor-pointer"><Link href={previousUrl} className="flex gap-2 items-center">
+          <ArrowNav size={35} left={true} />
+            <h4 className="hidden sm:block">Ver anterior álbum</h4>
+            <h4 className="sm:hidden">Anterior</h4>
+            </Link></div>
+          <div className="hover:cursor-pointer"><Link href={goBackUrl} className="">Volver</Link></div>
+          <div className="hover:cursor-pointer"><Link href={nextUrl} className="flex gap-2 items-center">
+            <h4 className="hidden sm:block">Ver siguiente álbum</h4>
+            <h4 className="sm:hidden">Siguiente</h4>
+            <ArrowNav left={false} size={35} />
+            </Link></div>
         </section>
       </div>
     );
