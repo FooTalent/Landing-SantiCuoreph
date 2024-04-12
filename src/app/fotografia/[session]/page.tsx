@@ -12,7 +12,7 @@ import Image from "next/image";
 import "./styles.css";
 import Link from "next/link";
 import CloseButton from "./close-btn";
-import { useState } from "react";
+import { MouseEvent, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import flecha from "../../../../public/images/arrow.png";
@@ -21,38 +21,6 @@ const buttonStyle = {
   width: "50px",
   background: "none",
   border: "0px",
-};
-const properties = {
-  prevArrow: (
-    <button className="ml-2 md:ml-4 lg:ml-10 " style={{ ...buttonStyle }}>
-      <div className="bg-slider w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] xl:w-14 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
-        <Image
-          src="/assets/img/ArrowLeft.png"
-          alt=""
-          width={20}
-          height={20}
-          className="w-[10px] sm:w-[16px]"
-        />
-      </div>
-    </button>
-  ),
-  nextArrow: (
-    <button className="mr-2 md:mr-4 lg:mr-10" style={{ ...buttonStyle }}>
-      <div className="bg-slider w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] xl:w-14 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
-        <Image
-          src="/assets/img/ArrowRight.png"
-          alt=""
-          width={20}
-          height={20}
-          className="w-[10px] sm:w-[16px]"
-        />
-      </div>
-    </button>
-  ),
-  autoplay: false,
-  indicators: false,
-  defaultIndex: 5,
-  transitionDuration: 500
 };
 
 type imageInfo = {
@@ -351,6 +319,11 @@ const sessionInfo: SessionInfoType[] = [
   },
 ];
 
+type ModalInfo = {
+  open: boolean,
+  defaultIndex: number
+}
+
 const SessionPage = ({ params }: { params: { session: string } }) => {
   const path = params.session;
   const session = sessionInfo.find((session) => session.path === path);
@@ -359,6 +332,45 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
   const urlSessions: string[] = sessionInfo.map((session) => session.path);
   const previousUrl:string = getPreviousUrl();
   const nextUrl: string = getNextUrl();
+  const [defIndex, setDefIndex] = useState<number>()
+
+  const [modal, setModal] = useState<ModalInfo>({
+    open: false,
+    defaultIndex: 0
+  })
+
+  const properties = {
+    prevArrow: (
+      <button className="ml-2 md:ml-4 lg:ml-10 " style={{ ...buttonStyle }}>
+        <div className="bg-slider w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] xl:w-14 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
+          <Image
+            src="/assets/img/ArrowLeft.png"
+            alt=""
+            width={20}
+            height={20}
+            className="w-[10px] sm:w-[16px]"
+          />
+        </div>
+      </button>
+    ),
+    nextArrow: (
+      <button className="mr-2 md:mr-4 lg:mr-10" style={{ ...buttonStyle }}>
+        <div className="bg-slider w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] xl:w-14 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
+          <Image
+            src="/assets/img/ArrowRight.png"
+            alt=""
+            width={20}
+            height={20}
+            className="w-[10px] sm:w-[16px]"
+          />
+        </div>
+      </button>
+    ),
+    autoplay: false,
+    indicators: false,
+    defaultIndex: modal.defaultIndex,
+    transitionDuration: 500
+  };
 
   function getPreviousUrl(): string {
     let goTo: string = "";
@@ -393,10 +405,16 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
     return index;
   }
 
-  
+  function handleOpenModal(open: boolean, index: number) {
+    setModal({
+      open: open,
+      defaultIndex: index
+    })
+  }
 
-  console.log(urlSessions)
-  const [showModal, setShowModal] = useState(false);
+  function handleHoverImage(index: number) {
+    setModal({...modal, defaultIndex: index})
+  }
 
   if (session) {
     return (
@@ -432,7 +450,10 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
                 <div
                   key={idx}
                   className={`image-container ${idx}`}
-                  onClick={() => setShowModal(true)}
+                  onClick={() => handleOpenModal(true, idx)}
+                  onMouseEnter={() => {
+                    handleHoverImage(idx)
+                  }}
                 >
                   <div
                     className={`relative ${
@@ -459,7 +480,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
           </div>
         </section>
 
-        {showModal ? (
+        {modal.open ? (
           <>
             <div className="h-screen w-screen fixed inset-0 z-50 outline-none focus:outline-none">
               <div className="relative">
@@ -469,7 +490,10 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
 
                   <button
                     className="absolute z-50 end-0 p-4 md:mr-4 lg:mr-8 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => setModal({
+                      open: false,
+                      defaultIndex: 0
+                    })}
                   >
                     <div className="p-3 lg:p-4 bg-slider hover:bg-sliderHover rounded-full">
                       <CloseButton />
