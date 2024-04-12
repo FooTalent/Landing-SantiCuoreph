@@ -33,7 +33,7 @@ const slideImages = [
   {
     index: 4,
     url: "/assets/img/Toch.JPG",
-    caption: "TOCH",
+    caption: "TOCH en Camping de Palermo",
     caption2: "Cobertura de evento",
     link: "/servicios/audiovisual",
   },
