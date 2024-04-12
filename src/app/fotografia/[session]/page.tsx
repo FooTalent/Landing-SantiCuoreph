@@ -168,7 +168,7 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Pasado pisado 03",
       },
       {
-        url: "/images/pasado-pisado/pp04.JPG",
+        url: "/images/pasado-pisado/pp04.jpg",
         alt: "Pasado pisado 04",
       },
       {
@@ -176,11 +176,11 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Pasado pisado 05",
       },
       {
-        url: "/images/pasado-pisado/pp06.JPG",
+        url: "/images/pasado-pisado/pp06.jpg",
         alt: "Pasado pisado 06",
       },
       {
-        url: "/images/pasado-pisado/pp07.JPG",
+        url: "/images/pasado-pisado/pp07.jpg",
         alt: "Pasado pisado 07",
       },
       {
@@ -284,19 +284,19 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Mas que uno 02",
       },
       {
-        url: "/images/mas-que-uno/mu03.JPG",
+        url: "/images/mas-que-uno/mu03.jpg",
         alt: "Mas que uno 03",
       },
       {
-        url: "/images/mas-que-uno/mu04.JPG",
+        url: "/images/mas-que-uno/mu04.jpg",
         alt: "Mas que uno 04",
       },
       {
-        url: "/images/mas-que-uno/mu05.JPG",
+        url: "/images/mas-que-uno/mu05.jpg",
         alt: "Mas que uno 05",
       },
       {
-        url: "/images/mas-que-uno/mu6.JPG",
+        url: "/images/mas-que-uno/mu6.jpg",
         alt: "Mas que uno 06",
       },
       {
