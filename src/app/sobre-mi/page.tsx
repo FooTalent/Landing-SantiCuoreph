@@ -6,12 +6,13 @@ import ServiceBanner from "../servicios/components/ServiceBanner";
 const AboutMe = () => {
   return (
     <>
-      <section className="xl:w-[1236px] m-auto merriwather text-fondoNegro nunitoSans">
-        <h1 className="text-3xl md:text-3xl xl:text-[48px] font-semibold ml-6 mb-5 lg:mb-8 pt-32">
+      <section className="xl:w-[1236px] pr-10  md:px-0 mx-4  pb-[24px] text-3xl xl:mx-auto pt-4 xl:pt-0   border-b-[2px] border-black text-fondoNegro md:text-3xl xl:text-[48px]  mb-[1em]">
+        <h1 className="pt-[2.4em]  font-semibold font-merriwather ">
           Sobre mí
         </h1>
-        <hr className="max-w-[1236px] mx-6 h-[2.5px] bg-black" />
-        <div className="SantiagoGarcia gap-x-20 items-start m-6 lg:grid-cols-2 lg:grid-rows-1">
+      </section>
+      <section className="xl:w-[1236px] m-auto merriwather text-fondoNegro nunitoSans">
+        <div className="SantiagoGarcia gap-x-20 items-start m-6 mt-0 lg:grid-cols-2 lg:grid-rows-1">
           <picture className="fotosanti row-span-1 lg:col-span-1">
             <Image
               src={santi}
