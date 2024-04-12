@@ -74,7 +74,7 @@ const Slideshow = () => {
       <Slide
         autoplay={true}
         infinite={true}
-        duration={8000}
+        duration={5000}
         {...properties}
         indicators={true}
         cssClass="pb-5"
