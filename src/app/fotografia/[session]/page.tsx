@@ -528,15 +528,17 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
             <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
           </>
         ) : null}
-        <section className="flex flex-row justify-between max-w-screen-xl mx-4 xl:mx-auto text-principal pb-8 text-base md:text-xl font-bold">
-          <div className="hover:cursor-pointer"><Link href={previousUrl} className="flex gap-3 items-center text-lg md:text-2xl">
-          <ArrowNav size={25} left={true} />
-            <h4>Ver anterior álbum</h4>
+        <section className="flex flex-row items-center justify-between max-w-screen-xl mx-4 xl:mx-auto text-principal pb-8 text-base sm:text-xl lg:text-2xl font-bold">
+          <div className="hover:cursor-pointer"><Link href={previousUrl} className="flex gap-2 items-center">
+          <ArrowNav size={35} left={true} />
+            <h4 className="hidden sm:block">Ver anterior álbum</h4>
+            <h4 className="sm:hidden">Anterior</h4>
             </Link></div>
-          <div className="hover:cursor-pointer"><Link href={goBackUrl} className="text-lg md:text-2xl">Volver</Link></div>
-          <div className="hover:cursor-pointer"><Link href={nextUrl} className="flex gap-3 items-center text-lg md:text-2xl">
-            <h4>Ver siguiente álbum</h4>
-            <ArrowNav left={false} size={25} />
+          <div className="hover:cursor-pointer"><Link href={goBackUrl} className="">Volver</Link></div>
+          <div className="hover:cursor-pointer"><Link href={nextUrl} className="flex gap-2 items-center">
+            <h4 className="hidden sm:block">Ver siguiente álbum</h4>
+            <h4 className="sm:hidden">Siguiente</h4>
+            <ArrowNav left={false} size={35} />
             </Link></div>
         </section>
       </div>
