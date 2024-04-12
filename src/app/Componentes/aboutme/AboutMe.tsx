@@ -6,7 +6,7 @@ import CustomFlecha from "./CustomFlecha";
 const AboutMe = () => {
     return (
         <>
-       <section className="Sobremi lg:grid-cols-2 lg:grid-rows-1 gap-8 lg:gap-2 my-40 max-w-[1000px] m-auto">
+       <section className="Sobremi lg:grid-cols-2 lg:grid-rows-1 gap-8 lg:gap-2 my-20 lg:my-40 max-w-[1000px] m-auto">
             <picture className="Sobremi__retrato  h-[350px]  sm:w-[420px] lg:h-[480px] m-2 row-span-2 flex">
                 <Image
                 src={santi}

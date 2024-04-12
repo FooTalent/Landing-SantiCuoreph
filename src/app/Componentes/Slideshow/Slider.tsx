@@ -18,7 +18,7 @@ const slideImages = [
   {
     index: 2,
     url: "/assets/img/AuraGin.JPG",
-    caption: "Aura Gin",
+    caption: "AURA Gin",
     caption2: "Fotografía comercial",
     link: "/fotografia/aura-gin",
   },

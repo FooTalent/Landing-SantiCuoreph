@@ -7,11 +7,11 @@ const AboutMe = () => {
   return (
     <>
       <section className="xl:w-[1236px] m-auto merriwather text-fondoNegro nunitoSans">
-        <h1 className="text-[24px] md:text-3xl xl:text-[46px] font-semibold ml-8 mb-5 lg:mb-10 pt-32">
+        <h1 className="text-3xl md:text-3xl xl:text-[48px] font-semibold ml-6 mb-5 lg:mb-8 pt-32">
           Sobre mí
         </h1>
-        <hr className="max-w-[1236px] mx-8 h-[2.5px] bg-black" />
-        <div className="SantiagoGarcia gap-x-20 items-start m-8 lg:grid-cols-2 lg:grid-rows-1">
+        <hr className="max-w-[1236px] mx-6 h-[2.5px] bg-black" />
+        <div className="SantiagoGarcia gap-x-20 items-start m-6 lg:grid-cols-2 lg:grid-rows-1">
           <picture className="fotosanti row-span-1 lg:col-span-1">
             <Image
               src={santi}
@@ -46,18 +46,18 @@ const AboutMe = () => {
       <picture className="">
         <div className="bg-fixed  h-screen bg-background1 bg-cover bg-center"></div>
       </picture>
-      <section className="sobremi__Santi w-full grid grid-cols-1 lg:grid-rows-1 lg:grid-cols-2 h-full place-content-center  nunitoSans text-xl lg:text-2xl max-w-[590px] max-w-fit m-auto">
-        <p className="pocodespues my-16 sm:my-16 m-8  block lg:hidden">
+      <section className="sobremi__Santi grid grid-cols-1 lg:flex h-full place-content-center  nunitoSans  sm:text-[20px] lg:text-[21px] m-auto">
+        <p className="pocodespues my-16 sm:my-16 m-6  block lg:hidden">
           Poco tiempo después, en 2016, creé <b>SantiCuore PH.</b>
         </p>
-        <p className="pocodespues mt-10 mb-16  m-8  flex lg:hidden">
+        <p className="pocodespues mt-10 mb-16  m-6  flex lg:hidden">
           Este emprendimiento surgió como resultado de una búsqueda de expresión
           artística. Comenzó inicialmente como un anhelo de capturar la belleza
           y la emoción detrás de cada instante, y con el objetivo de llevar a un
           nivel profesional mi creatividad y mi pasión por la fotografía
         </p>
-        <div className="hidden lg:flex flex-col m-8">
-          <p className="pocodespues m-16">
+        <div className="hidden lg:flex flex-col m-6">
+          <p className="pocodespues m-16 mr-0">
             Poco tiempo después, en 2016, creé <b>SantiCuore PH.</b>
           </p>
           <p className="pocodespues m-16 ">
@@ -68,13 +68,13 @@ const AboutMe = () => {
             fotografía
           </p>
         </div>
-        <picture className="flex justify-center santiCamera m-8 lg:m-0 ">
+        <picture className="flex justify-center santiCamera m-6 lg:m-0 sm:min-w-[400px]">
           <Image
             src={santiCuorePH}
             width={678}
             height={792}
             alt="santiCuorepH"
-            className=""
+            className="object-cover"
           ></Image>
         </picture>
       </section>
@@ -97,7 +97,7 @@ const AboutMe = () => {
       </section>
       <div className="bg-fixed  h-screen bg-background3 bg-cover bg-center"></div>
       <section className="w-full grid grid-cols-1 lg:grid-cols-2  nunitoSans max-w-[590px] lg:max-w-fit m-auto mb-20 lg:mb-0 text-lg text-start">
-        <div className=" flex flex-col lg:hidden gap-10 mx-8  mt-10">
+        <div className=" flex flex-col lg:hidden gap-10 mx-6 mt-10">
           <p>
             Mi enfoque va más allá de simplemente capturar imágenes y editar
             videos:
@@ -107,7 +107,7 @@ const AboutMe = () => {
             el tiempo
           </p>
         </div>
-        <picture className="flex justify-center m-8 lg:m-0">
+        <picture className="flex justify-center m-6 lg:m-0">
           <Image
             src={santiago}
             width={678}
@@ -118,11 +118,11 @@ const AboutMe = () => {
         </picture>
         <div className="sobremi__text mx-14">
           <div className="text-balance flex flex-col gap-10 mt-0">
-            <p className="hidden lg:block mt-10">
+            <p className="hidden lg:block mt-10 xl:ml-16">
               Mi enfoque va más allá de simplemente capturar imágenes y editar
               videos:
             </p>
-            <p className="hidden lg:block font-bold">
+            <p className="hidden lg:block font-bold xl:ml-16">
               Me encargo de crear recuerdos y construir historias que perduren
               en el tiempo
             </p>
