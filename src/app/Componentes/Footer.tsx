@@ -34,7 +34,7 @@ const Footer = () => {
           contenido.
         </p>
         <p className="text-xs lg:text-base">
-          Sitio web diseñado y desarrollado por Foo Talent Group.
+          Sitio web diseñado y desarrollado por <a href="https://www.linkedin.com/company/footalent/ " target="_Blank">Foo Talent Group.</a>
         </p>
         <p className="text-xs lg:text-base">
           <b>Santiago García. 2024.</b> Buenos Aires, Argentina.
