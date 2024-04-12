@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import flecha from "../../Icon/Group.png";
 import { useRouter } from "next/navigation";
+import "../styles.css"
 const buttonStyle = {
   width: "50px",
   background: "none",
@@ -129,13 +130,13 @@ const Audiovisual = () => {
               controls
               src="/videos/-df52-4356-853b-f2fcf5ce094e.mp4"
             />
-            <div className="m-auto text-center mt-5 space-y-3 text-fondoBlanco">
-              <h1 className=" text-2xl  xl:text-[48px]  italic">
-                Spasio Kinesio
-              </h1>
-              <p className="text-fondoBlanco font-nunitoSans font-thin text-xl md:text-[30px]">
+            <div className="mx-auto text-center mt-5 space-y-3 text-fondoBlanco">
+            <h2 className=" text-2xl  xl:text-4xl font-bold">
                 Creación de video para redes
-              </p>
+              </h2>
+              <h3 className="font-thin text-xl md:text-3xl italic">
+                Spasio Kinesio
+              </h3>  
             </div>
           </div>
           <div className=" h-[450px] ">
@@ -146,13 +147,13 @@ const Audiovisual = () => {
               controls
               src="/videos/-aa9d-4724-bd79-6eef7dc35203.mp4"
             />
-            <div className="m-auto text-center mt-5 space-y-3 text-fondoBlanco">
-              <h1 className="  text-2xl xl:text-[48px]  italic">
-                TOCH en Camping de Palermo
-              </h1>
-              <p className="text-fondoBlanco font-nunitoSans font-thin  text-xl md:text-[30px]">
+            <div className="mx-auto text-center mt-5 space-y-3 text-fondoBlanco">
+            <h2 className=" text-2xl  xl:text-4xl font-bold">
                 Creación de video para redes
-              </p>
+              </h2>
+              <h3 className="font-thin text-xl md:text-3xl italic">
+              TOCH en Camping de Palermo
+              </h3>  
             </div>
           </div>
           <div className=" h-[450px] ">
@@ -164,15 +165,16 @@ const Audiovisual = () => {
               src="/videos/Backstage Microcentro ALTA.mp4"
             />
 
-            <div className="m-auto text-center mt-5 space-y-3 text-fondoBlanco">
-              <h1 className="  text-2xl xl:text-[48px]  italic">
-                Backstage de fotos Pasado Pisado{" "}
-              </h1>
-              <p className="font-nunitoSans font-thin  text-xl md:text-[30px]">
-                Creación de video para redes{" "}
-              </p>
+<div className="mx-auto text-center mt-5 space-y-3 text-fondoBlanco">
+            <h2 className=" text-2xl  xl:text-4xl font-bold">
+                Creación de video para redes
+              </h2>
+              <h3 className="font-thin text-xl md:text-3xl italic">
+              Backstage de fotos Pasado Pisado
+              </h3>  
             </div>
           </div>
+          
           <div className=" h-[450px] ">
             <video
               className="object-contain h-full mx-auto"
@@ -181,13 +183,13 @@ const Audiovisual = () => {
               controls
               src="/videos/Sala de Exposiciones.mp4"
             />
-            <div className="m-auto text-center mt-5 space-y-3 text-fondoBlanco">
-              <h1 className="  text-2xl xl:text-[48px]  italic">
-                Exposición en Centro Cultural Kirchner{" "}
-              </h1>
-              <p className="font-nunitoSans font-thin  text-xl md:text-[30px]">
-                Edición de video{" "}
-              </p>
+            <div className="mx-auto text-center mt-5 space-y-3 text-fondoBlanco">
+            <h2 className=" text-2xl  xl:text-4xl font-bold">
+            Edición de video
+              </h2>
+              <h3 className="font-thin text-xl md:text-3xl italic">
+              Exposición en Centro Cultural Kirchner
+              </h3>  
             </div>
           </div>
           <div className=" h-[450px] ">
@@ -199,26 +201,26 @@ const Audiovisual = () => {
               controls
               src="/videos/Biró.mp4"
             />
-            <div className="m-auto text-center mt-5 space-y-3 text-fondoBlanco">
-              <h1 className="  text-2xl xl:text-[48px]  italic">
-                José Ladislao Biró{" "}
-              </h1>
-              <p className="font-nunitoSans font-thin  text-xl md:text-[30px]">
-                Edición de video{" "}
-              </p>
+             <div className="mx-auto text-center mt-5 space-y-3 text-fondoBlanco">
+            <h2 className=" text-2xl  xl:text-4xl font-bold">
+            Edición de video
+              </h2>
+              <h3 className="font-thin text-xl md:text-3xl italic">
+              José Ladislao Biró
+              </h3>  
             </div>
           </div>
           <div className=" h-[450px]">
-            <div className=" h-full  flex">
-              <div className="space-y-20 m-auto flex flex-col">
-                <p className="merriwather text-2xl text-center italic text-white">
+            <div className=" h-full  flex mt-16">
+              <div className="space-y-5 sm:space-y-10 m-auto flex flex-col items-center">
+                <p className="merriwather text-2xl sm:text-4xl xl:text-5xl text-center italic text-white">
                   Reservemos una cita!
                 </p>
                 <div>
                   <Link
                     onClick={handleNavigateContacto}
                     href="/contacto"
-                    className="text-xl transition-all ease-in-out sm:text-2xl md:text-[40px] py-[0.5em] px-[2em] md:px-[81px] md:py-[17px] bg-principal rounded-full merriwather font-semibold text-fondoNegro hover:bg-principalHover hover:font-bold"
+                    className="text-xl transition-all ease-in-out sm:text-2xl md:text-2xl py-[0.5em] px-[2em] md:px-[81px] md:py-[17px] bg-principal rounded-full merriwather font-semibold text-fondoNegro hover:bg-principalHover hover:font-bold"
                   >
                     Contactame
                   </Link>
@@ -234,7 +236,7 @@ const Audiovisual = () => {
             "gap-y-2 xl:max-w-screen-xl  px-5 lg:px-0 mx-auto flex flex-col"
           }
         >
-          <div className="flex-col mt-10  lg:flex space-y-2  lg:space-y-0 lg:flex-row gap-x-2 font-merriwather italic text-fondoBlanco">
+          <div className="flex-col mt-10  lg:flex space-y-2  lg:space-y-0 lg:flex-row gap-x-2 font-merriwather text-fondoBlanco">
             <div
               onMouseEnter={() => videoRef1.current.play()}
               onMouseLeave={() => videoRef1.current.pause()}
@@ -255,10 +257,14 @@ const Audiovisual = () => {
                 }}
                 className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
-                <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
-                  <div className="group-hover:pr-20  w-full  transition-all duration-300">
-                    <h3 className="xl:text-3xl text-xl mb-4 italic">Videos para redes</h3>
-                    <h2 className="xl:text-2xl text-lg font-thin">Spasio Kinesio</h2>
+                <div className="cardBg absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                  <div className="group-hover:pr-10  w-full  transition-all duration-300 mx-auto">
+                    <div className="flex gap-1 justify-center sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">
+                    <h3 className="hidden sm:block ">Creación de videos</h3>
+                    <h3 className="sm:hidden">Videos </h3>
+                    <h3 className=""> para redes</h3>
+                    </div>
+                    <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">Spasio Kinesio</h2>
                   </div>
                   <Image
                     src={flecha}
@@ -285,12 +291,14 @@ const Audiovisual = () => {
                 onClick={() => handleOpenModal(1)}
                 className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
-                <div className="texto_image absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
-                  <div className="group-hover:pr-20  w-full  transition-all duration-300">
-                    <h3 className="xl:text-3xl text-xl mb-4 italic">Videos para redes</h3>
-                    <h2 className="xl:text-2xl text-lg font-thin">
-                      TOCH en Camping de Palermo
-                    </h2>
+                <div className="cardBg absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                <div className="group-hover:pr-10  w-full  transition-all duration-300 mx-auto">
+                    <div className="flex gap-1 justify-center sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">
+                    <h3 className="hidden sm:block ">Creación de videos</h3>
+                    <h3 className="sm:hidden">Videos </h3>
+                    <h3 className=""> para redes</h3>
+                    </div>
+                    <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">TOCH en Camping de Palermo</h2>
                   </div>
                   <Image
                     src={flecha}
@@ -319,12 +327,14 @@ const Audiovisual = () => {
                 onClick={() => handleOpenModal(2)}
                 className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
-                <div className="texto_image absolute rounded-xl bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
-                  <div className="group-hover:pr-20  w-full  transition-all duration-300">
-                    <h3 className="xl:text-3xl text-xl mb-4 italic">Videos para redes</h3>
-                    <h2 className="xl:text-2xl text-lg font-thin text-balance">
-                      Backstage de fotos Pasado Pisado
-                    </h2>
+                <div className="cardBg absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                <div className="group-hover:pr-10  w-full  transition-all duration-300 mx-auto">
+                    <div className="flex gap-1 justify-center sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">
+                    <h3 className="hidden sm:block ">Creación de videos</h3>
+                    <h3 className="sm:hidden">Videos </h3>
+                    <h3 className=""> para redes</h3>
+                    </div>
+                    <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">Backstage de fotos Pasado Pisado</h2>
                   </div>
                   <Image
                     src={flecha}
@@ -352,11 +362,11 @@ const Audiovisual = () => {
                   onClick={() => handleOpenModal(3)}
                   className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
                 >
-                  <div className="texto_image rounded-xl absolute bottom-0 z-30 w-full h-40  flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
-                    <div className="group-hover:pr-20  w-full  transition-all duration-300">
-                      <h3 className="xl:text-3xl text-xl mb-4 italic">Edicion de video</h3>
-                      <h2 className="xl:text-2xl text-lg font-thin text-balance">
-                        José Ladislao Biró
+                  <div className="cardBg absolute rounded-b-xl bottom-0 z-30 w-full h-40  flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                    <div className="group-hover:pr-10  w-full  transition-all duration-300">
+                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">Edicion de video</h3>
+                      <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">
+                      Exposición en el Centro Cultural Kirchner
                       </h2>
                     </div>
                     <Image
@@ -383,11 +393,11 @@ const Audiovisual = () => {
                   onClick={() => handleOpenModal(4)}
                   className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
                 >
-                  <div className="texto_image  rounded-xl absolute bottom-0 z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
-                    <div className="group-hover:pr-20  w-full  transition-all duration-300">
-                      <h3 className="xl:text-3xl text-lg mb-4 italic">Edicion de video</h3>
-                      <h2 className="xl:text-2xl text-md font-thin text-balance">
-                        Exposición en el Centro Cultural Kirchner
+                  <div className="cardBg absolute rounded-b-xl bottom-0 z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
+                    <div className="group-hover:pr-10  w-full  transition-all duration-300">
+                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">Edicion de video</h3>
+                      <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">
+                      José Ladislao Biró
                       </h2>
                     </div>
                     <Image

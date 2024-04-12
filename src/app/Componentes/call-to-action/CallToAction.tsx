@@ -14,7 +14,7 @@ const CallToAction = (props: CallToActionProps) => {
     const {header, imageUrl, buttonText, imageSize} = props;
 
     return (
-        <section className="mx-auto text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl flex flex-col justify-center items-center gap-[1.25em] md:gap-[1.25em] relative">
+        <section className="mx-auto text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-[42px]  flex flex-col justify-center items-center gap-[1.25em] md:gap-[1.25em] relative">
             <p className="text-center font-bold merriwather">{header}</p>
             <div className="relative w-3/12 min-w-[150px] max-w-[410px] aspect-square" >
             <Image

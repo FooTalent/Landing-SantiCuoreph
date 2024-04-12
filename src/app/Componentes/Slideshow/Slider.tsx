@@ -18,7 +18,7 @@ const slideImages = [
   {
     index: 2,
     url: "/assets/img/AuraGin.JPG",
-    caption: "Aura Gin",
+    caption: "AURA Gin",
     caption2: "Fotografía comercial",
     link: "/fotografia/aura-gin",
   },
@@ -81,7 +81,7 @@ const Slideshow = () => {
       >
         {slideImages.map((slideImage, index) => (
           <div key={slideImage.index} className="h-[438px] md:h-full">
-            <Link href={slideImage.link}>
+            <Link href={`${slideImage.link}?home`}>
               <div className="md:h-screen relative flex items-center">
                 <Image
                   src={slideImage.url}
