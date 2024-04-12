@@ -16,6 +16,9 @@ import { MouseEvent, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import flecha from "../../../../public/images/arrow.png";
+import Arrow from "./arrow";
+import ArrowNav from "./arrow";
+import { useSearchParams } from "next/navigation";
 
 const buttonStyle = {
   width: "50px",
@@ -329,10 +332,11 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
   const session = sessionInfo.find((session) => session.path === path);
   const sessionsLength:number = sessionInfo.length
   const currIndex: number = getCurrentIndex(sessionInfo);
-  const urlSessions: string[] = sessionInfo.map((session) => session.path);
   const previousUrl:string = getPreviousUrl();
   const nextUrl: string = getNextUrl();
-  const [defIndex, setDefIndex] = useState<number>()
+
+  const searchParams = useSearchParams()
+  const goBackUrl = searchParams.has("home") ? "/" : "/servicios"
 
   const [modal, setModal] = useState<ModalInfo>({
     open: false,
@@ -430,7 +434,7 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
               </h3>
             </div>
             <div>
-              <Link href="/servicios">
+              <Link href={goBackUrl}>
                 <div className="p-3 bg-fondoGris rounded-md md:hover:rounded-md md:hover:bg-fondoGris">
                   <CloseButton />
                 </div>
@@ -528,11 +532,14 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
           </>
         ) : null}
         <section className="flex flex-row justify-between max-w-screen-xl mx-4 xl:mx-auto text-principal pb-8 text-base md:text-xl font-bold">
-          <div className="hover:cursor-pointer"><Link href={previousUrl}>Anterior</Link></div>
-          <div className="hover:cursor-pointer"><Link href="/servicios" className="">Volver</Link></div>
-          <div className="hover:cursor-pointer"><Link href={nextUrl} className="flex gap-3 items-center">
-            <Image src={flecha} alt="Rigth arrow" className="invert md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-[40px]" />
-            Siguiente
+          <div className="hover:cursor-pointer"><Link href={previousUrl} className="flex gap-3 items-center text-lg md:text-2xl">
+          <ArrowNav size={25} left={true} />
+            <h4>Ver anterior álbum</h4>
+            </Link></div>
+          <div className="hover:cursor-pointer"><Link href={goBackUrl} className="text-lg md:text-2xl">Volver</Link></div>
+          <div className="hover:cursor-pointer"><Link href={nextUrl} className="flex gap-3 items-center text-lg md:text-2xl">
+            <h4>Ver siguiente álbum</h4>
+            <ArrowNav left={false} size={25} />
             </Link></div>
         </section>
       </div>
