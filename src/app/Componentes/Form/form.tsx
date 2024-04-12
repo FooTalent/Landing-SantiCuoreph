@@ -370,11 +370,12 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
         </div>
       )}
       {paso == 1 && (
-        <div className="text-fondoBlanco text-xl mb-8  flex justify-between items-center px-6 md:px-0">
+        <div className="text-fondoBlanco text-xl mb-8  flex justify-between items-center px-4 md:px-0">
           <h2 className="sm:text-3xl font-bold font-merriwather">
             Información de contacto
           </h2>
           <h2 className="text-xl sm:text-2xl font-bold font-nunitoSans">
+            <span className="hidden lg:inline bg-inherit">Paso </span>
             {paso} de 4
           </h2>
         </div>
@@ -391,6 +392,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             Servicio de fotografía
           </h2>
           <h2 className="text-lg sm:text-2xl font-bold font-nunitoSans md:mx-10">
+            <span className="hidden lg:inline bg-inherit">Paso </span>
             {paso} de 4
           </h2>
         </div>
@@ -407,6 +409,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             Servicio de edición / creación de video
           </h2>
           <h2 className="text-xl flex-grow sm:text-2xl font-bold font-nunitoSans text-right">
+            <span className="hidden lg:inline bg-inherit">Paso </span>
             {paso} de 4
           </h2>
         </div>
@@ -423,6 +426,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             Servicio de fotografía y edición de video
           </h2>
           <h2 className="text-xl flex-grow sm:text-2xl font-bold font-nunitoSans text-right">
+            <span className="hidden lg:inline bg-inherit">Paso </span>
             {paso} de 4
           </h2>
         </div>
@@ -435,6 +439,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             Servicio de fotografía
           </h2>
           <h2 className="text-xl sm:text-2xl font-bold font-nunitoSans">
+            <span className="hidden lg:inline bg-inherit">Paso </span>
             {paso} de 4
           </h2>
         </div>
@@ -447,6 +452,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             Servicio de fotografía
           </h2>
           <h2 className="text-xl sm:text-2xl font-bold font-nunitoSans lg:max-w-36 lg:mx-14">
+            <span className="hidden lg:inline bg-inherit">Paso </span>
             {paso} de 4
           </h2>
         </div>
@@ -645,7 +651,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             >
               <label
                 htmlFor="servicio"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿Qué tipo de servicio fotográfico necesitás? *
                 <Controller
@@ -981,7 +987,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             >
               <label
                 htmlFor="servicio"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿Qué tipo de servicio de video necesitás? *
                 <Controller
@@ -1051,7 +1057,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="ciudad"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿En qué ciudad se va a realizar la sesión de video? *
                 <input
@@ -1069,7 +1075,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="fecha"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿En qué fecha estimada se va a realizar la sesión de video? *
                 <div className="flex relative max-w-[60%] sm:max-w-[50%] border-[1.5px] border-inputBorderSelected rounded-2xl h-11 text-xl text-fondoBlanco bg-formBackground focus:outline outline-3 outline-principalHover">
@@ -1091,7 +1097,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="duracion"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿Cuántas horas necesitás el servicio? *
                 <Controller
@@ -1161,7 +1167,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="cantidadVideos"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿Cuántos videos necesitás? *
                 <Controller
@@ -1239,7 +1245,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
             >
               <label
                 htmlFor="servicio"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿Qué tipo de servicio fotográfico necesitás? *
                 <Controller
@@ -1309,7 +1315,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="servicio1"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿Qué tipo de servicio de video necesitás? *
                 <Controller
@@ -1379,7 +1385,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="ciudad"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿En qué ciudad se va a realizar la sesión de fotos / video? *
                 <input
@@ -1397,7 +1403,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="fecha"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿En qué fecha estimada se va a realizar la sesión de fotos /
                 video? *
@@ -1420,7 +1426,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="duracion"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿Cuántas horas necesitás el servicio? *
                 <Controller
@@ -1490,7 +1496,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="cantidad"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿Cuántas fotos necesitás? *
                 <Controller
@@ -1560,7 +1566,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="formato"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿En qué formato necesitás las fotos? *
                 <Controller
@@ -1630,7 +1636,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
               </label>
               <label
                 htmlFor="cantidad2"
-                className="flex flex-col text-base font-bold text-center"
+                className="flex flex-col text-base font-bold text-center md:text-left"
               >
                 ¿Cuántos videos necesitás? *
                 <Controller

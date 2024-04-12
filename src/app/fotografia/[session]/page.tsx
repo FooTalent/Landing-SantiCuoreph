@@ -84,11 +84,11 @@ const sessionInfo: SessionInfoType[] = [
     verticalImage: true,
     images: [
       {
-        url: "/images/aura/aura01.jpg",
+        url: "/images/aura/aura01.png",
         alt: "Aura gin",
       },
       {
-        url: "/images/aura/aura02.jpg",
+        url: "/images/aura/aura02.png",
         alt: "Aura gin 02",
       },
       {
@@ -108,7 +108,7 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Aura gin 06",
       },
       {
-        url: "/images/aura/aura07.jpg",
+        url: "/images/aura/aura07.png",
         alt: "Aura gin 07",
       },
       {
@@ -264,7 +264,7 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Mas que uno 05",
       },
       {
-        url: "/images/mas-que-uno/mu06.jpg",
+        url: "/images/mas-que-uno/mu6.jpg",
         alt: "Mas que uno 06",
       },
       {
@@ -272,7 +272,7 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Mas que uno 07",
       },
       {
-        url: "/images/mas-que-uno/mu08.jpg",
+        url: "/images/mas-que-uno/mu8.jpg",
         alt: "Mas que uno 08",
       },
     ],
