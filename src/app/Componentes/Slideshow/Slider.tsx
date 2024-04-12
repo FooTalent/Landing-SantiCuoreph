@@ -33,7 +33,7 @@ const slideImages = [
   {
     index: 4,
     url: "/assets/img/Toch.JPG",
-    caption: "TOCH",
+    caption: "TOCH en Camping de Palermo",
     caption2: "Cobertura de evento",
     link: "/servicios/audiovisual",
   },
@@ -95,10 +95,10 @@ const Slideshow = () => {
                 />
 
                 {/* TEXTO PRINCIPAL Y SECUNDARIO */}
-                <p className="text-fondoBlanco absolute font-merriwather font-bold   lg:text-7xl text-2xl md:text-[2rem] lg:left-[105px] left-10 lg:bottom-44 bottom-28 md:bottom-56 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
+                <p className="text-fondoBlanco absolute font-merriwather font-bold   lg:text-7xl text-2xl md:text-[2rem] lg:left-[115px] left-10 lg:bottom-44 bottom-28 md:bottom-56 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
                   {slideImage.caption2}
                 </p>
-                <p className="lg:left-[105px] font-nunitoSans absolute font-light italic text-fondoBlanco text-xl md:text-[2rem] left-10 lg:bottom-28 md:bottom-40 bottom-20 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
+                <p className="lg:left-[115px] font-nunitoSans absolute font-light italic text-fondoBlanco text-xl md:text-[2rem] left-10 lg:bottom-28 md:bottom-40 bottom-20 drop-shadow-[0_8px_5px_rgb(0,0,0,0.8)]">
                   {slideImage.caption}
                 </p>
               </div>
