@@ -346,26 +346,26 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
   const properties = {
     prevArrow: (
       <button className="ml-2 md:ml-4 lg:ml-10 " style={{ ...buttonStyle }}>
-        <div className="bg-slider w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] xl:w-14 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
+        <div className="bg-slider w-[35px] h-[35px] sm:w-[40px] sm:h-[40px] xl:w-14 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full">
           <Image
             src="/assets/img/ArrowLeft.png"
             alt=""
             width={20}
             height={20}
-            className="w-[10px] sm:w-[16px]"
+            className="w-[10px] sm:w-[14px]"
           />
         </div>
       </button>
     ),
     nextArrow: (
-      <button className="mr-2 md:mr-4 lg:mr-10" style={{ ...buttonStyle }}>
-        <div className="bg-slider w-[35px] h-[35px] sm:w-[45px] sm:h-[45px] xl:w-14 xl:h-14 flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
+      <button className="md:mr-4 lg:mr-10" style={{ ...buttonStyle }}>
+        <div className="bg-slider w-[35px] h-[35px] sm:w-[40px] sm:h-[40px] xl:w-[50px] xl:h-[50px] flex justify-center items-center hover:bg-sliderHover rounded-full object-cover">
           <Image
             src="/assets/img/ArrowRight.png"
             alt=""
             width={20}
             height={20}
-            className="w-[10px] sm:w-[16px]"
+            className="w-[10px] sm:w-[14px]"
           />
         </div>
       </button>
@@ -488,18 +488,15 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
           <>
             <div className="h-screen w-screen fixed inset-0 z-50 outline-none focus:outline-none">
               <div className="relative">
-                {/*content*/}
                 <div className="relative flex flex-col w-full outline-none focus:outline-none">
-                  {/*header*/}
-
                   <button
-                    className="absolute z-50 end-0 p-4 md:mr-4 lg:mr-8 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    className="absolute z-50 p-4 sm:p-3 lg:p-4 end-0 md:mr-4 lg:mr-6 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                     onClick={() => setModal({
                       open: false,
                       defaultIndex: 0
                     })}
                   >
-                    <div className="p-3 lg:p-4 bg-slider hover:bg-sliderHover rounded-full">
+                    <div className="p-3 xl:p-4 bg-slider hover:bg-sliderHover rounded-full">
                       <CloseButton />
                     </div>
                   </button>
