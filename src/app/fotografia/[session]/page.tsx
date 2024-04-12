@@ -220,11 +220,11 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Jettatore 06",
       },
       {
-        url: "/images/jettatore/jt07.JPG",
+        url: "/images/jettatore/jt07.jpg",
         alt: "Jettatore 07",
       },
       {
-        url: "/images/jettatore/jt08.JPG",
+        url: "/images/jettatore/jt08.jpg",
         alt: "Jettatore 08",
       },
     ],
@@ -300,7 +300,7 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Mas que uno 06",
       },
       {
-        url: "/images/mas-que-uno/mu7.webp",
+        url: "/images/mas-que-uno/mu07.jpg",
         alt: "Mas que uno 07",
       },
       {
