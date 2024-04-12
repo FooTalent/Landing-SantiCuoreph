@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import CustomButton from "../Componentes/CustomButton";
 import Images from "./components/Images";
+import Image from "next/image";
 const page = () => {
   return (
     <>
@@ -22,10 +23,12 @@ const page = () => {
             audiovisual de calidad,
             <br className="hidden xl:block" /> a un mensaje de distancia
           </h3>
-          <img
+          <Image
             src="/assets/img/fondoContact1.jpeg"
             alt="bg"
             className="xl:w-[245px] w-[200px] mx-auto rounded-full"
+            width={100}
+            height={100}
           />
         </div>
         <div className="px-5 xl:px-40 text-center space-y-10">
@@ -59,9 +62,9 @@ const page = () => {
             <p className="text-center font-bold xl:text-[36px] my-auto">
               Escribime a{" "}
             </p>
-            <a href="mailto:santicuroeph@gmail.com" className="text-center ">
+            <a href="mailto:santiagocuoreph@gmail.com" className="text-center ">
               <CustomButton
-                title="santicuoreph@gmail.com"
+                title="santiagocuoreph@gmail.com"
                 styles="xl:bg-slate-100  xl:h-[84px] xl:w-[437px] transition-all ease-in-out duration-300 xl:border-none px-4 py-4 w-max mx-auto xl:mx-0 border xl:shadow-none shadow-md bg-white rounded-[20px] font-bold hover:bg-principalHover"
               />
             </a>
