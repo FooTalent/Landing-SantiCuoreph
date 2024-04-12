@@ -116,11 +116,11 @@ const sessionInfo: SessionInfoType[] = [
     verticalImage: true,
     images: [
       {
-        url: "/images/aura/aura01.jpg",
+        url: "/images/aura/aura01.png",
         alt: "Aura gin",
       },
       {
-        url: "/images/aura/aura02.jpg",
+        url: "/images/aura/aura02.png",
         alt: "Aura gin 02",
       },
       {
@@ -140,7 +140,7 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Aura gin 06",
       },
       {
-        url: "/images/aura/aura07.jpg",
+        url: "/images/aura/aura07.png",
         alt: "Aura gin 07",
       },
       {
@@ -168,7 +168,7 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Pasado pisado 03",
       },
       {
-        url: "/images/pasado-pisado/pp04.jpg",
+        url: "/images/pasado-pisado/pp04.JPG",
         alt: "Pasado pisado 04",
       },
       {
@@ -176,11 +176,11 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Pasado pisado 05",
       },
       {
-        url: "/images/pasado-pisado/pp06.jpg",
+        url: "/images/pasado-pisado/pp06.JPG",
         alt: "Pasado pisado 06",
       },
       {
-        url: "/images/pasado-pisado/pp07.jpg",
+        url: "/images/pasado-pisado/pp07.JPG",
         alt: "Pasado pisado 07",
       },
       {
@@ -220,11 +220,11 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Jettatore 06",
       },
       {
-        url: "/images/jettatore/jt07.jpg",
+        url: "/images/jettatore/jt07.JPG",
         alt: "Jettatore 07",
       },
       {
-        url: "/images/jettatore/jt08.jpg",
+        url: "/images/jettatore/jt08.JPG",
         alt: "Jettatore 08",
       },
     ],
@@ -284,27 +284,27 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Mas que uno 02",
       },
       {
-        url: "/images/mas-que-uno/mu03.jpg",
+        url: "/images/mas-que-uno/mu03.JPG",
         alt: "Mas que uno 03",
       },
       {
-        url: "/images/mas-que-uno/mu04.jpg",
+        url: "/images/mas-que-uno/mu04.JPG",
         alt: "Mas que uno 04",
       },
       {
-        url: "/images/mas-que-uno/mu05.jpg",
+        url: "/images/mas-que-uno/mu05.JPG",
         alt: "Mas que uno 05",
       },
       {
-        url: "/images/mas-que-uno/mu06.jpg",
+        url: "/images/mas-que-uno/mu6.JPG",
         alt: "Mas que uno 06",
       },
       {
-        url: "/images/mas-que-uno/mu07.jpg",
+        url: "/images/mas-que-uno/mu7.webp",
         alt: "Mas que uno 07",
       },
       {
-        url: "/images/mas-que-uno/mu08.jpg",
+        url: "/images/mas-que-uno/mu8.jpg",
         alt: "Mas que uno 08",
       },
     ],
