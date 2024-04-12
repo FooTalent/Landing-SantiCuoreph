@@ -68,7 +68,7 @@ const AboutMe = () => {
             fotografía
           </p>
         </div>
-        <picture className="flex justify-center santiCamera m-6 lg:m-0 min-w-[500px]">
+        <picture className="flex justify-center santiCamera m-6 lg:m-0 sm:min-w-[400px]">
           <Image
             src={santiCuorePH}
             width={678}
