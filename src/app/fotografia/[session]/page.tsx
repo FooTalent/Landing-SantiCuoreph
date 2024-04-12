@@ -296,11 +296,11 @@ const sessionInfo: SessionInfoType[] = [
         alt: "Mas que uno 05",
       },
       {
-        url: "/images/mas-que-uno/mu6.jpg",
+        url: "/images/mas-que-uno/mu06.jpg",
         alt: "Mas que uno 06",
       },
       {
-        url: "/images/mas-que-uno/mu07.jpg",
+        url: "/images/mas-que-uno/mu7.jpg",
         alt: "Mas que uno 07",
       },
       {
