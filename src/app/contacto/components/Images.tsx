@@ -24,12 +24,16 @@ export default function Images() {
             className="w-[89.46px] xl:w-[122px] hover:"
             src="/images/whasshovered.png"
             alt=""
+            width={100}
+            height={100}
           />
         ) : (
           <Image
             className="w-[89.46px] xl:w-[122px] hover:"
             src="/images/whass.png"
             alt=""
+            width={100}
+            height={100}
           />
         )}
       </button>
@@ -44,12 +48,16 @@ export default function Images() {
             className="w-[89.46px] xl:w-[122px] hover:"
             src="/images/instahovered.png"
             alt=""
+            width={100}
+            height={100}
           />
         ) : (
           <Image
             className="w-[89.46px] xl:w-[122px] hover:"
             src="/images/insta.png"
             alt=""
+            width={100}
+            height={100}
           />
         )}
       </Link>

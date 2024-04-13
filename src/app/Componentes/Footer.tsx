@@ -38,6 +38,7 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/company/footalent/ "
             target="_Blank"
+            className="font-bold"
           >
             Foo Talent Group.
           </a>

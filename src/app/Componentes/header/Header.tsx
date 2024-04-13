@@ -45,7 +45,6 @@ const Header = () => {
     }
   };
   const handleNavigateLinksOpenModal = (href: string) => {
-    toggleNavbar();
     if (pathName === "/contacto/formulario") {
       document.body.style.overflow = "hidden";
       setToNavigate(href);
@@ -193,7 +192,10 @@ const Header = () => {
                 return (
                   <li className="hover:text-principalHover" key={link.name}>
                     <button
-                      onClick={() => handleNavigateLinksOpenModal(link.href)}
+                      onClick={() => {
+                        handleNavigateLinksOpenModal(link.href);
+                        toggleNavbar();
+                      }}
                     >
                       {link.name}
                     </button>
