@@ -1,13 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 export default function Images() {
   const [setHoveredW, setSetHoveredW] = useState<boolean>(false);
   const [setHoveredI, setSetHoveredI] = useState<boolean>(false);
   const handleSendMessageWhatssap = () => {
     const phoneNumberEncoded = encodeURIComponent(5491153748531);
     const messageEncoded = encodeURIComponent(
-      "¡Hola, Santi! Estoy interesado en tus servicios."
+      "¡Hola, Santi! Estoy interesado en tus servicios. ¿Podrías darme información sobre "
     );
     window.open(`https://wa.me/${phoneNumberEncoded}?text=${messageEncoded}`);
   };
@@ -19,13 +20,13 @@ export default function Images() {
         onClick={handleSendMessageWhatssap}
       >
         {setHoveredW ? (
-          <img
+          <Image
             className="w-[89.46px] xl:w-[122px] hover:"
             src="/images/whasshovered.png"
             alt=""
           />
         ) : (
-          <img
+          <Image
             className="w-[89.46px] xl:w-[122px] hover:"
             src="/images/whass.png"
             alt=""
@@ -33,19 +34,19 @@ export default function Images() {
         )}
       </button>
       <Link
-      target="_blank"
+        target="_blank"
         href="https://www.instagram.com/santicuore.ph/"
         onMouseEnter={() => setSetHoveredI(true)}
         onMouseLeave={() => setSetHoveredI(false)}
       >
         {setHoveredI ? (
-          <img
+          <Image
             className="w-[89.46px] xl:w-[122px] hover:"
             src="/images/instahovered.png"
             alt=""
           />
         ) : (
-          <img
+          <Image
             className="w-[89.46px] xl:w-[122px] hover:"
             src="/images/insta.png"
             alt=""
