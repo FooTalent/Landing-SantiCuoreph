@@ -17,7 +17,7 @@ const Footer = () => {
           >
             <Instagram />
           </a>
-          <a href="mailto:santi@gmail.com" className="p-2.5">
+          <a href="mailto:santiagocuoreph@gmail.com" className="p-2.5">
             <Mail />
           </a>
           <a
@@ -34,7 +34,13 @@ const Footer = () => {
           contenido.
         </p>
         <p className="text-xs lg:text-base">
-          Sitio web diseñado y desarrollado por <a href="https://www.linkedin.com/company/footalent/ " target="_Blank">Foo Talent Group.</a>
+          Sitio web diseñado y desarrollado por{" "}
+          <a
+            href="https://www.linkedin.com/company/footalent/ "
+            target="_Blank"
+          >
+            Foo Talent Group.
+          </a>
         </p>
         <p className="text-xs lg:text-base">
           <b>Santiago García. 2024.</b> Buenos Aires, Argentina.

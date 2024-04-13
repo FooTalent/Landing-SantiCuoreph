@@ -45,6 +45,7 @@ const Header = () => {
     }
   };
   const handleNavigateLinksOpenModal = (href: string) => {
+    toggleNavbar();
     if (pathName === "/contacto/formulario") {
       document.body.style.overflow = "hidden";
       setToNavigate(href);
@@ -68,7 +69,7 @@ const Header = () => {
         <div className="absolute w-full h-screen backdrop-blur-lg flex ">
           <div className="h-72 w-[700px] space-y-5 p-5 rounded-3xl font-merriwather  border bg-white m-auto">
             <button
-              className="ml-auto flex"
+              className="ml-auto hidden sm:flex"
               onClick={() => {
                 setShowModal(false), (document.body.style.overflow = "auto");
               }}
@@ -88,16 +89,16 @@ const Header = () => {
                 />
               </svg>
             </button>
-            <h3 className="text-3xl font-bold text-center">
+            <h3 className="text-[22px] sm:text-3xl font-bold text-center">
               ¿Salir sin completar el formulario?
             </h3>
-            <p className="text-center">
+            <p className="text-center text-lg text-normal">
               Si salís del formulario ahora, perderás los datos ingresados.
             </p>
             <div className="flex justify-evenly">
               <button
                 onClick={handleCancelModal}
-                className="border w-32 rounded-3xl font-bold py-3 px-2 hover:bg-principalHover transition-all ease-in-out"
+                className="border border-[#b3b3b3] w-32 rounded-3xl font-bold py-3 px-2 hover:bg-principalHover transition-all ease-in-out"
               >
                 Cancelar
               </button>
@@ -152,7 +153,10 @@ const Header = () => {
               </a>
             </div>
             <div className="hidden sm:flex grow justify-end items-center gap-10">
-              <a href="https://api.whatsapp.com/send/?phone=5491153748531&text=%C2%A1Hola%2C+Santi%21+Estoy+interesado+en+tus+servicios.&type=phone_number&app_absent=0" target="_blank">
+              <a
+                href="https://api.whatsapp.com/send/?phone=5491153748531&text=%C2%A1Hola%2C+Santi%21+Estoy+interesado+en+tus+servicios.&type=phone_number&app_absent=0"
+                target="_blank"
+              >
                 <Whatsapp size={28} />
               </a>
             </div>
@@ -188,9 +192,11 @@ const Header = () => {
               {navLinks.map((link) => {
                 return (
                   <li className="hover:text-principalHover" key={link.name}>
-                    <Link href={link.href} onClick={toggleNavbar}>
+                    <button
+                      onClick={() => handleNavigateLinksOpenModal(link.href)}
+                    >
                       {link.name}
-                    </Link>
+                    </button>
                   </li>
                 );
               })}
@@ -201,7 +207,10 @@ const Header = () => {
                 >
                   <InstagramLogo size={26} />
                 </a>
-                <a href="https://api.whatsapp.com/send/?phone=5491153748531&text=%C2%A1Hola%2C+Santi%21+Estoy+interesado+en+tus+servicios.&type=phone_number&app_absent=0" target="_blank">
+                <a
+                  href="https://api.whatsapp.com/send/?phone=5491153748531&text=%C2%A1Hola%2C+Santi%21+Estoy+interesado+en+tus+servicios.&type=phone_number&app_absent=0"
+                  target="_blank"
+                >
                   <Whatsapp size={28} />
                 </a>
               </div>
