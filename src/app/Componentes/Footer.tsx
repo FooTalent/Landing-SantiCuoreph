@@ -21,7 +21,7 @@ const Footer = () => {
             <Mail />
           </a>
           <a
-            href="https://api.whatsapp.com/send/?phone=5491153748531&text=%C2%A1Hola%2C+Santi%21+Estoy+interesado+en+tus+servicios.&type=phone_number&app_absent=0"
+            href="https://wa.me/5491153748531?text=https://api.whatsapp.com/send?phone=5491153748531&text=%C2%A1Hola%2C%20Santi!%20Estoy%20interesado%20en%20tus%20servicios.%20%C2%BFPodr%C3%ADas%20darme%20informaci%C3%B3n%20sobre%20&type=phone_number&app_absent=0"
             target="_blank"
             className="p-2.5"
           >
@@ -38,6 +38,7 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/company/footalent/ "
             target="_Blank"
+            className="font-bold"
           >
             Foo Talent Group.
           </a>

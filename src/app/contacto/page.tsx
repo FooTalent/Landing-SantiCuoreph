@@ -77,7 +77,7 @@ const page = () => {
             <h3 className="text-center text-2xl xl:text-[36px] pb-10 xl:pb-0 font-bold my-auto">
               ¡Contactame a través de mis redes!
             </h3>
-            <div className="flex text-3xl pb-10 xl:pb-0 xl:space-x-16 font-bold justify-evenly">
+            <div className="flex text-3xl pb-10 xl:pb-0 xl:space-x-16 font-bold justify-evenly items-center">
               <Images />
             </div>
           </div>
