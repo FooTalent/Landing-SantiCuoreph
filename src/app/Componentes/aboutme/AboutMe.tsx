@@ -3,7 +3,16 @@ import santi from '../../../../public/images/aboutme/05_FotografiaSantiagoGarcia
 import Image from "next/image";
 import Link from "next/link";
 import CustomFlecha from "./CustomFlecha";
+import CustomCheck from "./custom-check";
 const AboutMe = () => {
+
+    const servicesDescription: string[] = [
+        "Fotógrafo profesional",
+        "Editor de video",
+        "Creador de contenido audiovisual",
+        "Reelmaker"
+    ]
+
     return (
         <>
        <section className="Sobremi lg:grid-cols-2 lg:grid-rows-1 gap-8 lg:gap-2 my-20 lg:my-40 max-w-[1000px] m-auto">
@@ -22,10 +31,17 @@ const AboutMe = () => {
             <p className="text-balance text-xl">¡Hola! Soy Santiago García, creador de <b>SantiCuorePH</b>, y soy...</p>
             </div>
             <div className="sobremi__texto Merriweather w-fit max-w-sm ml-3">
+                {
+                    servicesDescription.map((service, idx) => {
+                        return <CustomCheck key={idx} description={service} />
+                    })
+                }
+                {/*
                 <CustomFlecha description="Fotógrafo profesional" />
                 <CustomFlecha description="Editor de video" />
                 <CustomFlecha description="Creador de contenido audiovisual" />
                 <CustomFlecha description="Reelmaker" />
+                 */}
                 <p className="text-xl font-semibold my-10">¿Querés saber más sobre mí?</p>
                 <div className="button flex justify-center items-center">
                 <Link href={"/sobre-mi"}>
