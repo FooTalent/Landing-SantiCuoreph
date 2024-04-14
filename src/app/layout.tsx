@@ -7,9 +7,9 @@ import Header from "./Componentes/header/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SantiCuore PH: Fotografía y Edición Audiovisual en Argentina",
+  title: "SantiCuore PH: Fotógrafo y Editor Audiovisual",
   description:
-    "SantiCuore PH es un servicio especializado en fotografía, edición de video y creación de contenido audiovisual para redes sociales. Realizamos retratos, fotografía artística, fotografía comercial y publicitaria. También realizamos cobertura de eventos artísticos, eventos sociales y eventos corporativos, cumpleaños, casamientos, y más. Producciones fotográficas y audiovisuales de calidad. Contactanos hoy mismo y solicita tu presupuesto sin compromiso.",
+    "SantiCuore PH, ubicado en Argentina ofrece servicios de fotografía, edición de video y creación de contenido.... etc.",
 };
 
 export default function RootLayout({

@@ -33,13 +33,13 @@ const ServicesPage = () => {
                 </div>
                 <Image
                   src={flecha}
-                  alt=""
+                  alt="Ingresar"
                   className="invert md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-[40px]"
                 ></Image>
               </div>
               <Image
                 src={img01}
-                alt="asd"
+                alt="Retrato Artístico"
                 className="object-cover h-[600px] md:h-[800px] lg:h-[941px] rounded-2xl  group-hover:brightness-50"
               />
             </Link>
@@ -60,13 +60,13 @@ const ServicesPage = () => {
                 </div>
                 <Image
                   src={flecha}
-                  alt=""
+                  alt="Ingresar"
                   className="invert md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-[40px]"
                 ></Image>
               </div>
               <Image
                 src={img02}
-                alt="asd"
+                alt="Fotografía comercial"
                 className="object-cover rounded-b-2xl rounded-2xl group-hover:brightness-50 h-[235px] sm:h-[300px] md:h-[395px] lg:h-[465px]"
               />
             </Link>
@@ -87,13 +87,13 @@ const ServicesPage = () => {
                 </div>
                 <Image
                   src={flecha}
-                  alt=""
+                  alt="Ingresar"
                   className="invert md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-[40px]"
                 ></Image>
               </div>
               <Image
                 src={img03}
-                alt="asd"
+                alt="Fotografía artística"
                 className="object-cover rounded-b-2xl h-full rounded-2xl group-hover:brightness-50 h-[235px] sm:h-[300px] md:h-[400px] lg:h-[465px]"
               />
             </Link>
@@ -114,13 +114,13 @@ const ServicesPage = () => {
               </div>
               <Image
                 src={flecha}
-                alt=""
+                alt="Ingresar"
                 className="invert md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-[40px]"
               ></Image>
             </div>
             <Image
               src={img04}
-              alt="asd"
+              alt="Evento artístico"
               className="object-cover rounded-b-2xl h-full h-[138px] sm:h-[250px] md:h-[300px] lg:h-[434px] object-top rounded-2xl  group-hover:brightness-50"
             />
           </Link>
@@ -139,13 +139,13 @@ const ServicesPage = () => {
               </div>
               <Image
                 src={flecha}
-                alt=""
+                alt="Ingresar"
                 className="invert md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-[40px]"
               ></Image>
             </div>
             <Image
               src={img05}
-              alt="asds"
+              alt="Evento social"
               className="object-cover rounded-b-2xl h-[291px] sm:h-[320px] lg:h-[458px] md:object-top rounded-2xl  group-hover:brightness-50"
               style={{objectPosition: "50% 10%"}}
             />
@@ -163,13 +163,13 @@ const ServicesPage = () => {
               </div>
               <Image
                 src={flecha}
-                alt=""
+                alt="Ingresar"
                 className="invert md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-[40px]"
               ></Image>
             </div>
             <Image
               src={img06}
-              alt="asds"
+              alt="Evento artístico"
               className="object-cover rounded-b-2xl object-top h-[267px] sm:h-[300px] md:h-[320px] lg:h-[458px] rounded-2xl  group-hover:brightness-50"
             />
           </Link>
@@ -187,13 +187,13 @@ const ServicesPage = () => {
             </div>
             <Image
               src={flecha}
-              alt=""
+              alt="Ingresar"
               className="invert md:opacity-0 md:group-hover:opacity-100 transition-all duration-300 w-[40px]"
             ></Image>
           </div>
           <Image
             src={img07}
-            alt="asds"
+            alt="Evento artístico"
             className="object-cover rounded-b-2xl h-[138px] sm:h-[200px] md:h-[300px] lg:h-[434px] rounded-2xl group-hover:brightness-50 transition-all duration-300"
             style={{objectPosition: "50% 40%"}}
           />
