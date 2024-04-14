@@ -6,7 +6,7 @@ import Images from "./components/Images";
 const page = () => {
   return (
     <>
-      <section className="xl:w-[1236px] pr-10  md:px-0 mx-4  pb-[24px] text-3xl xl:mx-auto pt-4 xl:pt-0   border-b-[2px] border-black text-fondoNegro md:text-3xl xl:text-[48px]  mb-[1em]">
+      <section className="xl:w-[1236px] pr-10  md:px-0 mx-4  pb-[24px] text-3xl xl:mx-auto pt-4 xl:pt-0   border-b-[2px] border-black text-fondoNegro xl:text-[48px]  mb-[1em]">
         <h1 className="pt-[2.4em]  font-semibold font-merriwather ">
           Contacto
         </h1>
