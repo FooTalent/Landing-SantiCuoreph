@@ -12,7 +12,7 @@ const Banner = () => {
               Fotografía
             </h1>
           </div>
-          <div
+          <picture
             className={`relative hover:scale-[1.3] flex w-full h-[200px] lg:h-[500px]  transition-all ease-in-out cursor-pointer   `}
           >
             <Image
@@ -22,7 +22,7 @@ const Banner = () => {
               alt="terraza"
               className="object-cover"
             ></Image>
-          </div>
+          </picture>
         </Link>
       </section>
 
