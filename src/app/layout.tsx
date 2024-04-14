@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "SantiCuore PH: Fotógrafo y Editor Audiovisual",
   description:
     "SantiCuore PH, ubicado en Argentina ofrece servicios de fotografía, edición de video y creación de contenido.... etc.",
+  keywords: "Fotógrafo, Editor, Editor Audiovisual, Fotografía, Argentina,Buenos aires,Fotografía Comercial,Fotografía artística, Cobertura de evento,Video,redes, redes sociales",
 };
 
 export default function RootLayout({
