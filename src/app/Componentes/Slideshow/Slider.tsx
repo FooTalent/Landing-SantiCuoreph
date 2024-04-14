@@ -85,7 +85,7 @@ const Slideshow = () => {
               <div className="md:h-screen relative flex items-center">
                 <Image
                   src={slideImage.url}
-                  alt="Slide"
+                  alt={slideImage.caption2}
                   width="0"
                   height="0"
                   sizes="100%"
