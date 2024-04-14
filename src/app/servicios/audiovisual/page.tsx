@@ -268,7 +268,7 @@ const Audiovisual = () => {
                   </div>
                   <Image
                     src={flecha}
-                    alt=""
+                    alt="Ingresar"
                     className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"
                   ></Image>
                 </div>
@@ -302,7 +302,7 @@ const Audiovisual = () => {
                   </div>
                   <Image
                     src={flecha}
-                    alt=""
+                    alt="Ingresar"
                     className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"
                   ></Image>
                 </div>
@@ -338,7 +338,7 @@ const Audiovisual = () => {
                   </div>
                   <Image
                     src={flecha}
-                    alt=""
+                    alt="Ingresar"
                     className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"
                   ></Image>
                 </div>
@@ -371,7 +371,7 @@ const Audiovisual = () => {
                     </div>
                     <Image
                       src={flecha}
-                      alt=""
+                      alt="Ingresar"
                       className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"
                     ></Image>
                   </div>
@@ -402,7 +402,7 @@ const Audiovisual = () => {
                     </div>
                     <Image
                       src={flecha}
-                      alt=""
+                      alt="Ingresar"
                       className="invert lg:opacity-0 group-hover:opacity-100 transition-all duration-300"
                     ></Image>
                   </div>
