@@ -16,14 +16,14 @@ const ServicesLayout = ({
   children: React.ReactNode;
 }>) => {
   const pathname = usePathname();
-  const activeStyle = "font-medium md:font-extrabold bg-principal md:bg-inherit p-1 px-3 rounded-full";
+  const activeStyle = "font-medium md:font-bold bg-principal md:bg-inherit p-1 px-3 rounded-full";
   const inactiveStyle = "font-light";
 
     return (
-      <div className="font-merriwather">
-      <section className="max-w-screen-xl pb-4 border-b-2 border-black text-fondoNegro mx-4 xl:mx-auto md:mb-3">
-          <h1 className="text-3xl font-semibold md:text-5xl pt-[4rem] pb-[1rem] md:pt-28 xl:pt-24 xl:pb-[.4em]">Servicios</h1>
-          <div className="flex gap-4 md:gap-10 sm:justify-center xl:gap-32">
+      <div className="pt-4">
+      <section className="xl:w-[1236px] mx-auto max-w-screen-xl pb-4 border-b-2 border-black text-fondoNegro mx-4 xl:mx-auto md:mb-3 text-3xl xl:text-[48px]">
+          <h1 className="font-semibold pt-[2.4em] pb-[1rem] md:pt-28 xl:pt-24 xl:pb-[.4em] font-merriwather">Servicios</h1>
+          <div className="flex gap-4 md:gap-10 sm:justify-center xl:gap-32 font-nunitoSans">
                     {
                         services.map((service, idx) => {
                             const isActive: boolean = pathname.endsWith(service.href);
