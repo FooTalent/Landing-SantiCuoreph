@@ -33,8 +33,8 @@ const page = () => {
         </div>
         <div className="px-5 xl:px-40 text-center space-y-10">
           <p className="text-white font-nunitoSans font-thin xl:font-bold  text-[16px] xl:text-[28px]">
-            Solicitá hoy tu presupuesto completando el siguiente formulario
-            Tendrás una respuesta en un plazo de 48 horas
+            Solicitá hoy tu presupuesto completando el siguiente formulario.
+            Tendrás una respuesta en un plazo de 48 horas.
           </p>
           <Link
             href={"/contacto/formulario"}
