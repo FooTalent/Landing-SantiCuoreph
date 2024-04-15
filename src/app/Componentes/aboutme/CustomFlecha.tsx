@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image"
-import flecha from '../../Icon/Group.png'
+import check from '../../../../public/images/Group.png'
 type flechaProps = {
     description: string,
 }
@@ -13,11 +13,11 @@ const {description}= props
     return(
         <div className="flex flex-row nunitoSans font-bold text-xl gap-2 my-5">
         <Image
-        src={flecha}
+        src={check}
         width={17}
         height={17}
         alt="flecha"
-        className="object-cover w-8 h-fit">
+        className="object-cover w-7 h-fit">
 
         </Image>
         {description}
