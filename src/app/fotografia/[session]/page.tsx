@@ -281,8 +281,8 @@ const sessionInfo: SessionInfoType[] = [
     ],
   },
   {
-    title: "Cobertura de evento artístico",
-    subtitle: "TOCH en Camping Palermo",
+    title: "TOCH en Camping Palermo",
+    subtitle: "Cobertura de evento artístico",
     path: "toch",
     verticalImage: false,
     images: [
