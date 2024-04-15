@@ -74,14 +74,14 @@ const Slideshow = () => {
       <Slide
         autoplay={true}
         infinite={true}
-        duration={8000}
+        duration={5000}
         {...properties}
         indicators={true}
         cssClass="pb-5"
       >
         {slideImages.map((slideImage, index) => (
           <div key={slideImage.index} className="h-[438px] md:h-full">
-            <Link href={slideImage.link}>
+            <Link href={`${slideImage.link}?home`}>
               <div className="md:h-screen relative flex items-center">
                 <Image
                   src={slideImage.url}
