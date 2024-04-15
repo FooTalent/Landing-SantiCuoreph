@@ -55,7 +55,7 @@ const AboutMe = () => {
           Este emprendimiento surgió como resultado de una búsqueda de expresión
           artística. Comenzó inicialmente como un anhelo de capturar la belleza
           y la emoción detrás de cada instante, y con el objetivo de llevar a un
-          nivel profesional mi creatividad y mi pasión por la fotografía
+          nivel profesional mi creatividad y mi pasión por la fotografía.
         </p>
         <div className="hidden lg:flex flex-col m-6">
           <p className="pocodespues m-16 mr-0">
@@ -66,10 +66,10 @@ const AboutMe = () => {
             expresión artística. Comenzó inicialmente como un anhelo de capturar
             la belleza y la emoción detrás de cada instante, y con el objetivo
             de llevar a un nivel profesional mi creatividad y mi pasión por la
-            fotografía
+            fotografía.
           </p>
         </div>
-        <picture className="flex justify-center santiCamera m-6 lg:m-0 sm:min-w-[400px]">
+        <picture className="flex justify-center santiCamera m-6 lg:m-0 sm:min-w-[550px]">
           <Image
             src={santiCuorePH}
             width={678}
@@ -114,11 +114,11 @@ const AboutMe = () => {
             width={678}
             height={792}
             alt="santiCuorepH Camera"
-            className=""
+            className="max-h-[600px] object-cover"
           ></Image>
         </picture>
         <div className="sobremi__text mx-14">
-          <div className="text-balance flex flex-col gap-10 mt-0">
+          <div className="flex flex-col gap-10 mt-16">
             <p className="hidden lg:block mt-10 xl:ml-16">
               Mi enfoque va más allá de simplemente capturar imágenes y editar
               videos:

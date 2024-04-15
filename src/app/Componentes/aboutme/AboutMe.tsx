@@ -15,7 +15,7 @@ const AboutMe = () => {
 
     return (
         <>
-       <section className="Sobremi lg:grid-cols-2 lg:grid-rows-1 gap-8 lg:gap-2 my-20 lg:my-40 max-w-[1000px] m-auto">
+       <section className="Sobremi lg:grid-cols-2 lg:grid-rows-1 gap-8 lg:gap-2 my-20 lg:my-40 max-w-[1000px] m-auto px-3">
             <picture className="Sobremi__retrato  h-[350px]  sm:w-[420px] lg:h-[480px] m-2 row-span-2 flex">
                 <Image
                 src={santi}
@@ -27,8 +27,8 @@ const AboutMe = () => {
                 </Image>
             </picture>
             <div className="quiensoy lg:row-span-1 Merriweather w-fit max-w-sm ml-4">
-            <h2 className="nunitoSans font-bold text-4xl mb-5">Sobre mí</h2>
-            <p className="text-balance text-xl">¡Hola! Soy Santiago García, creador de <b>SantiCuorePH</b>, y soy...</p>
+            <h2 className="font-bold text-[44px] mb-5 text-fondoNegro">Sobre mí</h2>
+            <p className=" text-xl">¡Hola! Soy Santiago García, creador de <b>SantiCuorePH</b>, y soy...</p>
             </div>
             <div className="sobremi__texto Merriweather w-fit max-w-sm ml-3">
                 {
