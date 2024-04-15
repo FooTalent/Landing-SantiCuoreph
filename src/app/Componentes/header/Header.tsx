@@ -21,6 +21,8 @@ const Header = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [toNavigate, setToNavigate] = useState<string>("");
   const [isClick, setIsClick] = useState(false);
+  console.log(pathName)
+  const selectNavStyles = "text-principal font-bold"
 
   const toggleNavbar = (): void => {
     setIsClick(!isClick);
@@ -111,8 +113,8 @@ const Header = () => {
           </div>
         </div>
       )}
-      <nav className="py-3 px-4 md:px-8 lg:px-28 xl:mx-[105px] xl:px-0">
-        <div className="flex justify-around">
+      <nav className="py-3 px-4">
+        <div className="flex justify-between xl:max-w-screen-2xl mx-auto">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <button
@@ -124,7 +126,7 @@ const Header = () => {
             </div>
           </div>
 
-          <ul className="hidden sm:flex justify-center gap-10 xl:gap-24 items-center text-white text-[19px] grow-[2] xl:pr-40">
+          <ul className="hidden sm:flex justify-center gap-10 xl:gap-24 items-center text-white text-[19px] grow-[2] lg:pl-10 xl:pl-40">
             {navLinks.slice(1).map((link) => {
               return (
                 <li
@@ -135,6 +137,7 @@ const Header = () => {
                     onClick={() =>
                       handleNavigateLinksOpenModal(link.href)
                     } /* href={link.href} */
+                    className={`${pathName === link.href ? selectNavStyles : ""}`}
                   >
                     {link.name}
                   </button>

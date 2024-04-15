@@ -44,7 +44,7 @@ const ServiceBanner = () => {
                   style={{objectPosition: "50% 20%"}}
                   alt="Imagen 01"
                 />
-                <div className="absolute flex flex-col md:flex-row inset-0 px-4 xl:max-w-screen-xl xl:px-0 mx-auto items-center gap-10 sm:gap-16 md:gap-2 pt-16 sm:pt-24 md:pt-0 lg:flex-nowrap xl:gap-20">
+                <div className="absolute flex flex-col md:flex-row inset-0 px-4 xl:w-[1236px] mx-auto xl:px-0 mx-auto items-center gap-10 sm:gap-16 md:gap-2 pt-16 sm:pt-24 md:pt-0 lg:flex-nowrap xl:gap-20">
                   <div className="">
                     <h3 className="text-lg text-center md:text-left sm:text-3xl lg:text-4xl xl:text-[43px] text-fondoBlanco font-nunitoSans font-bold leading-[25px]">
                       {image.caption}
