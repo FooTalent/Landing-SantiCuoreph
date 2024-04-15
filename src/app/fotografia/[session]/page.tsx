@@ -427,10 +427,10 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
           <div className="flex justify-between">
             <div className="text-fondoBlanco">
               <h2 className="text-2xl md:text-4xl xl:text-5xl merriwather font-bold">
-                {session.title}
+                {session.subtitle}
               </h2>
               <h3 className="text-xl md:text-3xl pt-1 pb-4 xl:pt-3 xl:pb-6 merriwather font-semibold italic">
-                {session.subtitle}
+                {session.title}
               </h3>
             </div>
             <div>

@@ -105,7 +105,7 @@ const AboutMe = () => {
           </p>
           <p className="font-bold">
             Me encargo de crear recuerdos y construir historias que perduren en
-            el tiempo
+            el tiempo.
           </p>
         </div>
         <picture className="flex justify-center m-6 lg:m-0">
@@ -125,10 +125,10 @@ const AboutMe = () => {
             </p>
             <p className="hidden lg:block font-bold xl:ml-16">
               Me encargo de crear recuerdos y construir historias que perduren
-              en el tiempo
+              en el tiempo.
             </p>
             <div className="flex flex-col gap-10 lg:items-center mt-20">
-              <p>Ahora que ya sabés un poco mas sobre mí...</p>
+              <p>Ahora que ya sabés un poco más sobre mí...</p>
               <p className="font-bold">¡Es hora de conocernos!</p>
             </div>
           </div>
