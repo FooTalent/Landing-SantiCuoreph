@@ -238,7 +238,7 @@ const sessionInfo: SessionInfoType[] = [
     ],
   },
   {
-    title: "Más que uno",
+    title: "Más que uno: 10 años",
     subtitle: "Cobertura de evento artístico",
     path: "mas-que-uno",
     verticalImage: false,
@@ -278,7 +278,7 @@ const sessionInfo: SessionInfoType[] = [
     ],
   },
   {
-    title: "Cobertura de evento",
+    title: "Cobertura de evento artístico",
     subtitle: "TOCH en Camping Palermo",
     path: "toch",
     verticalImage: false,
@@ -423,10 +423,10 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
           <div className="flex justify-between">
             <div className="text-fondoBlanco">
               <h2 className="text-2xl md:text-4xl xl:text-5xl merriwather font-bold">
-                {session.subtitle}
+                {session.title}
               </h2>
               <h3 className="text-xl md:text-3xl pt-1 pb-4 xl:pt-3 xl:pb-6 merriwather font-semibold italic">
-                {session.title}
+                {session.subtitle}
               </h3>
             </div>
             <div>
