@@ -21,7 +21,7 @@ const page = () => {
           <h3 className="text-[16px] w-full pb-10 xl:pb-0 font-merriwather  font-thin  xl:font-bold text-center xl:text-left xl:text-[36px] my-auto  text-white">
             Contenido fotográfico <br className="hidden xl:block" /> y
             audiovisual de calidad,
-            <br className="hidden xl:block" /> a un mensaje de distancia
+            <br className="hidden xl:block" /> a un mensaje de distancia.
           </h3>
           <Image
             src="/assets/img/fondoContact1.jpeg"
