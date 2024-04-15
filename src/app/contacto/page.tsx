@@ -21,7 +21,7 @@ const page = () => {
           <h3 className="text-[16px] w-full pb-10 xl:pb-0 font-merriwather  font-thin  xl:font-bold text-center xl:text-left xl:text-[36px] my-auto  text-white">
             Contenido fotográfico <br className="hidden xl:block" /> y
             audiovisual de calidad,
-            <br className="hidden xl:block" /> a un mensaje de distancia
+            <br className="hidden xl:block" /> a un mensaje de distancia.
           </h3>
           <Image
             src="/assets/img/fondoContact1.jpeg"
@@ -33,8 +33,8 @@ const page = () => {
         </div>
         <div className="px-5 xl:px-40 text-center space-y-10">
           <p className="text-white font-nunitoSans font-thin xl:font-bold  text-[16px] xl:text-[28px]">
-            Solicitá hoy tu presupuesto completando el siguiente formulario
-            Tendrás una respuesta en un plazo de 48 horas
+            Solicitá hoy tu presupuesto completando el siguiente formulario.
+            Tendrás una respuesta en un plazo de 48 horas.
           </p>
           <Link
             href={"/contacto/formulario"}

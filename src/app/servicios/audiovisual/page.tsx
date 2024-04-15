@@ -260,8 +260,8 @@ const Audiovisual = () => {
                 <div className="cardBg absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                   <div className="group-hover:pr-10  w-full  transition-all duration-300 mx-auto">
                     <div className="flex gap-1 justify-center sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">
-                    <h3 className="hidden sm:block ">Creación de videos</h3>
-                    <h3 className="sm:hidden">Videos </h3>
+                    <h3 className="hidden sm:block ">Creación de video</h3>
+                    <h3 className="sm:hidden">Video </h3>
                     <h3 className=""> para redes</h3>
                     </div>
                     <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">Spasio Kinesio</h2>
@@ -294,8 +294,8 @@ const Audiovisual = () => {
                 <div className="cardBg absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                 <div className="group-hover:pr-10  w-full  transition-all duration-300 mx-auto">
                     <div className="flex gap-1 justify-center sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">
-                    <h3 className="hidden sm:block ">Creación de videos</h3>
-                    <h3 className="sm:hidden">Videos </h3>
+                    <h3 className="hidden sm:block ">Creación de video</h3>
+                    <h3 className="sm:hidden">Video </h3>
                     <h3 className=""> para redes</h3>
                     </div>
                     <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">TOCH en Camping de Palermo</h2>
@@ -330,8 +330,8 @@ const Audiovisual = () => {
                 <div className="cardBg absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                 <div className="group-hover:pr-10  w-full  transition-all duration-300 mx-auto">
                     <div className="flex gap-1 justify-center sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">
-                    <h3 className="hidden sm:block ">Creación de videos</h3>
-                    <h3 className="sm:hidden">Videos </h3>
+                    <h3 className="hidden sm:block ">Creación de video</h3>
+                    <h3 className="sm:hidden">Video </h3>
                     <h3 className=""> para redes</h3>
                     </div>
                     <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">Backstage de fotos Pasado Pisado</h2>
@@ -364,7 +364,7 @@ const Audiovisual = () => {
                 >
                   <div className="cardBg absolute rounded-b-xl bottom-0 z-30 w-full h-40  flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                     <div className="group-hover:pr-10  w-full  transition-all duration-300">
-                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">Edicion de video</h3>
+                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">Edición de video</h3>
                       <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">
                       Exposición en el Centro Cultural Kirchner
                       </h2>
@@ -395,7 +395,7 @@ const Audiovisual = () => {
                 >
                   <div className="cardBg absolute rounded-b-xl bottom-0 z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                     <div className="group-hover:pr-10  w-full  transition-all duration-300">
-                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">Edicion de video</h3>
+                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">Edición de video</h3>
                       <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">
                       José Ladislao Biró
                       </h2>

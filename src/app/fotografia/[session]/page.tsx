@@ -241,7 +241,7 @@ const sessionInfo: SessionInfoType[] = [
     ],
   },
   {
-    title: "Más que uno",
+    title: "Más que uno: 10 años",
     subtitle: "Cobertura de evento artístico",
     path: "mas-que-uno",
     verticalImage: false,
@@ -281,7 +281,7 @@ const sessionInfo: SessionInfoType[] = [
     ],
   },
   {
-    title: "Cobertura de evento",
+    title: "Cobertura de evento artístico",
     subtitle: "TOCH en Camping Palermo",
     path: "toch",
     verticalImage: false,
