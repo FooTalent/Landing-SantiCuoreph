@@ -364,7 +364,7 @@ const Audiovisual = () => {
                 >
                   <div className="cardBg absolute rounded-b-xl bottom-0 z-30 w-full h-40  flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                     <div className="group-hover:pr-10  w-full  transition-all duration-300">
-                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">Edicion de video</h3>
+                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">Edición de video</h3>
                       <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">
                       Exposición en el Centro Cultural Kirchner
                       </h2>
@@ -395,7 +395,7 @@ const Audiovisual = () => {
                 >
                   <div className="cardBg absolute rounded-b-xl bottom-0 z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                     <div className="group-hover:pr-10  w-full  transition-all duration-300">
-                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">Edicion de video</h3>
+                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">Edición de video</h3>
                       <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">
                       José Ladislao Biró
                       </h2>
