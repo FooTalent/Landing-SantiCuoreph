@@ -7,7 +7,7 @@ export default function Images() {
   const handleSendMessageWhatssap = () => {
     const phoneNumberEncoded = encodeURIComponent(5491153748531);
     const messageEncoded = encodeURIComponent(
-      "¡Hola, Santi! Estoy interesado en tus servicios."
+      "¡Hola, Santi! Estoy interesado en tus servicios. ¿Podrías darme informacion sobre"
     );
     window.open(`https://wa.me/${phoneNumberEncoded}?text=${messageEncoded}`);
   };
