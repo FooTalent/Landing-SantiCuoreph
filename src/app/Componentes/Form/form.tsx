@@ -1738,7 +1738,7 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                     {watch("nombre")}
                   </p>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-2">
                   <p className="text-fondoBlanco font-nunitoSans text-base sm:text-lg">
                     Apellido
                   </p>
@@ -1747,8 +1747,8 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-2">
-                <div className="flex flex-col gap-4 grow">
+              <div className="grid gap-4 md:grid-cols-2">
+                <div className="flex flex-col gap-2 grow">
                   <p className="text-fondoBlanco font-nunitoSans text-base sm:text-lg">
                     Whatsapp
                   </p>
@@ -1756,11 +1756,11 @@ const Form: React.FC<FormProps> = ({ paso, setPaso }) => {
                     {watch("telefono1")}
                   </p>
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-2">
                   <p className="text-fondoBlanco font-nunitoSans text-base sm:text-lg text-left">
                     Email
                   </p>
-                  <p className="font-nunito text-base sm:text-lg font-bold">
+                  <p className="font-nunito text-base sm:text-lg font-bold max-w-[179px] text-wrap">
                     {watch("email")}
                   </p>
                 </div>
