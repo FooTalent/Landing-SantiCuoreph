@@ -121,6 +121,25 @@ El videografo autodidacta de Buenos Aires SantiCuoreph con gran creatividad nece
 <img src="https://cdn.logojoy.com/wp-content/uploads/20210422095037/discord-mascot.png" alt="Logo" width="60" height="60">
 
 
+<h3>SEO APLICADO </h3>
+<p>
+La Landing-Page cuenta con un enfoque SEO en competir contra los demas fotógrafos/ editores de video Áudiovisual en argentina, por esto, contamos con un meta descripción general de la página que incluye las palabras claves, Argentina, buenos Aires y (nombre servicio) para mejorar las posibilidades de búsqueda con palabras claves como Fotógrafo en Buenos Aires.
+</p>
+
+<p>
+En cuanto a su estructura, esta, al ser una pagina que cuenta con distintas imagenes, son encarceladas por un picture, esto aumenta la calificación de estructura web, junto, con un buen uso de las etiquetas semánticas Header,Nav, Footer, Article y Section.
+</p>
+
+<p>
+Cuenta con un documento Robots.txt que le indicara al navegador en que sesiones de la página pueden navegar, en este caso, los usuarios pueden entrar de forma general a los distintos apartados de la web.
+</p>
+
+<h3>MEJORAS A FUTURO</h3>
+
+<p>Deseable implementar un side.map que mejora la visibilidad y el posicionamiento en el motor de búsqueda.</p>
+
+<p>Hacer uso de Backlinks, un Backlinks es un enlace que retorna a la pagina web que se solicita posicionar, ¿Como lo podemos hacer?, Por medio de Foros/Wikipedia. </p>
+
 
 <!-- ACKNOWLEDGMENTS -->
 <div align='center'>
