@@ -35,7 +35,7 @@ const slideImages = [
     url: "/assets/img/Toch.JPG",
     caption: "TOCH en Camping de Palermo",
     caption2: "Cobertura de evento",
-    link: "/servicios/audiovisual",
+    link: "/fotografia/toch",
   },
 ];
 
