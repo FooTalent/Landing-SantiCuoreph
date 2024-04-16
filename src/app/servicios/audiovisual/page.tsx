@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import flecha from "../../Icon/Group.png";
 import { useRouter } from "next/navigation";
-import "../styles.css"
+import "../styles.css";
 const buttonStyle = {
   width: "50px",
   background: "none",
@@ -116,6 +116,22 @@ const Audiovisual = () => {
             : "hidden"
         }
       >
+        <div
+          className="absolute right-6 md:right-[21%] bg-fondoGrisClaro/70 w-7 h-7 md:w-8 xl:w-14 md:h-8 xl:h-14 text-fondoBlanco rounded-full flex justify-center items-center cursor-pointer hover:bg-sliderHover"
+          onClick={() => setCarrousel(false)}
+        >
+          <svg
+            className={`w-4 h-4 xl:w-5 xl:h-5 `}
+            viewBox="0 0 29 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.9 29L0 26.1L11.6 14.5L0 2.9L2.9 0L14.5 11.6L26.1 0L29 2.9L17.4 14.5L29 26.1L26.1 29L14.5 17.4L2.9 29Z"
+              fill="white"
+            />
+          </svg>
+        </div>
         <Slider
           ref={(slider) => {
             sliderRef = slider;
@@ -131,12 +147,12 @@ const Audiovisual = () => {
               src="/videos/-df52-4356-853b-f2fcf5ce094e.mp4"
             />
             <div className="mx-auto text-center mt-5 space-y-3 text-fondoBlanco">
-            <h2 className=" text-2xl  xl:text-4xl font-bold">
+              <h2 className=" text-2xl  xl:text-4xl font-bold">
                 Creación de video para redes
               </h2>
               <h3 className="font-thin text-xl md:text-3xl italic">
                 Spasio Kinesio
-              </h3>  
+              </h3>
             </div>
           </div>
           <div className=" h-[450px] ">
@@ -148,12 +164,12 @@ const Audiovisual = () => {
               src="/videos/-aa9d-4724-bd79-6eef7dc35203.mp4"
             />
             <div className="mx-auto text-center mt-5 space-y-3 text-fondoBlanco">
-            <h2 className=" text-2xl  xl:text-4xl font-bold">
+              <h2 className=" text-2xl  xl:text-4xl font-bold">
                 Creación de video para redes
               </h2>
               <h3 className="font-thin text-xl md:text-3xl italic">
-              TOCH en Camping de Palermo
-              </h3>  
+                TOCH en Camping de Palermo
+              </h3>
             </div>
           </div>
           <div className=" h-[450px] ">
@@ -165,16 +181,16 @@ const Audiovisual = () => {
               src="/videos/Backstage Microcentro ALTA.mp4"
             />
 
-<div className="mx-auto text-center mt-5 space-y-3 text-fondoBlanco">
-            <h2 className=" text-2xl  xl:text-4xl font-bold">
+            <div className="mx-auto text-center mt-5 space-y-3 text-fondoBlanco">
+              <h2 className=" text-2xl  xl:text-4xl font-bold">
                 Creación de video para redes
               </h2>
               <h3 className="font-thin text-xl md:text-3xl italic">
-              Backstage de fotos Pasado Pisado
-              </h3>  
+                Backstage de fotos Pasado Pisado
+              </h3>
             </div>
           </div>
-          
+
           <div className=" h-[450px] ">
             <video
               className="object-contain h-full mx-auto"
@@ -184,12 +200,12 @@ const Audiovisual = () => {
               src="/videos/Sala de Exposiciones.mp4"
             />
             <div className="mx-auto text-center mt-5 space-y-3 text-fondoBlanco">
-            <h2 className=" text-2xl  xl:text-4xl font-bold">
-            Edición de video
+              <h2 className=" text-2xl  xl:text-4xl font-bold">
+                Edición de video
               </h2>
               <h3 className="font-thin text-xl md:text-3xl italic">
-              Exposición en Centro Cultural Kirchner
-              </h3>  
+                Exposición en Centro Cultural Kirchner
+              </h3>
             </div>
           </div>
           <div className=" h-[450px] ">
@@ -201,13 +217,13 @@ const Audiovisual = () => {
               controls
               src="/videos/Biró.mp4"
             />
-             <div className="mx-auto text-center mt-5 space-y-3 text-fondoBlanco">
-            <h2 className=" text-2xl  xl:text-4xl font-bold">
-            Edición de video
+            <div className="mx-auto text-center mt-5 space-y-3 text-fondoBlanco">
+              <h2 className=" text-2xl  xl:text-4xl font-bold">
+                Edición de video
               </h2>
               <h3 className="font-thin text-xl md:text-3xl italic">
-              José Ladislao Biró
-              </h3>  
+                José Ladislao Biró
+              </h3>
             </div>
           </div>
           <div className=" h-[450px]">
@@ -260,11 +276,13 @@ const Audiovisual = () => {
                 <div className="cardBg absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                   <div className="group-hover:pr-10  w-full  transition-all duration-300 mx-auto">
                     <div className="flex gap-1 justify-center sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">
-                    <h3 className="hidden sm:block ">Creación de video</h3>
-                    <h3 className="sm:hidden">Video </h3>
-                    <h3 className=""> para redes</h3>
+                      <h3 className="hidden sm:block ">Creación de video</h3>
+                      <h3 className="sm:hidden">Video </h3>
+                      <h3 className=""> para redes</h3>
                     </div>
-                    <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">Spasio Kinesio</h2>
+                    <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">
+                      Spasio Kinesio
+                    </h2>
                   </div>
                   <Image
                     src={flecha}
@@ -292,13 +310,15 @@ const Audiovisual = () => {
                 className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
                 <div className="cardBg absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
-                <div className="group-hover:pr-10  w-full  transition-all duration-300 mx-auto">
+                  <div className="group-hover:pr-10  w-full  transition-all duration-300 mx-auto">
                     <div className="flex gap-1 justify-center sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">
-                    <h3 className="hidden sm:block ">Creación de video</h3>
-                    <h3 className="sm:hidden">Video </h3>
-                    <h3 className=""> para redes</h3>
+                      <h3 className="hidden sm:block ">Creación de video</h3>
+                      <h3 className="sm:hidden">Video </h3>
+                      <h3 className=""> para redes</h3>
                     </div>
-                    <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">TOCH en Camping de Palermo</h2>
+                    <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">
+                      TOCH en Camping de Palermo
+                    </h2>
                   </div>
                   <Image
                     src={flecha}
@@ -328,13 +348,15 @@ const Audiovisual = () => {
                 className="absolute rounded-xl group-hover:bg-black/50 top-0 h-full text-center w-full  transition-all duration-300 "
               >
                 <div className="cardBg absolute bottom-1/2 top-2/4  z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
-                <div className="group-hover:pr-10  w-full  transition-all duration-300 mx-auto">
+                  <div className="group-hover:pr-10  w-full  transition-all duration-300 mx-auto">
                     <div className="flex gap-1 justify-center sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">
-                    <h3 className="hidden sm:block ">Creación de video</h3>
-                    <h3 className="sm:hidden">Video </h3>
-                    <h3 className=""> para redes</h3>
+                      <h3 className="hidden sm:block ">Creación de video</h3>
+                      <h3 className="sm:hidden">Video </h3>
+                      <h3 className=""> para redes</h3>
                     </div>
-                    <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">Backstage de fotos Pasado Pisado</h2>
+                    <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">
+                      Backstage de fotos Pasado Pisado
+                    </h2>
                   </div>
                   <Image
                     src={flecha}
@@ -364,9 +386,11 @@ const Audiovisual = () => {
                 >
                   <div className="cardBg absolute rounded-b-xl bottom-0 z-30 w-full h-40  flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                     <div className="group-hover:pr-10  w-full  transition-all duration-300">
-                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">Edición de video</h3>
+                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">
+                        Edición de video
+                      </h3>
                       <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">
-                      Exposición en el Centro Cultural Kirchner
+                        Exposición en el Centro Cultural Kirchner
                       </h2>
                     </div>
                     <Image
@@ -395,9 +419,11 @@ const Audiovisual = () => {
                 >
                   <div className="cardBg absolute rounded-b-xl bottom-0 z-30 w-full h-40 flex flex-row text-center xl:px-10 px-3 justify-between items-center cursor-pointer transition-all duration-200 bg-black/50">
                     <div className="group-hover:pr-10  w-full  transition-all duration-300">
-                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">Edición de video</h3>
+                      <h3 className="sm:pb-1 text-xl md:text-2xl xl:text-3xl  font-bold">
+                        Edición de video
+                      </h3>
                       <h2 className="text-lg sm:text-xl xl:text-2xl font-thin italic">
-                      José Ladislao Biró
+                        José Ladislao Biró
                       </h2>
                     </div>
                     <Image
