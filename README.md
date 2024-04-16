@@ -7,14 +7,16 @@
 <br>
 <div>
 <h1> 
-Nesesidad 
+Necesidad 
 </h1>
 <p>
-El videografo autodidacta de Buenos Aires SantiCuoreph con gran creatividad necesita expandirse por el mundo digital, cuenta con un buen publico y un hermoso instagram con gran cantidad de fotografias/videos, solicita ayuda a Foo Talent Group para tener su propia Landing Page en el cual los usuarios puedan ver su trabajo y conocer mas sobre el.
+El videografo autodidacta de Buenos Aires SantiCuore PH con gran creatividad necesita expandirse por el mundo digital, cuenta con un buen público y un hermoso Instagram con gran cantidad de fotografias/videos, solicita ayuda a Foo Talent Group para tener su propia Landing Page en el cual los usuarios puedan ver su trabajo y conocer más sobre él.
 </p>
 </div>
 
-<h1> ¿Quienes somos?
+
+
+<h1> ¿Quiénes somos?
 </h1>
 <div>
 <table align='center'>
