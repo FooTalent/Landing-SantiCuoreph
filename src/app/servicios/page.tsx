@@ -14,7 +14,7 @@ import "./styles.css"
 
 const ServicesPage = () => {
   return (
-    <div className="mx-4 xl:w-[1236px] mx-auto">
+    <div className="mx-4 xl:w-[1236px] mx-auto font-merriwather">
       <section className="xl:max-w-screen-xl mb-16  mx-auto md:mb-36 text-fondoBlanco  md:px-0 mt-6 md:mt-10">
         <div className="md:grid md:grid-cols-12 md:grid-rows-4 md:gap-3 mb-3 items-stretch overflow-hidden md:h-[800px] lg:h-[941px] space-y-4 md:space-y-0">
           <div className="md:col-span-5 md:col-start-8 h-[600px] md:h-[800px] lg:h-[941px] rounded-2xl">
@@ -29,7 +29,7 @@ const ServicesPage = () => {
               >
                 <div className="md:group-hover:pr-10  w-full  transition-all duration-300">
                   <h3 className="text-2xl sm:text-3xl md:mb-4 font-bold">Retrato Artístico</h3>
-                  <h2 className="text-md sm:text-2xl font-thin italic">Moda subte</h2>
+                  <h2 className="text-md sm:text-3xl font-thin italic">Moda subte</h2>
                 </div>
                 <Image
                   src={flecha}
