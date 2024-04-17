@@ -36,31 +36,6 @@ El videografo autodidacta de Buenos Aires SantiCuore PH con gran creatividad nec
         </div>
       </div>
     </td>
-</tr>
-</table>
-</div>
-<div>
-
-<table align='center'>
-  <tr>
-    <td align='center'>
-      <div >
-        <a href="https://www.linkedin.com/in/joelrondinelpacheco/" target="_blank" rel="author">
-          <img width="110" src="https://media.licdn.com/dms/image/D4D03AQFHphWMHa_MNQ/profile-displayphoto-shrink_800_800/0/1684823645750?e=1715817600&v=beta&t=VfCbgJwnUX_RfIp79LYiDekoXeecjvUjP9x6iKdK83Y"/>
-        </a>
-        <a href="https://www.linkedin.com/in/joelrondinelpacheco/" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Joel Rondinel Pacheco</br><small>Java Backend Developer</small></h4>
-        </a>
-        <div style='display: flex; flex-direction: column'>
-        <a href="https://github.com/JoelRondinelPacheco" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
-        </a>
-        <a href="https://www.linkedin.com/in/joelrondinelpacheco/" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
-        </a>
-        </div>
-      </div>
-    </td>
     <td align='center'>
       <div >
         <a href="https://www.linkedin.com/in/nicolas-martinez-ju/" target="_blank" rel="author">
@@ -92,6 +67,31 @@ El videografo autodidacta de Buenos Aires SantiCuore PH con gran creatividad nec
           <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
         </a>
         <a href="https://www.linkedin.com/in/rafael-strongoli/" target="_blank">
+          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+        </div>
+      </div>
+    </td>
+</tr>
+</table>
+</div>
+<div>
+
+<table align='center'>
+  <tr>
+    <td align='center'>
+      <div >
+        <a href="https://www.linkedin.com/in/joelrondinelpacheco/" target="_blank" rel="author">
+          <img width="110" src="https://media.licdn.com/dms/image/D4D03AQFHphWMHa_MNQ/profile-displayphoto-shrink_800_800/0/1684823645750?e=1715817600&v=beta&t=VfCbgJwnUX_RfIp79LYiDekoXeecjvUjP9x6iKdK83Y"/>
+        </a>
+        <a href="https://www.linkedin.com/in/joelrondinelpacheco/" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Joel Rondinel Pacheco</br><small>Java Backend Developer</small></h4>
+        </a>
+        <div style='display: flex; flex-direction: column'>
+        <a href="https://github.com/JoelRondinelPacheco" target="_blank">
+          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/joelrondinelpacheco/" target="_blank">
           <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
         </a>
         </div>
