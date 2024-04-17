@@ -97,6 +97,42 @@ El videografo autodidacta de Buenos Aires SantiCuore PH con gran creatividad nec
         </div>
       </div>
     </td>
+   <td align='center'>
+      <div >
+        <a href="https://www.linkedin.com/in/thamairy-gonzalez" target="_blank" rel="author">
+          <img width="110" src="https://media.licdn.com/dms/image/D4D03AQGAm_z9bMzxbA/profile-displayphoto-shrink_200_200/0/1696368858400?e=1718841600&v=beta&t=buwvqpB6TJsGz2Azlrca5g0eNLjv7oFMi48vQtFATGk"/>
+        </a>
+        <a href="https://www.linkedin.com/in/thamairy-gonzalez" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Thamairy Gonzalez</br><small>QA Testing</small></h4>
+        </a>
+        <div style='display: flex; flex-direction: column'>
+        <a href="https://github.com/ThamairyGonzalez" target="_blank">
+          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/thamairy-gonzalez" target="_blank">
+          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+        </div>
+      </div>
+    </td>
+    <td align='center'>
+      <div >
+        <a href="https://www.linkedin.com/in/maria-bebion-85a6038a/" target="_blank" rel="author">
+          <img width="110" src="https://media.licdn.com/dms/image/D4D03AQFg1vMnZ79Wsw/profile-displayphoto-shrink_200_200/0/1682262728491?e=1718841600&v=beta&t=Mq8XtONSCqzNVgQh1hisYTfhK7Oa7lGpRVE7ABWR1Oc"/>
+        </a>
+        <a href="https://www.linkedin.com/in/maria-bebion-85a6038a/" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Maria Bebion</br><small>QA Testing</small></h4>
+        </a>
+        <div style='display: flex; flex-direction: column'>
+        <a href="https://github.com/MariaABebion" target="_blank">
+          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/maria-bebion-85a6038a/" target="_blank">
+          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+        </div>
+      </div>
+    </td>
   </tr>
   </table>
 </div>
