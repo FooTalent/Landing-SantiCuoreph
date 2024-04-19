@@ -7,15 +7,16 @@
 <br>
 <div>
 <h1> 
-Nesesidad 
+Necesidad 
 </h1>
 <p>
-El videografo autodidacta de Buenos Aires SantiCuoreph con gran creatividad necesita expandirse por el mundo digital, cuenta con un buen publico y un hermoso instagram con gran cantidad de fotografias/videos, solicita ayuda a Foo Talent Group para tener su propia Landing Page en el cual los usuarios puedan ver su trabajo y conocer mas sobre el.
+El videografo autodidacta de Buenos Aires SantiCuore PH con gran creatividad necesita expandirse por el mundo digital, cuenta con un buen público y un hermoso Instagram con gran cantidad de fotografias/videos, solicita ayuda a Foo Talent Group para tener su propia Landing Page en el cual los usuarios puedan ver su trabajo y conocer más sobre él.
 </p>
 </div>
 
 
-<h1> ¿Quienes somos?
+
+<h1> ¿Quiénes somos?
 </h1>
 <div>
 <table align='center'>
@@ -62,6 +63,9 @@ El videografo autodidacta de Buenos Aires SantiCuoreph con gran creatividad nece
           <h4 style="margin-top: 1rem;">Rafael Strongoli</br><small>Frontend Developer</small></h4>
         </a>
         <div style='display: flex; flex-direction: column'>
+        <a href="https://github.com/rafaric" target="_blank">
+          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
         <a href="https://www.linkedin.com/in/rafael-strongoli/" target="_blank">
           <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
         </a>
@@ -143,8 +147,6 @@ El videografo autodidacta de Buenos Aires SantiCuoreph con gran creatividad nece
 <br>
 </div>
 
-
-
 </div>
 <!-- Organización -->
 <h1> Organización
@@ -155,7 +157,6 @@ El videografo autodidacta de Buenos Aires SantiCuoreph con gran creatividad nece
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Logo" width="60" height="60">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" alt="Logo" width="60" height="60">
 <img src="https://cdn.logojoy.com/wp-content/uploads/20210422095037/discord-mascot.png" alt="Logo" width="60" height="60">
-
 
 <h3>SEO APLICADO </h3>
 <p>
@@ -175,7 +176,6 @@ Cuenta con un documento Robots.txt que le indicara al navegador en que sesiones 
 <p>Deseable implementar un side.map que mejora la visibilidad y el posicionamiento en el motor de búsqueda.</p>
 
 <p>Hacer uso de Backlinks, un Backlinks es un enlace que retorna a la pagina web que se solicita posicionar, ¿Como lo podemos hacer?, Por medio de Foros/Wikipedia. </p>
-
 
 <!-- ACKNOWLEDGMENTS -->
 <div align='center'>

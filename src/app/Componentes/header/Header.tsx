@@ -21,8 +21,16 @@ const Header = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
   const [toNavigate, setToNavigate] = useState<string>("");
   const [isClick, setIsClick] = useState(false);
-  console.log(pathName)
   const selectNavStyles = "text-principal font-bold"
+  console.log(pathName)
+
+  function handlePathName(currentPath: string): string {
+    if (currentPath === "/servicios" || currentPath === "/servicios/audiovisual") {
+      return "/servicios";
+    } else {
+      return currentPath
+    }
+  }
 
   const toggleNavbar = (): void => {
     setIsClick(!isClick);
@@ -137,7 +145,7 @@ const Header = () => {
                     onClick={() =>
                       handleNavigateLinksOpenModal(link.href)
                     } /* href={link.href} */
-                    className={`${pathName === link.href ? selectNavStyles : ""}`}
+                    className={`${handlePathName(pathName) === link.href ? selectNavStyles : ""}`}
                   >
                     {link.name}
                   </button>

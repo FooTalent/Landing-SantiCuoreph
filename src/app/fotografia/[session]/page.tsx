@@ -281,8 +281,8 @@ const sessionInfo: SessionInfoType[] = [
     ],
   },
   {
-    title: "Cobertura de evento artístico",
-    subtitle: "TOCH en Camping Palermo",
+    title: "TOCH en Camping Palermo",
+    subtitle: "Cobertura de evento artístico",
     path: "toch",
     verticalImage: false,
     images: [
@@ -336,7 +336,10 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
   const nextUrl: string = getNextUrl();
 
   const searchParams = useSearchParams()
-  const goBackUrl = searchParams.has("home") ? "/" : "/servicios"
+  const fromHome: boolean = searchParams.has("home");
+  console.log("asdas")
+  console.log(fromHome)
+  const goBackUrl = fromHome ? "/" : "/servicios"
 
   const [modal, setModal] = useState<ModalInfo>({
     open: false,
@@ -529,13 +532,13 @@ const SessionPage = ({ params }: { params: { session: string } }) => {
           </>
         ) : null}
         <section className="flex flex-row items-center justify-between max-w-screen-xl mx-4 xl:mx-auto text-principal pb-8 text-base sm:text-xl lg:text-2xl font-bold">
-          <div className="hover:cursor-pointer"><Link href={previousUrl} className="flex gap-2 items-center">
+          <div className="hover:cursor-pointer"><Link href={`${previousUrl}${fromHome ? "?home" : ""}`} className="flex gap-2 items-center">
           <ArrowNav size={35} left={true} />
             <h4 className="hidden sm:block">Ver anterior álbum</h4>
             <h4 className="sm:hidden">Anterior</h4>
             </Link></div>
           <div className="hover:cursor-pointer"><Link href={goBackUrl} className="">Volver</Link></div>
-          <div className="hover:cursor-pointer"><Link href={nextUrl} className="flex gap-2 items-center">
+          <div className="hover:cursor-pointer"><Link href={`${nextUrl}${fromHome ? "?home" : ""}`} className="flex gap-2 items-center">
             <h4 className="hidden sm:block">Ver siguiente álbum</h4>
             <h4 className="sm:hidden">Siguiente</h4>
             <ArrowNav left={false} size={35} />
