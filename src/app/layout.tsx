@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "SantiCuore PH: Fotógrafo y Editor Audiovisual",
   description:
-    "SantiCuore PH, ubicado en Buenos Aires, Argentina es fotógrafo y editor profesional. Ofrece servicios de fotografía, edición de video y creación de contenido. Cobertura de eventos, fotografía artística, comercial y publicitaria.",
+    "SantiCuore PH, ubicado en Buenos Aires, Argentina es fotógrafo y editor profesional. Ofrece servicios de fotografía, edición de video y creación de contenido.",
   keywords: "Fotógrafo, Editor, Editor Audiovisual, Fotografía, Argentina,Buenos aires,Fotografía Comercial,Fotografía artística, Cobertura de evento,Video,redes, redes sociales,la capital,capital de argentina",
 };
 
