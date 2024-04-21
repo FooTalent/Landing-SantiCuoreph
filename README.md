@@ -33,17 +33,31 @@
 
 <div>
   <h2> 
-  03. Equipo e integrantes
+  03. Desafío del Equipo
   </h2>
   <p>
-  El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina. Quien tenía la necesidad de tener una página que le sirviera de portafolio, además de ser un punto de contacto para nuevos clientes.
+  El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina, quien tenía la necesidad de tener una página que le sirviera de portafolio, además de ser un punto de contacto para nuevos clientes.
   </p>
-
 </div>
 
 <div>
   <h2> 
-  04. Deploy del Proyecto
+  04. Integrantes
+  </h2>
+  <div>
+    <table align='center'>
+      <tr>
+        <td colspan="4" align='center'>
+          <h3> Project Manager y Product Designer </h3>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div>
+  <h2> 
+  05. Deploy del Proyecto
   </h2>
   <p>
   El proyecto se encuenta en https://www.santicuoreph.com/
