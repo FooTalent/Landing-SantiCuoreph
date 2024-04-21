@@ -50,83 +50,47 @@ El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago 
          </a>
          <p>Isabel de la Cuadra</p>
          <p>Project Manager</p>
+         </a>
          <div style='display: flex; flex-direction: column'>
-         <a href="https://github.com/Isabel-de-la-Cuadra" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
-        </a>
-        <a href="https://www.linkedin.com/in/isabeldelacuadralunas/" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
-        </a>
+           <a href="https://github.com/Isabel-de-la-Cuadra" target="_blank">
+            <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+          </a>
+          <a href="https://www.linkedin.com/in/isabeldelacuadralunas/" target="_blank">
+            <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+          </a> 
         </div>
-        
-         <a href="URL_DEL_PORTAFOLIO" target="_blank"><button>Portafolio</button></a>
-         <a href="URL_DE_LINKEDIN" target="_blank"><button>LinkedIn</button></a>
-      </td>
-    </tr>
-
     </tr>
     <tr>
       <td>Nombre 1</td>
       <td>Foto 1</td>
       <td>Descripción 1</td>
     </tr>
-    <tr>
-      <td>Nombre 2</td>
-      <td>Foto 2</td>
-      <td>Descripción 2</td>
-    </tr>
-    <!-- Agregar más filas según sea necesario -->
   </table>
 </div>
 
 </p>
 </h2>
 
-
-
-
-
-<
-  <div>
-    <table align='center'>
-      <tr>
-      <td align='center'>
-      <div >
-        <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank" rel="author">
-          <img width="110" src="https://media.licdn.com/dms/image/D5603AQF9YCdt56iNUQ/profile-displayphoto-shrink_800_800/0/1703882243546?e=1715817600&v=beta&t=l5b6HqZTYuU1D8e7C5afz93S16yFTUuwOS8qaskh7ew"/>
-        </a>
-        <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Duvan Mancilla</br><small>Frontend Developer</small></h4>
-        </a>
-        <div style='display: flex; flex-direction: column'>
-          <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
-        </a>
-        </div>
-      </div>
-    </td>
-    <td align='center'>
-</table>
-</div>
+<div>
+<h2> 
+04. Deploy del Proyecto
+</h2>
+<p>
+El proyecto se encuenta en https://www.santicuoreph.com/
+</p>
+</h2>
 
 <div>
 <h2> 
-04.  
+05. Investigación y trabajo de Diseño UX-UI
 </h2>
 <p>
-.
+
 </p>
-</div>
+</h2>
 
   
-<div>
-<h1> 
-Necesidad 
-</h1>
-<p>
-El videografo autodidacta de Buenos Aires SantiCuore PH con gran creatividad necesita expandirse por el mundo digital, cuenta con un buen público y un hermoso Instagram con gran cantidad de fotografias/videos, solicita ayuda a Foo Talent Group para tener su propia Landing Page en el cual los usuarios puedan ver su trabajo y conocer más sobre él.
-</p>
-</div>
+
 
 <h1> ¿Quiénes somos?
 </h1>
