@@ -40,18 +40,21 @@ El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago 
 
 <div>
   <table align='center'> 
+   
     <tr>
       <td colspan="4" align='center'>
         <h3> Integrantes </h3>
       </td>
     </tr>
+   
     <tr>
       <td colspan="4" align='center'>
         <h3> Project Manager y Product Designer </h3>
       </td>
     </tr>
+    
     <tr>
-      <td colspan="2">
+      <td colspan="2" align='center'>
          <a href="https://www.linkedin.com/in/isabeldelacuadralunas/="_blank">
            <img src="https://media.licdn.com/dms/image/D4E03AQECtyWMaoh0tQ/profile-displayphoto-shrink_200_200/0/1713731142985?e=1719446400&v=beta&t=FNS1K9D1JaNRu0-FrrmooGGUUFmaIg4FDfnGeWrey94" alt="Fotografía de Perfil Isabel de la Cuadra" style="width: 100px; height: 100px;">
          </a>
@@ -65,12 +68,50 @@ El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago 
             <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
           </a> 
         </div>
+      </td>
+      <td colspan="2" align='center'>
+         <a href="https://www.linkedin.com/in/rociomancinelli/" target="_blank" rel="author">
+           <img src="https://media.licdn.com/dms/image/D4D03AQElnVCjQ3trYg/profile-displayphoto-shrink_200_200/0/1712002125074?e=1719446400&v=beta&t=3hNRekrXc_ru83h7aRubNW2EmY2w_NaQ1qzqA9zjU-o" alt="Fotografía de Perfil Rocio Mancinelli" style="width: 100px; height: 100px;">
+         </a>
+         <h4 style="margin-top: 1rem;">Rocío Mancinelli</br><small>Product Designer</small></h4>
+         </a>
+         <div style='display: flex; flex-direction: column'>
+           <a href="" target="_blank">
+            <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+          </a>
+          <a href="https://www.linkedin.com/in/rociomancinelli/" target="_blank">
+            <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+          </a> 
+        </div>
+      </td>
     </tr>
+
+   <tr>
+      <td colspan="4" align='center'>
+        <h3> Equipo de Diseño </h3>
+      </td>
+    </tr>
+
     <tr>
-      <td>Nombre 1</td>
-      <td>Foto 1</td>
-      <td>Descripción 1</td>
+      <td colspan="4" align='center'>
+        <h3> Equipo de Desarrollo </h3>
+      </td>
     </tr>
+
+    <tr>
+      <td colspan="4" align='center'>
+        <h3> Equipo de Quality Assurance</h3>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="4" align='center'>
+        <h3> Community Manager</h3>
+      </td>
+    </tr>
+
+
+    
   </table>
 </div>
 
