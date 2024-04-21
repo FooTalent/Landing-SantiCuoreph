@@ -1,5 +1,5 @@
 <div>
-<!-- PROJECT LOGO -->
+<!-- PROJECT LOGO src/app/componentes/header/logo.tsx -->
 </div>
 
 <!-- Palabras iniciales -->
@@ -36,7 +36,7 @@
   03. Desafío del Equipo
   </h2>
   <p>
-  El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina, quien tenía la necesidad de tener una página que le sirviera de portafolio, además de ser un punto de contacto para nuevos clientes.
+  El Equipo 6 trabajó para lograr este desarrollo: la Landing Page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina, quien necesitaba tener una página que le sirviera de portafolio, además de ser un punto de contacto para nuevos clientes.
   </p>
 </div>
 
@@ -136,7 +136,7 @@
         </td>
         <td align='center'>
           <a href="https://www.linkedin.com/in/juanjozorrilla/" target="_blank" rel="author">
-               <img src="https://media.licdn.com/dms/image/D4D03AQF9Xw64fZrWTQ/profile-displayphoto-shrink_200_200/0/1705012439664?e=1719446400&v=beta&t=PhJ4iJqSsHc4PPb-QIXtYpW8U1CvsnR23-dWlf7MheM" alt="Fotografía de Perfil Javier Palomequi" style="width: 100px; height: 100px;">
+               <img src="https://media.licdn.com/dms/image/D4D03AQF9Xw64fZrWTQ/profile-displayphoto-shrink_200_200/0/1705012439664?e=1719446400&v=beta&t=PhJ4iJqSsHc4PPb-QIXtYpW8U1CvsnR23-dWlf7MheM" alt="Fotografía de Perfil Juan Zorrilla" style="width: 100px; height: 100px;">
           </a>
           <h4 style="margin-top: 1rem;">Juan Zorrilla</br><small>Diseñador UX-UI</small></h4>
           <div style='display: flex; flex-direction: column'>
@@ -155,6 +155,68 @@
           <h3> Equipo de Desarrollo </h3>
         </td>     
       </tr>
+      <tr>
+        <td align='center'>
+          <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank" rel="author">
+               <img src="https://media.licdn.com/dms/image/D5603AQF9YCdt56iNUQ/profile-displayphoto-shrink_200_200/0/1703882243546?e=1719446400&v=beta&t=Om936ixbpZfFEn75U_Fxc37AtDW0CYw0bCXb5igMVQw" alt="Fotografía de Perfil Duvan Mancilla" style="width: 100px; height: 100px;">
+          </a>
+          <h4 style="margin-top: 1rem;">Duvan Mancilla</br><small>Desarrollador Front End</small></h4>
+          <div style='display: flex; flex-direction: column'>
+            <a href="https://github.com/DuvanLT" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+            </a>
+            <br>
+            <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+            </a> 
+          </div>
+        </td>
+        <td align='center'>
+          <a href="https://www.linkedin.com/in/rafael-strongoli/" target="_blank" rel="author">
+               <img src="https://media.licdn.com/dms/image/D4E35AQGcmu2CS8HD3A/profile-framedphoto-shrink_200_200/0/1689114650333?e=1714345200&v=beta&t=3uN9X_4pBqbXnucPO6-G291tyPqkEhk39z95o8GtpkE" alt="Fotografía de Perfil Rafael Strongoli" style="width: 100px; height: 100px;">
+          </a>
+          <h4 style="margin-top: 1rem;">Rafael Strongoli</br><small>Desarrollador Front End</small></h4>
+          <div style='display: flex; flex-direction: column'>
+            <a href="https://github.com/rafaric" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+            </a>
+            <br>
+            <a href="https://www.linkedin.com/in/rafael-strongoli/" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+            </a> 
+          </div>
+        </td>
+        <td align='center'>
+          <a href="http://www.linkedin.com/in/mar%C3%ADa-valentina-barrera-gil-" target="_blank" rel="author">
+               <img src="https://media.licdn.com/dms/image/D4D03AQECtz9dlCRFsg/profile-displayphoto-shrink_200_200/0/1685516672284?e=1719446400&v=beta&t=AsLm7cTCYb0YQ7ggNiHgVVGICZZwlNF1gjzNISUeIVI" alt="Fotografía de Perfil María Valentina Barrera" style="width: 100px; height: 100px;">
+          </a>
+          <h4 style="margin-top: 1rem;">María Valentina Barrera</br><small>Diseñadora UX-UI</small></h4>
+          <div style='display: flex; flex-direction: column'>
+            <a href="" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+            </a>
+            <br>
+            <a href="http://www.linkedin.com/in/mar%C3%ADa-valentina-barrera-gil-" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+            </a> 
+          </div>
+        </td>
+        <td align='center'>
+          <a href="https://www.linkedin.com/in/juanjozorrilla/" target="_blank" rel="author">
+               <img src="https://media.licdn.com/dms/image/D4D03AQF9Xw64fZrWTQ/profile-displayphoto-shrink_200_200/0/1705012439664?e=1719446400&v=beta&t=PhJ4iJqSsHc4PPb-QIXtYpW8U1CvsnR23-dWlf7MheM" alt="Fotografía de Perfil Javier Palomequi" style="width: 100px; height: 100px;">
+          </a>
+          <h4 style="margin-top: 1rem;">Juan Zorrilla</br><small>Diseñador UX-UI</small></h4>
+          <div style='display: flex; flex-direction: column'>
+            <a href="" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+            </a>
+            <br>
+            <a href="https://www.linkedin.com/in/juanjozorrilla/" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+            </a> 
+          </div>
+        </td>
+      </tr>
     </table>
   </div>
 </div>
@@ -170,16 +232,32 @@
 
 <div>
   <h2> 
-  06. Investigación y trabajo de Diseño UX-UI
+  06. Trabajo en equipo
+  </h2>
+  <p>
+  Trabajamos, el equipo completo, en toda la etapa de Diseño del Producto. Cuando nuestro cliente fue aprobando las diferentes vistas, Desarrollo empezó a implementar y QA a testear.
+  Nuestra Community Manager trabajó codo a codo con el equipo de Diseño, para hacer el Logo del cliente; además de empezar de cero el Instagram.
+  Cada miembro del equipo se salió de su área de expertise para apoyar y conocer las otras áreas. Eso facilitó enormemente el trabajo de cada uno.
+  </p>
+</div>
+
+<div>
+  <h2> 
+  07. Investigación y trabajo en Diseño UX-UI
   </h2>
   <p>
   
   </p>
 </div>
 
-
-<h1> ¿Quiénes somos?
-</h1>
+<div>
+  <h2> 
+  08. Trabajo en Desarrollo
+  </h2>
+  <p>
+  El Desarrollo se hizo en TypeScript ![TYPESCRIPT](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
+  </p>
+</div>
 
 <div>
 <table align='center'>
