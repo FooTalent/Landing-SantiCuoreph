@@ -51,6 +51,25 @@
           <h3> Project Manager y Product Designer </h3>
         </td>
       </tr>
+      <tr>
+        <td colspan="2" align='center'>
+          <a href="https://www.linkedin.com/in/isabeldelacuadralunas/" target="_blank" rel="author">
+               <img src="https://media.licdn.com/dms/image/D4E03AQECtyWMaoh0tQ/profile-displayphoto-shrink_200_200/0/1713731142985?e=1719446400&v=beta&t=FNS1K9D1JaNRu0-FrrmooGGUUFmaIg4FDfnGeWrey94" alt="Fotografía de Perfil Isabel de la Cuadra" style="width: 100px; height: 100px;">
+          </a>
+          <h4 style="margin-top: 1rem;">Isabel de la Cuadra</br><small>Project Manager</small></h4>
+          <div style='display: flex; flex-direction: column'>
+            <a href="https://github.com/Isabel-de-la-Cuadra" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+            </a>
+            <a href="https://www.linkedin.com/in/isabeldelacuadralunas/" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+            </a> 
+          </div>
+        </td>
+        <td colspan="2" align='center'>
+          <h3> Project Manager y Product Designer </h3>
+        </td>
+      </tr>
     </table>
   </div>
 </div>
