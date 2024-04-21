@@ -5,6 +5,76 @@
 <h3>Hola Mundo! Somos el equipo Landing-SantiCuoreph</h3></div>
 <!-- ABOUT THE PROJECT -->
 <br>
+
+
+
+  
+<div>
+<h2> 
+01. Origen del Proyecto 
+</h2>
+<p>
+Foo Talent Group crea experiencias laborales con clientes reales para Trainees y Juniors. 
+
+En enero de 2024, lanzó una convocatoria a través de redes sociales para realizar pasantías no remuneradas dirigidas a Trainees y Juniors del área de TI interesados en vivir la experiencia de trabajar en un entorno real.
+
+Se seleccionaron y formaron equipos que incluyeron Project Manager, Product Designer, Diseñadores UX-UI, UX Writers, Desarrolladores Front End, Quality Assurance y Community Managers. 
+
+Cada uno de los miembros de cada equipo colaboró en crear un proyecto desde cero.
+</p>
+</div>
+
+<div>
+<h2> 
+02. Periodo de Trabajo 
+</h2>
+<p>
+Desde la convocatoria al término de los proyectos, pasaron menos de 4 meses. Desde enero 2024 a abril 2024.
+</p>
+</div>
+
+<div>
+<h2> 
+03. Equipo e integranes
+</h2>
+<p>
+El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina.
+</p>
+</h2>
+<p>
+<div>
+<table align='center'>
+  <tr>
+    <td align='center'>
+      <div >
+        <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank" rel="author">
+          <img width="110" src="https://media.licdn.com/dms/image/D5603AQF9YCdt56iNUQ/profile-displayphoto-shrink_800_800/0/1703882243546?e=1715817600&v=beta&t=l5b6HqZTYuU1D8e7C5afz93S16yFTUuwOS8qaskh7ew"/>
+        </a>
+        <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Duvan Mancilla</br><small>Frontend Developer</small></h4>
+        </a>
+        <div style='display: flex; flex-direction: column'>
+          <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank">
+          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+        </div>
+      </div>
+    </td>
+    <td align='center'>
+  
+  </p>
+</div>
+
+<div>
+<h2> 
+04.  
+</h2>
+<p>
+.
+</p>
+</div>
+
+  
 <div>
 <h1> 
 Necesidad 
@@ -13,8 +83,6 @@ Necesidad
 El videografo autodidacta de Buenos Aires SantiCuore PH con gran creatividad necesita expandirse por el mundo digital, cuenta con un buen público y un hermoso Instagram con gran cantidad de fotografias/videos, solicita ayuda a Foo Talent Group para tener su propia Landing Page en el cual los usuarios puedan ver su trabajo y conocer más sobre él.
 </p>
 </div>
-
-
 
 <h1> ¿Quiénes somos?
 </h1>
