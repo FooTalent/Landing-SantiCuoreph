@@ -6,9 +6,7 @@
 <!-- ABOUT THE PROJECT -->
 <br>
 
-
-
-  
+ 
 <div>
 <h2> 
 01. Origen del Proyecto 
@@ -35,27 +33,51 @@ Desde la convocatoria al término de los proyectos, pasaron menos de 4 meses. De
 
 <div>
 <h2> 
-03. Equipo e integranes
+03. Equipo e integrantes
 </h2>
 <p>
 El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina.
 
 <div>
-  <table>
+  <table align='center'> 
     <tr>
-      <td>Contenido de la celda 1</td>
+      <td colspan="4" align='center'>Project Manager y Product Designer</td>
     </tr>
     <tr>
-      <td>Contenido de la celda 2</td>
-      <td>Contenido de la celda 3</td>
+      <td colspan="2">
+         <a href="https://www.linkedin.com/in/isabeldelacuadralunas/="_blank">
+           <img src="URL_DE_LA_FOTOGRAFIA" alt="Fotografía de Perfil" style="width: 100px; height: 100px;">
+         </a>
+         <p>Isabel de la Cuadra</p>
+         <p>Project Manager</p>
+         <div style='display: flex; flex-direction: column'>
+         <a href="https://github.com/Isabel-de-la-Cuadra" target="_blank">
+          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/isabeldelacuadralunas/" target="_blank">
+          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+        </div>
+        
+         <a href="URL_DEL_PORTAFOLIO" target="_blank"><button>Portafolio</button></a>
+         <a href="URL_DE_LINKEDIN" target="_blank"><button>LinkedIn</button></a>
+      </td>
+    </tr>
+
     </tr>
     <tr>
-      <td>Contenido de la celda 4</td>
+      <td>Nombre 1</td>
+      <td>Foto 1</td>
+      <td>Descripción 1</td>
     </tr>
+    <tr>
+      <td>Nombre 2</td>
+      <td>Foto 2</td>
+      <td>Descripción 2</td>
+    </tr>
+    <!-- Agregar más filas según sea necesario -->
   </table>
 </div>
-
-
 
 </p>
 </h2>
@@ -64,7 +86,7 @@ El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago 
 
 
 
-
+<
   <div>
     <table align='center'>
       <tr>
