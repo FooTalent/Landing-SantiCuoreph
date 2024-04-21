@@ -120,31 +120,31 @@
           </div>
         </td>
         <td align='center'>
-          <a href="https://www.linkedin.com/in/javierpalomequi/" target="_blank" rel="author">
-               <img src="https://media.licdn.com/dms/image/D4D03AQEO-OX-TflsbA/profile-displayphoto-shrink_200_200/0/1712096627138?e=1719446400&v=beta&t=xQvSCPjj-Tzm-lN0j3pPIQSozwga4NES3FE_h3SwAqA" alt="Fotografía de Perfil Javier Palomequi" style="width: 100px; height: 100px;">
+          <a href="http://www.linkedin.com/in/mar%C3%ADa-valentina-barrera-gil-" target="_blank" rel="author">
+               <img src="https://media.licdn.com/dms/image/D4D03AQECtz9dlCRFsg/profile-displayphoto-shrink_200_200/0/1685516672284?e=1719446400&v=beta&t=AsLm7cTCYb0YQ7ggNiHgVVGICZZwlNF1gjzNISUeIVI" alt="Fotografía de Perfil María Valentina Barrera" style="width: 100px; height: 100px;">
           </a>
-          <h4 style="margin-top: 1rem;">Javier Palomequi</br><small>Diseñador UX-UI</small></h4>
+          <h4 style="margin-top: 1rem;">María Valentina Barrera</br><small>Diseñadora UX-UI</small></h4>
           <div style='display: flex; flex-direction: column'>
             <a href="" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
             </a>
             <br>
-            <a href="https://www.linkedin.com/in/javierpalomequi/" target="_blank">
+            <a href="http://www.linkedin.com/in/mar%C3%ADa-valentina-barrera-gil-" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a> 
           </div>
         </td>
         <td align='center'>
-          <a href="https://www.linkedin.com/in/javierpalomequi/" target="_blank" rel="author">
-               <img src="https://media.licdn.com/dms/image/D4D03AQEO-OX-TflsbA/profile-displayphoto-shrink_200_200/0/1712096627138?e=1719446400&v=beta&t=xQvSCPjj-Tzm-lN0j3pPIQSozwga4NES3FE_h3SwAqA" alt="Fotografía de Perfil Javier Palomequi" style="width: 100px; height: 100px;">
+          <a href="https://www.linkedin.com/in/juanjozorrilla/" target="_blank" rel="author">
+               <img src="https://media.licdn.com/dms/image/D4D03AQF9Xw64fZrWTQ/profile-displayphoto-shrink_200_200/0/1705012439664?e=1719446400&v=beta&t=PhJ4iJqSsHc4PPb-QIXtYpW8U1CvsnR23-dWlf7MheM" alt="Fotografía de Perfil Javier Palomequi" style="width: 100px; height: 100px;">
           </a>
-          <h4 style="margin-top: 1rem;">Javier Palomequi</br><small>Diseñador UX-UI</small></h4>
+          <h4 style="margin-top: 1rem;">Juan Zorrilla</br><small>Diseñador UX-UI</small></h4>
           <div style='display: flex; flex-direction: column'>
             <a href="" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
             </a>
             <br>
-            <a href="https://www.linkedin.com/in/javierpalomequi/" target="_blank">
+            <a href="https://www.linkedin.com/in/juanjozorrilla/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a> 
           </div>
