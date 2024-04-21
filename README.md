@@ -61,6 +61,7 @@
             <a href="https://github.com/Isabel-de-la-Cuadra" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
             </a>
+            <br>
             <a href="https://www.linkedin.com/in/isabeldelacuadralunas/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a> 
@@ -75,11 +76,17 @@
             <a href="" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
             </a>
+            <br>
             <a href="https://www.linkedin.com/in/rociomancinelli/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a> 
           </div>
         </td>
+      </tr>
+      <tr>
+        <td colspan="4" align='center'>
+          <h3> Equipo de Diseño </h3>
+        </td>     
       </tr>
     </table>
   </div>
