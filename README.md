@@ -4,7 +4,7 @@
 
 <!-- Palabras iniciales -->
 <div align='center'>
-  <h3>Hola Mundo! Somos el equipo Landing-SantiCuoreph</h3>
+  <h3>Hola Mundo! Somos el Equipo que creó la Landing Page SantiCuore PH https://www.santicuoreph.com/</h3>
 </div>
  
 <div>
@@ -13,11 +13,14 @@
   </h2>
   <p>
   Foo Talent Group crea experiencias laborales con clientes reales para Trainees y Juniors. 
-  
+  </p>
+  <p>
   En enero de 2024, lanzó una convocatoria a través de redes sociales para realizar pasantías no remuneradas dirigidas a Trainees y Juniors del área de TI interesados en vivir la experiencia de trabajar en un entorno real.
-  
+  </p>
+  <p>
   Se seleccionaron y formaron equipos que incluyeron Project Manager, Product Designer, Diseñadores UX-UI, UX Writers, Desarrolladores Front End, Quality Assurance y Community Managers. 
-  
+  </p>
+  <p>
   Cada uno de los miembros de cada equipo colaboró en crear un proyecto desde cero.
   </p>
 </div>
@@ -295,11 +298,14 @@
   </h2>
   <p>
   Trabajamos, el equipo completo, en toda la etapa de Diseño del Producto. Cuando nuestro cliente fue aprobando las diferentes vistas, Desarrollo empezó a implementar y QA a testear.
-    
-  Nuestra Community Manager trabajó codo a codo con el equipo de Diseño, para hacer el Logo del cliente; además de empezar de cero el Instagram.
-  
+  </p>
+  <p>  
+  Nuestra Community Manager trabajó codo a codo con el equipo de Diseño, para hacer el Logo del cliente; además de empezar de cero el Instagram, implementó el correo electrónico de trabajo y WhatsApp Business.
+  </p>
+  <p>
   Cada miembro del equipo se salió de su área de expertise para apoyar y conocer las otras áreas. Eso facilitó enormemente el trabajo de cada uno.
-
+  </p>
+  <p>
   Para organizarnos utilizamos Slack (para comunicarnos) Notion (para dejar los enlaces y documentos importantes), FigJam y Figma (orgnanización y diseño de interfaces) y Trello (gestionar el proyecto). 
   </p>
 </div>
@@ -309,7 +315,7 @@
   07. Investigación y trabajo en Diseño UX-UI
   </h2>
   <p>
-  
+  Todo el trabajo de investigación se encuentra en FigJam https://www.figma.com/file/3JyXDBhKycTIc4fcjWmll3/Santi-Cuore-project?type=whiteboard&node-id=0-1&t=nKCZdkulZTraxav9-0 y Figma https://www.figma.com/file/T0XOPGc2d3c4RwHsWlDYki/TAREAS-SPRINT%2F-GRUPO-SANTI-CUORE?type=design&node-id=447%3A788&mode=design&t=VfEqEFy0MNjHB8UO-1
   </p>
 </div>
 
@@ -319,44 +325,48 @@
   </h2>
   <p>
   El Desarrollo se hizo en NextJS y TypeScript 
-  
+  </p>
+  <p>
 ![NEXTJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)  
 ![TYPESCRIPT](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
   </p>
 </div>
 
-</div>
-<!-- Organización -->
-<h1> Organización
-</h1>
-  <img src="https://cdn.iconscout.com/icon/free/png-256/free-google-meet-7662286-6297222.png?f=webp" alt="Logo" width="60" height="60">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" alt="Logo" width="60" height="60">
-  <img src="https://cdn.worldvectorlogo.com/logos/trello.svg" alt="Logo" width="60" height="60">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Logo" width="60" height="60">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg" alt="Logo" width="60" height="60">
-<img src="https://cdn.logojoy.com/wp-content/uploads/20210422095037/discord-mascot.png" alt="Logo" width="60" height="60">
+<div>
+  <h2> 
+  09. SEO aplicado
+  </h2>
+  <p>
+  La Landing Page cuenta con un enfoque SEO para competir con los demas fotógrafos y creadores de contenido audiovisual en Argentina. Por esto contamos con un meta descripción general de la página que incluye las palabras claves como Argentina, Buenos Aires y (nombre servicio) para mejorar las posibilidades de encontrarla con palabras claves como Fotógrafo en Buenos Aires.    
+  </p>
+  <p>
+  En cuanto a su estructura, ésta al ser una página que cuenta con distintas imágenes, son encapsuladas por un Picture, esto aumenta la calificación de estructura web, junto, con un buen uso de las etiquetas semánticas Header, Nav, Footer, Article y Section.
+  </p>
+  <p>
+  Cuenta con un documento Robots.txt que le indicará al Navegador en qué secciones de la página puede navegar, en este caso, los usuarios pueden entrar de forma general a los distintos apartados de la Web.  
+  </p>
+</div>  
 
-<h3>SEO APLICADO </h3>
-<p>
-La Landing-Page cuenta con un enfoque SEO en competir contra los demas fotógrafos/ editores de video Áudiovisual en argentina, por esto, contamos con un meta descripción general de la página que incluye las palabras claves, Argentina, buenos Aires y (nombre servicio) para mejorar las posibilidades de búsqueda con palabras claves como Fotógrafo en Buenos Aires.
-</p>
+<div>
+  <h2> 
+  10. Mejoras a futuro
+  </h2>
+  <p>
+  Deseable implementar un side.map que mejora la visibilidad y el posicionamiento en el motor de búsqueda.
+  </p>
+  <p>
+  Hacer uso de Backlinks, un Backlinks es un enlace que retorna a la Página Web que se solicita posicionar ¿Cémo lo podemos hacer? Por medio de Foros o Wikipedia.
+  </p>
+</div>  
 
-<p>
-En cuanto a su estructura, esta, al ser una pagina que cuenta con distintas imagenes, son encarceladas por un picture, esto aumenta la calificación de estructura web, junto, con un buen uso de las etiquetas semánticas Header,Nav, Footer, Article y Section.
-</p>
-
-<p>
-Cuenta con un documento Robots.txt que le indicara al navegador en que sesiones de la página pueden navegar, en este caso, los usuarios pueden entrar de forma general a los distintos apartados de la web.
-</p>
-
-<h3>MEJORAS A FUTURO</h3>
-
-<p>Deseable implementar un side.map que mejora la visibilidad y el posicionamiento en el motor de búsqueda.</p>
-
-<p>Hacer uso de Backlinks, un Backlinks es un enlace que retorna a la pagina web que se solicita posicionar, ¿Como lo podemos hacer?, Por medio de Foros/Wikipedia. </p>
-
-<!-- ACKNOWLEDGMENTS -->
-<div align='center'>
-<h3>Agradecimientos</h3>
-  <h3>Foo Talent Group</h3>
+<div>
+  <h2> 
+  11. Agradecimientos
+  </h2>
+  <p>
+  Este equipo agradece la posibilidad brindada por Foo Talent Group para aprender y trabajar con un cliente real. Brindarnos el marco, la organización y las directrices, para poner en práctica lo que sabemos y desafiarnos a aprender aún más.
+  </p>
+  <p>
+  También nos agradecemos a nosotros mismos, porque con generosidad compartimos nuestros conocimientos y quisimos ser equipo.
+  </p>
 </div>
