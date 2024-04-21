@@ -36,20 +36,26 @@ Desde la convocatoria al término de los proyectos, pasaron menos de 4 meses. De
 03. Equipo e integrantes
 </h2>
 <p>
-El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina.
+El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina. Quien tenía la necesidad de tener una página que le sirviera de portafolio, además de ser un punto de contacto para nuevos clientes.
 
 <div>
   <table align='center'> 
     <tr>
-      <td colspan="4" align='center'>Project Manager y Product Designer</td>
+      <td colspan="4" align='center'>
+        <h3> Integrantes </h3>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="4" align='center'>
+        <h3> Project Manager y Product Designer </h3>
+      </td>
     </tr>
     <tr>
       <td colspan="2">
          <a href="https://www.linkedin.com/in/isabeldelacuadralunas/="_blank">
-           <img src="URL_DE_LA_FOTOGRAFIA" alt="Fotografía de Perfil" style="width: 100px; height: 100px;">
+           <img src="https://drive.google.com/file/d/1TVr8iuNASWGvUixSLbhc_7ccWe3Ir4a_/view?usp=drive_link" alt="Fotografía de Perfil Isabel de la Cuadra" style="width: 100px; height: 100px;">
          </a>
-         <p>Isabel de la Cuadra</p>
-         <p>Project Manager</p>
+         <h4 style="margin-top: 1rem;">Isabel de la Cuadra</br><small>Project Manager</small></h4>
          </a>
          <div style='display: flex; flex-direction: column'>
            <a href="https://github.com/Isabel-de-la-Cuadra" target="_blank">
