@@ -274,7 +274,6 @@
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a> 
           </div>
-
         </td>     
       </tr>
     </table>
@@ -317,9 +316,9 @@
   08. Trabajo en Desarrollo
   </h2>
   <p>
-  El Desarrollo se hizo en TypeScript 
-    
-  ![TYPESCRIPT](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
+  El Desarrollo se hizo en NextJS y TypeScript 
+  
+![NEXTJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)  ![TYPESCRIPT](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
   </p>
 </div>
 
