@@ -67,15 +67,15 @@
           </div>
         </td>
         <td colspan="2" align='center'>
-          <a href="https://www.linkedin.com/in/isabeldelacuadralunas/" target="_blank" rel="author">
-               <img src="https://media.licdn.com/dms/image/D4E03AQECtyWMaoh0tQ/profile-displayphoto-shrink_200_200/0/1713731142985?e=1719446400&v=beta&t=FNS1K9D1JaNRu0-FrrmooGGUUFmaIg4FDfnGeWrey94" alt="Fotografía de Perfil Isabel de la Cuadra" style="width: 100px; height: 100px;">
+          <a href="https://www.linkedin.com/in/rociomancinelli/" target="_blank" rel="author">
+               <img src="https://media.licdn.com/dms/image/D4D03AQElnVCjQ3trYg/profile-displayphoto-shrink_200_200/0/1712002125074?e=1719446400&v=beta&t=3hNRekrXc_ru83h7aRubNW2EmY2w_NaQ1qzqA9zjU-o" alt="Fotografía de Perfil Rocio Mancinelli" style="width: 100px; height: 100px;">
           </a>
-          <h4 style="margin-top: 1rem;">Isabel de la Cuadra</br><small>Project Manager</small></h4>
+          <h4 style="margin-top: 1rem;">Rocio Mancinelli</br><small>Product Designer</small></h4>
           <div style='display: flex; flex-direction: column'>
-            <a href="https://github.com/Isabel-de-la-Cuadra" target="_blank">
+            <a href="" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
             </a>
-            <a href="https://www.linkedin.com/in/isabeldelacuadralunas/" target="_blank">
+            <a href="https://www.linkedin.com/in/rociomancinelli/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a> 
           </div>
@@ -96,7 +96,7 @@
 
 <div>
   <h2> 
-  05. Investigación y trabajo de Diseño UX-UI
+  06. Investigación y trabajo de Diseño UX-UI
   </h2>
   <p>
   
