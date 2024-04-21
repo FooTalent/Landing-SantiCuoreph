@@ -1,12 +1,13 @@
 <div>
-<!-- PROJECT LOGO src/app/componentes/header/logo.tsx -->
+src/app/componentes/header/logo.tsx
 </div>
-
-<!-- Palabras iniciales -->
+<br>
 <div align='center'>
-  <h3>Hola Mundo! Somos el Equipo que creó la Landing Page SantiCuore PH https://www.santicuoreph.com/</h3>
+  <h3>
+    Hola Mundo! Somos el Equipo que creó la Landing Page SantiCuore PH:  https://www.santicuoreph.com/
+  </h3>
 </div>
- 
+<br> 
 <div>
   <h2> 
   01. Origen del Proyecto 
@@ -24,7 +25,7 @@
   Cada uno de los miembros de cada equipo colaboró en crear un proyecto desde cero.
   </p>
 </div>
-
+<br>
 <div>
   <h2> 
   02. Periodo de Trabajo 
@@ -33,7 +34,7 @@
   Desde la convocatoria al término de los proyectos, pasaron menos de 4 meses. Desde enero 2024 a abril 2024.
   </p>
 </div>
-
+<br>
 <div>
   <h2> 
   03. Desafío del Equipo
@@ -42,7 +43,7 @@
   El Equipo 6 trabajó para lograr este desarrollo: la Landing Page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina, quien necesitaba tener una página que le sirviera de portafolio, además de ser un punto de contacto para nuevos clientes.
   </p>
 </div>
-
+<br>
 <div>
   <h2> 
   04. Integrantes
@@ -282,16 +283,16 @@
     </table>
   </div>
 </div>
-
+<br>
 <div>
   <h2> 
   05. Deploy del Proyecto
   </h2>
   <p>
-  El proyecto se encuenta en https://www.santicuoreph.com/
+  El proyecto se encuenta en:  https://www.santicuoreph.com/
   </p>
 </div>
-
+<br>
 <div>
   <h2> 
   06. Trabajo en equipo
@@ -309,20 +310,19 @@
   Para organizarnos utilizamos Slack (para comunicarnos) Notion (para dejar los enlaces y documentos importantes), FigJam y Figma (orgnanización y diseño de interfaces) y Trello (gestionar el proyecto). 
   </p>
 </div>
-
+<br>
 <div>
   <h2> 
   07. Investigación y trabajo en Diseño UX-UI
   </h2>
   <p>
-  Todo el trabajo de investigación se encuentra en [![FigJam](https://img.shields.io/badge/Ver_en_Figma-View_on_Figma-orange?style=for-the-badge&logo=figma)](https://www.figma.com/file/3JyXDBhKycTIc4fcjWmll3/Santi-Cuore-project?type=whiteboard&node-id=0-1&t=nKCZdkulZTraxav9-0) y Figma https://www.figma.com/file/T0XOPGc2d3c4RwHsWlDYki/TAREAS-SPRINT%2F-GRUPO-SANTI-CUORE?type=design&node-id=447%3A788&mode=design&t=VfEqEFy0MNjHB8UO-1
+  Todo el trabajo de investigación se encuentra en:
   </p>
-[![Ver en Figma](https://img.shields.io/badge/Ver_en_Figma-View_on_Figma-orange?style=for-the-badge&logo=figma)](URL_DE_TU_DISEÑO_EN_FIGMA)
-
-[![Ver en FigJam](https://img.shields.io/badge/Ver_en_FigJam-View_on_FigJam-blue?style=for-the-badge&logo=figma)](URL_DE_TU_DISEÑO_EN_FIGJAM)
-
+[![Ver en FigJam](https://img.shields.io/badge/Ver_en_Figma-View_on_Figma-orange?style=for-the-badge&logo=figma)](https://www.figma.com/file/3JyXDBhKycTIc4fcjWmll3/Santi-Cuore-project?type=whiteboard&node-id=0-1&t=nKCZdkulZTraxav9-0)
+<br>
+[![Ver en Figma](https://img.shields.io/badge/Ver_en_FigJam-View_on_FigJam-blue?style=for-the-badge&logo=figma)]([URL_DE_TU_DISEÑO_EN_FIGJAM](https://www.figma.com/file/T0XOPGc2d3c4RwHsWlDYki/TAREAS-SPRINT%2F-GRUPO-SANTI-CUORE?type=design&node-id=447%3A788&mode=design&t=VfEqEFy0MNjHB8UO-1))
 </div>
-
+<br>
 <div>
   <h2> 
   08. Trabajo en Desarrollo
@@ -335,7 +335,7 @@
 ![TYPESCRIPT](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
   </p>
 </div>
-
+<br>
 <div>
   <h2> 
   09. SEO aplicado
@@ -350,7 +350,7 @@
   Cuenta con un documento Robots.txt que le indicará al Navegador en qué secciones de la página puede navegar, en este caso, los usuarios pueden entrar de forma general a los distintos apartados de la Web.  
   </p>
 </div>  
-
+<br>
 <div>
   <h2> 
   10. Mejoras a futuro
@@ -362,7 +362,7 @@
   Hacer uso de Backlinks, un Backlinks es un enlace que retorna a la Página Web que se solicita posicionar ¿Cémo lo podemos hacer? Por medio de Foros o Wikipedia.
   </p>
 </div>  
-
+<br>
 <div>
   <h2> 
   11. Agradecimientos
