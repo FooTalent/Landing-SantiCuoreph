@@ -53,7 +53,7 @@ El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago 
     <tr>
       <td colspan="2">
          <a href="https://www.linkedin.com/in/isabeldelacuadralunas/="_blank">
-           <img src="https://drive.google.com/file/d/1TVr8iuNASWGvUixSLbhc_7ccWe3Ir4a_/view?usp=drive_link" alt="Fotografía de Perfil Isabel de la Cuadra" style="width: 100px; height: 100px;">
+           <img src="https://media.licdn.com/dms/image/D4E03AQECtyWMaoh0tQ/profile-displayphoto-shrink_200_200/0/1713731142985?e=1719446400&v=beta&t=FNS1K9D1JaNRu0-FrrmooGGUUFmaIg4FDfnGeWrey94" alt="Fotografía de Perfil Isabel de la Cuadra" style="width: 100px; height: 100px;">
          </a>
          <h4 style="margin-top: 1rem;">Isabel de la Cuadra</br><small>Project Manager</small></h4>
          </a>
