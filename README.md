@@ -187,35 +187,45 @@
           </div>
         </td>
         <td align='center'>
-          <a href="http://www.linkedin.com/in/mar%C3%ADa-valentina-barrera-gil-" target="_blank" rel="author">
-               <img src="https://media.licdn.com/dms/image/D4D03AQECtz9dlCRFsg/profile-displayphoto-shrink_200_200/0/1685516672284?e=1719446400&v=beta&t=AsLm7cTCYb0YQ7ggNiHgVVGICZZwlNF1gjzNISUeIVI" alt="Fotografía de Perfil María Valentina Barrera" style="width: 100px; height: 100px;">
+          <a href="https://www.linkedin.com/in/joelrondinelpacheco/" target="_blank" rel="author">
+               <img src="https://media.licdn.com/dms/image/D4D03AQFHphWMHa_MNQ/profile-displayphoto-shrink_200_200/0/1684823645750?e=1719446400&v=beta&t=IeV2Zn-nW_BRZ3ix1lCqOORZ4YXyx7YBp3WTQ9BV_D8" alt="Fotografía de Perfil Joel Rondinel" style="width: 100px; height: 100px;">
           </a>
-          <h4 style="margin-top: 1rem;">María Valentina Barrera</br><small>Diseñadora UX-UI</small></h4>
+          <h4 style="margin-top: 1rem;">Joel Rondinel</br><small>Desarrollador Back End</small></h4>
           <div style='display: flex; flex-direction: column'>
-            <a href="" target="_blank">
+            <a href="https://github.com/JoelRondinelPacheco" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
             </a>
             <br>
-            <a href="http://www.linkedin.com/in/mar%C3%ADa-valentina-barrera-gil-" target="_blank">
+            <a href="https://www.linkedin.com/in/joelrondinelpacheco/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a> 
           </div>
         </td>
         <td align='center'>
-          <a href="https://www.linkedin.com/in/juanjozorrilla/" target="_blank" rel="author">
-               <img src="https://media.licdn.com/dms/image/D4D03AQF9Xw64fZrWTQ/profile-displayphoto-shrink_200_200/0/1705012439664?e=1719446400&v=beta&t=PhJ4iJqSsHc4PPb-QIXtYpW8U1CvsnR23-dWlf7MheM" alt="Fotografía de Perfil Javier Palomequi" style="width: 100px; height: 100px;">
+          <a href="https://www.linkedin.com/in/nicolas-martinez-ju/" target="_blank" rel="author">
+               <img src="https://media.licdn.com/dms/image/D4D03AQEiIx_ViZIXSg/profile-displayphoto-shrink_200_200/0/1704982970424?e=1719446400&v=beta&t=sgmxlfbCcnczhMIqYqJAMKzY8F5dyVQZJm8LW-k_DcE" alt="Fotografía de Perfil Nicolás Martínez" style="width: 100px; height: 100px;">
           </a>
-          <h4 style="margin-top: 1rem;">Juan Zorrilla</br><small>Diseñador UX-UI</small></h4>
+          <h4 style="margin-top: 1rem;">Nicolás Martínez</br><small>Desarrollador Front End</small></h4>
           <div style='display: flex; flex-direction: column'>
-            <a href="" target="_blank">
+            <a href="https://github.com/MartinezNicolass" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
             </a>
             <br>
-            <a href="https://www.linkedin.com/in/juanjozorrilla/" target="_blank">
+            <a href="https://www.linkedin.com/in/nicolas-martinez-ju/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a> 
           </div>
         </td>
+      </tr>
+       <tr>
+        <td colspan="4" align='center'>
+          <h3> Equipo de Quality Assurance</h3>
+        </td>     
+      </tr>
+      <tr>
+        <td colspan="4" align='center'>
+          <h3> Community Manager</h3>
+        </td>     
       </tr>
     </table>
   </div>
