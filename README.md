@@ -223,6 +223,38 @@
         </td>     
       </tr>
       <tr>
+        <td colspan="2" align='center'>
+          <a href="https://www.linkedin.com/in/thamairy-gonzalez/" target="_blank" rel="author">
+               <img src="https://media.licdn.com/dms/image/D4D35AQF9MyQFP0EE-A/profile-framedphoto-shrink_200_200/0/1713391513150?e=1714345200&v=beta&t=Ye_Qb_OQdziAKIb7sqzof9NkYMRuqKwirWiAmNp414s" alt="Fotografía de Perfil Thamairy González" style="width: 100px; height: 100px;">
+          </a>
+          <h4 style="margin-top: 1rem;">Thamairy González</br><small>Quality Assurance</small></h4>
+          <div style='display: flex; flex-direction: column'>
+            <a href="https://github.com/Isabel-de-la-Cuadra" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+            </a>
+            <br>
+            <a href="https://www.linkedin.com/in/thamairy-gonzalez/" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+            </a> 
+          </div>
+        </td>
+        <td colspan="2" align='center'>
+          <a href="https://www.linkedin.com/in/rociomancinelli/" target="_blank" rel="author">
+               <img src="https://media.licdn.com/dms/image/D4D03AQElnVCjQ3trYg/profile-displayphoto-shrink_200_200/0/1712002125074?e=1719446400&v=beta&t=3hNRekrXc_ru83h7aRubNW2EmY2w_NaQ1qzqA9zjU-o" alt="Fotografía de Perfil Rocio Mancinelli" style="width: 100px; height: 100px;">
+          </a>
+          <h4 style="margin-top: 1rem;">Rocio Mancinelli</br><small>Product Designer</small></h4>
+          <div style='display: flex; flex-direction: column'>
+            <a href="" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+            </a>
+            <br>
+            <a href="https://www.linkedin.com/in/rociomancinelli/" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+            </a> 
+          </div>
+        </td>
+      </tr>
+      <tr>
         <td colspan="4" align='center'>
           <h3> Community Manager</h3>
         </td>     
@@ -246,7 +278,9 @@
   </h2>
   <p>
   Trabajamos, el equipo completo, en toda la etapa de Diseño del Producto. Cuando nuestro cliente fue aprobando las diferentes vistas, Desarrollo empezó a implementar y QA a testear.
+    
   Nuestra Community Manager trabajó codo a codo con el equipo de Diseño, para hacer el Logo del cliente; además de empezar de cero el Instagram.
+  
   Cada miembro del equipo se salió de su área de expertise para apoyar y conocer las otras áreas. Eso facilitó enormemente el trabajo de cada uno.
   </p>
 </div>
@@ -265,7 +299,9 @@
   08. Trabajo en Desarrollo
   </h2>
   <p>
-  El Desarrollo se hizo en TypeScript ![TYPESCRIPT](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
+  El Desarrollo se hizo en TypeScript 
+    
+  ![TYPESCRIPT](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
   </p>
 </div>
 
