@@ -39,13 +39,36 @@ Desde la convocatoria al término de los proyectos, pasaron menos de 4 meses. De
 </h2>
 <p>
 El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina.
+
+<div>
+  <table>
+    <tr>
+      <td>Contenido de la celda 1</td>
+    </tr>
+    <tr>
+      <td>Contenido de la celda 2</td>
+      <td>Contenido de la celda 3</td>
+    </tr>
+    <tr>
+      <td>Contenido de la celda 4</td>
+    </tr>
+  </table>
+</div>
+
+
+
 </p>
 </h2>
-<p>
-<div>
-<table align='center'>
-  <tr>
-    <td align='center'>
+
+
+
+
+
+
+  <div>
+    <table align='center'>
+      <tr>
+      <td align='center'>
       <div >
         <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank" rel="author">
           <img width="110" src="https://media.licdn.com/dms/image/D5603AQF9YCdt56iNUQ/profile-displayphoto-shrink_800_800/0/1703882243546?e=1715817600&v=beta&t=l5b6HqZTYuU1D8e7C5afz93S16yFTUuwOS8qaskh7ew"/>
@@ -61,8 +84,7 @@ El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago 
       </div>
     </td>
     <td align='center'>
-  
-  </p>
+</table>
 </div>
 
 <div>
