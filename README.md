@@ -1,5 +1,5 @@
 <div>
-src/app/componentes/header/logo.tsx
+  <img src="src/app/componentes/header/logo.tsx" alt="Logo SantiCuore PH" style="font-size: 8rem;">
 </div>
 <br>
 <div align='center'>
@@ -319,11 +319,8 @@ src/app/componentes/header/logo.tsx
   Todo el trabajo de investigación se encuentra en:
   </p>
     <a href="https://www.figma.com/file/3JyXDBhKycTIc4fcjWmll3/Santi-Cuore-project?type=whiteboard&node-id=0-1&t=nKCZdkulZTraxav9-0" target="_blank">
-      <img style='width:8rem' src="https://img.shields.io/badge/Ver_en_Figma-View_on_Figma-orange?style=for-the-badge&logo=figma"/>
+      <img style='width:8rem' src="https://img.shields.io/badge/Ver_en_FigJam?style=for-the-badge&logo=figma"/>
     </a>
-[![Ver en FigJam](https://img.shields.io/badge/Ver_en_Figma-View_on_Figma-orange?style=for-the-badge&logo=figma)](https://www.figma.com/file/3JyXDBhKycTIc4fcjWmll3/Santi-Cuore-project?type=whiteboard&node-id=0-1&t=nKCZdkulZTraxav9-0)
-<br>
-[![Ver en Figma](https://img.shields.io/badge/Ver_en_FigJam-View_on_FigJam-blue?style=for-the-badge&logo=figma)]([URL_DE_TU_DISEÑO_EN_FIGJAM](https://www.figma.com/file/T0XOPGc2d3c4RwHsWlDYki/TAREAS-SPRINT%2F-GRUPO-SANTI-CUORE?type=design&node-id=447%3A788&mode=design&t=VfEqEFy0MNjHB8UO-1))
 </div>
 <br>
 <div>
