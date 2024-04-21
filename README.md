@@ -299,6 +299,8 @@
   Nuestra Community Manager trabajó codo a codo con el equipo de Diseño, para hacer el Logo del cliente; además de empezar de cero el Instagram.
   
   Cada miembro del equipo se salió de su área de expertise para apoyar y conocer las otras áreas. Eso facilitó enormemente el trabajo de cada uno.
+
+  Para organizarnos utilizamos Slack (para comunicarnos) Notion (para dejar los enlaces y documentos importantes), FigJam y Figma (orgnanización y diseño de interfaces) y Trello (gestionar el proyecto). 
   </p>
 </div>
 
@@ -318,137 +320,9 @@
   <p>
   El Desarrollo se hizo en NextJS y TypeScript 
   
-![NEXTJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)  ![TYPESCRIPT](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
-  </p>
-</div>
-
-<div>
-<table align='center'>
-  <tr>
-    <td align='center'>
-      <div >
-        <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank" rel="author">
-          <img width="110" src="https://media.licdn.com/dms/image/D5603AQF9YCdt56iNUQ/profile-displayphoto-shrink_800_800/0/1703882243546?e=1715817600&v=beta&t=l5b6HqZTYuU1D8e7C5afz93S16yFTUuwOS8qaskh7ew"/>
-        </a>
-        <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Duvan Mancilla</br><small>Frontend Developer</small></h4>
-        </a>
-        <div style='display: flex; flex-direction: column'>
-          <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
-        </a>
-        </div>
-      </div>
-    </td>
-    <td align='center'>
-      <div >
-        <a href="https://www.linkedin.com/in/nicolas-martinez-ju/" target="_blank" rel="author">
-          <img width="110" src="https://media.licdn.com/dms/image/D4D03AQEiIx_ViZIXSg/profile-displayphoto-shrink_200_200/0/1704982970424?e=1714608000&v=beta&t=upQgMvWth4WH2EEQ2wn0GaOBqa2t3rS_bhqrzwD6eGY"/>
-        </a>
-        <a href="https://www.linkedin.com/in/nicolas-martinez-ju/" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Nicolas Martinez</br><small>Backend Developer</small></h4>
-        </a>
-        <div style='display: flex; flex-direction: column'>
-        <a href="https://github.com/MartinezNicolass" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
-        </a>
-        <a href="https://www.linkedin.com/in/nicolas-martinez-ju/" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
-        </a>
-        </div>
-      </div>
-    </td>
-    <td align='center'>
-      <div >
-        <a href="https://www.linkedin.com/in/rafael-strongoli/" target="_blank" rel="author">
-          <img width="110" src="https://avatars.githubusercontent.com/u/44025206?v=4"/>
-        </a>
-        <a href="https://www.linkedin.com/in/rafael-strongoli/" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Rafael Strongoli</br><small>Frontend Developer</small></h4>
-        </a>
-        <div style='display: flex; flex-direction: column'>
-        <a href="https://github.com/rafaric" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
-        </a>
-        <a href="https://www.linkedin.com/in/rafael-strongoli/" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
-        </a>
-        </div>
-      </div>
-    </td>
-</tr>
-</table>
-</div>
-<div>
-
-<table align='center'>
-  <tr>
-    <td align='center'>
-      <div >
-        <a href="https://www.linkedin.com/in/joelrondinelpacheco/" target="_blank" rel="author">
-          <img width="110" src="https://media.licdn.com/dms/image/D4D03AQFHphWMHa_MNQ/profile-displayphoto-shrink_800_800/0/1684823645750?e=1715817600&v=beta&t=VfCbgJwnUX_RfIp79LYiDekoXeecjvUjP9x6iKdK83Y"/>
-        </a>
-        <a href="https://www.linkedin.com/in/joelrondinelpacheco/" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Joel Rondinel Pacheco</br><small>Java Backend Developer</small></h4>
-        </a>
-        <div style='display: flex; flex-direction: column'>
-        <a href="https://github.com/JoelRondinelPacheco" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
-        </a>
-        <a href="https://www.linkedin.com/in/joelrondinelpacheco/" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
-        </a>
-        </div>
-      </div>
-    </td>
-   <td align='center'>
-      <div >
-        <a href="https://www.linkedin.com/in/thamairy-gonzalez" target="_blank" rel="author">
-          <img width="110" src="https://media.licdn.com/dms/image/D4D03AQGAm_z9bMzxbA/profile-displayphoto-shrink_200_200/0/1696368858400?e=1718841600&v=beta&t=buwvqpB6TJsGz2Azlrca5g0eNLjv7oFMi48vQtFATGk"/>
-        </a>
-        <a href="https://www.linkedin.com/in/thamairy-gonzalez" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Thamairy Gonzalez</br><small>QA Testing</small></h4>
-        </a>
-        <div style='display: flex; flex-direction: column'>
-        <a href="https://github.com/ThamairyGonzalez" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
-        </a>
-        <a href="https://www.linkedin.com/in/thamairy-gonzalez" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
-        </a>
-        </div>
-      </div>
-    </td>
-    <td align='center'>
-      <div >
-        <a href="https://www.linkedin.com/in/maria-bebion-85a6038a/" target="_blank" rel="author">
-          <img width="110" src="https://media.licdn.com/dms/image/D4D03AQFg1vMnZ79Wsw/profile-displayphoto-shrink_200_200/0/1682262728491?e=1718841600&v=beta&t=Mq8XtONSCqzNVgQh1hisYTfhK7Oa7lGpRVE7ABWR1Oc"/>
-        </a>
-        <a href="https://www.linkedin.com/in/maria-bebion-85a6038a/" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Maria Bebion</br><small>QA Testing</small></h4>
-        </a>
-        <div style='display: flex; flex-direction: column'>
-        <a href="https://github.com/MariaABebion" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
-        </a>
-        <a href="https://www.linkedin.com/in/maria-bebion-85a6038a/" target="_blank">
-          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
-        </a>
-        </div>
-      </div>
-    </td>
-  </tr>
-  </table>
-</div>
-
-<div>
-<h1>Tecnologias usadas</h1>
-
-![NEXTJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-
+![NEXTJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)  
 ![TYPESCRIPT](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
-
-<br>
+  </p>
 </div>
 
 </div>
