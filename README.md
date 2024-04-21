@@ -1,145 +1,68 @@
 <div>
 <!-- PROJECT LOGO -->
-<br />
-  <div align='center'>
-<h3>Hola Mundo! Somos el equipo Landing-SantiCuoreph</h3></div>
-<!-- ABOUT THE PROJECT -->
-<br>
+</div>
 
+<!-- Palabras iniciales -->
+<div align='center'>
+  <h3>Hola Mundo! Somos el equipo Landing-SantiCuoreph</h3>
+</div>
  
 <div>
-<h2> 
-01. Origen del Proyecto 
-</h2>
-<p>
-Foo Talent Group crea experiencias laborales con clientes reales para Trainees y Juniors. 
-
-En enero de 2024, lanzó una convocatoria a través de redes sociales para realizar pasantías no remuneradas dirigidas a Trainees y Juniors del área de TI interesados en vivir la experiencia de trabajar en un entorno real.
-
-Se seleccionaron y formaron equipos que incluyeron Project Manager, Product Designer, Diseñadores UX-UI, UX Writers, Desarrolladores Front End, Quality Assurance y Community Managers. 
-
-Cada uno de los miembros de cada equipo colaboró en crear un proyecto desde cero.
-</p>
-</div>
-
-<div>
-<h2> 
-02. Periodo de Trabajo 
-</h2>
-<p>
-Desde la convocatoria al término de los proyectos, pasaron menos de 4 meses. Desde enero 2024 a abril 2024.
-</p>
-</div>
-
-<div>
-<h2> 
-03. Equipo e integrantes
-</h2>
-
-<p>
-El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina. Quien tenía la necesidad de tener una página que le sirviera de portafolio, además de ser un punto de contacto para nuevos clientes.
-</p>
-
-<div>
-  <table align='center'> 
-   
-    <tr>
-      <td colspan="4" align='center'>
-        <h3> Integrantes </h3>
-      </td>
-    </tr>
-   
-    <tr>
-      <td colspan="4" align='center'>
-        <h3> Project Manager y Product Designer </h3>
-      </td>
-    </tr>
-    
-    <tr>
-      <td colspan="2" align='center'>
-         <a href="https://www.linkedin.com/in/isabeldelacuadralunas/="_blank">
-           <img src="https://media.licdn.com/dms/image/D4E03AQECtyWMaoh0tQ/profile-displayphoto-shrink_200_200/0/1713731142985?e=1719446400&v=beta&t=FNS1K9D1JaNRu0-FrrmooGGUUFmaIg4FDfnGeWrey94" alt="Fotografía de Perfil Isabel de la Cuadra" style="width: 100px; height: 100px;">
-         </a>
-         <h4 style="margin-top: 1rem;">Isabel de la Cuadra</br><small>Project Manager</small></h4>
-         </a>
-         <div style='display: flex; flex-direction: column'>
-           <a href="https://github.com/Isabel-de-la-Cuadra" target="_blank">
-            <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
-          </a>
-          <a href="https://www.linkedin.com/in/isabeldelacuadralunas/" target="_blank">
-            <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
-          </a> 
-        </div>
-      </td>
-      <td colspan="2" align='center'>
-         <a href="https://www.linkedin.com/in/rociomancinelli/" target="_blank" rel="author">
-           <img src="https://media.licdn.com/dms/image/D4D03AQElnVCjQ3trYg/profile-displayphoto-shrink_200_200/0/1712002125074?e=1719446400&v=beta&t=3hNRekrXc_ru83h7aRubNW2EmY2w_NaQ1qzqA9zjU-o" alt="Fotografía de Perfil Rocio Mancinelli" style="width: 100px; height: 100px;">
-         </a>
-         <h4 style="margin-top: 1rem;">Rocío Mancinelli</br><small>Product Designer</small></h4>
-         </a>
-         <div style='display: flex; flex-direction: column'>
-           <a href="" target="_blank">
-            <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
-          </a>
-          <a href="https://www.linkedin.com/in/rociomancinelli/" target="_blank">
-            <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
-          </a> 
-        </div>
-      </td>
-    </tr>
-
-   <tr>
-      <td colspan="4" align='center'>
-        <h3> Equipo de Diseño </h3>
-      </td>
-    </tr>
-
-    <tr>
-      <td colspan="4" align='center'>
-        <h3> Equipo de Desarrollo </h3>
-      </td>
-    </tr>
-
-    <tr>
-      <td colspan="4" align='center'>
-        <h3> Equipo de Quality Assurance</h3>
-      </td>
-    </tr>
-
-    <tr>
-      <td colspan="4" align='center'>
-        <h3> Community Manager</h3>
-      </td>
-    </tr>
-
-
-    
-  </table>
-</div>
-
-<div>
-<h2> 
-04. Deploy del Proyecto
-</h2>
-<p>
-El proyecto se encuenta en https://www.santicuoreph.com/
-</p>
-</h2>
-
-<div>
-<h2> 
-05. Investigación y trabajo de Diseño UX-UI
-</h2>
-<p>
-
-</p>
-</h2>
-
+  <h2> 
+  01. Origen del Proyecto 
+  </h2>
+  <p>
+  Foo Talent Group crea experiencias laborales con clientes reales para Trainees y Juniors. 
   
+  En enero de 2024, lanzó una convocatoria a través de redes sociales para realizar pasantías no remuneradas dirigidas a Trainees y Juniors del área de TI interesados en vivir la experiencia de trabajar en un entorno real.
+  
+  Se seleccionaron y formaron equipos que incluyeron Project Manager, Product Designer, Diseñadores UX-UI, UX Writers, Desarrolladores Front End, Quality Assurance y Community Managers. 
+  
+  Cada uno de los miembros de cada equipo colaboró en crear un proyecto desde cero.
+  </p>
+</div>
+
+<div>
+  <h2> 
+  02. Periodo de Trabajo 
+  </h2>
+  <p>
+  Desde la convocatoria al término de los proyectos, pasaron menos de 4 meses. Desde enero 2024 a abril 2024.
+  </p>
+</div>
+
+<div>
+  <h2> 
+  03. Equipo e integrantes
+  </h2>
+  <p>
+  El Equipo 6 trabajó para lograr este desarrollo: la landing page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina. Quien tenía la necesidad de tener una página que le sirviera de portafolio, además de ser un punto de contacto para nuevos clientes.
+  </p>
+
+</div>
+
+<div>
+  <h2> 
+  04. Deploy del Proyecto
+  </h2>
+  <p>
+  El proyecto se encuenta en https://www.santicuoreph.com/
+  </p>
+</div>
+
+<div>
+  <h2> 
+  05. Investigación y trabajo de Diseño UX-UI
+  </h2>
+  <p>
+  
+  </p>
+</div>
 
 
 <h1> ¿Quiénes somos?
 </h1>
+
 <div>
 <table align='center'>
   <tr>
