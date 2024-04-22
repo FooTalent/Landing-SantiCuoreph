@@ -77,9 +77,11 @@
           </a>
           <h4 style="margin-top: 1rem;">Rocio Mancinelli</br><small>Product Designer</small></h4>
           <div style='display: flex; flex-direction: column'>
+            <!--
             <a href="" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=172B4D&logo=Behance&logoColor=FFFFFF&label="/>
             </a>
+            -->
             <br>
             <a href="https://www.linkedin.com/in/rociomancinelli/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
@@ -320,7 +322,7 @@
   08. Trabajo en Desarrollo
   </h2>
   <p>
-  El Desarrollo se hizo en NextJS y TypeScript 
+  El Desarrollo se hizo en NextJS y TypeScript. 
   </p>
 
 ![NEXTJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)  
@@ -352,7 +354,7 @@
   Deseable implementar un side.map que mejora la visibilidad y el posicionamiento en el motor de búsqueda.
   </p>
   <p>
-  Hacer uso de Backlinks, un Backlinks es un enlace que retorna a la Página Web que se solicita posicionar ¿Cémo lo podemos hacer? Por medio de Foros o Wikipedia.
+  Hacer uso de Backlinks, un Backlinks es un enlace que retorna a la Página Web que se solicita posicionar ¿Cómo lo podemos hacer? Por medio de Foros o Wikipedia.
   </p>
 </div>  
 <br>
