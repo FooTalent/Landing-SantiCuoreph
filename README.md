@@ -335,12 +335,9 @@
   El Desarrollo se hizo en NextJS y TypeScript. 
   </p>
 
-![NEXTJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)  
-
-![TYPESCRIPT](https://img.shields.io/badge/TypeScript-000000?style=for-the-badge&logo=TypeScript&logoColor=white)
-<!--
-![TYPESCRIPT](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
--->
+  ![NEXTJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)  
+  
+  ![TYPESCRIPT](https://img.shields.io/badge/TypeScript-000000?style=for-the-badge&logo=TypeScript&logoColor=white)
 </div>
 <br>
 <div>
