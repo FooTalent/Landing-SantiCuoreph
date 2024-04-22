@@ -40,7 +40,7 @@
   03. Desafío del Equipo
   </h2>
   <p>
-  El Equipo 6 trabajó para lograr este desarrollo: la Landing Page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires Argentina, quien necesitaba tener una página que le sirviera de portafolio, además de ser un punto de contacto para nuevos clientes.
+  El Equipo 6 trabajó para lograr este desarrollo: la Landing Page para Santiago García, SantiCuore PH, Fotógrafo y Creador de Contenido Audiovisual de Buenos Aires, Argentina; quien necesitaba tener una página que le sirviera de portafolio, además de ser un punto de contacto para nuevos clientes.
   </p>
 </div>
 <br>
@@ -83,6 +83,7 @@
             </a>
             -->
             <br>
+            <br>
             <a href="https://www.linkedin.com/in/rociomancinelli/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a> 
@@ -101,11 +102,9 @@
           </a>
           <h4 style="margin-top: 1rem;">Guillermo Larroca</br><small>UX Writing</small></h4>
           <div style='display: flex; flex-direction: column'>
-           <!--
-            <a href="" target="_blank">
-               <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=172B4D&logo=Behance&logoColor=FFFFFF&label="/>
+            <a href="https://common-water-9a5.notion.site/Hola-Soy-Guillermo-167fe00ac235456e8978001b55dac5e9" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=Notion&color=172B4D&logo=Notion&logoColor=FFFFFF&label="/>
             </a>
-            -->
             <br>
             <a href="https://www.linkedin.com/in/guillermo-larroca-ux/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
@@ -124,6 +123,7 @@
             </a>
             -->
             <br>
+            <br>
             <a href="https://www.linkedin.com/in/javierpalomequi/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a> 
@@ -141,6 +141,7 @@
             </a>
             -->
             <br>
+            <br>
             <a href="http://www.linkedin.com/in/mar%C3%ADa-valentina-barrera-gil-" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a> 
@@ -157,6 +158,7 @@
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=172B4D&logo=Behance&logoColor=FFFFFF&label="/>
             </a>
             -->
+            <br>
             <br>
             <a href="https://www.linkedin.com/in/juanjozorrilla/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
