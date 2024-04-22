@@ -78,7 +78,7 @@
           <h4 style="margin-top: 1rem;">Rocio Mancinelli</br><small>Product Designer</small></h4>
           <div style='display: flex; flex-direction: column'>
             <a href="" target="_blank">
-               <img style='width:8rem' src=""/>
+               <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=172B4D&logo=Behance&logoColor=FFFFFF&label="/>
             </a>
             <br>
             <a href="https://www.linkedin.com/in/rociomancinelli/" target="_blank">
