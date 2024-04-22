@@ -1,4 +1,4 @@
-<div>
+<div align='center'>
   <img src="public/images/favicon.ico" alt="Logo SantiCuore PH" style="font-size: 8rem;">
 </div>
 <br>
