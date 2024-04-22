@@ -323,7 +323,9 @@
       <img style='width:8rem' src=""/>
     </a>
   </p>
+  
 [![Ver en Figma](https://img.shields.io/badge/Ver_en_Figma-View_on_Figma-orange?style=for-the-badge&logo=figma)](URL_DE_TU_DISEÑO_EN_FIGMA)
+
 </div>
 <br>
 <div>
