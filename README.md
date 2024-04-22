@@ -4,7 +4,7 @@
 <br>
 <div align='center'>
   <h3>
-    Hola Mundo! Somos el Equipo que creó la Landing Page SantiCuore PH:  https://www.santicuoreph.com/
+    Hola Mundo! Somos el Equipo que creó la Landing Page <a href="https://www.santicuoreph.com/">SantiCuore PH</a>.
   </h3>
 </div>
 <br> 
