@@ -318,9 +318,12 @@
   <p>
   Todo el trabajo de investigación se encuentra en:
   </p>
-    <a href="https://www.figma.com/file/3JyXDBhKycTIc4fcjWmll3/Santi-Cuore-project?type=whiteboard&node-id=0-1&t=nKCZdkulZTraxav9-0" target="_blank">
-      <img style='width:8rem' src="https://img.shields.io/badge/Ver_en_FigJam?style=for-the-badge&logo=figma"/>
+  <p>
+    <a href="" target="_blank">
+      <img style='width:8rem' src=""/>
     </a>
+  </p>
+[![Ver en Figma](https://img.shields.io/badge/Ver_en_Figma-View_on_Figma-orange?style=for-the-badge&logo=figma)](URL_DE_TU_DISEÑO_EN_FIGMA)
 </div>
 <br>
 <div>
