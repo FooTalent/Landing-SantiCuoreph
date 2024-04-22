@@ -178,8 +178,8 @@
           </a>
           <h4 style="margin-top: 1rem;">Duvan Mancilla</br><small>Desarrollador Front End</small></h4>
           <div style='display: flex; flex-direction: column'>
-            <a href="https://github.com/DuvanLT" target="_blank">
-               <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+            <a href="https://duvandev.netlify.app/" target="_blank">
+               <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=Netlify&color=172B4D&logo=Netlify&logoColor=FFFFFF&label="/>
             </a>
             <br>
             <a href="https://www.linkedin.com/in/duvan-mancilla/" target="_blank">
@@ -189,7 +189,7 @@
         </td>
         <td align='center'>
           <a href="https://www.linkedin.com/in/rafael-strongoli/" target="_blank" rel="author">
-               <img src="https://media.licdn.com/dms/image/D4E35AQGcmu2CS8HD3A/profile-displayphoto-shrink_200_200/0/1689114650333?e=1714345200&v=beta&t=3uN9X_4pBqbXnucPO6-G291tyPqkEhk39z95o8GtpkE" alt="Fotografía de Perfil Rafael Strongoli" style="width: 100px; height: 100px;">
+               <img src="https://media.licdn.com/dms/image/D4E35AQGcmu2CS8HD3A/profile-framedphoto-shrink_200_200/0/1689114650333?e=1714356000&v=beta&t=zxXb0UM6faxRAMkmUmCRfyN1OsozDgQN7qrdG_fROPc" alt="Fotografía de Perfil Rafael Strongoli" style="width: 100px; height: 100px;">
           </a>
           <h4 style="margin-top: 1rem;">Rafael Strongoli</br><small>Desarrollador Front End</small></h4>
           <div style='display: flex; flex-direction: column'>
