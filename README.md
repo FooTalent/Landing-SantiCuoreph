@@ -324,7 +324,7 @@
     </a>
   </p>
   
-[![Ver en Figma](https://img.shields.io/badge/Ver_en_Figma-View_on_Figma-orange?style=for-the-badge&logo=figma)](URL_DE_TU_DISEÑO_EN_FIGMA)
+[![Ver en Figma](https://img.shields.io/badge/Ver_en_Figma?style=for-the-badge&logo=figma)](https://www.figma.com/file/T0XOPGc2d3c4RwHsWlDYki/TAREAS-SPRINT%2F-GRUPO-SANTI-CUORE?type=design&node-id=447%3A788&mode=design&t=VfEqEFy0MNjHB8UO-1)
 
 </div>
 <br>
@@ -335,10 +335,11 @@
   <p>
   El Desarrollo se hizo en NextJS y TypeScript 
   </p>
-  <p>
+
 ![NEXTJS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)  
+
 ![TYPESCRIPT](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
-  </p>
+
 </div>
 <br>
 <div>
