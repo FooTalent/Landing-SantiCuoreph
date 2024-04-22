@@ -316,8 +316,8 @@
   07. Investigación y trabajo en Diseño UX-UI
   </h2>
   <p>
-  Todo el trabajo de investigación se encuentra en [![Figma](https://img.shields.io/badge/Ver_en_Figma?style=for-the-badge&logo=figma)](https://www.figma.com/file/T0XOPGc2d3c4RwHsWlDYki/TAREAS-SPRINT%2F-GRUPO-SANTI-CUORE?type=design&node-id=447%3A788&mode=design&t=VfEqEFy0MNjHB8UO-1) y [![FigJam](https://img.shields.io/badge/Ver_en_Figma?style=for-the-badge&logo=figma)](https://www.figma.com/file/3JyXDBhKycTIc4fcjWmll3/Santi-Cuore-project?type=whiteboard&node-id=0-1&t=nKCZdkulZTraxav9-0)
-  </p>
+  Todo el trabajo de investigación se encuentra en <a href="https://www.figma.com/file/T0XOPGc2d3c4RwHsWlDYki/TAREAS-SPRINT%2F-GRUPO-SANTI-CUORE?type=design&node-id=447%3A788&mode=design&t=VfEqEFy0MNjHB8UO-1">Figma</a>.
+</p>
 </div>
 <br>
 <div>
