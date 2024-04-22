@@ -241,7 +241,7 @@
       <tr>
         <td colspan="2" align='center'>
           <a href="https://www.linkedin.com/in/thamairy-gonzalez/" target="_blank" rel="author">
-               <img src="https://media.licdn.com/dms/image/D4D35AQF9MyQFP0EE-A/profile-framedphoto-shrink_200_200/0/1713391513150?e=1714345200&v=beta&t=Ye_Qb_OQdziAKIb7sqzof9NkYMRuqKwirWiAmNp414s" alt="Fotografía de Perfil Thamairy González" style="width: 100px; height: 100px;">
+               <img src="https://media.licdn.com/dms/image/D4D03AQGAm_z9bMzxbA/profile-displayphoto-shrink_200_200/0/1696368858400?e=1719446400&v=beta&t=Mkh1jK_e3fSh-8aCajaMmDgBpzp1XOKuw-ZTXinOOq8" alt="Fotografía de Perfil Thamairy González" style="width: 100px; height: 100px;">
           </a>
           <h4 style="margin-top: 1rem;">Thamairy González</br><small>Quality Assurance</small></h4>
           <div style='display: flex; flex-direction: column'>
