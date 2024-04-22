@@ -101,9 +101,11 @@
           </a>
           <h4 style="margin-top: 1rem;">Guillermo Larroca</br><small>UX Writing</small></h4>
           <div style='display: flex; flex-direction: column'>
+           <!--
             <a href="" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=172B4D&logo=Behance&logoColor=FFFFFF&label="/>
             </a>
+            -->
             <br>
             <a href="https://www.linkedin.com/in/guillermo-larroca-ux/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
@@ -116,9 +118,11 @@
           </a>
           <h4 style="margin-top: 1rem;">Javier Palomequi</br><small>Diseñador UX-UI</small></h4>
           <div style='display: flex; flex-direction: column'>
+            <!--
             <a href="" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=172B4D&logo=Behance&logoColor=FFFFFF&label="/>
             </a>
+            -->
             <br>
             <a href="https://www.linkedin.com/in/javierpalomequi/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
@@ -131,9 +135,11 @@
           </a>
           <h4 style="margin-top: 1rem;">María Valentina Barrera</br><small>Diseñadora UX-UI</small></h4>
           <div style='display: flex; flex-direction: column'>
+           <!--
             <a href="" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=172B4D&logo=Behance&logoColor=FFFFFF&label="/>
             </a>
+            -->
             <br>
             <a href="http://www.linkedin.com/in/mar%C3%ADa-valentina-barrera-gil-" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
@@ -146,9 +152,11 @@
           </a>
           <h4 style="margin-top: 1rem;">Juan Zorrilla</br><small>Diseñador UX-UI</small></h4>
           <div style='display: flex; flex-direction: column'>
+           <!--
             <a href="" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=172B4D&logo=Behance&logoColor=FFFFFF&label="/>
             </a>
+            -->
             <br>
             <a href="https://www.linkedin.com/in/juanjozorrilla/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
