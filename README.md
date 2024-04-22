@@ -269,11 +269,6 @@
                <img src="https://media.licdn.com/dms/image/D4D03AQHLWz35WXrp-g/profile-displayphoto-shrink_200_200/0/1707187164508?e=1719446400&v=beta&t=sxJrOBjc6FDYJQuJxAuA2zUqRbiODKrz6RNX7l0WkQo" alt="Fotografía de Perfil Stella Agüero" style="width: 100px; height: 100px;">
           </a>
           <h4 style="margin-top: 1rem;">Stella Agüero</br><small>Community Manager</small></h4>
-          <div style='display: flex; flex-direction: column'>
-            <a href="" target="_blank">
-               <img style='width:8rem' src="[https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label=](https://img.shields.io/static/v1?style=for-the-badge&message=Behance&color=172B4D&logo=Behance&logoColor=FFFFFF&label=)"/>
-            </a>
-            <br>
             <a href="https://www.linkedin.com/in/stellamarisag%C3%BCero/" target="_blank">
                <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a> 
