@@ -1,5 +1,7 @@
 <div>
-  <img src="src/app/componentes/header/logo.tsx" alt="Logo SantiCuore PH" style="font-size: 8rem;">
+  <!-- <img src="src/app/componentes/header/logo.tsx" alt="Logo SantiCuore PH" style="font-size: 8rem;"> -->
+  ![Logo SantiCuore PH](https://drive.google.com/file/d/1WBu9pikYj5CDw3b5w_6jnRSrGWGUE8G1/view?usp=sharing)
+  <!-- https://drive.google.com/file/d/1WBu9pikYj5CDw3b5w_6jnRSrGWGUE8G1/view?usp=sharing -->
 </div>
 <br>
 <div align='center'>
