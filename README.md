@@ -189,7 +189,7 @@
         </td>
         <td align='center'>
           <a href="https://www.linkedin.com/in/rafael-strongoli/" target="_blank" rel="author">
-               <img src="https://media.licdn.com/dms/image/D4E35AQGcmu2CS8HD3A/profile-framedphoto-shrink_200_200/0/1689114650333?e=1714356000&v=beta&t=zxXb0UM6faxRAMkmUmCRfyN1OsozDgQN7qrdG_fROPc" alt="Fotografía de Perfil Rafael Strongoli" style="width: 100px; height: 100px;">
+               <img src="https://media.licdn.com/dms/image/D4E03AQEu4I7zMvACmg/profile-displayphoto-shrink_200_200/0/1689114648532?e=1719446400&v=beta&t=s1L2mHn8UVnC1z1GhrvIQH3wW3RgdVyaXIJT3XZWF3M" alt="Fotografía de Perfil Rafael Strongoli" style="width: 100px; height: 100px;">
           </a>
           <h4 style="margin-top: 1rem;">Rafael Strongoli</br><small>Desarrollador Front End</small></h4>
           <div style='display: flex; flex-direction: column'>
