@@ -41,7 +41,7 @@ export default function Images() {
       </button>
       <Link
         target="_blank"
-        href="https://www.instagram.com/santicuore.ph/"
+        href="https://www.instagram.com/santicuoreph/"
         onMouseEnter={() => setSetHoveredI(true)}
         onMouseLeave={() => setSetHoveredI(false)}
       >
