@@ -11,7 +11,7 @@ const Footer = () => {
         <picture className="flex flex-row justify-center items-center gap-8">
           <hr className="min-w-[500px] hidden lg:block"></hr>
           <a
-            href="https://www.instagram.com/santicuore.ph/"
+            href="https://www.instagram.com/santicuoreph/"
             target="_blank"
             className="p-2.5"
           >
