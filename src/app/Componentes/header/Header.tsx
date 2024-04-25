@@ -215,7 +215,7 @@ const Header = () => {
               })}
               <div className="flex items-center gap-10 ">
                 <a
-                  href="https://www.instagram.com/santicuore.ph/"
+                  href="https://www.instagram.com/santicuoreph/"
                   target="_blank"
                 >
                   <InstagramLogo size={26} />
